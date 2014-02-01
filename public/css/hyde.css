@@ -231,6 +231,7 @@ a:focus {
 }
 .masthead-inner {
   padding: 20px;
+  padding-top: 5px;
 }
 
 /* Masthead content */
