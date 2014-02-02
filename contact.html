@@ -7,7 +7,7 @@ title: Contact
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript">
 	$( document ).ready(function() {
-		$('#submit').onclick(function() {
+		$( document ).on( 'click', '#submit', function () {
 			var mail = $('#email').val();
 			mail.serialize();
 			var subj =  "[Portfolio] " + $('#subject').val();
