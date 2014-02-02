@@ -10,7 +10,7 @@ title: Contact
 		$( document ).on( 'click', '#submit', function () {
 			var mail = $('#email').val();
 			var subj =  "[Portfolio] " + $('#subject').val();
-			var htm='From: ' + $('#name').value + "<br>" + $('#message').val();
+			var htm='From: ' + $('#name').val() + '<br>' + $('#message').val();
 
 			$.ajax({
 			  type: 'POST',
