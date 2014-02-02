@@ -15,7 +15,15 @@ title: Contact
 	(function(d, t){
 	   var g = d.createElement(t),
 		   s = d.getElementsByTagName(t)[0];
-	   g.src = "http://www.foxyform.com/js.php?id=518733&sec_hash=2f63196c5af&width=350px";
+	   g.src = (function(d){
+	  var l = d.getElementById("foxyform_embed_link_518733");
+	      i = d.createElement('IFRAME');
+	  i.src = "http://www.foxyform.com/form.php?id=518733&sec_hash=2f63196c5af";
+	  i.width = "350px";
+	  i.height = "474px";
+	  i.frameborder = 0;
+	  l.parentNode.insertBefore(i,l);
+	})(document);
 	   s.parentNode.insertBefore(g, s);
 	}(document, "script"));
 	</script>
