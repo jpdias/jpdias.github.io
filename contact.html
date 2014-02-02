@@ -6,7 +6,7 @@ title: Contact
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript">
-	$('#submit').click(function() {
+	$('#submit').onclick(function() {
 		var mail = $('#email').val();
 		mail.serialize();
 		var subj =  "[Portfolio] " + $('#subject').val();
@@ -46,6 +46,6 @@ title: Contact
 		Email:<input type="email" id="email" required></input><br>
 		Subject:<input type="text" id="subject" required></input><br>
 		Message:<input type="text" id="message" required></input><br>
-		<input type="button" id="submit"></input>
+		<button id="submit">Send Contact</button>
   </div>
 </div>
