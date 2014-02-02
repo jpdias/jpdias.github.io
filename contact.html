@@ -8,21 +8,21 @@ title: Contact
 	<script type="text/javascript">
 	$('#submit').click(function() {
 		$.ajax({
-		  type: “POST”,
-		  url: “https://mandrillapp.com/api/1.0/messages/send.json”,
+		  type: 'POST',
+		  url: 'https://mandrillapp.com/api/1.0/messages/send.json',
 		  data: {
-			‘key’: ‘Kj-1SGPKFICoSgUIo9OEqw’,
-			‘message’: {
-			  ‘from_email’: $('#email').val(),
-			  ‘to’: [
+			'key': 'Kj-1SGPKFICoSgUIo9OEqw',
+			'message': {
+			  'from_email': $('#email').val(),
+			  'to': [
 				  {
-					‘email’: ‘jpdias@live.com.pt’,
-					‘type’: ‘to’
+					'email': 'jpdias@live.com.pt',
+					'type': 'to'
 				  }
 				],
-			  ‘autotext’: ‘true’,
-			  ‘subject’: "[Portfolio] " + $('#subject').val(),
-			  ‘html’: 'From: ' + $('#name').value + "<br>" + $('#message').val()
+			  'autotext': 'true',
+			  'subject': "[Portfolio] " + $('#subject').val(),
+			  'html': 'From: ' + $('#name').value + "<br>" + $('#message').val()
 			}
 		  }
 		 }).done(function(response) {
