@@ -58,7 +58,7 @@ title: Contact
           E-mail<span class="form-required">*</span>
         </label>
         <div id="cid_3" class="form-input">
-          <input type="email" class=" form-textbox validate[required, Email]" id="input_3" name="q3_email3" size="30" value="" />
+          <input type="email" id="input_3" name="q3_email3" size="30" value="" required/>
         </div>
       </li>
       <li class="form-line" id="id_5">
@@ -66,7 +66,7 @@ title: Contact
           Subject<span class="form-required">*</span>
         </label>
         <div id="cid_5" class="form-input">
-          <input type="text" class=" form-textbox validate[required]" data-type="input-textbox" id="input_5" name="q5_subject" size="20" value="" />
+          <input type="text"  data-type="input-textbox" id="input_5" name="q5_subject" size="20" value="" required/>
         </div>
       </li>
       <li class="form-line" id="id_4">
@@ -74,7 +74,7 @@ title: Contact
           Message<span class="form-required">*</span>
         </label>
         <div id="cid_4" class="form-input">
-          <textarea id="input_4" class="form-textarea validate[required]" name="q4_message" cols="40" rows="6"></textarea>
+          <textarea id="input_4" name="q4_message" cols="40" rows="6" required></textarea>
         </div>
       </li>
       <li class="form-line" id="id_7">
@@ -85,7 +85,7 @@ title: Contact
           <div class="form-captcha">
             <label for="input_7"> <img alt="Captcha - Reload if it's not displayed" id="input_7_captcha" class="form-captcha-image" style="background:url(http://cdn.jotfor.ms/images/loader-big.gif) no-repeat center;" src="http://cdn.jotfor.ms/images/blank.gif" width="150" height="41" /> </label>
             <div style="white-space:nowrap;">
-              <input type="text" id="input_7" class="form-textbox validate[required]" name="captcha" style="width:200px;" />
+              <input type="text" id="input_7" name="captcha" style="width:100px;" required/>
               <img src="http://cdn.jotfor.ms/images/reload.png" alt="Reload" align="absmiddle" style="cursor:pointer" onclick="JotForm.reloadCaptcha('input_7');" />
               <input type="hidden" name="captcha_id" id="input_7_captcha_id" value="0" />
             </div>
@@ -96,7 +96,7 @@ title: Contact
         <div id="cid_2" class="form-input-wide">
           <div style="margin-left:156px" class="form-buttons-wrapper">
             <button id="input_2" type="submit" class="form-submit-button">
-              Enviar
+              Submit contact
             </button>
           </div>
         </div>
