@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="post">
-  <h1>{{ page.title }}</h1>
+  <h1 id="title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
   {{ content }}
 </div>
@@ -27,10 +27,10 @@ layout: default
 <script>
 document.write("<div>"+
 "<p>Social share: "+
-'<a  href="http://twitter.com/intent/tweet?url='+ document.URL + '&amp;text=' + document.title + '&amp;via=JP Dias">Twitter </a>' +
+'<a  href="http://twitter.com/intent/tweet?url='+ document.URL + '&amp;text=' + document.getElementById("title").textContent + '&amp;via=JP Dias">Twitter </a>' +
 '| <a  href="http://facebook.com/sharer.php?u='+ document.URL + '">Facebook </a>' +
 '| <a  href="https://plus.google.com/share?url=' + document.URL + '">Google+ </a> '+
-'| <a  href="http://www.linkedin.com/shareArticle?mini=true&amp;url="' +document.URL +'">LinkedIn</a>' 
+'| <a  href="http://www.linkedin.com/shareArticle?mini=true&url="' +document.URL +'"target="_blank">LinkedIn</a>' 
 + "</p>" +
 "</div>"
 );
