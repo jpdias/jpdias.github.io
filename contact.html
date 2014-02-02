@@ -9,11 +9,9 @@ title: Contact
 	$( document ).ready(function() {
 		$( document ).on( 'click', '#submit', function () {
 			var mail = $('#email').val();
-			mail.serialize();
 			var subj =  "[Portfolio] " + $('#subject').val();
-			subj.serialize();
 			var htm='From: ' + $('#name').value + "<br>" + $('#message').val();
-			htm.serialize();
+
 			$.ajax({
 			  type: 'POST',
 			  url: 'https://mandrillapp.com/api/1.0/messages/send.json',
