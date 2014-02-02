@@ -8,18 +8,112 @@ title: Contact
   <h1 class="page-title">Contact</h1>
   
   <div>
-		<script language="javascript">var sa_email_id = '13593-baef2';var sa_sent_text = 'Thank you for contacting us. We will get back to you soon.';</script>
-		<script language="javascript" src="http://s1.smartaddon.com/sa_htmlform.js"></script>
-		<div id="sa_contactdiv">
-		<form name=sa_htmlform style="margin:0px" onsubmit="return sa_contactform()">
-			<table>
-			<tr><td>Name:<br><input type="text" name="name" /></td></tr>
-			<tr><td>E-mail Address: <span style="color:#D70000">*</span><br><input type="text" name="email" required="true" /></td></tr>
-			<tr><td>Subject: <span style="color:#D70000">*</span><br><input type="text" name="subject" required="true" /></td></tr>
-			<tr><td>Message: <span style="color:#D70000">*</span><br><textarea name="message" cols="42" rows="9" required="true"></textarea></td></tr>
-			<tr><td><input type="submit" value="Send Message" style="font-weight:bold"></td></tr>
-			</table>
-		</form>
+	
+	
+	<script src="http://cdn.jotfor.ms/static/jotform.js?3.2.455" type="text/javascript"></script>
+<script type="text/javascript">
+   JotForm.init(function(){
+      $('input_3').hint('ex: myname@example.com');
+      JotForm.initCaptcha('input_7');
+      JotForm.alterTexts({"required":"Este campo é obrigatório.","requireOne":"Pelo menos um campo é requisitado","requireEveryRow":"Todos os campos são requeridos.","alphabetic":"Este campo só pode conter letras","numeric":"Este campo pode conter apenas números","alphanumeric":"Este campo só pode conter letras e números.","incompleteFields":"Há campos obrigatórios incompletos. Por favor, preencha-os.","uploadFilesize":"O tamanho do arquivo não pode ser maior que:","confirmClearForm":"Você tem certeza que quer limpar este formulário?","lessThan":"A sua pontuação deve ser inferior ou igual a","email":"Digite um endereço de e-mail válido.","uploadExtensions":"Só pode fazer upload dos seguintes ficheiros:","pleaseWait":"Por favor aguarde...","confirmEmail":"E-mail não confere","submissionLimit":"Foi mal, mas apenas um envio de dados é permitido. Múltiplas submissões estão desativadas nesse formulário.","gradingScoreError":"Pontuação total deve ser menor ou igual a ","inputCarretErrorA":"A entrada não deve ser menor do que o valor mínimo:","inputCarretErrorB":"Valor não deve ser maior do que o máximo:","maxDigitsError":"O numero máximo de caracteres permitidos são","minSelectionsError":"O número mínimo exigido de seleções é","maxSelectionsError":"O número máximo de seleções permitido é","pastDatesDisallowed":"A data não pode ser passada.","multipleFileUploads_typeError":"O arquivo {file} é inválido, pois somente as extensões {extensions} são permitidas.","multipleFileUploads_sizeError":"{file} é muito grande, o tamanho máximo é {sizeLimit}.","multipleFileUploads_minSizeError":"{file} é muito pequeno, o tamanho mínimo do arquivo é {minSizeLimit}.","multipleFileUploads_emptyError":"{file} está vazio, por favor selecione os arquivos denovo.","multipleFileUploads_onLeave":"Os arquivos agora estão em upload, se você sair agora o upload será cancelado.","generalError":"Existem alguns erros no formulário. Arrume-os antes de continuar. ","generalPageError":"Há erros nesta página. Por favor, corrigi-los antes de continuar."});
+   });
+</script>
+<link href="http://cdn.jotfor.ms/static/formCss.css?3.2.455" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="http://cdn.jotfor.ms/css/styles/nova.css?3.2.455" />
+<link type="text/css" media="print" rel="stylesheet" href="http://cdn.jotfor.ms/css/printForm.css?3.2.455" />
+<style type="text/css">
+    .form-label{
+        width:150px !important;
+    }
+    .form-label-left{
+        width:150px !important;
+    }
+    .form-line{
+        padding-top:12px;
+        padding-bottom:12px;
+    }
+    .form-label-right{
+        width:150px !important;
+    }
+    .form-all{
+        width:650px;
+        color:#555 !important;
+        font-family:'Lucida Grande';
+        font-size:14px;
+    }
+</style>
+
+<form class="jotform-form" action="http://submit.jotformeu.com/submit/40318281619353/" method="post" name="form_40318281619353" id="40318281619353" accept-charset="utf-8">
+  <input type="hidden" name="formID" value="40318281619353" />
+  <div class="form-all">
+    <ul class="form-section">
+      <li class="form-line" id="id_6">
+        <label class="form-label-left" id="label_6" for="input_6"> Name </label>
+        <div id="cid_6" class="form-input">
+          <input type="text" class=" form-textbox" data-type="input-textbox" id="input_6" name="q6_name" size="20" value="" />
+        </div>
+      </li>
+      <li class="form-line" id="id_3">
+        <label class="form-label-left" id="label_3" for="input_3">
+          E-mail<span class="form-required">*</span>
+        </label>
+        <div id="cid_3" class="form-input">
+          <input type="email" class=" form-textbox validate[required, Email]" id="input_3" name="q3_email3" size="30" value="" />
+        </div>
+      </li>
+      <li class="form-line" id="id_5">
+        <label class="form-label-left" id="label_5" for="input_5">
+          Subject<span class="form-required">*</span>
+        </label>
+        <div id="cid_5" class="form-input">
+          <input type="text" class=" form-textbox validate[required]" data-type="input-textbox" id="input_5" name="q5_subject" size="20" value="" />
+        </div>
+      </li>
+      <li class="form-line" id="id_4">
+        <label class="form-label-left" id="label_4" for="input_4">
+          Message<span class="form-required">*</span>
+        </label>
+        <div id="cid_4" class="form-input">
+          <textarea id="input_4" class="form-textarea validate[required]" name="q4_message" cols="40" rows="6"></textarea>
+        </div>
+      </li>
+      <li class="form-line" id="id_7">
+        <label class="form-label-left" id="label_7" for="input_7">
+          CAPTCHA<span class="form-required">*</span>
+        </label>
+        <div id="cid_7" class="form-input">
+          <div class="form-captcha">
+            <label for="input_7"> <img alt="Captcha - Reload if it's not displayed" id="input_7_captcha" class="form-captcha-image" style="background:url(http://cdn.jotfor.ms/images/loader-big.gif) no-repeat center;" src="http://cdn.jotfor.ms/images/blank.gif" width="150" height="41" /> </label>
+            <div style="white-space:nowrap;">
+              <input type="text" id="input_7" class="form-textbox validate[required]" name="captcha" style="width:130px;" />
+              <img src="http://cdn.jotfor.ms/images/reload.png" alt="Reload" align="absmiddle" style="cursor:pointer" onclick="JotForm.reloadCaptcha('input_7');" />
+              <input type="hidden" name="captcha_id" id="input_7_captcha_id" value="0" />
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" id="id_2">
+        <div id="cid_2" class="form-input-wide">
+          <div style="margin-left:156px" class="form-buttons-wrapper">
+            <button id="input_2" type="submit" class="form-submit-button">
+              Enviar
+            </button>
+          </div>
+        </div>
+      </li>
+      <li style="display:none">
+        Should be Empty:
+        <input type="text" name="website" value="" />
+      </li>
+    </ul>
+  </div>
+  <input type="hidden" id="simple_spc" name="simple_spc" value="40318281619353" />
+  <script type="text/javascript">
+  document.getElementById("si" + "mple" + "_spc").value = "40318281619353-40318281619353";
+  </script>
+</form>
+	
+	
 		
    </div>
 </div>
