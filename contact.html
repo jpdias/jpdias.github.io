@@ -3,73 +3,43 @@ layout: default
 title: Contact
 ---
 
-<div class="page">
 
-  <h1 class="page-title">Contact</h1>
-  
-  <div>
-<script type="text/javascript">
-
-function auto_size_iframe(url){
-	this.visit_id="L4n0AFaea2tb369B";
-	this.frame_id = "auto_size_iframe_"+this.visit_id;
-	this.frame = null;
-	this.init = function(){
-		this.create_frame();
-
-		
-var XD=function(){var interval_id,last_hash,cache_bust=1,attached_callback,window=this;return{postMessage:function(message,target_url,target){if(!target_url){return}target=target||parent;if(window['postMessage']){target['postMessage'](message,target_url.replace(/([^:]+:\/\/[^\/]+).*/,'$1'))}else if(target_url){target.location=target_url.replace(/#.*$/,'')+'#'+(+new Date)+(cache_bust++)+'&'+message}},receiveMessage:function(callback,source_origin){if(window['postMessage']){if(callback){attached_callback=function(e){if((typeof source_origin==='string'&&e.origin!==source_origin)||(Object.prototype.toString.call(source_origin)==="[object Function]"&&source_origin(e.origin)===!1)){return!1}callback(e)}}if(window['addEventListener']){window[callback?'addEventListener':'removeEventListener']('message',attached_callback,!1)}else{window[callback?'attachEvent':'detachEvent']('onmessage',attached_callback)}}else{interval_id&&clearInterval(interval_id);interval_id=null;if(callback){interval_id=setInterval(function(){var hash=document.location.hash,re=/^#?\d+&/;if(hash!==last_hash&&re.test(hash)){last_hash=hash;callback({data:hash.replace(re,'')})}},100)}}}}}();		var self=this;
-		XD.receiveMessage(function(message){
-			//window.alert("msg:["+message.data + "] received on "+window.location.host);
-			if(message && message.data){
-				var parts=message.data.split(',');
-				var operation=parts[0];
-				if(operation=='resize'){
-					var height=parts[1];
-					var visit_id=parts.length>=3 ? parts[2] : null;
-					self.set_frame_height(height, visit_id);
-				}else if(operation=='scroll_to'){
-					var y=parseInt(parts[1]);
-					var visit_id=parts.length>=3 ? parts[2] : null;
-					self.scroll_to(y, visit_id);
-				}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+	$('#submit').click(function() {
+		$.ajax({
+		  type: “POST”,
+		  url: “https://mandrillapp.com/api/1.0/messages/send.json”,
+		  data: {
+			‘key’: ‘Kj-1SGPKFICoSgUIo9OEqw’,
+			‘message’: {
+			  ‘from_email’: $('#email').val(),
+			  ‘to’: [
+				  {
+					‘email’: ‘jpdias@live.com.pt’,
+					‘type’: ‘to’
+				  }
+				],
+			  ‘autotext’: ‘true’,
+			  ‘subject’: "[Portfolio] " + $('#subject').val(),
+			  ‘html’: 'From: ' + $('#name').value + "<br>" + $('#message').val()
 			}
-		});
-	};
-
-	this.set_frame_height = function(height, visit_id){
-		if(!visit_id || this.visit_id==visit_id){
-			this.frame.style.height = height;
-		}
-	},
-
-	this.scroll_to = function (y, visit_id){
-		if(!visit_id || this.visit_id==visit_id){
-			var destination=y + jQuery("#"+this.frame_id).offset().top;
-			jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination}, 1100);
-		}
-	},
-
-	this.scroll_to_page_top = function(){
-		if(window['scrollTo']){
-			window.scrollTo(0,0);
-		}else{
-			window.location.href='#';
-		}
-	},
-	this.create_frame = function(){
-				var htmlCode = "<html><body><iframe src=\""+url+"#"+encodeURIComponent(document.location.href)+"\""
-			+" allowtransparency=\"true\" frameborder=\"0\" name=\""+this.frame_id+"\" id=\""+this.frame_id+"\" style=\"height:100px;width:100%;border:none;\" scrolling=\"no\" onload=\"auto_size_iframe_instance.scroll_to_page_top();\"></iframe></body></html>";
-		document.write(htmlCode);
-		this.frame = document.getElementById(this.frame_id);
-	};
-
-	this.init();
-}
-var auto_size_iframe_instance=new auto_size_iframe('http://www.emailmeform.com/builder/embed/L4n0AFaea2tb369B');
-document.write(unescape("%3Cscript src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
-
+		  }
+		 }).done(function(response) {
+			$('#contact').hide();
+		  console.write("Message Sent");
+		 });
+	});		
 </script>
 
-   </div>
+<div class="page">
+  <h1 class="page-title">Contact</h1>
+  <div id="contact">
+	
+		Name:<input type="text" id="name"></input><br>
+		Email:<input type="email" id="email" required></input><br>
+		Subject:<input type="text" id="subject" required></input><br>
+		Message:<input type="text" id="message" required></input><br>
+		<input type="submit" id="submit"></input>
+  </div>
 </div>
