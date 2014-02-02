@@ -6,36 +6,38 @@ title: Contact
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript">
-	$('#submit').onclick(function() {
-		var mail = $('#email').val();
-		mail.serialize();
-		var subj =  "[Portfolio] " + $('#subject').val();
-		subj.serialize();
-		var htm='From: ' + $('#name').value + "<br>" + $('#message').val();
-		htm.serialize();
-		$.ajax({
-		  type: 'POST',
-		  url: 'https://mandrillapp.com/api/1.0/messages/send.json',
-		  data: {
-			'key': 'Kj-1SGPKFICoSgUIo9OEqw',
-			'message': {
-			  'from_email': mail,
-			  'to': [
-				  {
-					'email': 'jpdias@live.com.pt',
-					'type': 'to'
-				  }
-				],
-			  'autotext': 'true',
-			  'subject': subj,
-			  'html': htm
-			}
-		  }
-		 }).done(function(response) {
-			$('#contact').hide();
-		  alert("Message Sent");
-		 });
-	});		
+	$( document ).ready(function() {
+		$('#submit').onclick(function() {
+			var mail = $('#email').val();
+			mail.serialize();
+			var subj =  "[Portfolio] " + $('#subject').val();
+			subj.serialize();
+			var htm='From: ' + $('#name').value + "<br>" + $('#message').val();
+			htm.serialize();
+			$.ajax({
+			  type: 'POST',
+			  url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+			  data: {
+				'key': 'Kj-1SGPKFICoSgUIo9OEqw',
+				'message': {
+				  'from_email': mail,
+				  'to': [
+					  {
+						'email': 'jpdias@live.com.pt',
+						'type': 'to'
+					  }
+					],
+				  'autotext': 'true',
+				  'subject': subj,
+				  'html': htm
+				}
+			  }
+			 }).done(function(response) {
+				$('#contact').hide();
+			  alert("Message Sent");
+			 });
+		});
+	});
 </script>
 
 <div class="page">
