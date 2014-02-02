@@ -3,7 +3,7 @@ layout: default
 title: Contact
 ---
 
-
+ <link rel="stylesheet" href="/public/css/contact.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript">
 	$( document ).ready(function() {
@@ -42,10 +42,11 @@ title: Contact
   <h1 class="page-title">Contact</h1>
   <div id="contact">
 	
-		Name:<input type="text" id="name"></input><br>
-		Email:<input type="email" id="email" required></input><br>
-		Subject:<input type="text" id="subject" required></input><br>
-		Message:<input type="text" id="message" required></input><br>
+		Name:<br><input type="text" id="name"></input><br>
+		Email:<br><input type="email" id="email" required></input><br>
+		Subject:<br><input type="text" id="subject" required></input><br>
+		Message:<br>​<textarea id="message" rows="10" cols="70" required></textarea>
+		<br>
 		<button id="submit">Send Contact</button>
   </div>
 </div>
