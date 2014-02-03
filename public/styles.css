@@ -18,6 +18,7 @@
 
 
 #w >table { border-collapse: collapse; border-spacing: 0; }
+#w >img { border: 0; max-width: 100%; margin:0;}
 
 
 
