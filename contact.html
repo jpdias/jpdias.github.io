@@ -7,7 +7,7 @@ title: Contact
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript">
 	$( document ).ready(function() {
-		$('#contactreply').hide();
+	
 		$( document ).on( 'click', '#submit', function () {
 			var mail = $('#email').val();
 			var subj =  "[Portfolio] " + $('#subject').val();
@@ -34,7 +34,7 @@ title: Contact
 			 }).done(function(response) {
 			 
 				$('#contact').hide();
-				$('#contactreply').show();
+				$('#contactreply').style.visibility="visible"
 			  
 			 });
 			
