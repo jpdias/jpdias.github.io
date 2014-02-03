@@ -9,10 +9,6 @@ title: Contact
 	$( document ).ready(function() {
 		$('#contactreply').hide();
 		$( document ).on( 'click', '#submit', function () {
-		
-		if($('#email').val() =="" || $('#subject').val() =="" || $('#message').val()=="")
-			alert("Must fill all the fields with *.");
-		else{
 			var mail = $('#email').val();
 			var subj =  "[Portfolio] " + $('#subject').val();
 			var htm='From: ' + $('#name').val() + '<br>' + $('#message').val();
@@ -41,7 +37,7 @@ title: Contact
 				$('#contactreply').show();
 			  
 			 });
-			 });
+			
 		});
 	});
 </script>

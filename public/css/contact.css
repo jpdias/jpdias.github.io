@@ -1,4 +1,4 @@
-input ,textarea { 
+input { 
    border:none; 
    -webkit-border-radius:5px; 
    -moz-border-radius:5px; 
@@ -11,7 +11,19 @@ input ,textarea {
    width:200px; 
    text-indent:5px; 
 } 
+textarea { 
+   border:none; 
+   -webkit-border-radius:5px; 
+   -moz-border-radius:5px; 
+   border-radius:5px; 
+   -webkit-box-shadow:0 0 5px #666 inset; 
+   -moz-box-shadow:0 0 5px #666 inset; 
+   box-shadow:0 0 5px #666 inset; 
+   line-height:25px; 
+   text-indent:5px; 
+} 
 input:focus { outline:none; }
+
 #contactreply{
 	visibility:hidden;
 }
