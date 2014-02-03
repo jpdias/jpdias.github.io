@@ -7,8 +7,13 @@ title: Contact
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript">
 	$( document ).ready(function() {
-	
+		
 		$( document ).on( 'click', '#submit', function () {
+		if($('#subject').val()=="" || $('#subject').val()==null ||
+			$('#email').val()==""||$('#email').val()==null||
+			$('#message').val()=="" || $('#message').val()==null)
+			alert("Please fill all the required(*) fields!");
+		else{
 			var mail = $('#email').val();
 			var subj =  "[Portfolio] " + $('#subject').val();
 			var htm='From: ' + $('#name').val() + '<br>' + $('#message').val();
@@ -37,7 +42,7 @@ title: Contact
 				document.getElementById('contactreply').style.display= 'block';
 			  
 			 });
-			
+		}
 		});
 	});
 </script>
@@ -54,7 +59,7 @@ title: Contact
 		<input type="submit" id="submit"></input>
   </div>
    <div id="contactreply">
-	
-		<h2>Thank you for your contact.<br> I will reply as soon as i can!</h2>
+		<h2><i class="fa fa-mail-reply-all"></i><h2> <br>
+		<h3>Thank you for your contact.<br> I will reply as soon as i can!</h3>
   </div>
 </div>
