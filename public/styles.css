@@ -1,13 +1,24 @@
+#w > div, #w >span, #w >applet, #w >object, #w >iframe, #w >blockquote, #w >pre, #w >a, #w >abbr, #w >acronym, #w >address, #w >big, #w >cite,
+#w > code, #w > del,#w > dfn, #w >em, #w >img, #w >ins, #w >kbd, #w >q, #w >s, #w >samp, #w >small, #w >strike, #w >strong, #w >sub, #w >sup,
+ #w >tt, #w >var, #w >b, #w >u, #w >i, #w >center, #w >dl, #w >dt, #w >dd, #w >ol,#w > ul,#w > li,#w > fieldset, #w >form, #w >label, #w >legend, #w >table, 
+ #w >caption, #w >tbody, #w >tfoot, #w >thead,#w > tr,#w > th, #w >td, #w >article, #w >aside, #w >canvas, #w >details, #w >embed, #w >figure, #w >figcaption, #w >footer,
+#w > header,#w > hgroup, #w >menu,#w > nav, #w >output, #w >ruby, #w >section, #w >summary, #w >time, #w >mark, #w >audio, #w >video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
-ol, ul { list-style: none; }
 
-blockquote, q { quotes: none; }
-blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+#w > article,#w > aside, #w >details,#w > figcaption,#w > figure, #w >footer, #w >header, #w >hgroup, #w >menu, #w >nav, #w >section { display: block; }
+#w > ol,#w > ul { list-style: none; }
+
+#w >blockquote, #w >q { quotes: none; }
+#w >blockquote:before, #w >blockquote:after, #w >q:before, #w >q:after { content: ''; content: none; }
 
 
-table { border-collapse: collapse; border-spacing: 0; }
-img { border: 0; max-width: 100%; }
+#w >table { border-collapse: collapse; border-spacing: 0; }
+#w >img { border: 0; max-width: 100%; }
 
 
 
