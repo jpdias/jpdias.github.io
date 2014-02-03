@@ -2,13 +2,7 @@ div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym, address, b
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
-  outline: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 
@@ -17,7 +11,7 @@ ol, ul { list-style: none; }
 
 blockquote, q { quotes: none; }
 blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
-strong { font-weight: bold; } 
+
 
 table { border-collapse: collapse; border-spacing: 0; }
 img { border: 0; max-width: 100%; }
