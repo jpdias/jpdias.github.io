@@ -7,7 +7,12 @@ title: Contact
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript">
 	$( document ).ready(function() {
+		$('#contactreply').hide();
 		$( document ).on( 'click', '#submit', function () {
+		
+		if($('#email').val() =="" || $('#subject').val() =="" || $('#message').val()=="")
+			alert("Must fill all the fields with *.");
+		else{
 			var mail = $('#email').val();
 			var subj =  "[Portfolio] " + $('#subject').val();
 			var htm='From: ' + $('#name').val() + '<br>' + $('#message').val();
@@ -31,8 +36,11 @@ title: Contact
 				}
 			  }
 			 }).done(function(response) {
+			 
 				$('#contact').hide();
-			  alert("Message Sent");
+				$('#contactreply').show();
+			  
+			 });
 			 });
 		});
 	});
@@ -43,10 +51,14 @@ title: Contact
   <div id="contact">
 	
 		Name:<br><input type="text" id="name"></input><br>
-		Email:<br><input type="email" id="email" required></input><br>
-		Subject:<br><input type="text" id="subject" required></input><br>
-		Message:<br>​<textarea id="message" rows="10" cols="70" required></textarea>
+		Email*:<br><input type="email" id="email" required></input><br>
+		Subject*:<br><input type="text" id="subject" required></input><br>
+		Message*:<br>​<textarea id="message" rows="10" cols="50" required></textarea>
 		<br>
-		<input type="submit" id="submit">Send Contact</input>
+		<input type="submit" id="submit"></input>
+  </div>
+   <div id="contactreply">
+	
+		<h2>Thank you for your contact. I will reply as soon as i can!</h2>
   </div>
 </div>
