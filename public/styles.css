@@ -1,4 +1,17 @@
 
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+
+
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+
+
+
+
 
 /* main page layout */
 #w { display: block; min-width: 850px; max-width: 1150px; margin: 0 auto; padding: 0 15px; padding-top: 45px; }
