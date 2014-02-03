@@ -1,4 +1,4 @@
-input { 
+input ,textarea { 
    border:none; 
    -webkit-border-radius:5px; 
    -moz-border-radius:5px; 
@@ -12,3 +12,6 @@ input {
    text-indent:5px; 
 } 
 input:focus { outline:none; }
+#contactreply{
+	visibility:hidden;
+}
