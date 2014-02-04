@@ -5,40 +5,87 @@ title: Projects
 
   <link rel="stylesheet" href="../public/buttons.css" />
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<style>
+
+.reveal    {        
+        display: inline-block;
+        white-space: nowrap;
+        background-color: #EDEDED;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+        background-image: -webkit-linear-gradient(top, #eee, #ccc);
+        background-image: -moz-linear-gradient(top, #eee, #ccc);
+        background-image: -ms-linear-gradient(top, #eee, #ccc);
+        background-image: -o-linear-gradient(top, #eee, #ccc);
+        background-image: url('linear-gradient(top,%20#eee, #ccc');
+        border: 1px solid #777;
+        margin: 0.25em;
+        text-decoration: none;
+        color: #333;
+        text-shadow: 0 1px 0 rgba(255,255,255,.8);
+        -moz-border-radius: .1em;
+        -webkit-border-radius: .1em;
+        border-radius: .1em;
+        -moz-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+        -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+        box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3); font-style:normal; font-variant:normal; font-weight:bold; line-height:2em; font-size:1em; font-family:Arial, Helvetica; padding-left:0.5em; padding-right:0.5em; padding-top:0; padding-bottom:0
+    }
+    
+    .show_reveal:hover
+    {
+        background-color: #eee;        
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#ddd));
+        background-image: -webkit-linear-gradient(top, #fafafa, #ddd);
+        background-image: -moz-linear-gradient(top, #fafafa, #ddd);
+        background-image: -ms-linear-gradient(top, #fafafa, #ddd);
+        background-image: -o-linear-gradient(top, #fafafa, #ddd);
+        background-image: url('linear-gradient(top,%20#fafafa, #ddd');
+    }
+    
+    .show_reveal:active
+    {
+        -moz-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+        -webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+        box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+        position: relative;
+        top: 1px;
+    }
+    
+    .show_reveal:focus
+    {
+        outline: 0;
+        background: #fafafa;
+    }    
+</style>
 <script>
-  document.ready(function(){
-   $('#bt').live('click', function(event) {        
-         $('#photo').toggle('show');
-    });
+$(document).ready(function(){
+$(".toggle_container").hide(); 
+$("button.reveal").click(function(){
+    $(this).toggleClass("active").next().slideToggle("fast");
+    
+    if ($.trim($(this).text()) === 'Show Answer') {
+        $(this).text('Hide Answer');
+    } else {
+        $(this).text('Show Answer');        
+    }
+    
+    return false; 
+});
+ $("a[href='" + window.location.hash + "']").parent(".reveal").click();
 });
 </script>
 <div class="page">
 
   <h1 class="page-title">Projects</h1>
 
+<button class="reveal button button-block button-rounded button-large"><i class="fa fa-camera"></i> Photography </button><div class="toggle_container">
+<div class="block"> Explanation of Question 1 </div></div>
+<br />
+<button class="reveal button button-block button-rounded button-large"><i class="fa fa-windows"></i> Windows Phone Development (C#,XAML)</button><div class="toggle_container">
+<div class="block"> Explanation of Question 2 </div></div>
+<br />
+<button class="reveal button button-block button-rounded button-large"><i class="fa fa-html5"></i> Web Development (HTML5,CSS3,JavaScript,PHP,XML)</button><div class="toggle_container">
+<div class="block"> Explanation of Question 3</div></div>
+<br>
 
-<br>
-<a id="bt" href="#" class="button button-block button-rounded button-large"><i class="fa fa-camera"></i> Photography</a>
-  <div id="photo">
-	Hello world!
-  </div>
-  <br>
- 
-	<a  href="#" class="button button-block button-rounded button-large"><i class="fa fa-windows"></i> Windows Phone Development (C#,XAML)</a>
-  <div id="wp">
-	
-  </div>
-<br>
- 
-	 <a  href="#" class="button button-block button-rounded button-large"></i><i class="fa fa-html5"></i> Web Development (HTML5,CSS3,JavaScript,PHP,XML)</a>
-
-<br>
-<div id="web">
-	
-  </div>
-	 <a href="#" class="button button-block button-rounded button-large"></i><i class="fa fa-android"></i> Android Development (JAVA, Android API)</a>
-<div id="droid">
-	
-  </div>
  
 </div>
