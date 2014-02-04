@@ -176,8 +176,8 @@ blockquote p:after {
 }
 
 img {
-  display: block;
- /* margin: 0 0 15px;*/
+  /*display: inline;*/
+  margin: 0 0 15px;
   border-radius: 5px;
 }
 
