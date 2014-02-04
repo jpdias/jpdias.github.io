@@ -4,8 +4,14 @@ title: Projects
 ---
 
   <link rel="stylesheet" href="../public/buttons.css" />
-
-
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+  document.ready(function(){
+   $('#bt').live('click', function(event) {        
+         $('#photo').toggle('show');
+    });
+});
+</script>
 <div class="page">
 
   <h1 class="page-title">Projects</h1>
@@ -14,7 +20,7 @@ title: Projects
 <br>
 <a id="bt" href="#" class="button button-block button-rounded button-large"><i class="fa fa-camera"></i> Photography</a>
   <div id="photo">
-	
+	Hello world!
   </div>
   <br>
  
