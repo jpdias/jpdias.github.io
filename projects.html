@@ -3,116 +3,27 @@ layout: default
 title: Projects
 ---
 
-
-
-  <link rel="stylesheet" href="../public/styles.css" />
-  <link rel="stylesheet" href="../public/colorbox.css" />
   <link rel="stylesheet" href="../public/buttons.css" />
- <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Kite+One">-->
-  <script type="text/javascript" src="../public/jquery.js"></script>
-  <script type="text/javascript" charset="utf-8" src="../public/jquery.quicksand.js"></script>
 
-  <script src="../public/jquery.colorbox.js"></script>
-		<script>
-			$(document).ready(function(){
-				//Examples of how to assign the Colorbox event to elements
-				$(".group1").colorbox({rel:'group1'});
-				$(".group2").colorbox({rel:'group2', transition:"fade"});
-				$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
-				$(".group4").colorbox({rel:'group4', slideshow:true});
-				$(".ajax").colorbox();
-				$(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
-				$(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
-				$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
-				$(".inline").colorbox({inline:true, width:"50%"});
-				$(".callbacks").colorbox({
-					onOpen:function(){ alert('onOpen: colorbox is about to open'); },
-					onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
-					onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
-					onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
-					onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
-				});
-
-				$('.non-retina').colorbox({rel:'group5', transition:'none'})
-				$('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
-				
-				//Example of preserving a JavaScript event for inline calls.
-				$("#click").click(function(){ 
-					$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
-					return false;
-				});
-				
-				$('#pht').click(function(){
-					document.getElementById('#pth1').style.display = 'block';
-				});
-			});
-		</script>
-  
 
 <div class="page">
 
   <h1 class="page-title">Projects</h1>
 
-<!--[if lt IE 9]>
-  <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+
 <br>
 <a id="pht" href="#" class="button button-block button-rounded button-large"><i class="fa fa-camera"></i> Photography</a>
-  <div id="pht1" style='display:none'>
-   <div id="w">
-  
-    <ul class="portfolio clearfix">
-      <li data-id="id-1" id="web"  href="http://flickr.com/joaopedrodias"><a href="http://flickr.com/joaopedrodias" target="_blank"><img src="../public/images/flickr.png" class="portimg"></a></li>
-      </div>
-  </div>
- </div>
- <br>
+  <br>
  
- <a  href="#" class="button button-block button-rounded button-large"><i class="fa fa-windows"></i> Windows Phone Development</a>
+	<a  href="#" class="button button-block button-rounded button-large"><i class="fa fa-windows"></i> Windows Phone Development</a>
 
-  <div id="w">
-  
-    <ul class="portfolio clearfix">
-      <li data-id="id-1" id="web" class='inline'   href="#inline_content"><a href="#inline_content" target="_blank"><img src="../public/images/ios-app-ui-01.png" class="portimg"></a></li>
-      
-      <li data-id="id-2" id="ios" class='inline'  href="#inline_content"><a href="#inline_content" target="_blank"><img src="../public/images/print-design-cards.png" class="portimg"></a></li>
-      
-      <li data-id="id-3" id="print" class='inline' href="#inline_content"><a href="#inline_content" target="_blank"><img src="../public/images/ios-app-ui-02.png" class="portimg"></a></li>
-      
-      </div>
-  </div>
+<br>
  
 	 <a  href="#" class="button button-block button-rounded button-large"><i class="fa fa-linux"></i><i class="fa fa-html5"></i> Web Development</a>
 
-  <div id="w">
-  
-    <ul class="portfolio clearfix">
-      <li data-id="id-1" id="web" class='inline'   href="#inline_content"><a href="#inline_content" target="_blank"><img src="../public/images/ios-app-ui-01.png" class="portimg"></a></li>
-      
-      <li data-id="id-2" id="ios" class='inline'  href="#inline_content"><a href="#inline_content" target="_blank"><img src="../public/images/print-design-cards.png" class="portimg"></a></li>
-      
-      <li data-id="id-3" id="print" class='inline' href="#inline_content"><a href="#inline_content" target="_blank"><img src="../public/images/ios-app-ui-02.png" class="portimg"></a></li>
-      
-      </div>
-  </div>
- 
+<br>
+
 	 <a href="#" class="button button-block button-rounded button-large"><i class="fa fa-linux"></i><i class="fa fa-android"></i> Android Development</a>
 
-  <div id="w">
-  
-    <ul class="portfolio clearfix">
-      <li data-id="id-1" id="web" class='inline'   href="#inline_content"><a href="#inline_content" target="_blank"><img src="../public/images/ios-app-ui-01.png" class="portimg"></a></li>
-      
-      <li data-id="id-2" id="ios" class='inline'  href="#inline_content"><a href="#inline_content" target="_blank"><img src="../public/images/print-design-cards.png" class="portimg"></a></li>
-      
-      <li data-id="id-3" id="print" class='inline' href="#inline_content"><a href="#inline_content" target="_blank"><img src="../public/images/ios-app-ui-02.png" class="portimg"></a></li>
-      
-      </div>
-  </div>
-  
-  <div style='display:none'>
-		<div id='inline_content' style='background:#fff;'>
-			Hello, World!
-		</div>
-	</div>
+ 
 </div>
