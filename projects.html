@@ -11,13 +11,6 @@ $(document).ready(function(){
 $(".toggle_container").hide(); 
 $("button.reveal").click(function(){
     $(this).toggleClass("active").next().slideToggle("fast");
-    
-    /*if ($.trim($(this).text()) === 'Show Answer') {
-        $(this).text('Hide Answer');
-    } else {
-        $(this).text('Show Answer');        
-    */
-    
     return false; 
 });
  $("a[href='" + window.location.hash + "']").parent(".reveal").click();
@@ -27,15 +20,25 @@ $("button.reveal").click(function(){
 
   <h1 class="page-title">Projects</h1>
 
-<button class="reveal button button-block button-rounded button-large"><i class="fa fa-camera"></i> Photography </button><div class="toggle_container">
-<div class="block"> Explanation of Question 1 </div></div>
+<button class="reveal button button-block button-rounded button-large"><i class="fa fa-camera"></i> Photography </button>
+<div class="toggle_container">
+<div class="block"> Explanation of Question 1 </div>
+</div>
 <br />
-<button class="reveal button button-block button-rounded button-large"><i class="fa fa-windows"></i> Windows Phone Development (C#,XAML)</button><div class="toggle_container">
-<div class="block"> Explanation of Question 2 </div></div>
+<button class="reveal button button-block button-rounded button-large"><i class="fa fa-windows"></i> Windows Phone Development (C#, XAML)</button>
+<div class="toggle_container">
+<div class="block"> Explanation of Question 2 </div>
+</div>
 <br />
-<button class="reveal button button-block button-rounded button-large"><i class="fa fa-html5"></i> Web Development (HTML5,CSS3,JavaScript,PHP,XML)</button><div class="toggle_container">
-<div class="block"> Explanation of Question 3</div></div>
+<button class="reveal button button-block button-rounded button-large"><i class="fa fa-html5"></i> Web Development (HTML5, CSS3, JavaScript, PHP, XML)</button>
+<div class="toggle_container">
+<div class="block"> Explanation of Question 3</div>
+</div>
 <br>
-
+<button class="reveal button button-block button-rounded button-large"><i class="fa fa-android"></i> Android Development (JAVA, Android API)</button>
+<div class="toggle_container">
+<div class="block"> Explanation of Question 3</div>
+</div>
+<br>
  
 </div>
