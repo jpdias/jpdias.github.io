@@ -7,14 +7,14 @@ title: Projects
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 	<script>
-	
+	$(document).ready(function(){
 	$(".toggle_container").hide(); 
 	$("button.reveal").click(function(){
 		$(this).toggleClass("active").next().slideToggle("fast");
 		return false; 
 	});
 	 $("a[href='" + window.location.hash + "']").parent(".reveal").click();
-	
+	});
 	</script>
 
 
