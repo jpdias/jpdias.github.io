@@ -227,7 +227,7 @@ a:focus {
 .masthead {
   color: #fff;
   background-color: rgb(0, 191, 255);
-  background-image: url("/public/css/img/bg.png");
+  background-image: url("/public/css/img/bg.jpg");
 }
 .masthead-inner {
   padding: 20px;
