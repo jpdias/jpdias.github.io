@@ -225,6 +225,7 @@ a:focus {
  
 /* Sidebar masthead */
 .masthead {
+  text-shadow: #000 0.1em 0.1em 0.2em;
   color: #fff;
   background-color: rgb(0, 191, 255);
   background-image: url("/public/css/img/bg.png");
