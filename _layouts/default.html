@@ -93,23 +93,22 @@
   </body>
   				
 <!-- Start Open Web Analytics Tracker -->
+<!-- Piwik -->
 <script type="text/javascript">
-//<![CDATA[
-var owa_baseUrl = 'http://raspberrypi/admin/owa/';
-var owa_cmds = owa_cmds || [];
-owa_cmds.push(['setSiteId', 'd5a82536205bd07193f395ac9f08aa71']);
-owa_cmds.push(['trackPageView']);
-owa_cmds.push(['trackClicks']);
-owa_cmds.push(['trackDomStream']);
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://jpdias.noip.me/admin/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
 
-(function() {
-	var _owa = document.createElement('script'); _owa.type = 'text/javascript'; _owa.async = true;
-	owa_baseUrl = ('https:' == document.location.protocol ? window.owa_baseSecUrl || owa_baseUrl.replace(/http:/, 'https:') : owa_baseUrl );
-	_owa.src = owa_baseUrl + 'modules/base/js/owa.tracker-combined-min.js';
-	var _owa_s = document.getElementsByTagName('script')[0]; _owa_s.parentNode.insertBefore(_owa, _owa_s);
-}());
-//]]>
 </script>
+<noscript><p><img src="http://jpdias.noip.me/admin/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
 <!-- End Open Web Analytics Code -->
 				
 		
