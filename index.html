@@ -1,41 +1,328 @@
----
-layout: default
-title: Home
----
-<style>
-html,body { 
-  background-image: url(../public/images/back.png); 
-  background-size: cover;
-  background-repeat: no-repeat;
-  
-}
+<!DOCTYPE html>
+<html lang="en">
 
-div>#ida {
-	width:50%;
-	background-color: #f9f9f9;
-    opacity: 0.75;
-    filter: alpha(opacity = 0.75);
-    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.75);
-}
+<head>
 
-</style>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>João Pedro Dias</title>
+  <meta name="description" content="Personal webpage">
+  <meta name="author" content="João Pedro Dias">
 
-<div class="page">
-<a href="https://github.com/jpdias">
-<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
-<!--  <h1 class="page-title">Home</h1>-->
-  <div>
-	<h2><code>Hello, World!</code></h2>
-	<br>
-	<div id="ida" style="padding-bottom: 5px;">
-		<code>#include &lsaquo;iostream&rsaquo;</code><br>
-		<code>using namespace std;             </code><br>
-		<code>                                 </code><br>
-		<code>int main()                       </code><br>
-		<code>{                                </code><br>
-		<code style="padding-left: 25px;">cout << "Hello, World!" << endl;</code><br>
-		<code style="padding-left: 25px;">return 0;          </code><br>
-		<code>}                                </code><br>
-	</div>
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/font-mfizz.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/hover.css">
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+
+<body>
+  <sidebar class="one">
+    <div class="sidebar">
+      <ul>
+
+        <li class="menu">
+          <a href="#home"><i class="fa fa-home"></i>Home</a>
+        </li>
+        <li class="menu">
+          <a href="#about"><i class="fa fa-user"></i>Profile</a>
+        </li>
+        <li class="menu">
+          <a href="#experiences"><i class="fa fa-flask"></i>Experience</a>
+        </li>
+        <li class="menu">
+          <a href="#skills"><i class="fa fa-cog"></i>Skills</a>
+        </li>
+        <li class="menu">
+          <a href="#proj"><i class="fa fa-folder-open"></i>Projects</a>
+        </li>
+        <li class="menu">
+          <a href="#contact"><i class="fa fa-paper-plane"></i>Contact</a>
+        </li>
+        <li>
+          <a href="" id="show"><i class="fa fa-bars"></i> Menu</a>
+        </li>
+      </ul>
+    </div>
+  </sidebar>
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="section first" id="home">
+    <div class="container">
+      <div class="row">
+        <div class="four column">
+          <h3>João Pedro Dias</h3>
+          <h5>Engineer. Developer. Photographer. Designer.</h5>
+          <i> Master in Informatics and Computing Engineering</i>
+        </div>
+        <div class="one-half column">
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+  <div class="section second" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+          <h4 class="sectitle"><i class="fa fa-user"></i> Profile</h4>
+          <div class="twelve columns">
+            <div class="row">
+              <div class="nine columns">
+                <h6><i class="fa fa-book "></i> About Me</h6>
+              </div>
+              <div class="three columns">
+                <h6><i class="fa fa-globe "></i> Details</h6>
+              </div>
+            </div>
+            <div class="row">
+              <div class="nine columns">
+                <div class="row">
+                  <div class="four columns" style="text-align: center;">
+                    <img class="prof" src='img/profile.JPG'></img>
+                  </div>
+                  <div class="eight columns">
+                    <p style="text-align: justify;">
+                      I am 21 years old and I am a 4th year student of <a href="http://fe.up.pt/">Informatics and Computing Engineering Master at Faculty of Engineering, University of Porto (FEUP)</a>. Even when i was young, I have always been passionate
+                      about technology specially in the areas of security, web design and programming. These were the main reasons that made me choose Informatics Engineering to study and to work in the future. Besides that i am also an amateur photographer.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="three columns">
+                <p>
+                  <i><i class="fa fa-asterisk"></i> Name:</i>
+                  <br> João Pedro Dias
+                  <br>
+                  <i><i class="fa fa-calendar"></i> Age:</i>
+                  <br> 21 years
+                  <br>
+                  <i><i class="fa fa-rocket"></i> Location:</i>
+                  <a href="https://www.google.pt/maps/place/Porto/@41.1621429,-8.6218531,13z/data=!3m1!4b1!4m2!3m1!1s0xd2464faf074d469:0x40562c11e1142a2f">
+                    <br> Porto, Portugal, Earth</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section second " id="experiences">
+    <div class="container ">
+      <div class="row ">
+        <div class="twelve column ">
+          <h4 class="sectitle "><i class="fa fa-flask "></i> Experience</h4>
+          <h5> <i class="fa fa-graduation-cap "></i> Education</h5>
+          <div class="row">
+            <div class="four columns">
+              <strong>Externato de Vila Meã</strong>
+              <br>
+              <i class="fa fa-clock-o"></i> 2003-2011
+            </div>
+            <div class="eight columns">
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="three columns">
+              <strong>Faculdade de Engenharia da Universidade do Porto</strong>
+              <br>
+              <i class="fa fa-clock-o"></i> 2011-Present
+            </div>
+            <div class="eight columns">
+            </div>
+          </div>
+          <hr>
+          <h5> <i class="fa fa-paperclip "></i> Work experience</h5>
+          <div class="row">
+            <div class="three columns">
+              <strong>Centro Hospitalar do Tamegâ e Sousa</strong>
+              <br>
+              <i class="fa fa-clock-o"></i> 2014(July and August)
+            </div>
+            <div class="eight columns">
+              <strong>Interneship</strong>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="three columns">
+              <strong>IEEE Student Branch Universidade do Porto</strong>
+              <br>
+              <i class="fa fa-clock-o"></i> 2012-Present
+            </div>
+            <div class="eight columns">
+              <strong>Board Member (Secretary)</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section second " id="skills">
+      <div class="container ">
+        <div class="row ">
+          <div class="twelve columns ">
+            <h4 class="sectitle "><i class="fa fa-cog "></i> Skills</h4>
+            <div style="text-align:center ">
+              <div class="two columns ">
+                <div class="box " style="background: url( 'img/skills/node.png') no-repeat ">
+                  <div class="overlay ">
+                    <h6 class="hover-text ">Node.js</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="two columns ">
+                <div class="box " style="background: url( 'img/skills/java.png') no-repeat ">
+                  <div class="overlay ">
+                    <h6 class="hover-text ">Java</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="two columns ">
+                <div class="box " style="background: url( 'img/skills/web.png') no-repeat ">
+                  <div class="overlay ">
+                    <h6 class="hover-text ">Web</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="two columns ">
+                <div class="box " style="background: url( 'img/skills/windows.png') no-repeat ">
+                  <div class="overlay ">
+                    <h6 class="hover-text ">Windows Apps</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="two columns ">
+                <div class="box " style="background: url( 'img/skills/git.png') no-repeat ">
+                  <div class="overlay ">
+                    <h6 class="hover-text ">Git</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="two columns ">
+                <div class="box " style="background: url( 'img/skills/c.png') no-repeat ">
+                  <div class="overlay ">
+                    <h6 class="hover-text ">C# and .NET</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section second " id="proj">
+      <div class="container ">
+        <div class="row ">
+          <div class="twelve column ">
+            <h4 class="sectitle "><i class="fa fa-folder-open "></i> Projects</h4>
+            <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com ">Skeleton documentation</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section fourth " id="contact">
+      <div class="container ">
+        <div class="row ">
+          <div class="twelve columns ">
+            <h4 style="color:white " class="sectitle "><i class="fa fa-paper-plane "></i> Contact</h4>
+            <div class="row ">
+              <div class="one-half column ">
+                <a href="http://twitter.com/jpd1as " target="_blank ">
+                  <span class="fa-stack fa-lg ">
+                    <i class="fa fa-circle fa-stack-2x "></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse "></i>
+                  </span> http://twitter.com/jpd1as </a>
+              </div>
+              <div class="one-half column ">
+                <a href="http://github.com/jpdias " target="_blank ">
+                  <span class="fa-stack fa-lg ">
+                    <i class="fa fa-circle fa-stack-2x "></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse "></i>
+                  </span> http://github.com/jpdias </a>
+              </div>
+            </div>
+            <div class="row ">
+              <div class="one-half column ">
+                <a href="http://flickr.com/jpd1as " target="_blank ">
+                  <span class="fa-stack fa-lg ">
+                    <i class="fa fa-circle fa-stack-2x "></i>
+                    <i class="fa fa-flickr fa-stack-1x fa-inverse "></i>
+                  </span> http://flickr.com/jpd1as </a>
+              </div>
+              <div class="one-half column ">
+                <a href="http://linkedin.com/jpdias " target="_blank ">
+                  <span class="fa-stack fa-lg ">
+                    <i class="fa fa-circle fa-stack-2x "></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse "></i>
+                  </span>
+                  http://linkedin.com/jpdias </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+<script src="js/jquery.js "></script>
+<script>
+  $(document).ready(function() {
+    if (!$(".menu ").is(":visible "))
+      $('#show').html('<i class="fa fa-angle-double-down "></i> Menu');
+    else
+      $('#show').html('<i class="fa fa-angle-double-up "></i> Menu');
+
+    $('a[href^="#"]').on('click', function(e) {
+      e.preventDefault();
+
+      if ($(window).width() < 720) {
+        menu();
+      }
+      var target = this.hash;
+      var $target = $(target);
+
+      $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+      }, 900, 'swing', function() {
+        window.location.hash = target;
+      });
+
+    });
+
+    $('#show').click(function(e) {
+      menu();
+      e.preventDefault();
+    });
+
+  });
+
+  function menu() {
+    $('.menu').slideToggle("fast ", function() {
+      if ($(this).is(':visible')) {
+        $('#show').html('<i class="fa fa-angle-double-up "></i> Menu');
+      } else {
+        $('#show').html('<i class="fa fa-angle-double-down "></i> Menu');
+      }
+    });
+  }
+</script>
+
+</html>
