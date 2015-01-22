@@ -289,7 +289,7 @@
             <ul class="tags">
               <a class="grow" href="">
                 <li class="tag">
-                  <i class="icon-mysql"></i> mySQL
+                  <i class="icon-mysql"></i> MySQL
                 </li>
               </a>
               <a class="grow" href="">
@@ -407,9 +407,9 @@
     $('a[href^="#"]').on('click', function(e) {
       e.preventDefault();
 
-      if ($(window).width() < 720) {
-        menu();
-      }
+      //  if ($(window).width() < 720) {
+      menu();
+      //  }
       var target = this.hash;
       var $target = $(target);
 

@@ -36,7 +36,7 @@ sidebar .sidebar > ul {
   text-align: left;
 }
 sidebar .sidebar > ul > li {
-  background-color: #03A9F4;
+  background-color: #fbfbfb;
   position: relative;
   margin-bottom: 0px;
 }
@@ -47,11 +47,11 @@ sidebar .sidebar > ul > li > a {
   display: block;
   outline: 0;
   text-decoration: none;
-  color: #FFFFFF;
+  color: #717070;
   padding: 0 24px;
   height: 50px;
   line-height: 50px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(108, 106, 106, 0.3);
 }
 sidebar .sidebar > ul > li > a:hover {
   color: rgba(255, 255, 255, 0.7);
@@ -85,10 +85,12 @@ sidebar .sidebar > ul > li > ul > li {
 sidebar .sidebar > ul > li > ul > li:hover {
   color: #3C7A5F;
 }
-@media screen and (min-width: 0px) and (max-width: 720px) {
-  .menu {
-    display: none;
-  }
+/*@media screen and (min-width: 0px) and (max-width: 720px) {
+
+}*/
+
+.menu {
+  display: none;
 }
 .sectitle:not(:last-child) {
   color: #212121;
