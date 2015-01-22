@@ -1,3 +1,20 @@
+@font-face {
+  font-family: 'LatoLatin';
+  src: url('../fonts/LatoLatin-Regular.eot');
+  /* IE9 Compat Modes */
+  
+  src: url('../fonts/LatoLatin-Regular.eot?#iefix') format('embedded-opentype'),
+  /* IE6-IE8 */
+  
+  url('../fonts/LatoLatin-Regular.woff') format('woff'),
+  /* Pretty Modern Browsers */
+  
+  url('../fonts/LatoLatin-Regular.ttf') format('truetype'),
+  /* Safari, Android, iOS */
+  
+  url('../fonts/LatoLatin-Regular.svg#svgFontName') format('svg');
+  /* Legacy iOS */
+}
 body {
   background-image: url("../img/pattern.png");
   background-repeat: repeat;
@@ -77,8 +94,8 @@ sidebar .sidebar > ul > li > ul > li:hover {
   color: #212121;
 }
 .section:not(.first):not(.fourth) > .container {
-  background-color: rgba(207, 216, 220, 0.5);
-  box-shadow: 0px 0.5px 0.5px 0px #777, 0px -0.5px 0px rgba(255, 255, 255, 0.01) inset;
+  box-shadow: 0px 0.5px 0.5px 0px rgba(129, 127, 127, 0.45), 0px -0.5px 0px rgba(255, 253, 253, 0) inset;
+  background-color: rgba(236, 240, 241, 0.5);
 }
 .section:not(.first) > .container > .row {
   margin: 2% 2% 2% 2%;
@@ -134,4 +151,28 @@ hr {
   background-image: -moz-linear-gradient(left, #ccc, rgba(49, 49, 49, 0.4), #ccc);
   background-image: -ms-linear-gradient(left, #ccc, rgba(49, 49, 49, 0.4), #ccc);
   background-image: -o-linear-gradient(left, #ccc, rgba(49, 49, 49, 0.4), #ccc);
+}
+.tags>a {
+  border-bottom: solid 0px;
+  text-decoration: none;
+}
+.tag>i {
+  color: #7f8c8d;
+}
+.tags>a>li:hover {
+  color: #fff;
+  background-color: #262626;
+}
+.tags {
+  text-align: center
+}
+.tags li {
+  list-style: none;
+  display: inline-block;
+  background-color: #F0F2F4;
+  padding: 3px 6px;
+  color: #5b646c;
+  box-shadow: 0px 0px 1px black;
+  margin: 3px 1px 3px 1px;
+  line-height: 27px;
 }
