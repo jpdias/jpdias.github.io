@@ -127,7 +127,7 @@ sidebar .sidebar > ul > li > ul > li:hover {
   -webkit-animation: slide 40s linear infinite;
   animation: slide 40s linear infinite;
   color: white;
-  padding-top: 10%;
+  padding-top: 50px;
   padding-bottom: 10%;
   box-shadow: 0px 2px 10px 0px #777, 0px -1px 0px rgba(255, 255, 255, 0.16) inset;
 }
@@ -175,26 +175,11 @@ hr {
   background-image: -o-linear-gradient(left, #ccc, rgba(49, 49, 49, 0.4), #ccc);
 }
 .tags>a {
-  border-bottom: solid 0px;
-  text-decoration: none;
+  border: none;
 }
-.tag>i {
-  color: #7f8c8d;
-}
-.tags>a>li:hover {
-  color: #fff;
-  background-color: #262626;
-}
-.tags {
-  text-align: center
-}
-.tags li {
+.tag {
   list-style: none;
-  display: inline-block;
-  background-color: #F0F2F4;
-  padding: 3px 6px;
-  color: #5b646c;
-  box-shadow: 0px 0px 1px black;
-  margin: 3px 1px 3px 1px;
-  line-height: 27px;
+  padding-right: 10px;
+  border: none;
+  cursor: default;
 }
