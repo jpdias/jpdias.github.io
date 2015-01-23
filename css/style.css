@@ -19,6 +19,22 @@ body {
   background-image: url("../img/pattern.png");
   background-repeat: repeat;
 }
+@-webkit-keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 sidebar {
   display: inline-block;
   z-index: 100;
@@ -104,8 +120,12 @@ sidebar .sidebar > ul > li > ul > li:hover {
   padding-top: 2.5%;
 }
 .first {
-  background-image: url("../img/bg.jpg");
-  background-repeat: repeat;
+  background-image: url(../img/head.png);
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-color: #8EC1DA;
+  -webkit-animation: slide 40s linear infinite;
+  animation: slide 40s linear infinite;
   color: white;
   padding-top: 10%;
   padding-bottom: 10%;
