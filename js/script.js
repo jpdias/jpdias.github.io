@@ -1,9 +1,11 @@
 $(document).ready(function() {
-  if (!$(".menu ").is(":visible "))
+  if (!$(".menu ").is(":visible ")) {
     $('#show').html('<i class="fa fa-angle-double-down "></i> Menu');
-  else
+    $('#show').css("cursor", "pointer");
+  } else {
     $('#show').html('<i class="fa fa-angle-double-up "></i> Menu');
-
+    $('#show').css("cursor", "pointer");
+  }
   $('a[href^="#"]').on('click', function(e) {
     e.preventDefault();
 
