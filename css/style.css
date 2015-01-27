@@ -254,3 +254,6 @@ figure a.close-caption.hidden {
 .no-touch #effect-2 figure:hover figcaption, #effect-2 figure.hover figcaption {
   transform: rotateY(0);
 }
+sup {
+  font-size: 70%;
+}
