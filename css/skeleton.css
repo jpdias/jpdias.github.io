@@ -156,21 +156,11 @@ html is set to 62.5% so that all the REM measurements throughout Skeleton
 are based on 10px sizing. So basically 1.5rem = 15px :) */
 
 @font-face {
-  font-family: 'LatoLatin';
-  src: url('../fonts/LatoLatin-Regular.eot');
-  /* IE9 Compat Modes */
-  
-  src: url('../fonts/LatoLatin-Regular.eot?#iefix') format('embedded-opentype'),
-  /* IE6-IE8 */
-  
-  url('../fonts/LatoLatin-Regular.woff') format('woff'),
-  /* Pretty Modern Browsers */
-  
-  url('../fonts/LatoLatin-Regular.ttf') format('truetype'),
-  /* Safari, Android, iOS */
-  
-  url('../fonts/LatoLatin-Regular.svg') format('svg');
-  /* Legacy iOS */
+  font-family: 'Lato';
+  src: url('../fonts/lato/lato-regular.eot');
+  src: url('../fonts/lato-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/lato-regular.woff') format('woff'), url('../fonts/lato-regular.ttf') format('truetype'), url('../fonts/lato-regular.svg#latoregular') format('svg');
+  font-weight: 400;
+  font-style: normal;
 }
 html {
   font-size: 62.5%;
@@ -181,7 +171,7 @@ body {
   
   line-height: 1.6;
   font-weight: 400;
-  font-family: "LatoLatin", Helvetica, Arial, sans-serif;
+  font-family: "Lato", sans-serif;
 }
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
