@@ -469,7 +469,7 @@
       </div>
     </div>
     <div style="position:fixed;bottom:0;right:15px;">
-      <a href="/cmd">π</a>
+      <span id="pi">π</span>
     </div>
     <!-- End Document –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   </body>
@@ -479,6 +479,20 @@
   <script src="js/script.js"></script>
   <script src="js/toucheffects.js"></script>
   <script>
+    $("#pi").hover(function() {
+       var text = $("#pi").text();
+      $("#pi").text( "π  Browser: " +
+       navigator.appName + " OS: " +
+       navigator.platform);
+    }, function() {
+      $("#pi").text("π");
+    });
+    /*(function() {
+      $("#pi").hover(function() {
+          var text = (this).text();
+          $(this).text = text + " " + navigator.appName;
+      });
+    });*/
     (function(i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r;
       i[r] = i[r] || function() {

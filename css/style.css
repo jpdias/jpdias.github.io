@@ -374,3 +374,10 @@ sup {
   /* shadow */
   text-shadow: 0 0 5px #444;
 }
+
+#pi {
+  text-align: right;
+  color: #808080;
+  font-size: smaller;
+  font: arial;
+}
