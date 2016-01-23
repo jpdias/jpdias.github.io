@@ -121,8 +121,7 @@ sidebar .sidebar > ul > li > ul > li:hover {
 .fourth {
   background-color:rgba(189, 195, 199, 0.6);;
   box-shadow: 0px 0.5px 0.5px 0px #777, 0px -0.5px 0px rgba(255, 255, 255, 0.01) inset;
-  /*color: #FFF;*/
-  
+  border-top: 3px dotted #000205;
   padding-bottom: 5%;
   margin-bottom: -1%;
 }
