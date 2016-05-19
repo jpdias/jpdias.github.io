@@ -43,21 +43,9 @@ function repoXHRHandler() {
         li.className = classes.li;
       }
 
-      li.innerHTML = '<a class="'
-      + classes.a
-      + '" href="'
-      + repos[i].html_url
-      + '">'
-      + repos[i].name
-      + '<p class="'
-      + classes.lang
-      + '">'
-      + (repos[i].language || 'Undefined')
-      + '</p><p class="'
-      + classes.desc
-      + '">'
-      + repos[i].description
-      + '</p></a>';
+      li.innerHTML = '<a class="' + classes.a + '" href="' + repos[i].html_url + '">' + repos[i].name
+      + '<p class="' + classes.lang + '">' + (repos[i].language || 'Undefined') + '</p><p class="'
+      + classes.desc + '">' + repos[i].description + '</p></a>';
       ul.appendChild(li);
     }
   }
@@ -69,18 +57,18 @@ function repoXHRHandler() {
   var total = 0;
   for (var lang in data.labels) {
     count = 0;
-    for (var i = 0; i < repos_data.length; ++i) {
-      if (repos_data[i] == data.labels[lang])
+    for (var j = 0; j < repos_data.length; ++j) {
+      if (repos_data[j] == data.labels[lang])
         count++;
       total++;
     }
-    if (count != 0)
+    if (count !== 0)
       data.series.push(count);
   }
 
   sortTogether(data.series, data.labels);
-  for (var i = 0; i < data.labels.length; i++) {
-    if (i < 6) {
+  for (var k = 0; k < data.labels.length; k++) {
+    if (k < 6) {
       var quantity = Math.round((data.series[i] / total) * 10000) / 10;
       $("#circle-area").append(
         '<div class="two columns"><div class="inner-content"><div class="c100 p' + Math.round(quantity) + ' small center"><span>' + quantity +
@@ -160,9 +148,9 @@ function sortTogether(array1, array2) {
   merged.sort(function (o1, o2) {
     return ((o1.a1 > o2.a1) ? -1 : ((o1.a1 == o2.a1) ? 0 : 1));
   });
-  for (var i = 0; i < merged.length; i++) {
-    array1[i] = merged[i].a1;
-    array2[i] = merged[i].a2;
+  for (var j = 0; j < merged.length; j++) {
+    array1[j] = merged[j].a1;
+    array2[j] = merged[j].a2;
   }
 
 }
