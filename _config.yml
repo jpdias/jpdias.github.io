@@ -10,7 +10,7 @@ title: João Pedro Dias
 email: jpdias@live.com.pt
 description: An informatics and computing engineer based on Porto that also loves design and photography. Developer by nature with special interest in security, back-end development and Internet of Things.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "localhost:4000" # the base hostname & protocol for your site
+url: "jpdias.github.io" # the base hostname & protocol for your site
 twitter_username: jpd1as
 github_username:  jpdias
 
