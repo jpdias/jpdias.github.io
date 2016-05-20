@@ -32,7 +32,7 @@ function repoXHRHandler() {
   var ul = document.getElementsByClassName(classes.ul)[0];
   for (var i = 0, len = repos.length; i < len; i++) {
     if (!repos[i].fork) {
-      if (repos[i].language !== null || repos[i].language !== undefined) {
+      if (repos[i].language != null || repos[i].language != undefined) {
         repos_data.push(repos[i].language);
       }
       var li = document.createElement('li');
@@ -46,9 +46,7 @@ function repoXHRHandler() {
       li.innerHTML = '<a class="' + classes.a + '" href="' + repos[i].html_url + '">' + repos[i].name
       + '<p class="' + classes.lang + '">' + (repos[i].language || 'Undefined') + '</p><p class="'
       + classes.desc + '">' + repos[i].description + '</p></a>';
-      
-      if(ul !== undefined)
-        ul.appendChild(li);
+      ul.appendChild(li);
     }
   }
   var data = {
@@ -59,8 +57,8 @@ function repoXHRHandler() {
   var total = 0;
   for (var lang in data.labels) {
     count = 0;
-    for (var i = 0; i < repos_data.length; ++i) {
-      if (repos_data[i] == data.labels[lang])
+    for (var j = 0; j < repos_data.length; ++j) {
+      if (repos_data[j] == data.labels[lang])
         count++;
       total++;
     }
@@ -69,8 +67,8 @@ function repoXHRHandler() {
   }
 
   sortTogether(data.series, data.labels);
-  for (var i = 0; i < data.labels.length;i++) {
-    if (i < 6) {
+  for (var k = 0; k < data.labels.length; k++) {
+    if (k < 6) {
       var quantity = Math.round((data.series[i] / total) * 10000) / 10;
       $("#circle-area").append(
         '<div class="two columns"><div class="inner-content"><div class="c100 p' + Math.round(quantity) + ' small center"><span>' + quantity +
