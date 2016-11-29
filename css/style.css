@@ -150,12 +150,6 @@ sidebar .sidebar > ul > li > ul > li:hover {
 }
 
 a {
-  -moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  -o-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  -ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  border-bottom: solid 1px rgba(111, 107, 107, 0.3);
   text-decoration: none;
   color: #222;
 }
