@@ -32,7 +32,7 @@ function repoXHRHandler() {
   var ul = document.getElementsByClassName(classes.ul)[0];
   for (var i = 0, len = repos.length; i < len; i++) {
     if (!repos[i].fork) {
-      if (repos[i].language !== null || repos[i].language !== undefined) {
+      if (repos[i].language !== null || repos[i].language !== undefined || repos[i].language !== "null") {
         repos_data.push(repos[i].language);
       }
       var li = document.createElement('li');
