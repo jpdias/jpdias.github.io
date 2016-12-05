@@ -36,7 +36,7 @@ function repoXHRHandler() {
         repos_data.push(repos[i].language);
       }
       var li = document.createElement('li');
-      if (i > 5) {
+      if (i > 6) {
         li.className = classes.li + ' ' + classes.hide;
       }
       else {
@@ -44,10 +44,10 @@ function repoXHRHandler() {
       }
 
       li.innerHTML = '<a class="' + classes.a + '" href="' + repos[i].html_url + '">' + repos[i].name
-      + '<p class="' + classes.lang + '">' + (repos[i].language || 'Undefined') + '</p><p class="'
-      + classes.desc + '">' + repos[i].description + '</p></a>';
-      
-      if(ul !== undefined)
+        + '<p class="' + classes.lang + '">' + (repos[i].language || 'Undefined') + '</p><p class="'
+        + classes.desc + '">' + repos[i].description + '</p></a>';
+
+      if (ul !== undefined)
         ul.appendChild(li);
     }
   }
@@ -69,14 +69,14 @@ function repoXHRHandler() {
   }
 
   sortTogether(data.series, data.labels);
-  for (var i = 0; i < data.labels.length;i++) {
+  for (var i = 0; i < data.labels.length; i++) {
     if (i < 6) {
       var quantity = Math.round((data.series[i] / total) * 10000) / 10;
       $("#circle-area").append(
         '<div class="two columns"><div class="inner-content"><div class="c100 p' + Math.round(quantity) + ' small center"><span>' + quantity +
         '% </span><div class="slice"><div class="bar"></div><div class="fill"></div></div></div><p><em>' + data.labels[i] +
         '</em></p></div></div>'
-        );
+      );
     }
   }
 }
@@ -105,8 +105,8 @@ $(document).ready(function () {
     $('html, body').stop().animate({
       'scrollTop': $target.offset().top
     }, 900, 'swing', function () {
-        window.location.hash = target;
-      });
+      window.location.hash = target;
+    });
 
   });
 
