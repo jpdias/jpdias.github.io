@@ -9,7 +9,9 @@ compass:
   # author will appear under the avatar (optional)
   author: "João Pedro Dias"
   # tagline will appear under the title (optional)
-  tagline: "Engineer. Developer.<br>Photography and design enthusiast."
+  tagline: "Engineer. Developer. Photography and design enthusiast."
+
+  tagline-site: "Engineer. Developer.<br>Photography and design enthusiast."
 
   work: "INESC TEC - Porto"
   # if include_content is true, the contents of the content.html include will be
