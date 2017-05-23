@@ -9,7 +9,7 @@ compass:
   # author will appear under the avatar (optional)
   author: "João Pedro Dias"
   # tagline will appear under the title (optional)
-  tagline: "Engineer. Developer. <br>Photography and design enthusiast."
+  tagline: "Engineer. Developer.<br>Photography and design enthusiast."
 
   work: "INESC TEC - Porto"
   # if include_content is true, the contents of the content.html include will be
@@ -18,7 +18,7 @@ compass:
   # if include_analytics is true, the content of the analytics.html include will
   # be added at the end of the <head> section. You can add your Google Analytics
   # Tracking Code to that file.
-  include_analytics: false
+  include_analytics: true
 
 # exclude
 exclude: ["CNAME", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
