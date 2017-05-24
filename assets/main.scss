@@ -22,7 +22,7 @@ body {
     margin: auto;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
-	overflow-y: hidden;
+	overflow-x: hidden;
 }
 
 header,
@@ -58,7 +58,7 @@ a:hover {
 /*** main content list ***/
 .main-list-item {
 	font-weight: bold;
-	font-size: 1em;
+	font-size: 0.95em;
 	margin: 0.7em 0;
 }
 
@@ -164,6 +164,10 @@ footer {
 	.logo-container,
 	.tagline-container p {
 		text-align: center;
+	}
+
+	.buttons-div { 
+		display: flex;
 	}
 
 	main {
