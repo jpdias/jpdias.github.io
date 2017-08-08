@@ -1,13 +1,5 @@
 # Personal Page
 
-## How this is built?
+![Website](https://i.imgur.com/SpImK78.jpg)
 
-This website was built using:
-- [Skeleton 2.0](http://getskeleton.com/?2.0)
-- [JQuery](https://jquery.com/)
-- [Typed.js](http://www.mattboldt.com/demos/typed-js/)
-- [Modernizr](https://modernizr.com/)
-
-## Screenshot
-
-![Website](http://i.imgur.com/13QSScU.png)
+_Feel free to use on your own._ :wink:
