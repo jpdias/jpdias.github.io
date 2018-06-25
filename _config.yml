@@ -13,7 +13,8 @@ compass:
 
   tagline-site: "Engineer. Developer.<br>Photography and design enthusiast."
 
-  work: "INESC TEC - Porto"
+  work1: "Researcher@INESC TEC - Porto"
+  work1: "Invited Assistant Professor@FEUP - Porto"
   # if include_content is true, the contents of the content.html include will be
   # added right above the generated item list, if present
   include_content: true
