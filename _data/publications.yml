@@ -15,13 +15,13 @@ confs:
     authors: "Duarte Pinto, João Pedro Dias and Hugo Sereno Ferreira"
     conference: "16th IEEE International Conference on Embedded and Ubiquitous Computing"
     year: 2018
-    url: http://doi.org/10.1109/EUC.2018.00008
+    url: "http://doi.org/10.1109/EUC.2018.00008"
   
   - title: "A Reactive and Model-based Approach for Developing Internet-of-Things Systems"
     authors: "João Pedro Dias, João Pascoal Faria and Hugo Sereno Ferreira"
     conference: "7th Software Engineering Doctoral Symposium (SEDES 2018) -- Part of the 11th International Conference on the Quality of Information and Communications Technology (QUATIC’2018)"
     year: 2018
-    url: "http://doi.org/10.1109/EUC.2018.00008" 
+    url: "http://doi.org/10.1109/QUATIC.2018.00049" 
 
   - title: "A Brief Overview of Existing Tools for Testing the Internet-of-Things"
     authors: "João Pedro Dias, Flávio Couto, Ana C.R. Paiva, Hugo Sereno Ferreira"
@@ -96,3 +96,11 @@ abstracts:
     year: 2016
     url: "https://ijup.up.pt"
     pdf: "https://ijup.up.pt/2019/wp-content/uploads/sites/269/2018/10/LivroResumos2016.pdf"
+
+thesis:
+  - title: "Reverse Engineering Static Content and Dynamic Behaviour of E-Commerce Websites for Fun and Profit"
+    degree: "Master's Degree Dissertation"
+    supervision: "Supervised by Hugo Sereno Ferreira, PhD & Co-Supervised by Rui Gonçalves, Eng."
+    year: 2016
+    url: "http://hdl.handle.net/10216/85374"
+    pdf: "https://jpdias.me/kugsha/resources/dissertation.pdf"

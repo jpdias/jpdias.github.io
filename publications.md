@@ -12,7 +12,7 @@ layout: default
  {% assign counter = counter | plus:1 %}
 
   {{ counter }}. <a href="{{ pub.url }}" _target="blank">**{{ pub.title }}**</a>, {{ pub.authors }} <br>
-  - {{ pub.conference }}, {{ pub.year }}, {% if pub.pdf %}
+  - {{ pub.conference }}, {{ pub.year }} {% if pub.pdf %}
         <a href="{{ pub.pdf }}" _target="blank"><i class="far fa-file-pdf"></i>&nbsp;PDF Download</a>
     {% endif %}
 
@@ -34,6 +34,21 @@ layout: default
 
 {% endfor %}
 
+## Thesis
+
+{% assign counter = 0 %}
+
+{% for pub in site.data.publications.thesis %}
+
+ {% assign counter = counter | plus:1 %}
+
+  {{ counter }}. <a href="{{ pub.url }}" _target="blank">**{{ pub.title }}**</a>, {{ pub.supervision }} <br>
+  - {{ pub.degree }}, {{ pub.year }} {% if pub.pdf %}
+        <a href="{{ pub.pdf }}" _target="blank"><i class="far fa-file-pdf"></i>&nbsp;PDF Download</a>
+    {% endif %}
+
+{% endfor %}
+
 ## Abstracts
 
 {% assign counter = 0 %}
@@ -43,7 +58,7 @@ layout: default
  {% assign counter = counter | plus:1 %}
 
   {{ counter }}. <a href="{{ pub.url }}" _target="blank">**{{ pub.title }}**</a>, {{ pub.authors }} <br>
-  - {{ pub.conference }}, {{ pub.year }}, {% if pub.pdf %}
+  - {{ pub.conference }}, {{ pub.year }} {% if pub.pdf %}
         <a href="{{ pub.pdf }}" _target="blank"><i class="far fa-file-pdf"></i>&nbsp;PDF Download</a>
     {% endif %}
 

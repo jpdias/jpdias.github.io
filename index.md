@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ./João Pedro Dias/
+title: "./João Pedro Dias/"
 ---
 
 ## About Me
@@ -9,13 +9,13 @@ title: ./João Pedro Dias/
 
 - *Engineer. Developer. Photography and design enthusiast.* 
 
-Currently working as a researcher on the thin line between hardware and software. Graduated from the Integrated Masters in Informatics and Computing Engineering by Faculty of Engineering, University of Porto. Passionate about technology in general, with a special focus on security and privacy, web development, data mining & Internet of Things. Furthermore, an amateur photographer, football player, book lover and science addict.
+Currently working as a researcher on the thin line between hardware and software. Graduated from the [Integrated Masters in Informatics and Computing Engineering](https://sigarra.up.pt/feup/en/cur_geral.cur_view?pv_ano_lectivo=2018&pv_origem=CUR&pv_tipo_cur_sigla=MI&pv_curso_id=742) by Faculty of Engineering, University of Porto. Passionate about technology in general, with a special focus on security and privacy, web development & Internet of Things. Furthermore, an amateur photographer, football player, book lover and science addict.
 
 #### Work & Study
 
-- Researcher @ INESC TEC - Porto
-- Invited Assistant Professor @ FEUP - Porto
-- PhD Candidate @ Doctoral Program in Informatics Engineering
+- Researcher @ [INESC TEC](https://inesctec.pt/) - Porto
+- Invited Assistant Professor @ [FEUP](https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL) - Porto
+- PhD Candidate @ [Doctoral Program in Informatics Engineering](https://sigarra.up.pt/feup/en/cur_geral.cur_view?pv_curso_id=679)
 
 ## Research Interests
 
@@ -38,4 +38,4 @@ Currently working as a researcher on the thin line between hardware and software
 
 {% endfor %}
 
-<a href="/publications"> - **View Other Publications**</a>
+<a href="/publications"><i class="fas fa-plus-square"></i> **View More**</a>
