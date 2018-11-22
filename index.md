@@ -1,5 +1,6 @@
 ---
 layout: default
+title: ./João Pedro Dias/
 ---
 
 ## About Me
