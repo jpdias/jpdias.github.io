@@ -1,34 +1,58 @@
-# general configuration
-url: http://jpdias.me
-baseurl: ''
+title: João Pedro Dias
+url: "https://jpdias.me"
+baseurl: ""
 
-# compass configuration
-compass:
-  # an avatar or logo (optional)
-  logo: "/images/profile.jpg"
-  # author will appear under the avatar (optional)
-  author: "João Pedro Dias"
-  # tagline will appear under the title (optional)
-  tagline: "Engineer. Developer. Photography and design enthusiast."
-
-  tagline-site: "Engineer. Developer.<br>Photography and design enthusiast."
-
-  work1: "Researcher @ INESC TEC - Porto"
-  work2: "Invited Assistant Professor @ FEUP - Porto"
-  # if include_content is true, the contents of the content.html include will be
-  # added right above the generated item list, if present
-  include_content: true
-  # if include_analytics is true, the content of the analytics.html include will
-  # be added at the end of the <head> section. You can add your Google Analytics
-  # Tracking Code to that file.
-  include_analytics: true
-
-# exclude
-exclude: ["CNAME", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
-
-# Dependencies
 markdown: kramdown
+excerpt_separator: <!--more-->
 highlighter: rouge
+paginate: 8
+paginate_path: "/blog/page:num/"
 
-# Permalinks
-permalink: pretty
+tracking_id: UA-47721282-1
+
+footer: yes
+
+sass:
+    style: compressed
+    sass_dir: _sass
+
+nav:
+ - name: "About"
+   link: "/"
+ - name: "Blog"
+   link: "/blog"
+ - name: "Publications"
+   link: "/publications"
+ - name: "Resume"
+   link: "/assets/jpdias.pdf"
+ - name: "Contact"
+   link: "/contact"
+
+social:
+  - name: 500px/jpdias
+    icon: fab fa-500px
+    url: https://500px.com/jpdias
+  - name: linkedin/joaopdias
+    icon: fab fa-linkedin
+    url: https://www.linkedin.com/in/joaopdias/
+  - name: instagram/jpdias.photo
+    icon: fab fa-instagram
+    url: https://www.instagram.com/jpdias.photo
+  - name: twitter/jpd1as
+    icon: fab fa-twitter
+    url: https://twitter.com/jpd1as
+  - name: github/jpdias
+    icon: fab fa-github
+    url: https://github.com/jpdias
+  - name: gitlab/joaopdias
+    icon: fab fa-gitlab
+    url: https://gitlab.com/joaopdias
+  - name: speakerdeck/jpd1as
+    icon: fas fa-bullhorn
+    url: https://speakerdeck.com/jpdias
+  - name: orcid/0000-0001-9066-6436
+    icon: fas fa-book-open
+    url: https://orcid.org/0000-0001-9066-6436
+  - name: gscholar/NYavJ60AAAAJ
+    icon: fas fa-graduation-cap
+    url: https://scholar.google.pt/citations?user=NYavJ60AAAAJ

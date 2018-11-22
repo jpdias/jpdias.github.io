@@ -1,0 +1,98 @@
+confs:
+  - title: "Blockchain-based PKI for Crowdsourced IoT Sensor Information"
+    authors: "Guilherme Pinto, João Pedro Dias and Hugo Sereno Ferreira"
+    conference: "14th International Conference on Information Assurance and Security"
+    year: 2018
+    url: "/404"
+
+  - title: "A Blockchain-based Scheme for Access Control in e-Health Scenarios"
+    authors: "João Pedro Dias, Hugo Sereno Ferreira and Ângelo Martins"
+    conference: "14th International Conference on Information Assurance and Security"
+    year: 2018
+    url: "/404"
+  
+  - title: "Dynamic Allocation of Serverless Functions in IoT Environments"
+    authors: "Duarte Pinto, João Pedro Dias and Hugo Sereno Ferreira"
+    conference: "16th IEEE International Conference on Embedded and Ubiquitous Computing"
+    year: 2018
+    url: http://doi.org/10.1109/EUC.2018.00008
+  
+  - title: "A Reactive and Model-based Approach for Developing Internet-of-Things Systems"
+    authors: "João Pedro Dias, João Pascoal Faria and Hugo Sereno Ferreira"
+    conference: "7th Software Engineering Doctoral Symposium (SEDES 2018) -- Part of the 11th International Conference on the Quality of Information and Communications Technology (QUATIC’2018)"
+    year: 2018
+    url: "http://doi.org/10.1109/EUC.2018.00008" 
+
+  - title: "A Brief Overview of Existing Tools for Testing the Internet-of-Things"
+    authors: "João Pedro Dias, Flávio Couto, Ana C.R. Paiva, Hugo Sereno Ferreira"
+    conference: "First International Workshop on Verification and Validation of Internet of Things (VVIoT 2018) -- Part of the 11th IEEE Conference on Software Testing, Validation and Verification (ICST 2018)"
+    year: 2018
+    url: "http://doi.org/10.1109/ICSTW.2018.00035" 
+
+  - title: "Patterns for Things that Fail"
+    authors: "António Ramadas, Gil Domingues, João Pedro Dias, Ademar Aguiar, Hugo Sereno Ferreira"
+    conference: "24th Conference on Pattern Languages of Programs (PLoP 2017)"
+    year: 2018
+    url: "/404"
+    pdf: "https://www.hillside.net/plop/2017/papers/proceedings/papers/07-ramadas.pdf"
+  
+  - title: "Towards a Framework for Agent-based Simulation of User Behaviour in E-Commerce Context"
+    authors: "Duarte Duarte, João Pedro Dias, Hugo Sereno Ferreira and Zaf. Kokkinogenis"
+    conference: "15th International Conference on Practical Applications of Agents and Multi-Agent Systems (PAAMS'17)"
+    year: 2017
+    url: "http://doi.org/10.1007/978-3-319-61578-3_3"
+  
+  - title: "Automating the Extraction of Static Content and Dynamic Behaviour from e-Commerce Websites"
+    authors: "João Pedro Dias and Hugo Sereno Ferreira"
+    conference: "8th International Conference on Ambient Systems, Networks and Technologies (ANT'17)"
+    year: 2017
+    url: "http://doi.org/10.1016/j.procs.2017.05.355"
+  
+  - title: "A Hands-on Approach on Botnets for Behavior Exploration"
+    authors: "João Pedro Dias, José Pedro Pinto and José Magalhães Cruz"
+    conference: "2nd International Conference on Internet of Things, Big Data and Security (IoTBDS 2017)"
+    year: 2017
+    url: "http://doi.org/10.5220/0006392404630469"
+
+informal:
+  - title: "State of the Software Development Life-Cycle for the Internet-of-Things"
+    authors: "João Pedro Dias and Hugo Sereno Ferreira"
+    year: 2018
+    url: "https://arxiv.org/abs/1811.04159"
+    pdf: "https://arxiv.org/pdf/1811.04159"
+  - title: "Blockchain-based PKI for Crowdsourced IoT Sensor Information"
+    authors: "Guilherme Pinto, João Pedro Dias, Hugo Sereno Ferreira"
+    year: 2018
+    url: "https://arxiv.org/abs/1807.03863"
+    pdf: "https://arxiv.org/pdf/1807.03863"
+  - title: "Dynamic Allocation of Serverless Functions in IoT Environments"
+    authors: "Duarte Pinto, João Pedro Dias, Hugo Sereno Ferreira"
+    year: 2018
+    url: "https://arxiv.org/abs/1807.03755"
+    pdf: "https://arxiv.org/pdf/1807.03755"
+  - title: "Blockchain for Access Control in e-Health Scenarios"
+    authors: "João Pedro Dias, Luís Reis, Hugo Sereno Ferreira, Ângelo Martins"
+    year: 2018
+    url: "https://arxiv.org/abs/1805.12267"
+    pdf: "https://arxiv.org/pdf/1805.12267"
+
+
+abstracts:
+  - title: "A Preliminary Study on Mesh Networks and IoT"
+    authors: "Filipa Barros, Luis Sousa, João Pedro Dias and Hugo Sereno Ferreira"
+    conference: "11th Meeting of Young Researchers of University of Porto (IJUP 2018)"
+    year: 2018
+    url: "https://ijup.up.pt"
+    pdf: "https://ijup.up.pt/2019/wp-content/uploads/sites/269/2018/10/LivroResumos2018.pdf"
+  - title: "Automating the Extraction of Static Content and Dynamic Behaviour from e-Commerce Websites"
+    authors: "João Pedro Dias and Hugo Sereno Ferreira"
+    conference: "10th Meeting of Young Researchers of University of Porto (IJUP 2016)"
+    year: 2017
+    url: "https://ijup.up.pt"
+    pdf: "https://ijup.up.pt/2019/wp-content/uploads/sites/269/2018/10/LivroResumos2017.pdf"
+  - title: "A hands-on approach on botnets for a learning purpose"
+    authors: "João Pedro Dias, José Pedro Pinto and José Magalhães Cruz"
+    conference: "9th Meeting of Young Researchers of University of Porto (IJUP 2016)"
+    year: 2016
+    url: "https://ijup.up.pt"
+    pdf: "https://ijup.up.pt/2019/wp-content/uploads/sites/269/2018/10/LivroResumos2016.pdf"
