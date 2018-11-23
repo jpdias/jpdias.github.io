@@ -9,7 +9,7 @@ title: "./João Pedro Dias/"
 
 - *Engineer. Developer. Photography and design enthusiast.* 
 
-Currently working as a researcher on the thin line between hardware and software. Graduated from the [Integrated Masters in Informatics and Computing Engineering](https://sigarra.up.pt/feup/en/cur_geral.cur_view?pv_ano_lectivo=2018&pv_origem=CUR&pv_tipo_cur_sigla=MI&pv_curso_id=742) by Faculty of Engineering, University of Porto. Passionate about technology in general, with a special focus on security and privacy, web development & Internet of Things. Furthermore, an amateur photographer, football player, book lover and science addict.
+Currently working as a researcher on the thin line between hardware and software. Graduated from the [Integrated Masters in Informatics and Computing Engineering](https://sigarra.up.pt/feup/en/cur_geral.cur_view?pv_ano_lectivo=2018&pv_origem=CUR&pv_tipo_cur_sigla=MI&pv_curso_id=742) by [Faculty of Engineering, University of Porto (FEUP)](https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL). Passionate about technology in general, with a special focus on security and privacy, web development & Internet of Things. Furthermore, an amateur photographer, football player, book lover and science addict.
 
 #### Work & Study
 
