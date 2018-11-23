@@ -3,7 +3,23 @@ layout: default
 is_contact: true
 ---
 
-* Email: [jpdias@outlook.com](mailto:jpdias@outlook.com)
+## Contact
+
+* Email: [jpdias[at]outlook.com](mailto:jpdias@outlook.com)
+
+---
+
+> João Pedro Dias
+>
+> Department of Informatics Engineering
+>
+> University of Porto – Faculty of Engineering
+>
+> Rua Dr. Roberto Frias, s/n
+>
+> 4200-465 Porto
+>
+> Portugal
 
 ---
 
