@@ -18,6 +18,8 @@ layout: default
 
 {% endfor %}
 
+---
+
 ## Pre-Prints
 #### Non-Peer-Reviewed (arxiv)
 
@@ -34,6 +36,8 @@ layout: default
 
 {% endfor %}
 
+---
+
 ## Thesis
 
 {% assign counter = 0 %}
@@ -48,6 +52,8 @@ layout: default
     {% endif %}
 
 {% endfor %}
+
+---
 
 ## Abstracts
 
