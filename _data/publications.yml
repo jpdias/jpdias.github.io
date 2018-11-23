@@ -60,21 +60,21 @@ informal:
     year: 2018
     url: "https://arxiv.org/abs/1811.04159"
     pdf: "https://arxiv.org/pdf/1811.04159"
-  - title: "Blockchain-based PKI for Crowdsourced IoT Sensor Information"
-    authors: "Guilherme Pinto, João Pedro Dias, Hugo Sereno Ferreira"
-    year: 2018
-    url: "https://arxiv.org/abs/1807.03863"
-    pdf: "https://arxiv.org/pdf/1807.03863"
-  - title: "Dynamic Allocation of Serverless Functions in IoT Environments"
-    authors: "Duarte Pinto, João Pedro Dias, Hugo Sereno Ferreira"
-    year: 2018
-    url: "https://arxiv.org/abs/1807.03755"
-    pdf: "https://arxiv.org/pdf/1807.03755"
-  - title: "Blockchain for Access Control in e-Health Scenarios"
-    authors: "João Pedro Dias, Luís Reis, Hugo Sereno Ferreira, Ângelo Martins"
-    year: 2018
-    url: "https://arxiv.org/abs/1805.12267"
-    pdf: "https://arxiv.org/pdf/1805.12267"
+#  - title: "Blockchain-based PKI for Crowdsourced IoT Sensor Information"
+#    authors: "Guilherme Pinto, João Pedro Dias, Hugo Sereno Ferreira"
+#    year: 2018
+#    url: "https://arxiv.org/abs/1807.03863"
+#    pdf: "https://arxiv.org/pdf/1807.03863"
+#  - title: "Dynamic Allocation of Serverless Functions in IoT Environments"
+#    authors: "Duarte Pinto, João Pedro Dias, Hugo Sereno Ferreira"
+#    year: 2018
+#    url: "https://arxiv.org/abs/1807.03755"
+#    pdf: "https://arxiv.org/pdf/1807.03755"
+#  - title: "Blockchain for Access Control in e-Health Scenarios"
+#    authors: "João Pedro Dias, Luís Reis, Hugo Sereno Ferreira, Ângelo Martins"
+#    year: 2018
+#    url: "https://arxiv.org/abs/1805.12267"
+#    pdf: "https://arxiv.org/pdf/1805.12267"
 
 
 abstracts:
