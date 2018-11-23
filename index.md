@@ -25,6 +25,8 @@ Currently working as a researcher on the thin line between hardware and software
     - Systems of Systems, Reference Architectures, Development Toolkits and IDEs
 - Security & Privacy
 
+---
+
 ## Recent Publications
 
 {% assign counter = 0 %}
