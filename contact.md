@@ -9,6 +9,8 @@ is_contact: true
 
 ---
 
+## Address
+
 > João Pedro Dias
 >
 > Department of Informatics Engineering
