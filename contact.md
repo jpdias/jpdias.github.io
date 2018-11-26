@@ -5,7 +5,7 @@ is_contact: true
 
 ## Contact
 
-* Email: [jpdias[at]outlook.com](mailto:jpdias@outlook.com)
+<i class="far fa-envelope"></i> Email: [jpdias[at]outlook.com](mailto:jpdias@outlook.com)
 
 ---
 
