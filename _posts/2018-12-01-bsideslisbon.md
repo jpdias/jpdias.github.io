@@ -96,7 +96,7 @@ We now had the third flag: Q3hJ
 
 This challenge URL, ```example.com/MrRobots```, when entering would redirect us to a known Youtube [link](https://www.youtube.com/watch?v=dQw4w9WgXcQ). 
 
-So the first thing was turning on the Burp suite intercept, setting the corresponding proxy on Firefox, and entering the URL. We could see in the header a ```Location= https://www.youtube.com/watch?v=dQw4w9WgXcQ``` along with a 302 status code. However, when looking to the response tab we would get the following message: 
+So the first thing was turning on the [Burp suite](https://portswigger.net/burp/communitydownload) intercept, setting the corresponding proxy on Firefox, and entering the URL. We could see in the header a ```Location= https://www.youtube.com/watch?v=dQw4w9WgXcQ``` along with a 302 status code. However, when looking to the response tab we would get the following message: 
 
 > wrong way, pal... Look carefully at the URL.
 
