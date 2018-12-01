@@ -23,7 +23,7 @@ nav:
  - name: "About"
    link: "/"
  - name: "Blog"
-   link: "/blog"
+   link: "/blog/"
  - name: "Publications"
    link: "/publications"
  - name: "CurriculumVitae"
