@@ -11,6 +11,7 @@ layout: default
             <span class="fa-li"><i class="fas fa-code-branch"></i></span>
             <a href="{{ post.url }}">{{ post.title }}</a>
         </h2>
+        <p></p>
         {{ post.excerpt }}
       </li>
     {% endfor %}
