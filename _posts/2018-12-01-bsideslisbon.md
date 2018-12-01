@@ -8,7 +8,9 @@ tags: [bsideslisbon, infosec, ctf]
 During the past two days, I went to the [Bsides Lisbon](http://bsideslisbon.org/) conference. Among all the talks/workshops (that will be available [online](https://www.youtube.com/channel/UC_M0dk4dvcBr_rFgi710D4Q)), a CTF competition and two badge-based challenges (RFID-card and a hardware soldering badge) there were some sponsor mini-challenges for some random prizes (among them a fluffy ~~scary~~ teddy unicorn). This is the write-up of the *mini* CTF made by [Checkmarx](https://www.checkmarx.com/).
 <!--more-->
 
+<img src="/images/bsideslx18/badge.jpg" style="width:250px; margin-left:10px" align="right">
 The location (URL) of the challenges was spread among QR-codes in the conference venue (including repeated QR-codes), thus we didn't know if there was any sequence in doing the challenges. From the beginning a hint was given, there was a total of **4 challenges** and there should be delivered only **one flag** at the end. Most of the challenges were made with the collaboration of [td00k](http://twitter.com/tiaggodias).
+
 
 ## Crypto
 
