@@ -2,3 +2,11 @@ _site
 .sass-cache
 
 .DS_Store
+
+
+### Code ###
+# Visual Studio Code - https://code.visualstudio.com/
+.settings/
+.vscode/
+tsconfig.json
+jsconfig.json
