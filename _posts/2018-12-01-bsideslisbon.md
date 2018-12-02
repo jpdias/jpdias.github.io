@@ -9,7 +9,9 @@ During the past two days, I went to the [Bsides Lisbon](http://bsideslisbon.org/
 <!--more-->
 
 <img src="/images/bsideslx18/badge.jpg" style="width:250px; margin-left:10px" align="right">
-The location (URL) of the challenges was spread among QR-codes in the conference venue (including repeated QR-codes), thus we didn't know if there was any sequence in doing the challenges. From the beginning a hint was given, there was a total of **4 challenges** and there should be delivered only **one flag** at the end. Most of the challenges were made with the collaboration of [td00k](http://twitter.com/tiaggodias).
+The location (URL) of the challenges was spread around in QR-codes on the conference venue (including repeated QR-codes), thus we didn't know if there was any sequence for doing the challenges. A hint was given in the beginning: there was a total of **4 challenges** and there should be delivered only **one flag** at the end. 
+
+Most of the challenges were solved with the collaboration of [td00k](http://twitter.com/tiaggodias).
 
 
 ## Crypto
