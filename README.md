@@ -1,5 +1,5 @@
 # Personal Page
 
-![Website](https://i.imgur.com/SpImK78.jpg)
+![Website](https://i.imgur.com/P5hg7sd.png)
 
-_Feel free to use on your own._ :wink:
+_Feel free to use on your own._ :fireworks:
