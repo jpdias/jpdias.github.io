@@ -3,7 +3,7 @@ layout: post
 title:  "Bsides Lisbon 2018 - Checkmarx (mini) CTF Write-Up"
 categories: [infosec]
 tags: [bsideslisbon, infosec, ctf]
-description: his is the write-up of the mini CTF made by Checkmarx during Bsides Lisbon 2018.
+description: Write-up of the mini CTF made by Checkmarx during Bsides Lisbon 2018.
 ---
 
 During the past two days, I went to the [Bsides Lisbon](http://bsideslisbon.org/) conference. Among all the talks/workshops (that will be available [online](https://www.youtube.com/channel/UC_M0dk4dvcBr_rFgi710D4Q)), a CTF competition and two badge-based challenges (RFID-card and a hardware soldering badge) there were some sponsor mini-challenges for some random prizes (among them a fluffy ~~scary~~ teddy unicorn). This is the write-up of the *mini* CTF made by [Checkmarx](https://www.checkmarx.com/).
