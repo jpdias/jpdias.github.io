@@ -3,6 +3,7 @@ layout: post
 title:  "Hello, World!"
 categories: [generic]
 tags: [helloworld]
+description: Hello world, this is my first blog post. A place for sharing ideas, thoughts, experiments and other tales of a jack-of-all-trades and master of *some*.
 ---
 
 **Hello world**, this is my first blog post. A place for sharing ideas, thoughts, experiments and other tales of a jack-of-all-trades and master of *some*.
