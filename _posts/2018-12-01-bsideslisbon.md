@@ -58,7 +58,7 @@ echo check($ans);
 
 So, the flag is *echo*'ed when we submit the right vulnerability name by the *answer* query param. After suspecting this was a web-related vulnerability (probably one of the [OWASP Top 10](https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf)) and after digging we found out this Github issue on the Go language repository that mentions SSRF exploiting in the ```url.Parse```, so we tried it and it worked!
 
->> Nice one! The flag is ZUJl
+>> **Nice one! The flag is ZUJl**
 
 We now had the second flag: ZUJl
 
@@ -92,7 +92,7 @@ So now we see 4 char comparisons going on, organized bellow:
 
 
 Submitting Q3hJ in the ```input``` field would give us the message:
->> that's right!
+>> **that's right!**
 
 We now had the third flag: Q3hJ
 
@@ -114,7 +114,7 @@ Disallow: /980j45grn/
 
 Entering the ```example.com/980j45grn``` would give us 404, but entering ```example.com/MrRobots/980j45grn``` would redirect us to the same Youtube link. Turning on the Burp suite again we would get the following text in the response tab:
 
->> Well done, the flag is c3Q=
+>> **Well done, the flag is c3Q=**
 
 We now had the fourth flag: c3Q=
 
