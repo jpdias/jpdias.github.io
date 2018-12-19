@@ -34,7 +34,7 @@
     {% endif %}
     <!-- Facebook Open Graph -->
     <meta name="og:description" content="{{ desc }}">
-    <meta name="og:title" content="{{ site.title }}">
+    <meta name="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="og:url" content="{{ url }}">
     <meta name="og:type" content="article">
     {% if site.og_image %}
@@ -45,7 +45,7 @@
     {% endif %}
     <!-- Twitter -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="{{ site.title }}">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:description" content="{{ desc }}">
     <meta name="twitter:url" content="{{ url }}">
     {% if site.twitter_image %}
