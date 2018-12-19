@@ -28,7 +28,7 @@ Mozilla, as a defender of the mission of *"keeping the internet open and accessi
 - Things Cloud: A collection of IoT cloud services.
 - Things Framework: A collection of reusable software components for building Web Things, which directly expose the Web Thing API.
 
-> The goal of this project is to build a Web of Things device capable of sensing its surroundings by measuring temperature, humidity and sensing motion. *Plus* be able to show any information in an OLED screen and operating status in a LED.
+> **The goal of this project is to build a Web of Things device capable of sensing its surroundings by measuring temperature, humidity and sensing motion. *Plus* be able to show any information in an OLED screen and operating status in a LED.**
 
 ## The Hardware
 
@@ -380,7 +380,7 @@ Our ```motionDetectedInterrupt``` function toggles the value of the global varia
 
 All the data is available by checking the respective ```href```, and we know *a priori* the type of data. Further, we can leverage the API to have additional data like descriptions. 
 
-In a future post, we gonna talk about accessing the Indoor Sensing Hub data, storing it and, then, visualizing it.
+In a future post, we gonna talk about accessing the Indoor Sensing Hub data, storing it and, then, visualizing it. And, also, adding MQTT support to it.
 
 <small>
 #### References
