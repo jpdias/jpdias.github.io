@@ -382,7 +382,7 @@ All the data is available by checking the respective ```href```, and we know *a 
 
 In a future post, we gonna talk about accessing the Indoor Sensing Hub data, storing it and, then, visualizing it. And, also, adding MQTT support to it.
 
-<small>
+
 #### References
 
 1. <a id="defrag" href="https://www.oreilly.com/ideas/the-iot-needs-a-defrag">The IoT needs a defrag</a>
@@ -393,4 +393,3 @@ In a future post, we gonna talk about accessing the Indoor Sensing Hub data, sto
 6. <a id="mdns" href="http://www.multicastdns.org/">Multicast DNS</a>
 7. <a id="wot" href="https://webofthings.org/">Web of Things</a>
 8. <a id="8" href="https://en.wikipedia.org/wiki/Interrupt">Interrupt</a>
-</small>
