@@ -8,8 +8,15 @@ excerpt_separator: <!--more-->
 highlighter: rouge
 paginate: 8
 paginate_path: "/blog/page:num/"
-gems: [jekyll-paginate]
 
+plugins:
+  - jekyll-paginate
+  - jekyll-compress-images
+  - rouge
+  - kramdown
+
+compress_images:
+  images_path: "images/**/*.{gif,png,jpg,jpeg,svg}"
 
 tracking_id: UA-47721282-1
 
