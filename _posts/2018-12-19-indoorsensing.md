@@ -38,11 +38,11 @@ After searching on [Thingiverse](https://www.thingiverse.com/) we found out this
 
 Count | 3D Part
 ------|------
-1     | Base_NodeMCU
-1     | Dome
-1     | Temperature_sensor_module
-1     | Small_OLED_screen_module
-1     | PIR_module
+1x    | Base_NodeMCU
+1x    | Dome
+1x    | Temperature_sensor_module
+1x    | Small_OLED_screen_module
+1x    | PIR_module
 
 <div class="imgsdiv">
     <div class="row">
@@ -64,13 +64,13 @@ Some modifications were done to this models after printing for fitting a breadbo
 
 Count | Part
 ------|------
-1     | NodeMCU ESP8266
-1     | LED (red)
-1     | PIR Motion Sensor
-1     | DHT11 Temperature/Humidity Sensor
-1     | 0.96" I2C OLED 128x64 Screen
-*     | Jump wires (Male-Female) 
-1     | Mini Breadboard
+1x    | NodeMCU ESP8266
+1x    | LED (red)
+1x    | PIR Motion Sensor
+1x    | DHT11 Temperature/Humidity Sensor
+1x    | 0.96" I2C OLED 128x64 Screen
+*x    | Jump wires (Male-Female) 
+1x    | Mini Breadboard
 
 The NodeMCU board was picked up since it is cheap, has a built-in wireless shield and is compatible with almost any Arduino libraries and scripts.
 
