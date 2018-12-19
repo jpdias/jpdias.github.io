@@ -1,14 +1,12 @@
 ---
-images/indoorsensing/indoorsensing_circuit.png: indoorsensing_circuit.png
-images/indoorsensing/mozilla_iot_wordmark.png: mozilla_iot_wordmark.png
-images/nextpi/circuit.png: circuit.png
-images/nextpi/nextlogo.png: nextlogo.png
-images/resistor.png: resistor.png
 images/bg.jpg: bg.jpg
 images/bsideslx18/badge.jpg: badge.jpg
 images/indoorsensing/3d1.jpg: 3d1.jpg
 images/indoorsensing/3d2.jpg: 3d2.jpg
 images/indoorsensing/3d3.jpg: 3d3.jpg
+images/indoorsensing/final1.jpg: final1.jpg
+images/indoorsensing/final2.jpg: final2.jpg
+images/indoorsensing/final3.jpg: final3.jpg
 images/nextpi/img_1.jpg: img_1.jpg
 images/nextpi/img_2.jpg: img_2.jpg
 images/nextpi/img_3.jpg: img_3.jpg
@@ -18,6 +16,9 @@ images/nextpi/img_6.jpg: img_6.jpg
 images/nextpi/parts.jpg: parts.jpg
 images/nextpi/pi.jpg: pi.jpg
 images/profile.jpg: profile.jpg
-images/indoorsensing/final1.jpg: final1.jpg
-images/indoorsensing/final2.jpg: final2.jpg
-images/indoorsensing/final3.jpg: final3.jpg
+images/indoorsensing/3d1-min.jpg: 3d1-min.jpg
+images/indoorsensing/3d2-min.jpg: 3d2-min.jpg
+images/indoorsensing/3d3-min.jpg: 3d3-min.jpg
+images/indoorsensing/final1-min.jpg: final1-min.jpg
+images/indoorsensing/final3-min.jpg: final3-min.jpg
+images/indoorsensing/final2-min.jpg: final2-min.jpg

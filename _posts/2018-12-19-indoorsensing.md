@@ -47,13 +47,13 @@ Count | 3D Part
 <div class="imgsdiv">
     <div class="row">
         <div class="column">
-            <img src="/images/indoorsensing/3d1.jpg">
+            <img src="/images/indoorsensing/3d1-min.jpg">
         </div>
         <div class="column">
-            <img src="/images/indoorsensing/3d2.jpg">
+            <img src="/images/indoorsensing/3d2-min.jpg">
         </div>
         <div class="column">
-            <img src="/images/indoorsensing/3d3.jpg">
+            <img src="/images/indoorsensing/3d3-min.jpg">
         </div>
     </div>
 </div>
@@ -145,7 +145,7 @@ void setup()
 }
 {% endhighlight %} 
 
-From this point on we already have our thing being announced to the local network using mDNS [[6]](#mdns) and we can access the device on our browser. The result page presents a JSON (as defined by the Web Thing API) with information about all the devices (components) connected to our thing.
+From this point on we already have our thing being announced to the local network using mDNS [[6]](#mdns) and we can access the device on our browser using the address: ```http://indoorsensor.local```. The result page presents a JSON (as defined by the Web Thing API) with information about all the devices (components) connected to our thing.
 
 ### Adding components to our Adapter
 
@@ -264,7 +264,7 @@ void setup(){
 }
 {% endhighlight %} 
 
-Going through the code:
+**Going through the code**:
 - Init the ```Adafruit_SSD1306``` lib. In our case the OLED screen doesn't have a reset pin, so we need to pass a -1 to the function.
 - Start the display ```display.begin(SSD1306_SWITCHCAPVCC, OLED_ADDR);````
 - Clean any data that could be on the display and display the data. In this case, the screen must remain empty.
@@ -305,13 +305,13 @@ Our ```motionDetectedInterrupt``` function toggles the value of the global varia
 <div class="imgsdiv">
     <div class="row">
         <div class="column">
-            <img src="/images/indoorsensing/final1.jpg">
+            <img src="/images/indoorsensing/final1-min.jpg">
         </div>
         <div class="column">
-            <img src="/images/indoorsensing/final2.jpg">
+            <img src="/images/indoorsensing/final2-min.jpg">
         </div>
         <div class="column">
-            <img src="/images/indoorsensing/final3.jpg">
+            <img src="/images/indoorsensing/final3-min.jpg">
         </div>
     </div>
 </div>
@@ -391,7 +391,7 @@ In a future post, we gonna talk about accessing the Indoor Sensing Hub data, sto
 5. <a id="i2c" href="https://en.wikipedia.org/wiki/I%C2%B2C">I²C</a>
 6. <a id="mdns" href="http://www.multicastdns.org/">Multicast DNS</a>
 7. <a id="wot" href="https://webofthings.org/">Web of Things</a>
-8. <a id="wot" href="https://en.wikipedia.org/wiki/Interrupt">Interrupt</a>
+8. <a id="8" href="https://en.wikipedia.org/wiki/Interrupt">Interrupt</a>
 
 
 </small>
