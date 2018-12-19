@@ -70,6 +70,7 @@ Count | Part
 1     | DHT11 Temperature/Humidity Sensor
 1     | 0.96" I2C OLED 128x64 Screen
 *     | Jump wires (Male-Female) 
+1     | Mini Breadboard
 
 The NodeMCU board was picked up since it is cheap, has a built-in wireless shield and is compatible with almost any Arduino libraries and scripts.
 
