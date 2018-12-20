@@ -8,6 +8,7 @@ html {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 body {
@@ -31,6 +32,41 @@ a:hover {
 
 h1 {
     text-align: left;
+}
+
+.blog-content {
+
+    h1:before {
+        content: '#';
+        color: $accent;
+        margin-right: 10px;
+        position: absolute;
+        margin-left: -40px;
+    }
+
+    h2:before {
+        content: '##';
+        color: $accent;
+        margin-right: 10px;
+        position: absolute;
+        margin-left: -40px;
+    }
+
+    h3:before {
+        content: '###';
+        color: $accent;
+        margin-right: 10px;
+        position: absolute;
+        margin-left: -45px;
+    }
+
+    h4:before {
+        content: '####';
+        color: $accent;
+        margin-right: 10px;
+        position: absolute;
+        margin-left: -50px;
+    }
 }
 
 /*
