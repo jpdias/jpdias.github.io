@@ -13,7 +13,7 @@ All the lines of text, lines of code (LoC), circuit diagrams and everything else
 
 Now in Typescript:
 
-{% highlight typescript %} 
+{% highlight typescript %}
 class Greeter {
     constructor(public greeting: string) { }
     greet() {
