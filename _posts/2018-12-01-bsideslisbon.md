@@ -45,10 +45,11 @@ include ("flag.php");
 
 highlight_file(__FILE__);
 
-// this piece of code represents a vulnerability in GO, what is it?
-// what is it?
-
-// ans := url.Parse(r.URL.Query().Get("input")).RequestURI()
+/*
+this piece of code represents a vulnerability in GO, what is it?
+what is it?
+ans := url.Parse(r.URL.Query().Get("input")).RequestURI()
+*/
 
 $ans = @$_GET["answer"];
 echo check($ans);
