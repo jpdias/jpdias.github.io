@@ -25,7 +25,7 @@ Currently working as a researcher on the thin line between hardware and software
 - Internet-of-Things
     - Systems of Systems, Reference Architectures, Development Toolkits and IDEs
 - Security & Privacy
-    - Electronic Rights, Capture the Flag (CTF), Steneography
+    - Surveillance Self-Defense, Capture the Flag (CTF), Security Education
 
 ---
 
