@@ -21,10 +21,11 @@ Currently working as a researcher on the thin line between hardware and software
 ## Research Interests
 
 - Software Engineering
-    - Design Patterns, Development Methodologies, Software Development Life-cycle, Edge/Fog/Cloud Computing
+    - Design Patterns, Development Methodologies, Software Development Life-cycle (SDLC), Edge/Fog/Cloud Computing, Live Programming & Liveness
 - Internet-of-Things
     - Systems of Systems, Reference Architectures, Development Toolkits and IDEs
 - Security & Privacy
+    - Electronic Rights, Capture the Flag (CTF), Steneography
 
 ---
 
