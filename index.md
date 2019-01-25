@@ -16,7 +16,7 @@ Currently working as a researcher on the thin line between hardware and software
 
 - Researcher @ [INESC TEC](https://inesctec.pt/)
 - Invited Assistant Lecturer @ [FEUP](https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL)
-- PhD Candidate @ [Doctoral Program in Informatics Engineering (FEUP)](https://sigarra.up.pt/feup/en/cur_geral.cur_view?pv_curso_id=679)
+- PhD Student @ [Doctoral Program in Informatics Engineering (FEUP)](https://sigarra.up.pt/feup/en/cur_geral.cur_view?pv_curso_id=679)
 
 ## Research Interests
 
