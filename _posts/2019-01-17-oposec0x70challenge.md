@@ -90,10 +90,10 @@ Further, we found out that calling ```http://example.com/flag``` was the trigger
 
 Since we now have access to the source code of the app, and sure that the app is written in Python, one of the first things that come to mind is [Server-Side Template Injection](https://portswigger.net/blog/server-side-template-injection). Reading some tutorials and write-ups about the subject I found this one as being the most straightforward: [Flaskcards challenge at Pico CTF 2018](https://s0cket7.com/picoctf-web).
 
-To find if the website is vulnerable we simply tweet ```\{\{ 7 * 7 \}\}```, and in the alert-info box we got the following response:
+To find if the website is vulnerable we simply tweet ```{% raw  %}{{ 7 * 7 }}{% endraw  %}```, and in the alert-info box we got the following response:
 *You just posted: 49*
 
-So our code is being executed. In order to exploit Template Injection firstly, we must find out what is the template engine being used. To do so, the probe ```\{\{7 * '7'\}\}``` would result in ```49``` in Twig, ```7777777``` in Jinja2, and neither if no template language is in use. In our case, the response was: *You just posted: 7777777*, so we're dealing with Jinja2.
+So our code is being executed. In order to exploit Template Injection firstly, we must find out what is the template engine being used. To do so, the probe ```{% raw  %}{{7 * '7'}}{% endraw  %}``` would result in ```49``` in Twig, ```7777777``` in Jinja2, and neither if no template language is in use. In our case, the response was: *You just posted: 7777777*, so we're dealing with Jinja2.
 
 We could also reach the same conclusion by analyzing the Python packages in the ```requirements.txt``` file. And we could also identify the vulnerable code:
 
@@ -102,7 +102,7 @@ We could also reach the same conclusion by analyzing the Python packages in the 
 post_content = render_template_string('''You just posted: %s ''' % form.post.data)
 {% endhighlight %}
 
-The next step was trying to get the config, posting ```\{\{ config.items() \}\}```, which resulted in an alert-info with a lot of information that is contained in the config, including:
+The next step was trying to get the config, posting ```{% raw  %}{{ config.items() }}{% endraw  %}```, which resulted in an alert-info with a lot of information that is contained in the config, including:
 - FLAG: {flag}V4lid4t3_always_us3r_1NPUT 
 - SECRET_KEY: yJmsCAeao5zOM3gvoxHrOyM5HGJTTDpQ7UxAIHneCxc=
 - SQLALCHEMY_DATABASE_URI: mysql+pymysql://twipy:RkZDwtkaZ9ugnwf@db/twip
