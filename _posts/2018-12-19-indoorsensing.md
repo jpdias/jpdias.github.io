@@ -97,14 +97,14 @@ Using the lib ```ESP8266WiFi``` we can set up the Wireless.
 
 **Defining the connection settings**:
 
-{% highlight C %} 
+{% highlight C linenos %}
 char *ssid = WLAN_SSID;
 char *password = WLAN_PASS;
 {% endhighlight %}
 
 **Setting up the connection**:
 
-{% highlight C %} 
+{% highlight C linenos %}
 void setup()
 {
     ...
@@ -133,18 +133,15 @@ And we're now connected to the local network.
 
 ### Creating a new WebThingAdapter (our *web thing*)
 
-{% highlight C %} 
+{% highlight c linenos %}
 WebThingAdapter *adapter;
 
 void setup()
 {
     adapter = new WebThingAdapter("indoorsensor", WiFi.localIP());
-    ...
-    // add all the components here
-    ...
     adapter->begin();
 }
-{% endhighlight %} 
+{% endhighlight %}
 
 From this point on we already have our thing being announced to the local network using mDNS [[6]](#mdns) and we can access the device on our browser using the address: ```http://indoorsensor.local```. The result page presents a JSON (as defined by the Web Thing API) with information about all the devices (components) connected to our thing.
 
@@ -152,7 +149,7 @@ From this point on we already have our thing being announced to the local networ
 
 This is an example of how to add the DHT sensor to the *web thing*. A similar process is needed for all the other parts.
 
-{% highlight C %} 
+{% highlight C linenos %}
 const char *dht11Types[] = {nullptr};
 ThingDevice indoor("dht11", "Temperature & Humidity Sensor", dht11Types);
 ThingProperty indoorTempC("temperatureC", "", NUMBER, nullptr);
@@ -161,12 +158,12 @@ ThingProperty indoorHum("humidity", "", NUMBER, nullptr);
 void readDHT11data()
 {
   Serial.println("Updating DHT data.");
-  //Serial.println("f-readDHT11data");
+  /*Serial.println("f-readDHT11data");*/
 
   float h = dht.readHumidity();
-  // Read temperature as Celsius (the default)
+  /*Read temperature as Celsius (the default)*/
   float t = dht.readTemperature();
-  // Read temperature as Fahrenheit (isFahrenheit = true)
+  /*Read temperature as Fahrenheit (isFahrenheit = true)*/
 
   if (isnan(h) || isnan(t) || isnan(f))
   {
@@ -194,7 +191,7 @@ void loop(){
   readDHT11data();
   adapter->update();
 }
-{% endhighlight %} 
+{% endhighlight %}
 
 **Going through the code**:
 - Firstly we create a component of the *thing* with the ```ThingDevice```
@@ -215,10 +212,11 @@ All the DHT sensors have the need of setting a delay between reads. The document
 
 Using the lib ```TaskScheduler``` we can easily create tasks that are executed just at a given time. As an example we can see the following code:
 
-{% highlight C %} 
-Task t1(5000, TASK_FOREVER, &readDHT11data);//create task for readDHT11data, 
-                                            //that execute forever, at 5000 milliseconds intervals
-Scheduler runner; //Setup of the task runner
+{% highlight C linenos %}
+/*create task for readDHT11data, 
+that execute forever, at 5000 milliseconds intervals*/
+Task t1(5000, TASK_FOREVER, &readDHT11data);
+Scheduler runner; /*Setup of the task runner*/
 
 void setup()
 {
@@ -239,7 +237,7 @@ void loop(){
     ...
 }
 
-{% endhighlight %} 
+{% endhighlight %}
 
 #### Connecting the OLED Screen
 
@@ -247,14 +245,14 @@ The OLED screen uses I2C communication (reducing the number of pins used). We ha
 
 In NodeMCU boards it is recommended to connect any I2C devices to pins D1 and D2 (as presented in the above circuit schematic).
 
-{% highlight C %} 
-#define SCL_PIN 5 //D1
-#define SDA_PIN 4 //D2
+{% highlight C linenos %}
+#define SCL_PIN 5 /*D1*/
+#define SDA_PIN 4 /*D2*/
 #define OLED_ADDR 0x3C
 
 String lastText = "moz://a iot";
 
-Adafruit_SSD1306 display(-1); // -1 = no reset pin
+Adafruit_SSD1306 display(-1); /*-1 = no reset pin*/
 
 void setup(){
   display.begin(SSD1306_SWITCHCAPVCC, OLED_ADDR);
@@ -263,7 +261,7 @@ void setup(){
 
   displayString(lastText);
 }
-{% endhighlight %} 
+{% endhighlight %}
 
 **Going through the code**:
 - Init the ```Adafruit_SSD1306``` lib. In our case the OLED screen doesn't have a reset pin, so we need to pass a -1 to the function.
@@ -281,7 +279,7 @@ In our case, due to the screen used and printing details, we used our screen ups
 
 Since the motion sensor can be triggered at any time, we can't simply check for motion in the *loop*. For that purpose, we can use interrupts [[8]](#8). So, instead of using the common ```pinMode(PIR, INPUT);```, we must use the ```INPUT_PULLUP``` flag. This allows us to hook a function when the value of the pin changes (flag ```CHANGE```). Since we're working with a digital input, this means that the value changes from 0 to 1 when it senses motion and makes a call to the ```motionDetectedInterrupt``` function.
 
-{% highlight C %} 
+{% highlight C linenos %}
 int state = false; 
 
 void motionDetectedInterrupt()
@@ -294,7 +292,7 @@ void setup(){
   pinMode(PIR, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(PIR), motionDetectedInterrupt, CHANGE);
 }
-{% endhighlight %} 
+{% endhighlight %}
 
 Our ```motionDetectedInterrupt``` function toggles the value of the global variable ```state``` when it senses motion, and, then, when it stops sensing it. Then we can easily read this state using the same approach that we used in the case of the DHT sensor, making the boolean data available by calling the respective endpoint. 
 
@@ -319,7 +317,7 @@ Our ```motionDetectedInterrupt``` function toggles the value of the global varia
 
 ### Resulting JSON Schema
 
-{% highlight JSON %} 
+{% highlight JSON linenos %}
 [
   {
     "name": "Text display",
@@ -376,7 +374,7 @@ Our ```motionDetectedInterrupt``` function toggles the value of the global varia
     }
   }
 ]
-{% endhighlight %} 
+{% endhighlight %}
 
 All the data is available by checking the respective ```href```, and we know *a priori* the type of data. Further, we can leverage the API to have additional data like descriptions. 
 
