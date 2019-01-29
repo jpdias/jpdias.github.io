@@ -39,22 +39,23 @@ We now had the first flag: c1ro
 
 So we were once again given an HTML page with the following PHP code in it:
 
-{% highlight php %} 
+{% highlight php linenos %}
 <?php
 include ("flag.php");
 
 highlight_file(__FILE__);
 
-// this piece of code represents a vulnerability in GO, what is it?
-// what is it?
-
-// ans := url.Parse(r.URL.Query().Get("input")).RequestURI()
+/*
+this piece of code represents a vulnerability in GO, what is it?
+what is it?
+ans := url.Parse(r.URL.Query().Get("input")).RequestURI()
+*/
 
 $ans = @$_GET["answer"];
 echo check($ans);
 
 ?>
-{% endhighlight %} 
+{% endhighlight %}
 
 So, the flag is *echo*'ed when we submit the right vulnerability name by the *answer* query param. After suspecting this was a web-related vulnerability (probably one of the [OWASP Top 10](https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf)) and after digging we found out this Github issue on the Go language repository that mentions SSRF exploiting in the ```url.Parse```, so we tried it and it worked!
 
@@ -107,10 +108,10 @@ So the first thing was turning on the [Burp suite](https://portswigger.net/burp/
 
 So after a little digging and asking around to some friends, I got a hint about the ```robots.txt``` file. When entering in the URL ```example.com/MrRobots/robots.txt``` we would get the following file:
 
-{% highlight text %} 
+{% highlight text %}
 User-agent: *
 Disallow: /980j45grn/
-{% endhighlight %} 
+{% endhighlight %}
 
 Entering the ```example.com/980j45grn``` would give us 404, but entering ```example.com/MrRobots/980j45grn``` would redirect us to the same Youtube link. Turning on the Burp suite again we would get the following text in the response tab:
 
