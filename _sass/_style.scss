@@ -13,9 +13,11 @@ html {
 
 body {
     margin: 0;
-    font-family: "IBM Plex Sans";
+    font-family: "Fira Sans", monospace;
+    color: rgba(255,255,255,0.8);
+    font-size: 16px;
+    line-height: 1.5;
     height: 100%;
-    color: #c8c8c8;
     background-color: rgb(32, 32, 32);
     text-align: justify;
     text-justify: inter-word;
