@@ -11,6 +11,12 @@ confs:
     year: 2018
     url: "/404"
   
+  - title: "Growing Smart Cities on an Open-Data-Centric Cyber-Physical Platform"
+    authors: " José Pedro Pinto, João Pedro Dias and Rosaldo J. F. Rossetti"
+    conference: "2018 IEEE International Smart Cities Conference (ISC2)"
+    year: 2018
+    url: "https://doi.org/10.1109/ISC2.2018.8656989"
+  
   - title: "Dynamic Allocation of Serverless Functions in IoT Environments"
     authors: "Duarte Pinto, João Pedro Dias and Hugo Sereno Ferreira"
     conference: "16th IEEE International Conference on Embedded and Ubiquitous Computing"
