@@ -15,7 +15,8 @@ plugins_dir:
   - rouge
   - kramdown
 
-gems: [jekyll-paginate]
+plugins:
+  - jekyll-paginate
 
 compress_images:
   images_path: "images/**/*.{gif,jpg,jpeg}"

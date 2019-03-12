@@ -26,6 +26,9 @@
         position: absolute;
         left: -30px;
     }
+    ol > li > ul > li {
+        list-style: none;
+    }
     blockquote {
         //border: 1px solid black;
         border-left: 5px solid #333333;
