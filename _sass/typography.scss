@@ -26,6 +26,9 @@
         position: absolute;
         left: -30px;
     }
+    ol > li > ul {
+        padding-left: 0px;
+    }
     ol > li > ul > li {
         list-style: none;
     }
