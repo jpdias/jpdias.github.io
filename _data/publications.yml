@@ -4,12 +4,14 @@ confs:
     conference: "14th International Conference on Information Assurance and Security"
     year: 2018
     url: "/404"
+    pub: Springer
 
   - title: "A Blockchain-based Scheme for Access Control in e-Health Scenarios"
     authors: "João Pedro Dias, Hugo Sereno Ferreira and Ângelo Martins"
     conference: "14th International Conference on Information Assurance and Security"
     year: 2018
     url: "/404"
+    pub: Springer
   
   - title: "Growing Smart Cities on an Open-Data-Centric Cyber-Physical Platform"
     authors: " José Pedro Pinto, João Pedro Dias and Rosaldo J. F. Rossetti"
@@ -17,6 +19,7 @@ confs:
     year: 2018
     url: "https://doi.org/10.1109/ISC2.2018.8656989"
     doi: 10.1109/ISC2.2018.8656989
+    pub: IEEE
   
   - title: "Dynamic Allocation of Serverless Functions in IoT Environments"
     authors: "Duarte Pinto, João Pedro Dias and Hugo Sereno Ferreira"
@@ -24,6 +27,7 @@ confs:
     year: 2018
     url: "http://doi.org/10.1109/EUC.2018.00008"
     doi: 10.1109/EUC.2018.00008
+    pub: IEEE
   
   - title: "A Reactive and Model-based Approach for Developing Internet-of-Things Systems"
     authors: "João Pedro Dias, João Pascoal Faria and Hugo Sereno Ferreira"
@@ -31,6 +35,7 @@ confs:
     year: 2018
     url: "http://doi.org/10.1109/QUATIC.2018.00049"
     doi: 10.1109/QUATIC.2018.00049
+    pub: IEEE
 
   - title: "A Brief Overview of Existing Tools for Testing the Internet-of-Things"
     authors: "João Pedro Dias, Flávio Couto, Ana C.R. Paiva, Hugo Sereno Ferreira"
@@ -38,6 +43,7 @@ confs:
     year: 2018
     url: "http://doi.org/10.1109/ICSTW.2018.00035"
     doi: 10.1109/ICSTW.2018.00035
+    pub: IEEE
 
   - title: "Patterns for Things that Fail"
     authors: "António Ramadas, Gil Domingues, João Pedro Dias, Ademar Aguiar, Hugo Sereno Ferreira"
@@ -45,6 +51,7 @@ confs:
     year: 2018
     url: "https://dl.acm.org/citation.cfm?id=3290290"
     pdf: "https://www.hillside.net/plop/2017/papers/proceedings/papers/07-ramadas.pdf"
+    pub: ACM
   
   - title: "Towards a Framework for Agent-based Simulation of User Behaviour in E-Commerce Context"
     authors: "Duarte Duarte, João Pedro Dias, Hugo Sereno Ferreira and Zaf. Kokkinogenis"
@@ -52,6 +59,7 @@ confs:
     year: 2017
     url: "http://doi.org/10.1007/978-3-319-61578-3_3"
     doi: 10.1007/978-3-319-61578-3_3
+    pub: Springer
   
   - title: "Automating the Extraction of Static Content and Dynamic Behaviour from e-Commerce Websites"
     authors: "João Pedro Dias and Hugo Sereno Ferreira"
@@ -59,6 +67,7 @@ confs:
     year: 2017
     url: "http://doi.org/10.1016/j.procs.2017.05.355"
     doi: 10.1016/j.procs.2017.05.355
+    pub: Elsevier
   
   - title: "A Hands-on Approach on Botnets for Behavior Exploration"
     authors: "João Pedro Dias, José Pedro Pinto and José Magalhães Cruz"
@@ -66,6 +75,7 @@ confs:
     year: 2017
     url: "http://doi.org/10.5220/0006392404630469"
     doi: 10.5220/0006392404630469
+    pub: SCITEPRESS
 
 informal:
   - title: "State of the Software Development Life-Cycle for the Internet-of-Things"
