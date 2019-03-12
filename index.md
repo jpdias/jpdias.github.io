@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "./jpdias/"
+title: "./João Pedro Dias/"
 description: Engineer. Developer. Photography and design enthusiast. Researching on the thin line between hardware and software.
 ---
 
