@@ -1,7 +1,6 @@
 ---
 layout: default
-title: "./jpdias/"
-description: Engineer. Developer. Photography and design enthusiast. Researching on the thin line between hardware and software.
+description: "Engineer. Developer. Photography and design enthusiast. Researching on the thin line between hardware and software."
 ---
 
 ## About Me
