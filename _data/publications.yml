@@ -1,9 +1,12 @@
+#status: Accepted, In Press, Published, Submitted, Under revision
+#type: Workshop, Conference
 confs:
   - title: "Blockchain-based PKI for Crowdsourced IoT Sensor Information"
     authors: "Guilherme Pinto, João Pedro Dias and Hugo Sereno Ferreira"
     conference: "14th International Conference on Information Assurance and Security"
     year: 2018
     url: "/404"
+    status: "In Press"
     pub: Springer
 
   - title: "A Blockchain-based Scheme for Access Control in e-Health Scenarios"
@@ -11,6 +14,7 @@ confs:
     conference: "14th International Conference on Information Assurance and Security"
     year: 2018
     url: "/404"
+    status: "In Press"
     pub: Springer
   
   - title: "Growing Smart Cities on an Open-Data-Centric Cyber-Physical Platform"
@@ -19,6 +23,7 @@ confs:
     year: 2018
     url: "https://doi.org/10.1109/ISC2.2018.8656989"
     doi: 10.1109/ISC2.2018.8656989
+    status: "Published"
     pub: IEEE
   
   - title: "Dynamic Allocation of Serverless Functions in IoT Environments"
@@ -27,6 +32,7 @@ confs:
     year: 2018
     url: "http://doi.org/10.1109/EUC.2018.00008"
     doi: 10.1109/EUC.2018.00008
+    status: "Published"
     pub: IEEE
   
   - title: "A Reactive and Model-based Approach for Developing Internet-of-Things Systems"
@@ -35,6 +41,7 @@ confs:
     year: 2018
     url: "http://doi.org/10.1109/QUATIC.2018.00049"
     doi: 10.1109/QUATIC.2018.00049
+    status: "Published"
     pub: IEEE
 
   - title: "A Brief Overview of Existing Tools for Testing the Internet-of-Things"
@@ -43,6 +50,7 @@ confs:
     year: 2018
     url: "http://doi.org/10.1109/ICSTW.2018.00035"
     doi: 10.1109/ICSTW.2018.00035
+    status: "Published"
     pub: IEEE
 
   - title: "Patterns for Things that Fail"
@@ -51,6 +59,7 @@ confs:
     year: 2018
     url: "https://dl.acm.org/citation.cfm?id=3290290"
     pdf: "https://www.hillside.net/plop/2017/papers/proceedings/papers/07-ramadas.pdf"
+    status: "Published"
     pub: ACM
   
   - title: "Towards a Framework for Agent-based Simulation of User Behaviour in E-Commerce Context"
@@ -59,6 +68,7 @@ confs:
     year: 2017
     url: "http://doi.org/10.1007/978-3-319-61578-3_3"
     doi: 10.1007/978-3-319-61578-3_3
+    status: "Published"
     pub: Springer
   
   - title: "Automating the Extraction of Static Content and Dynamic Behaviour from e-Commerce Websites"
@@ -67,6 +77,7 @@ confs:
     year: 2017
     url: "http://doi.org/10.1016/j.procs.2017.05.355"
     doi: 10.1016/j.procs.2017.05.355
+    status: "Published"
     pub: Elsevier
   
   - title: "A Hands-on Approach on Botnets for Behavior Exploration"
@@ -75,6 +86,7 @@ confs:
     year: 2017
     url: "http://doi.org/10.5220/0006392404630469"
     doi: 10.5220/0006392404630469
+    status: "Published"
     pub: SCITEPRESS
 
 informal:
