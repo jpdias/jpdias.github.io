@@ -1,6 +1,22 @@
 #status: Accepted, In Press, Published, Submitted, Under revision
 #type: Workshop, Conference
 confs:
+  - title: "Live Software Development Environment for Java using Virtual Reality"
+    authors: "Diogo Amaral, João Pedro Dias, Rui Nobrega, Gil Domingues, Ademar Aguiar and Hugo Ferreira"
+    conference: "International Conference on Evaluation of Novel Software Approaches to Software Engineering"
+    year: 2019
+    url: "/404"
+    status: "Accepted"
+    pub: SCITEPRESS
+    
+  - title: "CloudCity: A Live Environment for the Management of Cloud Infrastructures"
+    authors: " 	Pedro Lourenço, João Pedro Dias, Hugo Ferreira and Ademar Aguiar"
+    conference: "14th  International Conference on Evaluation of Novel Software Approaches to Software Engineering"
+    year: 2019
+    url: "/404"
+    status: "Accepted"
+    pub: SCITEPRESS
+
   - title: "Blockchain-based PKI for Crowdsourced IoT Sensor Information"
     authors: "Guilherme Pinto, João Pedro Dias and Hugo Sereno Ferreira"
     conference: "14th International Conference on Information Assurance and Security"
