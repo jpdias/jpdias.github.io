@@ -16,30 +16,34 @@ confs:
     conference: "2018 IEEE International Smart Cities Conference (ISC2)"
     year: 2018
     url: "https://doi.org/10.1109/ISC2.2018.8656989"
+    doi: 10.1109/ISC2.2018.8656989
   
   - title: "Dynamic Allocation of Serverless Functions in IoT Environments"
     authors: "Duarte Pinto, João Pedro Dias and Hugo Sereno Ferreira"
     conference: "16th IEEE International Conference on Embedded and Ubiquitous Computing"
     year: 2018
     url: "http://doi.org/10.1109/EUC.2018.00008"
+    doi: 10.1109/EUC.2018.00008
   
   - title: "A Reactive and Model-based Approach for Developing Internet-of-Things Systems"
     authors: "João Pedro Dias, João Pascoal Faria and Hugo Sereno Ferreira"
     conference: "7th Software Engineering Doctoral Symposium (SEDES 2018) -- Part of the 11th International Conference on the Quality of Information and Communications Technology (QUATIC’2018)"
     year: 2018
-    url: "http://doi.org/10.1109/QUATIC.2018.00049" 
+    url: "http://doi.org/10.1109/QUATIC.2018.00049"
+    doi: 10.1109/QUATIC.2018.00049
 
   - title: "A Brief Overview of Existing Tools for Testing the Internet-of-Things"
     authors: "João Pedro Dias, Flávio Couto, Ana C.R. Paiva, Hugo Sereno Ferreira"
     conference: "First International Workshop on Verification and Validation of Internet of Things (VVIoT 2018) -- Part of the 11th IEEE Conference on Software Testing, Validation and Verification (ICST 2018)"
     year: 2018
-    url: "http://doi.org/10.1109/ICSTW.2018.00035" 
+    url: "http://doi.org/10.1109/ICSTW.2018.00035"
+    doi: 10.1109/ICSTW.2018.00035
 
   - title: "Patterns for Things that Fail"
     authors: "António Ramadas, Gil Domingues, João Pedro Dias, Ademar Aguiar, Hugo Sereno Ferreira"
     conference: "24th Conference on Pattern Languages of Programs (PLoP 2017)"
     year: 2018
-    url: "/404"
+    url: "https://dl.acm.org/citation.cfm?id=3290290"
     pdf: "https://www.hillside.net/plop/2017/papers/proceedings/papers/07-ramadas.pdf"
   
   - title: "Towards a Framework for Agent-based Simulation of User Behaviour in E-Commerce Context"
@@ -47,18 +51,21 @@ confs:
     conference: "15th International Conference on Practical Applications of Agents and Multi-Agent Systems (PAAMS'17)"
     year: 2017
     url: "http://doi.org/10.1007/978-3-319-61578-3_3"
+    doi: 10.1007/978-3-319-61578-3_3
   
   - title: "Automating the Extraction of Static Content and Dynamic Behaviour from e-Commerce Websites"
     authors: "João Pedro Dias and Hugo Sereno Ferreira"
     conference: "8th International Conference on Ambient Systems, Networks and Technologies (ANT'17)"
     year: 2017
     url: "http://doi.org/10.1016/j.procs.2017.05.355"
+    doi: 10.1016/j.procs.2017.05.355
   
   - title: "A Hands-on Approach on Botnets for Behavior Exploration"
     authors: "João Pedro Dias, José Pedro Pinto and José Magalhães Cruz"
     conference: "2nd International Conference on Internet of Things, Big Data and Security (IoTBDS 2017)"
     year: 2017
     url: "http://doi.org/10.5220/0006392404630469"
+    doi: 10.5220/0006392404630469
 
 informal:
   - title: "State of the Software Development Life-Cycle for the Internet-of-Things"

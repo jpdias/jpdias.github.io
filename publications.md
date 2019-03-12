@@ -11,11 +11,11 @@ layout: default
 
  {% assign counter = counter | plus:1 %}
 
-  {{ counter }}. <a href="{{ pub.url }}" _target="blank">**{{ pub.title }}**</a>, {{ pub.authors }} <br>
-  - {{ pub.conference }}, {{ pub.year }} {% if pub.pdf %}
-        <a href="{{ pub.pdf }}" _target="blank"><i class="far fa-file-pdf"></i>&nbsp;PDF Download</a>
-    {% endif %}
-
+  {{ counter }}. <a href="{{ pub.url }}" _target="blank">**{{ pub.title }}**</a><br>
+  - <i class="fas fa-users"></i> {{ pub.authors }}
+  - <i class="fas fa-caret-right"></i> {{ pub.conference }}
+  - <span class="shield shield-blue"><span><i class="fas fa-calendar"></i></span>{{ pub.year }}</span>
+        {% if pub.doi %}<span class="shield shield-yellow"><span><i class="fas fa-fingerprint"></i></span>{{ pub.doi }}</span>{% endif %}{% if pub.pdf %}<a href="{{ pub.pdf }}" _target="blank" class="shield shield-red"><span><i class="fas fa-file-pdf"></i></span>PDF</a>{% endif %}<br>    
 {% endfor %}
 
 ---
@@ -29,10 +29,10 @@ layout: default
 
  {% assign counter = counter | plus:1 %}
 
-  {{ counter }}. <a href="{{ pub.url }}" _target="blank">**{{ pub.title }}**</a>, {{ pub.authors }} <br>
-  - {% if pub.pdf %}
-        <a href="{{ pub.pdf }}" _target="blank"><i class="far fa-file-pdf"></i>&nbsp;PDF Download</a>
-    {% endif %}
+  {{ counter }}. <a href="{{ pub.url }}" _target="blank">**{{ pub.title }}**</a> <br>
+  - <i class="fas fa-users"></i> {{ pub.authors }}
+  - <span class="shield shield-blue"><span><i class="fas fa-calendar"></i></span>{{ pub.year }}</span>
+        {% if pub.doi %}<span class="shield shield-yellow"><span><i class="fas fa-fingerprint"></i></span>{{ pub.doi }}</span>{% endif %}{% if pub.pdf %}<a href="{{ pub.pdf }}" _target="blank" class="shield shield-red"><span><i class="fas fa-file-pdf"></i></span>PDF</a>{% endif %}<br>    
 
 {% endfor %}
 
@@ -46,10 +46,10 @@ layout: default
 
  {% assign counter = counter | plus:1 %}
 
-  {{ counter }}. <a href="{{ pub.url }}" _target="blank">**{{ pub.title }}**</a>, {{ pub.supervision }} <br>
-  - {{ pub.degree }}, {{ pub.year }} {% if pub.pdf %}
-        <a href="{{ pub.pdf }}" _target="blank"><i class="far fa-file-pdf"></i>&nbsp;PDF Download</a>
-    {% endif %}
+  {{ counter }}. <a href="{{ pub.url }}" _target="blank">**{{ pub.title }}**</a> <br>
+  - <i class="fas fa-caret-right"></i> {{ pub.supervision }}
+  - <span class="shield shield-blue"><span><i class="fas fa-calendar"></i></span>{{ pub.year }}</span>
+        {% if pub.doi %}<span class="shield shield-yellow"><span><i class="fas fa-fingerprint"></i></span>{{ pub.doi }}</span>{% endif %}{% if pub.pdf %}<a href="{{ pub.pdf }}" _target="blank" class="shield shield-red"><span><i class="fas fa-file-pdf"></i></span>PDF</a>{% endif %}<br>    
 
 {% endfor %}
 
@@ -63,9 +63,10 @@ layout: default
 
  {% assign counter = counter | plus:1 %}
 
-  {{ counter }}. <a href="{{ pub.url }}" _target="blank">**{{ pub.title }}**</a>, {{ pub.authors }} <br>
-  - {{ pub.conference }}, {{ pub.year }} {% if pub.pdf %}
-        <a href="{{ pub.pdf }}" _target="blank"><i class="far fa-file-pdf"></i>&nbsp;PDF Download</a>
-    {% endif %}
+  {{ counter }}. <a href="{{ pub.url }}" _target="blank">**{{ pub.title }}**</a><br>
+  - <i class="fas fa-users"></i> {{ pub.authors }}
+  - <i class="fas fa-caret-right"></i> {{ pub.conference }}
+  - <span class="shield shield-blue"><span><i class="fas fa-calendar"></i></span>{{ pub.year }}</span>
+        {% if pub.doi %}<span class="shield shield-yellow"><span><i class="fas fa-fingerprint"></i></span>{{ pub.doi }}</span>{% endif %}{% if pub.pdf %}<a href="{{ pub.pdf }}" _target="blank" class="shield shield-red"><span><i class="fas fa-file-pdf"></i></span>PDF</a>{% endif %}<br>    
 
 {% endfor %}

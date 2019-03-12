@@ -37,8 +37,9 @@ Currently working as a researcher on the thin line between hardware and software
 
  {% assign counter = counter | plus:1 %}
 
-  {{ counter }}. <a href="{{ pub.url }}">**{{ pub.title }}**</a>, {{ pub.authors }} <br>
-  - {{ pub.conference }}, {{ pub.year }}
+  {{ counter }}. <a href="{{ pub.url }}">**{{ pub.title }}**</a><br>
+  - <i class="fas fa-users"></i> {{ pub.authors }}
+  - <i class="fas fa-caret-right"></i> {{ pub.conference }}, {{ pub.year }}
 
 {% endfor %}
 
