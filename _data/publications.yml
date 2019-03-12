@@ -1,17 +1,25 @@
 #status: Accepted, In Press, Published, Submitted, Under revision
 #type: Workshop, Conference
 confs:
+  - title: "Testing and Deployment Patterns for the Internet-of-Things"
+    authors: "João Pedro Dias, Tiago Boldt and Hugo Sereno Ferreira"
+    conference: "24th European Conference on Pattern Languages of Programs"
+    year: 2019
+    url: "/404"
+    status: "Under Revision"
+    pub: ACM
+  
   - title: "Live Software Development Environment for Java using Virtual Reality"
-    authors: "Diogo Amaral, Gil Domingues, João Pedro Dias, Rui Nobrega, Hugo Ferreira and Ademar Aguiar"
-    conference: "International Conference on Evaluation of Novel Software Approaches to Software Engineering"
+    authors: "Diogo Amaral, Gil Domingues, João Pedro Dias, Rui Nobrega, Hugo Sereno Ferreira and Ademar Aguiar"
+    conference: "14th International Conference on Evaluation of Novel Software Approaches to Software Engineering"
     year: 2019
     url: "/404"
     status: "Accepted"
     pub: SCITEPRESS
     
   - title: "CloudCity: A Live Environment for the Management of Cloud Infrastructures"
-    authors: "Pedro Lourenço, João Pedro Dias, Hugo Ferreira and Ademar Aguiar"
-    conference: "14th  International Conference on Evaluation of Novel Software Approaches to Software Engineering"
+    authors: "Pedro Lourenço, João Pedro Dias, Hugo Sereno Ferreira and Ademar Aguiar"
+    conference: "14th International Conference on Evaluation of Novel Software Approaches to Software Engineering"
     year: 2019
     url: "/404"
     status: "Accepted"
