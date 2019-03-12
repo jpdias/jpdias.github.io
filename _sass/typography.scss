@@ -28,6 +28,7 @@
     }
     ol > li > ul {
         padding-left: 0px;
+        display: flow-root;
     }
     ol > li > ul > li {
         list-style: none;
