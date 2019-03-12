@@ -1,6 +1,7 @@
 ---
 layout: default
 is_contact: true
+title: Contact
 ---
 
 ## Contact
