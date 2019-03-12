@@ -1,7 +1,7 @@
 ---
 layout: default
 is_contact: true
-title: ./jpdias/contact
+title: "./jpdias/contact"
 ---
 
 ## Contact

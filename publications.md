@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ./jpdias/publications
+title: "./jpdias/publications"
 ---
 
 ## Conference Publications
