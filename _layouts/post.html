@@ -5,10 +5,9 @@ layout: default
     <h1>{{ page.title }}</h1>
     <p>
         <p><span class="shield shield-blue"><span><i class="fas fa-calendar-alt"></i></span>{{ page.date | date: '%B %d, %Y' }}</span>
-            {% for tag in post.tags %}<span class="shield shield-grey"><span><i class="fas fa-hashtag"></i></span>{{tag}}</span>{% endfor %}
+            {% for tag in page.tags %}<span class="shield shield-grey"><span><i class="fas fa-hashtag"></i></span>{{tag}}</span>{% endfor %}
         <span class="shield shield-yellow"><span><i class="fas fa-stopwatch "></i></span>{% include reading-time.html %}</span>
-        </p>
-    </p>
+    </p><br>
 
     {{ content }}
 </div>
