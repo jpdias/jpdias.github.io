@@ -37,15 +37,17 @@ confs:
     authors: "Guilherme Pinto, João Pedro Dias and Hugo Sereno Ferreira"
     conference: "14th International Conference on Information Assurance and Security"
     year: 2018
-    url: "/404"
+    url: "https://doi.org/10.1007/978-3-030-17065-3_25"
     status: "In Press"
+    doi: 10.1007/978-3-030-17065-3_25
     pub: Springer
 
   - title: "A Blockchain-based Scheme for Access Control in e-Health Scenarios"
     authors: "João Pedro Dias, Hugo Sereno Ferreira and Ângelo Martins"
     conference: "14th International Conference on Information Assurance and Security"
     year: 2018
-    url: "/404"
+    url: "https://doi.org/10.1007/978-3-030-17065-3_24"
+    doi: 10.1007/978-3-030-17065-3_24
     status: "In Press"
     pub: Springer
   
