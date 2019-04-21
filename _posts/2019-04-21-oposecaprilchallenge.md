@@ -56,7 +56,7 @@ After some searching and trial and error, it looked like an md5 hash of the stri
 
 Moving on, a check for embedded files comes to mind. So, using ```$ binwalk -e challenge.jpg``` a ZIP file appeared: ```46D41.zip``` with a file named ```dd02c7c2232759874e1c205587017bed``` inside.
 
-Using [fcrackzip](https://github.com/hyc/fcrackzip) did not properly worked on the zip (with both wordlist and brute-force).
+For some reason [fcrackzip](https://github.com/hyc/fcrackzip) did not properly worked on the zip (with both wordlist and brute-force).
 
 Going traditional, I found several Python scripts on GitHub capable of brute-forcing ZIP password-protected files. Using *military grade challenge* as a hint, I guess it must be an "easy" password. 
 
