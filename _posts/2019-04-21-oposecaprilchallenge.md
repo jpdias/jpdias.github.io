@@ -48,6 +48,8 @@ And, by just changing the value from 124 to 40 in the file header (OFFSET 14 / D
 
 > [Download Image](/images/oposec/challenge.jpg)
 
+### How to solve it?
+
 Another steganography challenge. After a little manual analysis of the file using [010 editor](https://www.sweetscape.com/010editor/), unknown padding at the end of the file appeared. Among the gibberish, an odd string appeared: ```dd02c7c2232759874e1c205587017bed```.
 
 After some searching and trial and error, it looked like an md5 hash of the string ```secret```. But that was not a flag.
@@ -66,3 +68,6 @@ SecLists/Passwords/Common-Credentials/best1050.txt```](https://github.com/daniel
 The password was quickly found: *admin123*. 
 
 >> flag{ThisIsaOldTrickInTheBook} 
+
+
+##### *That's all folks!*
