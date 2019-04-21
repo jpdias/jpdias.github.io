@@ -23,9 +23,9 @@ The meetup happens in a monthly-basis, feel free to [join in](https://www.meetup
 
 ### How to solve it?
 
-This seems like a stegneography challenge. The first attempt was trying to run several stegneography tools, including [zsteg](https://github.com/zed-0xff/zsteg). However none of them worked throwing a variety of errors, but ```steghide``` throwed a curious one:
+This seems like a steganography challenge. The first attempt was trying to run several steganography tools, including [zsteg](https://github.com/zed-0xff/zsteg). However none of them worked throwing a variety of errors, but ```steghide``` threw a curious one:
 
-```steghide: the bmp file "omegalul.bmp" has a format that is not supported (biSize: 124).``` 
+```steghide: the BMP file "omegalul.bmp" has a format that is not supported (biSize: 124).``` 
 
 After some searching found out this relevant [StackOverflow Question](https://stackoverflow.com/questions/25713117/what-is-the-difference-between-bisizeimage-bisize-and-bfsize): 
 
@@ -48,7 +48,7 @@ And, by just changing the value from 124 to 40 in the file header (OFFSET 14 / D
 
 > [Download Image](/images/oposec/challenge.jpg)
 
-Another stegneography challenge. After a little of manual analysis of the file using [010 editor](https://www.sweetscape.com/010editor/), an unknown padding at the end of the file appeared. Among the gibberish, an odd string appeared: ```dd02c7c2232759874e1c205587017bed```.
+Another steganography challenge. After a little manual analysis of the file using [010 editor](https://www.sweetscape.com/010editor/), unknown padding at the end of the file appeared. Among the gibberish, an odd string appeared: ```dd02c7c2232759874e1c205587017bed```.
 
 After some searching and trial and error, it looked like an md5 hash of the string ```secret```. But that was not a flag.
 
@@ -56,9 +56,9 @@ Moving on, a check for embedded files comes to mind. So, using ```$ binwalk -e c
 
 Using [fcrackzip](https://github.com/hyc/fcrackzip) did not properly worked on the zip (with both wordlist and brute-force).
 
-Going traditional, I found several Python scripts on GitHub capable of bruteforcing ZIP password-protected files. Using *military grade challenge* as hint, I guess it must be an "easy" password. 
+Going traditional, I found several Python scripts on GitHub capable of brute-forcing ZIP password-protected files. Using *military grade challenge* as a hint, I guess it must be an "easy" password. 
 
-Using the following script, and the **dictonary** [```
+Using the following script, and the **dictionary** [```
 SecLists/Passwords/Common-Credentials/best1050.txt```](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/best1050.txt).
 
 <script src="https://gist.github.com/jpdias/569562c7c5ab57492ceec15e20345c25.js"></script>
