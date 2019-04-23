@@ -17,7 +17,11 @@ The meetup happens in a monthly-basis, feel free to [join in](https://www.meetup
 
 ```$ wget <ip_address>/omegalul.bmp```
 
-![omegalul](/images/oposec/omegalul.png)
+The resulting image was a modified version of the known XKCD sketch "Random Number":
+
+![random_number](https://imgs.xkcd.com/comics/random_number.png)
+
+The modified imaged can be downloaded below:
 
 > [Download Image](/images/oposec/omegalul.png)
 
