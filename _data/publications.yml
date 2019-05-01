@@ -38,7 +38,7 @@ confs:
     conference: "14th International Conference on Information Assurance and Security"
     year: 2018
     url: "https://doi.org/10.1007/978-3-030-17065-3_25"
-    status: "In Press"
+    status: "Published"
     doi: 10.1007/978-3-030-17065-3_25
     pub: Springer
 
@@ -48,7 +48,7 @@ confs:
     year: 2018
     url: "https://doi.org/10.1007/978-3-030-17065-3_24"
     doi: 10.1007/978-3-030-17065-3_24
-    status: "In Press"
+    status: "Published"
     pub: Springer
   
   - title: "Growing Smart Cities on an Open-Data-Centric Cyber-Physical Platform"
@@ -122,6 +122,16 @@ confs:
     doi: 10.5220/0006392404630469
     status: "Published"
     pub: SCITEPRESS
+    
+journals:
+  - title: "A Blockchain-based Approach for Access Control in eHealth Scenarios"
+    authors: "João Pedro Dias, Ângelo Martins and Hugo Sereno Ferreira"
+    conference: "Journal of Information Assurance and Security, Volume 13, Issue 4"
+    year: 2018
+    url: "http://mirlabs.net/jias/secured/Volume13-Issue4/vol13-issue4.html"
+    issn: 1554-1010
+    status: "Published"
+    pub: MIR Labs
 
 informal:
   - title: "State of the Software Development Life-Cycle for the Internet-of-Things"
