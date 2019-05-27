@@ -6,7 +6,7 @@ confs:
     conference: "24th European Conference on Pattern Languages of Programs"
     year: 2019
     url: "/404"
-    status: "Under Revision"
+    status: "Accepted"
     pub: ACM
     
   - title: "Live Software Development --- Tightening the feedback loops"
@@ -21,16 +21,18 @@ confs:
     authors: "Diogo Amaral, Gil Domingues, João Pedro Dias, Rui Nobrega, Hugo Sereno Ferreira and Ademar Aguiar"
     conference: "14th International Conference on Evaluation of Novel Software Approaches to Software Engineering"
     year: 2019
-    url: "/404"
-    status: "Accepted"
+    url: "https://doi.org/10.5220/0007699800370046"
+    doi: 10.5220/0007699800370046
+    status: "Published"
     pub: SCITEPRESS
     
   - title: "CloudCity: A Live Environment for the Management of Cloud Infrastructures"
     authors: "Pedro Lourenço, João Pedro Dias, Hugo Sereno Ferreira and Ademar Aguiar"
     conference: "14th International Conference on Evaluation of Novel Software Approaches to Software Engineering"
     year: 2019
-    url: "/404"
-    status: "Accepted"
+    url: "https://doi.org/10.5220/0007699700270036"
+    doi: "10.5220/0007699700270036"
+    status: "Published"
     pub: SCITEPRESS
 
   - title: "Blockchain-based PKI for Crowdsourced IoT Sensor Information"
