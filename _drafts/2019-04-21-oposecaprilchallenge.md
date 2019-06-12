@@ -114,10 +114,10 @@ And after, @hugosf had an idea, how about checking out the *clipboard*.
 ```bash
 $ python volatility/vol.py -f memdmp --profile=WinXPSP2x86 clipboard
 Volatility Foundation Volatility Framework 2.6.1
-Session    WindowStation Format                 Handle Object     Data                                              
+Session    WindowStation Format                 Handle Object     Data  
 ---------- ------------- ------------------ ---------- ---------- --------
          0 WinSta0       CF_UNICODETEXT        0x30115 0xe146f0b8 NOTEPAD                    
-         0 WinSta0       CF_LOCALE            0x5400fb 0xe1b75620                    
+         0 WinSta0       CF_LOCALE            0x5400fb 0xe1b75620       
          0 WinSta0       CF_TEXT                   0x1 ----------
          0 WinSta0       CF_OEMTEXT                0x1 ----------
 ```
