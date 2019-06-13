@@ -81,7 +81,7 @@ academic:
     icon: ai ai-publons
     url: https://publons.com/researcher/1883812/joao-pedro-dias/
   - name: scopus/57194725990
-    icon: ai ai-scopus
+    icon: fab fa-etsy
     url: http://www.scopus.com/authid/detail.uri?authorId=57194725990
   - name: researchGate/Joao_Dias29
     icon: ai ai-researchgate
@@ -92,3 +92,6 @@ academic:
   - name: acm/99659321244
     icon: ai ai-acm
     url: https://dl.acm.org/author_page.cfm?id=99659321244
+  - name: arXiv/Dias%2C+J+P
+    icon: ai ai-arxiv
+    url: https://arxiv.org/search/cs?searchtype=author&query=Dias%2C+J+P
