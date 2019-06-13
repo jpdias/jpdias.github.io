@@ -14,9 +14,9 @@ title: "./jpdias/contact"
 
 > João Pedro Dias
 >
-> Department of Informatics Engineering
-> University of Porto – Faculty of Engineering
-> Rua Dr. Roberto Frias, s/n
+> Department of Informatics Engineering; 
+> University of Porto – Faculty of Engineering; 
+> Rua Dr. Roberto Frias, s/n; 
 > 4200-465 Porto, Portugal
 
 ---
