@@ -318,12 +318,14 @@ ul.pager li {
   border-right: 1px solid rgba(0, 0, 0, 0.15);
 }
 
+
+//override fonts defaults
 .fab {
-  font-size: 1.4em;
+  font-size: 1.4em !important;
 }
 
 .ai {
-  font-size: 1.4em;
+  font-size: 1.4em !important;
 }
 
 @import "typography";
