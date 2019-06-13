@@ -66,9 +66,29 @@ social:
   - name: speakerdeck/jpd1as
     icon: fas fa-bullhorn
     url: https://speakerdeck.com/jpdias
+
+academic:
   - name: orcid/0000-0001-9066-6436
-    icon: fas fa-book-open
+    icon: ai ai-orcid
     url: https://orcid.org/0000-0001-9066-6436
   - name: gscholar/NYavJ60AAAAJ
-    icon: fas fa-graduation-cap
+    icon: ai ai-google-scholar
     url: https://scholar.google.pt/citations?user=NYavJ60AAAAJ
+  - name: dblp/d/Dias:Jo=atilde=o_Pedro
+    icon: ai ai-dblp
+    url: http://www.informatik.uni-trier.de/~ley/pers/hd/d/Dias:Jo=atilde=o_Pedro.html
+  - name: publons/1883812/joao-pedro-dias
+    icon: ai ai-publons
+    url: https://publons.com/researcher/1883812/joao-pedro-dias/
+  - name: scopus/57194725990
+    icon: ai ai-scopus
+    url: http://www.scopus.com/authid/detail.uri?authorId=57194725990
+  - name: researchGate/Joao_Dias29
+    icon: ai ai-researchgate
+    url: https://www.researchgate.net/profile/Joao_Dias29
+  - name: mendeley/joo-pedro-dias
+    icon: ai ai-mendeley
+    url: https://www.mendeley.com/profiles/joo-pedro-dias/
+  - name: acm/99659321244
+    icon: ai ai-acm
+    url: https://dl.acm.org/author_page.cfm?id=99659321244
