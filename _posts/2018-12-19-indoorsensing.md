@@ -13,11 +13,11 @@ The *Web of Things* aims to build the Internet of Things in a truly open, flexib
 
 <img src="/images/indoorsensing/mozilla_iot_wordmark.png" style="width:200px; padding-left:8px" align="right">
 
-Before entering into the details of Web of Things[^7], one must present its origin, the Internet-of-Things. The Internet-of-Things can be seen as the result of the interconnection via the Internet of computing devices embedded in everyday objects, enabling them to send and receive data. This paradigm-shift provoked a ripple effect transforming everyday objects into *smart* objects, thus being widespread in terms of domains of application.
+Before entering into the details of Web of Things [^7], one must present its origin, the Internet-of-Things. The Internet-of-Things can be seen as the result of the interconnection via the Internet of computing devices embedded in everyday objects, enabling them to send and receive data. This paradigm-shift provoked a ripple effect transforming everyday objects into *smart* objects, thus being widespread in terms of domains of application.
 
-This paradigm-shift opened a window on new market opportunities that lead to several companies to create new products for these new markets, such as the smart-home. However, *despite utopian visions of seamless home automation, the smart home technology market, like every other, is **fragmented***[^1][^2]. Several companies, institutions and other entities (including governmental ones) have been working on standards for assuring the interoperability and reducing the technological fragmentation of IoT. 
+This paradigm-shift opened a window on new market opportunities that lead to several companies to create new products for these new markets, such as the smart-home. However, *despite utopian visions of seamless home automation, the smart home technology market, like every other, is **fragmented*** [^1][^2]. Several companies, institutions and other entities (including governmental ones) have been working on standards for assuring the interoperability and reducing the technological fragmentation of IoT. 
 
-Web of Things, as part of the Internet-of-Things initiative, proposes the creation a decentralized Internet-of-Things by giving Things URLs on the web to make them linkable and discoverable, and defining a standard data model and APIs to make them interoperable[^4].
+Web of Things, as part of the Internet-of-Things initiative, proposes the creation a decentralized Internet-of-Things by giving Things URLs on the web to make them linkable and discoverable, and defining a standard data model and APIs to make them interoperable [^4].
 
 Mozilla, as a defender of the mission of *"keeping the internet open and accessible to all"* and putting efforts on building a better Internet[^1] has embraced the Web of Things initiative and created **Project Things** [[4]](#projectthings). This project distinguishes itself from the other standardization initiatives due to the fact that it is built upon existing web standards such as HTTP, REST, JSON, WebSockets and TLS.
 
@@ -383,11 +383,18 @@ In a future post, we gonna talk about accessing the Indoor Sensing Hub data, sto
 
 #### References
 
-[^1] <a href="https://www.oreilly.com/ideas/the-iot-needs-a-defrag">The IoT needs a defrag</a>
-[^2] <a href="https://www.qualcomm.com/news/onq/2016/02/19/fragmentation-enemy-internet-things">Fragmentation is the enemy of the Internet of Things</a>
-[^3] <a href="https://www.mozilla.org/en-US/mission/">Mozilla Mission</a>
-[^4] <a href="https://iot.mozilla.org/">Web of Things</a>
-[^5] <a href="https://en.wikipedia.org/wiki/I%C2%B2C">I²C</a>
-[^6] <a href="http://www.multicastdns.org/">Multicast DNS</a>
-[^7] <a href="https://webofthings.org/">Web of Things</a>
-[^8] <a href="https://en.wikipedia.org/wiki/Interrupt">Interrupt</a>
+[^1]: <a href="https://www.oreilly.com/ideas/the-iot-needs-a-defrag">The IoT needs a defrag</a>
+
+[^2]: <a href="https://www.qualcomm.com/news/onq/2016/02/19/fragmentation-enemy-internet-things">Fragmentation is the enemy of the Internet of Things</a>
+
+[^3]: <a href="https://www.mozilla.org/en-US/mission/">Mozilla Mission</a>
+
+[^4]: <a href="https://iot.mozilla.org/">Web of Things</a>
+
+[^5]: <a href="https://en.wikipedia.org/wiki/I%C2%B2C">I²C</a>
+
+[^6]: <a href="http://www.multicastdns.org/">Multicast DNS</a>
+
+[^7]: <a href="https://webofthings.org/">Web of Things</a>
+
+[^8]: <a href="https://en.wikipedia.org/wiki/Interrupt">Interrupt</a>
