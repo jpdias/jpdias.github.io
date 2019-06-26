@@ -13,16 +13,16 @@ The *Web of Things* aims to build the Internet of Things in a truly open, flexib
 
 <img src="/images/indoorsensing/mozilla_iot_wordmark.png" style="width:200px; padding-left:8px" align="right">
 
-Before entering into the details of Web of Things [[7]](#wot), one must present its origin, the Internet-of-Things. The Internet-of-Things can be seen as the result of the interconnection via the Internet of computing devices embedded in everyday objects, enabling them to send and receive data. This paradigm-shift provoked a ripple effect transforming everyday objects into *smart* objects, thus being widespread in terms of domains of application.
+Before entering into the details of Web of Things[^7], one must present its origin, the Internet-of-Things. The Internet-of-Things can be seen as the result of the interconnection via the Internet of computing devices embedded in everyday objects, enabling them to send and receive data. This paradigm-shift provoked a ripple effect transforming everyday objects into *smart* objects, thus being widespread in terms of domains of application.
 
-This paradigm-shift opened a window on new market opportunities that lead to several companies to create new products for these new markets, such as the smart-home. However, *despite utopian visions of seamless home automation, the smart home technology market, like every other, is **fragmented*** [[1]](#defrag)[[2]](#enemy). Several companies, institutions and other entities (including governmental ones) have been working on standards for assuring the interoperability and reducing the technological fragmentation of IoT. 
+This paradigm-shift opened a window on new market opportunities that lead to several companies to create new products for these new markets, such as the smart-home. However, *despite utopian visions of seamless home automation, the smart home technology market, like every other, is **fragmented***[^1][^2]. Several companies, institutions and other entities (including governmental ones) have been working on standards for assuring the interoperability and reducing the technological fragmentation of IoT. 
 
-Web of Things, as part of the Internet-of-Things initiative, proposes the creation a decentralized Internet-of-Things by giving Things URLs on the web to make them linkable and discoverable, and defining a standard data model and APIs to make them interoperable [[4]](#projectthings).
+Web of Things, as part of the Internet-of-Things initiative, proposes the creation a decentralized Internet-of-Things by giving Things URLs on the web to make them linkable and discoverable, and defining a standard data model and APIs to make them interoperable[^4].
 
-Mozilla, as a defender of the mission of *"keeping the internet open and accessible to all"* and putting efforts on building a better Internet [[3]](#moz) has embraced the Web of Things initiative and created **Project Things** [[4]](#projectthings). This project distinguishes itself from the other standardization initiatives due to the fact that it is built upon existing web standards such as HTTP, REST, JSON, WebSockets and TLS.
+Mozilla, as a defender of the mission of *"keeping the internet open and accessible to all"* and putting efforts on building a better Internet[^1] has embraced the Web of Things initiative and created **Project Things** [[4]](#projectthings). This project distinguishes itself from the other standardization initiatives due to the fact that it is built upon existing web standards such as HTTP, REST, JSON, WebSockets and TLS.
 
 
-**Project Things** [[4]](#projectthings) is an experimental framework of software and services from Mozilla for connecting "things" to the web and will consist of three main components:
+**Project Things**[^4] is an experimental framework of software and services from Mozilla for connecting "things" to the web and will consist of three main components:
 - Web Thing API: A common data model and API for the Web of Things.
 - Things Gateway: An implementation of a Web of Things gateway that leverages the Web Thing API.
 - Things Cloud: A collection of IoT cloud services.
@@ -86,7 +86,7 @@ Using the Mozilla Things Framework is as easy as adding the ```webthing-arduino`
 
 For the sake of simplicity for reading and writing data from and to the different parts several libs were used, namely:
 - ``` DHT sensor library```: Reading data from the DHT sensor.
-- ```Adafruit GFX Library```, ```Adafruit_SSD1306``` and ```OneWire```: Writing data on the OLED screen using the I2C connection [[5]](#i2c).
+- ```Adafruit GFX Library```, ```Adafruit_SSD1306``` and ```OneWire```: Writing data on the OLED screen using the I2C connection[^5].
 - ```TaskScheduler```: For scheduling recurring tasks (due to limitations of the DHT sensor, we cannot read data all the times, so we need to schedule it in the Arduino *loop*).
 
 After setting up the dependencies, let's focus on the ```main.cpp```.
@@ -143,7 +143,7 @@ void setup()
 }
 {% endhighlight %}
 
-From this point on we already have our thing being announced to the local network using mDNS [[6]](#mdns) and we can access the device on our browser using the address: ```http://indoorsensor.local```. The result page presents a JSON (as defined by the Web Thing API) with information about all the devices (components) connected to our thing.
+From this point on we already have our thing being announced to the local network using mDNS[^6] and we can access the device on our browser using the address: ```http://indoorsensor.local```. The result page presents a JSON (as defined by the Web Thing API) with information about all the devices (components) connected to our thing.
 
 ### Adding components to our Adapter
 
@@ -241,7 +241,7 @@ void loop(){
 
 #### Connecting the OLED Screen
 
-The OLED screen uses I2C communication (reducing the number of pins used). We have a 4 pin connection, the VCC, GND, Serial Data Line (SDA) and Serial Clock Line (SCL) [[5]](#i2c). Using the ```Adafruit_SSD1306``` for connecting to it, we need to know the hardware address to communicate with it. For finding it out we can use the I2C scanner ([gist available here](https://gist.github.com/tfeldmann/5411375)) to check all the pins.
+The OLED screen uses I2C communication (reducing the number of pins used). We have a 4 pin connection, the VCC, GND, Serial Data Line (SDA) and Serial Clock Line (SCL)[^5]. Using the ```Adafruit_SSD1306``` for connecting to it, we need to know the hardware address to communicate with it. For finding it out we can use the I2C scanner ([gist available here](https://gist.github.com/tfeldmann/5411375)) to check all the pins.
 
 In NodeMCU boards it is recommended to connect any I2C devices to pins D1 and D2 (as presented in the above circuit schematic).
 
@@ -277,7 +277,7 @@ In our case, due to the screen used and printing details, we used our screen ups
 
 #### Checking for motion
 
-Since the motion sensor can be triggered at any time, we can't simply check for motion in the *loop*. For that purpose, we can use interrupts [[8]](#8). So, instead of using the common ```pinMode(PIR, INPUT);```, we must use the ```INPUT_PULLUP``` flag. This allows us to hook a function when the value of the pin changes (flag ```CHANGE```). Since we're working with a digital input, this means that the value changes from 0 to 1 when it senses motion and makes a call to the ```motionDetectedInterrupt``` function.
+Since the motion sensor can be triggered at any time, we can't simply check for motion in the *loop*. For that purpose, we can use interrupts[^8]. So, instead of using the common ```pinMode(PIR, INPUT);```, we must use the ```INPUT_PULLUP``` flag. This allows us to hook a function when the value of the pin changes (flag ```CHANGE```). Since we're working with a digital input, this means that the value changes from 0 to 1 when it senses motion and makes a call to the ```motionDetectedInterrupt``` function.
 
 {% highlight C linenos %}
 int state = false; 
@@ -383,11 +383,11 @@ In a future post, we gonna talk about accessing the Indoor Sensing Hub data, sto
 
 #### References
 
-1. <a id="defrag" href="https://www.oreilly.com/ideas/the-iot-needs-a-defrag">The IoT needs a defrag</a>
-2. <a id="enemy" href="https://www.qualcomm.com/news/onq/2016/02/19/fragmentation-enemy-internet-things">Fragmentation is the enemy of the Internet of Things</a>
-3. <a id="moz" href="https://www.mozilla.org/en-US/mission/">Mozilla Mission</a>
-4. <a id="projectthings" href="https://iot.mozilla.org/">Web of Things</a>
-5. <a id="i2c" href="https://en.wikipedia.org/wiki/I%C2%B2C">I²C</a>
-6. <a id="mdns" href="http://www.multicastdns.org/">Multicast DNS</a>
-7. <a id="wot" href="https://webofthings.org/">Web of Things</a>
-8. <a id="8" href="https://en.wikipedia.org/wiki/Interrupt">Interrupt</a>
+[^1] <a href="https://www.oreilly.com/ideas/the-iot-needs-a-defrag">The IoT needs a defrag</a>
+[^2] <a href="https://www.qualcomm.com/news/onq/2016/02/19/fragmentation-enemy-internet-things">Fragmentation is the enemy of the Internet of Things</a>
+[^3] <a href="https://www.mozilla.org/en-US/mission/">Mozilla Mission</a>
+[^4] <a href="https://iot.mozilla.org/">Web of Things</a>
+[^5] <a href="https://en.wikipedia.org/wiki/I%C2%B2C">I²C</a>
+[^6] <a href="http://www.multicastdns.org/">Multicast DNS</a>
+[^7] <a href="https://webofthings.org/">Web of Things</a>
+[^8] <a href="https://en.wikipedia.org/wiki/Interrupt">Interrupt</a>
