@@ -11,7 +11,7 @@ description: "Write-up for the CTF-like challenge of [0x75] edition of the Øx�
 
 The meetup happens in a monthly-basis, feel free to [join in](https://www.meetup.com/0xOPOSEC/).
 
-This challenge was solved in collaboration with my friend ~(and Ph.D. supervisor)~[@hugosf](http://hugosereno.eu/).
+This challenge was solved in collaboration with my friend _<s>(and Ph.D. supervisor)</s>_ [@hugosf](http://hugosereno.eu/).
 
 
 ## Análise.eml
@@ -28,7 +28,7 @@ It all started with an URL to a Dropbox stored file. The file, named `Análise.e
 >--
 >A **volatilidade** é a constante da vida!
 
-!(footer)[/images/oposec/banner.jpg]
+![footer](/images/oposec/banner.jpg)
 
 Analyzing the headers of the Email message nothing useful popped out. 
 
@@ -109,7 +109,7 @@ Offset(P)  Local Address             Remote Address            Pid
 
 Even after wasting some time running nmap in some of the most strange ones, nothing.
 
-And after, @hugosf had an idea, how about checking out the *clipboard*.
+And after, *@hugosf* had an idea, how about checking out the *clipboard*.
 
 ```bash
 $ python volatility/vol.py -f memdmp --profile=WinXPSP2x86 clipboard
