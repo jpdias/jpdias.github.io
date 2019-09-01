@@ -13,8 +13,9 @@ confs:
     authors: "Ademar Aguiar, André Restivo, Filipe Figueiredo Correia, Hugo Sereno Ferreira, João Pedro Dias"
     conference: "5th Programming Experience (PX) Workshop -- Part of the International Conference on the Art, Science, and Engineering of Programming (‹Programming› 2019)"
     year: 2019
-    url: "/404"
-    status: "Accepted"
+    url: "https://doi.org/10.1145/3328433.3328456"
+    doi: 10.1145/3328433.3328456
+    status: "Published"
     pub: ACM
   
   - title: "Live Software Development Environment for Java using Virtual Reality"
