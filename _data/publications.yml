@@ -5,7 +5,8 @@ confs:
     authors: "João Pedro Dias, Tiago Boldt and Hugo Sereno Ferreira"
     conference: "24th European Conference on Pattern Languages of Programs"
     year: 2019
-    url: "/404"
+    doi: 10.1145/3361149.3361165
+    url: "http://doi.org/10.1145/3361149.3361165"
     status: "Accepted"
     pub: ACM
     
