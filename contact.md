@@ -4,7 +4,7 @@ is_contact: true
 title: "./jpdias/contact"
 ---
 
-## contact
+## Contact
 
 <i class="far fa-envelope"></i> Email: [jpdias[at]outlook.com](mailto:jpdias@outlook.com)
 
