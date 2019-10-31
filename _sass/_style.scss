@@ -133,7 +133,8 @@ h1 {
 
 @media (max-width: 650px) {
   .container {
-    max-width: 83%;
+    max-width: 85%;
+    font-size: 85%;
   }
 
   .navbar-ul {
@@ -266,7 +267,7 @@ ul.pager li {
 /*shields*/
 
 .tagline {
-  height: 10px;
+  display: inline-block;
 }
 
 .shield {
