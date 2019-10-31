@@ -30,15 +30,15 @@ sass:
     sass_dir: _sass
 
 nav:
- - name: "About"
+ - name: "about"
    link: "/"
- - name: "Blog"
+ - name: "blog"
    link: "/blog/"
- - name: "Publications"
+ - name: "publications"
    link: "/publications"
- - name: "CurriculumVitae"
+ - name: "curriculum_vitae"
    link: "/assets/jpdias.pdf"
- - name: "Contact"
+ - name: "contact"
    link: "/contact"
 
 social:
