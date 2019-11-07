@@ -37,6 +37,14 @@ h1 {
   text-align: left;
 }
 
+h2::before {
+    color: #FE5C35;
+    margin-right: 10px;
+    position: absolute;
+    margin-left: -20px;
+    content: '#';
+}
+
 .blog-content {
   h1:before {
     content: "#";
