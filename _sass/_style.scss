@@ -37,7 +37,7 @@ h1 {
   text-align: left;
 }
 
-h2::before {
+.content > h2::before {
     color: #FE5C35;
     margin-right: 10px;
     position: absolute;
