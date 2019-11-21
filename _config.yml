@@ -25,10 +25,6 @@ tracking_id: UA-47721282-1
 
 footer: yes
 
-sass:
-    style: compressed
-    sass_dir: _sass
-
 nav:
  - name: "about"
    link: "/"
