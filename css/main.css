@@ -1,0 +1,496 @@
+:root {
+  --main-headers-color: #fe5c35;
+  --main-bg-color: #202020;
+  --main-font-color: rgba(255, 255, 255, 0.8);
+  --code-bg-color: 
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: "Rosario", sans-serif;
+  color: var(--main-font-color);
+  font-size: 1.02em;
+  line-height: 1.5;
+  height: 100%;
+  background-color: var(--main-bg-color);
+  text-align: justify;
+  text-justify: inter-word;
+  overflow-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-headers-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  text-align: left;
+}
+
+.content > h2::before {
+  color: var(--main-headers-color);
+  margin-right: 10px;
+  position: absolute;
+  margin-left: -20px;
+  content: "#";
+}
+
+.blog-content h1:before {
+  content: "#";
+  color: var(--main-headers-color);
+  margin-right: 10px;
+  position: absolute;
+  margin-left: -35px;
+}
+.blog-content h2:before {
+  content: "##";
+  color: var(--main-headers-color);
+  margin-right: 10px;
+  position: absolute;
+  margin-left: -40px;
+}
+.blog-content h3:before {
+  content: "###";
+  color: var(--main-headers-color);
+  margin-right: 10px;
+  position: absolute;
+  margin-left: -45px;
+}
+.blog-content h4:before {
+  content: "####";
+  color: var(--main-headers-color);
+  margin-right: 10px;
+  position: absolute;
+  margin-left: -50px;
+}
+
+/*
+   * Navbar
+   */
+#author-name {
+  font-size: 30px;
+  color: var(--main-font-color);
+  display: inline-block;
+}
+
+.navbar {
+  padding: 50px 0 50px 0;
+}
+
+.navbar-ul {
+  display: inline-block;
+  margin: 0;
+  padding: 5px 0 5px 0;
+  margin-left: 20px;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0 5px 0 10px;
+}
+
+.alignable,
+.pull-right,
+.pull-left {
+  display: inline-block;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+/* Divs */
+.container {
+  max-width: 860px;
+  margin: auto;
+}
+
+.wrapper {
+  min-height: 100%;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .container {
+    max-width: 600px;
+    transition: 0.3s ease all;
+  }
+}
+@media (max-width: 650px) {
+  .container {
+    max-width: 85%;
+    font-size: 95%;
+  }
+
+  .navbar-ul {
+    margin-top: 5px;
+  }
+}
+@media (max-width: 500px) {
+  .navbar {
+    text-align: center;
+    padding: 50px 0px 0px 0px;
+  }
+
+  #author-name {
+    width: 100%;
+    float: none;
+  }
+
+  /*.content ol > li {
+      margin-top: 30px !important;
+    }*/
+  #navlist {
+    padding: 10px 0 10px 0;
+    margin: 0;
+    display: block;
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  #navlist li.alignable,
+  #navlist li.pull-left,
+  #navlist li.pull-right {
+    display: inline-block;
+  }
+
+  #navlist li.pull-left {
+    float: none;
+  }
+
+  #navlist li.nav-list {
+    margin: 0;
+  }
+}
+/*images*/
+.imgsdiv {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+/* HR 
+  border: 0;
+  height: 0;
+  
+  */
+hr {
+  background: url("/images/resistor.png") no-repeat top center;
+  background-size: contain;
+  display: block;
+  height: 18px;
+  border: 0;
+  position: relative;
+}
+
+hr:before,
+hr:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-top: 0px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  height: 0px;
+  top: 8px;
+}
+
+hr:before {
+  left: 0;
+  right: 50%;
+  margin-right: 22px;
+}
+
+hr:after {
+  right: 0;
+  left: 50%;
+  margin-left: 22px;
+}
+
+/*share*/
+.share-page {
+  text-align: center;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+.share-page a {
+  font-weight: 700;
+  margin-left: 10px;
+}
+.share-page a:hover {
+  border-bottom: 1px dashed;
+}
+
+/*pagination*/
+ul.pager {
+  text-align: center;
+  list-style: none;
+}
+
+ul.pager li {
+  display: inline;
+  padding: 10px;
+  margin: 5px;
+}
+
+/*shields*/
+.tagline {
+  display: inline-block;
+}
+
+.shield {
+  height: 20px;
+  font-size: 13px;
+  line-height: 20px;
+  padding-right: 5px;
+  padding-left: 30px;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  float: left;
+  letter-spacing: 1px;
+  border-radius: 5px;
+}
+
+.shield-grey {
+  background-color: #495057;
+  color: white;
+}
+
+.shield-blue {
+  background-color: #297fb8;
+  color: white;
+}
+
+.shield-yellow {
+  background-color: #d8a509;
+  color: white;
+}
+
+.shield-red {
+  background-color: var(--main-headers-color);
+  color: white;
+}
+
+.shield-green {
+  background-color: #35aa12;
+  color: white;
+}
+
+.shield span {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  width: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 10px;
+}
+
+div > .highlighter-rouge {
+  font-family: "Fira Code", monospace;
+  border-left: 5px solid #333333;
+  margin: 20px 0 20px 0;
+  padding: 2px 8px 2px 8px;
+  font-size: 0.98em;
+}
+
+.social-links {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+table {
+  margin: 15px 0;
+  border-collapse: collapse;
+  width: 100%;
+  padding: 0;
+}
+
+table tr {
+  border-top: 1px solid #cccccc;
+  margin: 0;
+  padding: 0;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f834;
+}
+
+table tr th {
+  font-weight: bold;
+  border: 1px solid #cccccc;
+  color: white;
+  background-color: #f8f8f834;
+  text-align: left;
+  margin: 0;
+  padding: 3px 7px;
+}
+
+table tr td {
+  border: 1px solid #cccccc;
+  text-align: left;
+  margin: 0;
+  padding: 3px 7px;
+}
+
+table tr th :first-child,
+table tr td :first-child {
+  margin: 0;
+}
+
+table tr th :last-child,
+table tr td :last-child {
+  margin: 0;
+}
+
+.rouge-table {
+  margin-bottom: 0px;
+}
+
+.rouge-table td {
+  border-top: none;
+}
+
+.rouge-table td:nth-child(1) {
+  width: 5px;
+}
+
+.highlight {
+  margin: 0px;
+}
+
+pre {
+  counter-reset: line-numbering;
+  border-radius: 0;
+  padding: 0;
+  line-height: 23px;
+  margin-bottom: 30px;
+  white-space: pre;
+  overflow-x: auto;
+  word-break: inherit;
+  word-wrap: inherit;
+}
+
+pre a::before {
+  content: counter(line-numbering);
+  counter-increment: line-numbering;
+  padding-right: 1em;
+  /* space after numbers */
+  width: 25px;
+  text-align: right;
+  opacity: 0.7;
+  display: inline-block;
+  margin-right: 16px;
+  padding: 2px 10px;
+  font-size: 13px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+pre a:first-of-type::before {
+  padding-top: 10px;
+}
+
+pre a:last-of-type::before {
+  padding-bottom: 10px;
+}
+
+pre a:only-of-type::before {
+  padding: 10px;
+}
+
+.content a:hover {
+  text-decoration: underline;
+}
+.content ol {
+  counter-reset: list;
+}
+.content ol > li {
+  list-style-position: none;
+  position: relative;
+  list-style: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.content ul > li {
+  margin: 5px 0 5px 0;
+}
+.content ol {
+  padding: 0 30px 0 30px;
+}
+.content ol > li:before {
+  content: "[" counter(list, decimal) "] ";
+  counter-increment: list;
+  position: absolute;
+  left: -30px;
+}
+.content ol > li > ul {
+  padding-left: 0px;
+  display: flow-root;
+}
+.content ol > li > ul > li {
+  list-style: none;
+}
+.content blockquote {
+  border-left: 5px solid #333333;
+  margin: 20px 0 20px 0;
+  padding: 2px 8px 2px 8px;
+  font-style: italic;
+}
+.content .profile-picture {
+  width: 100px;
+  position: relative;
+  margin: -60px 0 0 15px;
+  float: right;
+  border: solid #96969d 2px;
+  margin-bottom: 10px;
+}
+@media (max-width: 480px) {
+  .content .profile-picture img {
+    display: none;
+  }
+}
+.content img {
+  text-align: center;
+  width: 100%;
+}
+@media (max-width: 480px) {
+  .content ol {
+    padding: 0 0 0 30px;
+  }
+}
