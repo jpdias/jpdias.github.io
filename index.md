@@ -10,7 +10,7 @@ description: "Engineer. Developer. Photography enthusiast. Researching on the th
 
 > Engineer. Developer. Photography enthusiast.
 
-Currently working as a researcher on the thin line between hardware and software. Graduated from the [Integrated Masters in Informatics and Computing Engineering](https://sigarra.up.pt/feup/en/cur_geral.cur_view?pv_ano_lectivo=2018&pv_origem=CUR&pv_tipo_cur_sigla=MI&pv_curso_id=742) by [Faculty of Engineering, University of Porto (FEUP)](https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL). Passionate about technology in general, with a special focus on security and privacy, web development & Internet of Things. Furthermore, an amateur photographer, football player, book lover and science addict.
+Currently working as a researcher on the thin line between hardware and software. Graduated from the [Integrated Masters in Informatics and Computing Engineering](https://sigarra.up.pt/feup/en/cur_geral.cur_view?pv_ano_lectivo=2018&pv_origem=CUR&pv_tipo_cur_sigla=MI&pv_curso_id=742) by [Faculty of Engineering, University of Porto (FEUP)](https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL). Passionate about technology in general, with a special focus on security and privacy, web development & Internet-of-Things. Furthermore, an amateur photographer, football player, book lover and science addict.
 
 #### Work & Study
 
@@ -21,11 +21,11 @@ Currently working as a researcher on the thin line between hardware and software
 ## Research Interests
 
 - Software Engineering
-    - Design Patterns, Development Methodologies, Software Development Life-cycle (SDLC), Edge/Fog/Cloud Computing, Live Programming & Liveness
+    - Design Patterns, Development Methodologies, Software Development, Edge/Fog/Cloud Computing, Live Programming, Visual Programming and Fault-Tolerance
 - Internet-of-Things
     - Systems of Systems, Reference Architectures, Development Toolkits and IDEs
 - Security & Privacy
-    - Surveillance Self-Defense, Capture the Flag (CTF), Security Education
+    - Surveillance Self-Defense, Capture the Flag (CTF) and Security Education
 
 ---
 
