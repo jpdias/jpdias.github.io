@@ -18,8 +18,6 @@ plugins_dir:
 plugins:
   - jekyll-paginate
 
-compress_images:
-  images_path: "images/**/*.{gif,jpg,jpeg}"
 
 tracking_id: UA-47721282-1
 
