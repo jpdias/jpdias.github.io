@@ -2,7 +2,23 @@
   --main-headers-color: #fe5c35;
   --main-bg-color: #202020;
   --main-font-color: rgba(255, 255, 255, 0.8);
-  --code-bg-color: 
+  --hr-border-settings: 2px solid rgba(255, 255, 255, 0.3);
+  --code-bg-color: #202020;
+  --code-font-color: #d0d0d0;
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-headers-color: #fe5c35;
+    --main-bg-color: #fff;
+    --main-font-color: #313135;
+    --hr-border-settings: 2px solid #666666;
+    --code-bg-color: #fff;
+    --code-font-color: #313135;
+  }
 }
 
 html {
@@ -214,7 +230,7 @@ hr:after {
   display: block;
   position: absolute;
   border-top: 0px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  border-bottom: var(--hr-border-settings);
   height: 0px;
   top: 8px;
 }
@@ -388,6 +404,8 @@ table tr td :last-child {
 
 .highlight {
   margin: 0px;
+  background: var(--code-bg-color);
+  color: var(--code-font-color);
 }
 
 pre {
