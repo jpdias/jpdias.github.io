@@ -447,3 +447,26 @@ pre a: only-of-type::before {
     padding: 0 0 0 30px;
   }
 }
+
+.gh-card {
+  background: #ffffff;
+}
+
+.gh-card img {
+  outline: 6px solid white;
+  outline-offset: -6px;;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+  grid-gap: 10px;
+}
+
+@media (max-width: 480px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
