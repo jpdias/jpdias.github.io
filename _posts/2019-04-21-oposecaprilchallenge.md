@@ -3,6 +3,7 @@ layout: post
 title:  "ØxＯＰＯＳɆＣ Mɇɇtuᵽ [0x72] and [0x73] Challenges Write-up"
 categories: [infosec, iot]
 tags: [oposec, infosec, ctf]
+thumbanil: https://imgs.xkcd.com/comics/random_number.png
 description: "Write-up for the CTF-like challenges of [0x72] and [0x73] edition of the ØxＯＰＯＳɆＣ Mɇɇtuᵽ"
 ---
 
