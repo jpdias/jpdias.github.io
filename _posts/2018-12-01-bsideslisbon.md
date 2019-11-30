@@ -3,6 +3,7 @@ layout: post
 title:  "Bsides Lisbon 2018 - Checkmarx (mini) CTF Write-up"
 categories: [infosec]
 tags: [bsideslisbon, infosec, ctf]
+thumbnail: /images/bsideslx18/badge.jpg
 description: Write-up of the mini CTF made by Checkmarx during Bsides Lisbon 2018.
 ---
 

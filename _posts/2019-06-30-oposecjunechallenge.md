@@ -3,6 +3,7 @@ layout: post
 title:  "ØxＯＰＯＳɆＣ Mɇɇtuᵽ [0x75] Challenge Write-up"
 categories: [infosec, iot]
 tags: [oposec, infosec, ctf]
+thumbnail: /images/oposec/banner.jpg
 description: "Write-up for the CTF-like challenge of [0x75] edition of the ØxＯＰＯＳɆＣ Mɇɇtuᵽ"
 ---
 

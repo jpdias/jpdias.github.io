@@ -3,6 +3,7 @@ layout: post
 title:  "Make it smoke! Cisco Challenge Write-up"
 categories: [infosec, iot]
 tags: [bsideslisbon, infosec, iot, cisco]
+thumbnail: /images/bsideslx19/final.png
 description: "Write-up of a sidequest challenge by Cisco/Talos during BSidesLisbon 2019"
 ---
 
