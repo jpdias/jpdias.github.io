@@ -39,21 +39,20 @@
     <meta name="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="og:url" content="{{ url }}">
     <meta name="og:type" content="article">
-    {% if site.og_image %}
-        <meta name="og:image" content="{{ site.og_image }}">
-    {% endif %}
-    {% if site.facebook_id %}
-        <meta name="fb:admins" content="{{ site.facebook_id }}">
+    {% if page.thumbnail %}
+        <meta name="og:image" content="{{ site.url }}{{ page.thumbnail }}">
+    {% else %}
+        <meta name="og:image" content="{{ site.url }}{{ site.profile_picture }}">
     {% endif %}
     <!-- Twitter -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:description" content="{{ desc }}">
     <meta name="twitter:url" content="{{ url }}">
-    {% if site.twitter_image %}
-        <meta name="twitter:image" content="{{ site.twitter_image }}">
+    {% if page.thumbnail %}
+        <meta name="twitter:image" content="{{ site.url }}{{ page.thumbnail }}">
     {% else %}
-        <meta name="twitter:image" content="{{ site.profile_picture }}">
+        <meta name="twitter:image" content="{{ site.url }}{{ site.profile_picture }}">
     {% endif %}
 </head>
 <body>
