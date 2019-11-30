@@ -2,6 +2,7 @@ title: "João Pedro Dias"
 url: "https://jpdias.me"
 baseurl: ""
 twitter_username: jpd1as
+profile_picture: /images/profile.jpg
 
 markdown: kramdown
 excerpt_separator: <!--more-->
