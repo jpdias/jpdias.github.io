@@ -7,7 +7,7 @@ thumbnail: /images/bsideslx19/final.png
 description: "Write-up of a sidequest challenge by Cisco/Talos during BSidesLisbon 2019"
 ---
 
-BSides is the biggest security-wise event in Portugal, with two days of talks, workshops, a CTF competition, and lots more. During BSides, some *sidequests* ranging from raffles to challenges appear that can give you prizes*!* This is a write-up of one of those challenges by Cisco/Talos.
+BSides is the biggest security dedicated event in Portugal, with two days of talks, workshops, a CTF competition, and lots more. During BSides, some *sidequests* ranging from raffles to challenges appear that can give you prizes*!* This is a write-up of one of those challenges by Cisco/Talos.
 
 <!--more-->
 
