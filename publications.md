@@ -3,12 +3,13 @@ layout: default
 title: "./jpdias/publications"
 ---
 
-## Conference Publications
+
+## Journal Articles
 #### Peer-Reviewed
 
 {% assign counter = 0 %}
 
-{% for pub in site.data.publications.confs %}
+{% for pub in site.data.publications.journals %}
 
  {% assign counter = counter | plus:1 %}
 
@@ -20,12 +21,13 @@ title: "./jpdias/publications"
 
 ---
 
-## Journal Articles
+
+## Conference Publications
 #### Peer-Reviewed
 
 {% assign counter = 0 %}
 
-{% for pub in site.data.publications.journals %}
+{% for pub in site.data.publications.confs %}
 
  {% assign counter = counter | plus:1 %}
 
