@@ -7,7 +7,7 @@ confs:
     year: 2019
     doi: 10.1145/3361149.3361165
     url: "http://doi.org/10.1145/3361149.3361165"
-    status: "Accepted"
+    status: "Published"
     pub: ACM
     
   - title: "Live Software Development --- Tightening the feedback loops"
@@ -128,6 +128,22 @@ confs:
     pub: SCITEPRESS
     
 journals:
+  - title: "Experimenting with Liveness in Cloud Infrastructure Management"
+    authors: "Pedro Lourenço, João Pedro Dias, Ademar Aguiar, Hugo Sereno Ferreira and André Restivo"
+    conference: "Communications in Computer and Information Science"
+    year: 2019
+    url: "/404"
+    issn: "-"
+    status: "To Appear"
+    pub: Springer
+  - title: "Live Software Development Environment using Virtual Reality: a Prototype and Experiment"
+    authors: "Diogo Amaral, Gil Domingues, João Pedro Dias, Hugo Sereno Ferreira, Ademar Aguiar, Rui Nóbrega and Filipe Figueiredo Correia"
+    conference: "Communications in Computer and Information Science"
+    year: 2019
+    url: "/404"
+    issn: "-"
+    status: "To Appear"
+    pub: Springer
   - title: "A Blockchain-based Approach for Access Control in eHealth Scenarios"
     authors: "João Pedro Dias, Ângelo Martins and Hugo Sereno Ferreira"
     conference: "Journal of Information Assurance and Security, Volume 13, Issue 4"
