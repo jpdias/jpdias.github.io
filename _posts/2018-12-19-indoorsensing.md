@@ -77,6 +77,8 @@ The NodeMCU board was picked up since it is cheap, has a built-in wireless shiel
 
 All the parts were brought on *eBay*. You can easily find similar ones on *Aliexpress*, *Amazon* or any other hardware parts seller.
 
+If you want something more *plug&play* you can use the components from [Seed Studio](https://www.seeedstudio.com/). They sell all the components above mentioned (including a [PIR Motion Sensor](https://www.seeedstudio.com/Grove-PIR-Motion-Sensor.html)) along with *Grove hats* that you can use to wire sensors and actuators more easily without need to worry about breadboards and so on.
+
 ![Circuit](/images/indoorsensing/indoorsensing_circuit.png)
 
 [Fritzing Schematic Download](/images/indoorsensing/indoorsensing_circuit.fzz)
