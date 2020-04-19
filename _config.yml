@@ -10,13 +10,13 @@ highlighter: rouge
 paginate: 8
 paginate_path: "/blog/page:num/"
 
+gems: [jekyll-paginate]
+
 plugins_dir:
   - jekyll-paginate
   - jekyll-compress-images
   - rouge
   - kramdown
-
-plugins:
   - jekyll-paginate
 
 

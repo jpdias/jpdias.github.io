@@ -1,14 +1,21 @@
 #status: Accepted, In Press, Published, Submitted, Under revision
 #type: Workshop, Conference
 confs:
-  - title: "Testing and Deployment Patterns for the Internet-of-Things"
-    authors: "João Pedro Dias, Tiago Boldt and Hugo Sereno Ferreira"
-    conference: "24th European Conference on Pattern Languages of Programs"
-    year: 2019
-    doi: 10.1145/3361149.3361165
-    url: "http://doi.org/10.1145/3361149.3361165"
-    status: "Published"
-    pub: ACM
+  - title: "Visual Self-Healing Modelling for Reliable Internet-of-Things Systems"
+    authors: "João Pedro Dias, Bruno Lima, João Pascoal Faria, André Restivo and Hugo Sereno Ferreira"
+    conference: "International Conference on Computational Science"
+    year: 2020
+    url: "/404"
+    status: "In Press"
+    pub: Springer
+    
+  - title: "Conversational Interface for Managing Non-Trivial Internet-of-Things Systems"
+    authors: "André Sousa Lago, João Pedro Dias, and Hugo Sereno Ferreira"
+    conference: "International Conference on Computational Science"
+    year: 2020
+    url: "/404"
+    status: "In Press"
+    pub: Springer
     
   - title: "Live Software Development --- Tightening the feedback loops"
     authors: "Ademar Aguiar, André Restivo, Filipe Figueiredo Correia, Hugo Sereno Ferreira, João Pedro Dias"
