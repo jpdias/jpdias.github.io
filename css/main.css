@@ -184,11 +184,6 @@ h1 {
 /* HR border: 0;
   height: 0;
   */
-.theme-toggle {
-  justify-content: center;
-  line-height: 1;
-  cursor: pointer;
-}
 hr {
   background: url("/images/resistor.png") no-repeat top center;
   background-size: contain;
@@ -459,7 +454,7 @@ pre a: only-of-type::before {
 
 .gh-card img {
   outline: 6px solid white;
-  outline-offset: -6px;;
+  outline-offset: -6px;
 }
 
 .projects {
@@ -474,4 +469,11 @@ pre a: only-of-type::before {
   .projects {
     grid-template-columns: 1fr;
   }
+}
+
+.easter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 5px;
 }
