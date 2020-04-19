@@ -184,6 +184,11 @@ h1 {
 /* HR border: 0;
   height: 0;
   */
+.theme-toggle {
+  justify-content: center;
+  line-height: 1;
+  cursor: pointer;
+}
 hr {
   background: url("/images/resistor.png") no-repeat top center;
   background-size: contain;
