@@ -57,11 +57,11 @@
         <div class="navbar container">
             <a id="author-name" class="alignable pull-left" href="/"><i class="far fa-compass">&nbsp;</i>{{ site.title }}</a>
             <ul id="navlist" class="alignable pull-right navbar-ul">
-                {% for x in site.nav %}
-                    {% if x.name == "Resume" %}
-                        <li class="alignable pull-left nav-list"><a target="_blank" href="{{ x.link }}">{{ x.name }}</a>
+                {% for page in site.nav %}
+                    {% if page.name == "Resume" %}
+                        <li class="alignable pull-left nav-list"><a target="_blank" href="{{ page.link }}">{{ page.name }}</a>
                     {% else %}
-                        <li class="alignable pull-left nav-list"><a href="{{ x.link }}">{{ x.name }}</a>
+                        <li class="alignable pull-left nav-list"><a href="{{ page.link }}">{{ page.name }}</a>
                     {% endif %}
                         /
                         </li>
@@ -78,8 +78,8 @@
                 {{ content }}
                 <hr />
                 <p class="social-links">
-                    {% for x in site.social %}
-                        <a href="{{ x.url }}" target="_blank"><i class="{{ x.icon }}"></i></span></a> &nbsp;
+                    {% for page in site.social %}
+                        <a href="{{ page.url }}" target="_blank"><i class="{{ page.icon }}"></i></span></a> &nbsp;
                     {% endfor %}
                 </p>
                 
