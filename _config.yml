@@ -19,9 +19,6 @@ plugins_dir:
   - kramdown
   - jekyll-paginate
 
-
-tracking_id: UA-47721282-1
-
 footer: yes
 
 nav:
