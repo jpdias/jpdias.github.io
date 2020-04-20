@@ -56,7 +56,7 @@ title: "./jpdias/projects"
 
     repoXHR.open(
         "GET",
-        'https://api.github.com/users/' + username + '/repos?sort=pushed&type=all',
+        'https://api.github.com/users/' + username + '/repos?sort=created&type=all',
         true
     );
     repoXHR.addEventListener("load", populate);
