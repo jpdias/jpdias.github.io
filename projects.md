@@ -28,7 +28,7 @@ title: "./jpdias/projects"
         const ul = document.getElementsByClassName(classes.ul)[0];
 
         for (var i = 0, len = repos.length; i < len; i++) {
-            if (repos[i].stargazers_count > 1 ||  repos[i].forks > 1) {
+            if (!repos[i].fork && (repos[i].stargazers_count > 1 ||  repos[i].forks > 1)) {
                 const li = document.createElement("li");
                 const a = document.createElement("a");
                 const p = document.createElement("p");
@@ -56,7 +56,7 @@ title: "./jpdias/projects"
 
     repoXHR.open(
         "GET",
-        'https://api.github.com/users/' + username + '/repos?sort=updated&type=all',
+        'https://api.github.com/users/' + username + '/repos?sort=pushed&type=all',
         true
     );
     repoXHR.addEventListener("load", populate);
