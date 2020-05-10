@@ -28,11 +28,8 @@ nav:
    link: "/blog/"
  - name: "publications"
    link: "/publications"
-<<<<<<< HEAD
-=======
 # - name: "open_source"
 #   link: "/projects"
->>>>>>> 5a484445109be86407bf6b3e93e1e293250afadb
  - name: "curriculum_vitae"
    link: "/assets/jpdias.pdf"
  - name: "contact"
