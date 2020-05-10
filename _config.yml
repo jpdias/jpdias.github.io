@@ -10,7 +10,7 @@ highlighter: rouge
 paginate: 8
 paginate_path: "/blog/page:num/"
 
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 
 plugins_dir:
   - jekyll-paginate
@@ -28,8 +28,6 @@ nav:
    link: "/blog/"
  - name: "publications"
    link: "/publications"
- - name: "open_source"
-   link: "/projects"
  - name: "curriculum_vitae"
    link: "/assets/jpdias.pdf"
  - name: "contact"
