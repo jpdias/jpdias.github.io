@@ -50,6 +50,11 @@ h1 {
   letter-spacing: -1px;
   text-align: left;
 }
+h2,h3,h4 {
+  letter-spacing: -1px;
+  text-align: left;
+}
+
 .footnotes {
   line-height: 1.1em;
 }
