@@ -26,11 +26,13 @@ html {
 }
 body {
   margin: 0;
-  font-family: "Rosario", sans-serif;
+  font-family: "Fira Mono", monospace;
   color: var(--main-font-color);
-  font-size: 16px;
-  line-height: 1.5;
-  height: 100%;
+  font-family: 'Fira Mono',monospace;
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: .03em;
+  line-height: 1.6em;
   background-color: var(--main-bg-color);
   text-align: justify;
   text-justify: inter-word;
@@ -44,7 +46,12 @@ a:hover {
   text-decoration: underline;
 }
 h1 {
+  font-size: 1.8em;
+  letter-spacing: -1px;
   text-align: left;
+}
+.footnotes {
+  line-height: 1.1em;
 }
 .content > h2::before {
   color: var(--main-headers-color);
@@ -83,7 +90,7 @@ h1 {
 }
 /* * Navbar */
 #author-name {
-  font-size: 30px;
+  font-size: 25px;
   color: var(--main-font-color);
   display: inline-block;
 }
