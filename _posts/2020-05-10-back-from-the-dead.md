@@ -11,13 +11,13 @@ My long-term laptop, which accompanied me for some years, died some time ago whi
 
 <!--more-->
 
-<center><img src="/images/msi/laptop.jpg" style="width:500px"></center>
+<center><img src="/images/msi/laptop.jpg" style="max-width:500px"></center>
 
 ## A little background
 
 So, I typically tend (and try) to buy machines that seem pretty reliable and easy to repair even if that comes with sacrificing my back a little. So, after carrying an Asus machine for some years, the low screen resolution -- 1366x768 -- on a 15.6'' screen became a pain to develop software with. As a result, back in 2016, I brought a 17.3'' war machine, a [MSI PE70 6QE](https://www.msi.com/Laptop/PE70-6QE/Specification) which resulted in sacrificing my back once again.
 
-<center><img src="/images/msi/meltdown-spectre.png" style="width:200px"></center>
+<center><img src="/images/msi/meltdown-spectre.png" style="max-width:200px"></center>
 
 The machine was pretty reliable for all its life; however, its processor, a 6th-generation Skylake-H Intel® Core™ i7-6700HQ, was amongst the ones affected with the [Meltdown and Spectre vulnerabilities](https://meltdownattack.com/). This Intel-powered vulnerability could allow an attacker to grab information currently being processed on the computer by running a malicious program to get data from other running programs (*which is not supposed to happen*).
 
@@ -49,7 +49,7 @@ Some time ago, due to my interest in starting to reverse engineering IoT stuff, 
 
 > CH341A is a USB interface chip that can emulate UART communication, standard parallel port, memory parallel port and synchronous serial (I2C, SPI).[^1]
 
-<center><img src="/images/msi/spi.png" style="width:250px"></center>
+<center><img src="/images/msi/spi.png" style="max-width:250px"></center>
 
 With this device, I could dump the firmware from a wide range of different serial flash memories (SPIflash) such as the ones typically used to "store" the BIOS program on PC. With some further reading, I found out that this device was pretty known among the BIOS modding community, and, although the lack of official documentation, an extensive amount of community-based documentation is available.
 
@@ -57,7 +57,7 @@ So, why not trying to fix the laptop? *At least it can't get any worse.*
 
 The process seems rather simple: open the laptop, remove every power source (including the CMOS), find the BIOS chip, connect the clip and the clip to the CH341A, connect to the PC and use one of the available tools to flash with the new firmware from the [MSI website](https://www.msi.com/Laptop/support/PE70-6QE).
 
-<center><img src="/images/msi/MSI-PE70.jpg" style="width:100%"></center>
+<center><img src="/images/msi/MSI-PE70.jpg" style="max-width:100%"></center>
 
 First thing first, let's identify the BIOS SPIflash. Typically, this chip is physically close to the CMOS battery, so there's a candidate with high probability highlighted in <span style="color:red;">RED</span> in the board picture. However, there are some other chips (highlighted in <span style="color:yellow;">YELLOW</span>) that are probably other SPIflashes (with other responsibilities). Nonetheless, before bricking anything else, let's check the markings on those chips [^2]. 
 
@@ -67,12 +67,12 @@ The only readable markings in the <span style="color:red;">RED</span> chip were 
 
 > The BIOS chip was named "25864CS1G". This is one of the Winbond's 8MByte/64MBit serial flash memory ICs. I used CH341A as the programmer and flashed it in "W25Q64FW" category. Also, don't forget that you will need a SOP8 crocodile and remove battery/BIOS battery before flashing.
 
-<center><img src="/images/msi/programmer.png" style="width:400px"></center>
+<center><img src="/images/msi/programmer.png" style="max-width:400px"></center>
 
 So this was it, let's flash the EEPROM. The CH341A is compatible with ICs with the terminology `x25XXX` and `x24XXX`. This matched the identified Winbond SPIflash. All is needed now is to connect the clip to the EEPROM. There are several programmers compatible with the CH431A programmer, and I picked AsProgrammer (Windows-only), available [here](https://github.com/nofeletru/UsbAsp-flash) [^5].
 
 
-<center><img src="/images/msi/flash.jpg" style="width:500px"></center>
+<center><img src="/images/msi/flash.jpg" style="max-width:500px"></center>
 
 Some considerations:
 - The red cable symbolizes the pin 0, so be careful to connect it accordantly both in the CH341A and in the motherboard (a dot mark symbolizes pin 0).
@@ -80,11 +80,11 @@ Some considerations:
 
 Connecting the USB port and opening the AsProgrammer allowed me to read and write from the chip, *yey!*
 
-<center><img src="/images/msi/Capture.png" style="width:400px"></center>
+<center><img src="/images/msi/capture.png" style="max-width:400px"></center>
 
 So, after dumping the current (and, believed, broken) firmware to a file, I flashed the chip with the latest version from the MSI support website. After rebooting the PC, it reset a few times, and then the BIOS screen showed up!
 
-<center><img src="/images/msi/bios.jpg" style="width:400px"></center>
+<center><img src="/images/msi/bios.jpg" style="max-width:400px"></center>
 
 SUCCESS! Everything went better than expected. I was able to correctly set-up everything, format and install Windows 10. It's now up and running after being declared dead by two different hardware stores.
 
