@@ -8,7 +8,7 @@ markdown: kramdown
 excerpt_separator: <!--more-->
 highlighter: rouge
 paginate: 8
-paginate_path: "/blog/page:num/"
+paginate_path: "/notes/page:num/"
 
 plugins: [jekyll-paginate]
 
@@ -24,8 +24,8 @@ footer: yes
 nav:
  - name: "about"
    link: "/"
- - name: "blog"
-   link: "/blog/"
+ - name: "notes"
+   link: "/notes/"
  - name: "publications"
    link: "/publications"
 # - name: "open_source"
