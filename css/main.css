@@ -156,10 +156,6 @@ h2,h3,h4 {
     width: 100%;
     float: none;
   }
-  /*.content ol > li {
-  margin-top: 30px !important;
-}
-*/
   #navlist {
     padding: 10px 0 10px 0;
     margin: 0;
@@ -411,6 +407,10 @@ pre a: only-of-type::before {
   list-style: none;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+.content ol > li:before {
+  content: "";
+  margin-left: -0.65rem;
 }
 .content ul > li {
   margin: 5px 0 5px 0;
