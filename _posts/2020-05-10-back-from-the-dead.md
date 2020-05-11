@@ -80,13 +80,15 @@ Some considerations:
 
 Connecting the USB port and opening the AsProgrammer allowed me to read and write from the chip, *yey!*
 
-<center><img src="/images/msi/capture.png" style="max-width:400px"></center>
+<center><img src="/images/msi/capture.jpg" style="max-width:400px"></center>
 
 So, after dumping the current (and, believed, broken) firmware to a file, I flashed the chip with the latest version from the MSI support website. After rebooting the PC, it reset a few times, and then the BIOS screen showed up!
 
 <center><img src="/images/msi/bios.jpg" style="max-width:400px"></center>
 
 SUCCESS! Everything went better than expected. I was able to correctly set-up everything, format and install Windows 10. It's now up and running after being declared dead by two different hardware stores.
+
+### References
 
 [^1]: [CH341A Mini Programmer Schematic and Drivers](https://www.onetransistor.eu/2017/08/ch341a-mini-programmer-schematic.html)
 [^2]: Just as a reminder, there is absolutely no official documentation (such as schematics) about the motherboard.
