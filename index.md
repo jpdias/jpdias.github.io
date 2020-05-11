@@ -27,13 +27,21 @@ Currently working as a researcher on the thin line between hardware and software
 - Security & Privacy
     - Surveillance Self-Defense, Capture the Flag (CTF) and Security Education
 
----
-
 ## Recent Publications
 
 {% assign counter = 0 %}
 
-{% for pub in site.data.publications.confs limit:5 %}
+{% for pub in site.data.publications.confs limit:3 %}
+
+ {% assign counter = counter | plus:1 %}
+
+  {{ counter }}. <a href="{{ pub.url }}">**{{ pub.title }}**</a><br>
+  - <i class="fas fa-users"></i> {{ pub.authors }}
+  - <i class="fas fa-caret-right"></i> {{ pub.conference }}, {{ pub.year }}
+
+{% endfor %}
+
+{% for pub in site.data.publications.journals limit:2 %}
 
  {% assign counter = counter | plus:1 %}
 
