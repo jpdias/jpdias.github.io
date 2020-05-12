@@ -8,9 +8,7 @@ title: "./jpdias/contact"
 
 <i class="far fa-envelope"></i> Email: [jpdias[at]outlook.com](mailto:jpdias@outlook.com)
 
----
-
-## Address
+### Address
 
 > João Pedro Dias
 >
@@ -19,15 +17,13 @@ title: "./jpdias/contact"
 > Rua Dr. Roberto Frias, s/n; 
 > 4200-465 Porto, Portugal
 
----
-
-## Social
+### Social
 
 {% for entry in site.social %}
    <a href="{{ entry.url }}" target="_blank"><i class="{{ entry.icon }}"></i> &nbsp; {{ entry.name }}</a>
 {% endfor %}
 
-## Academic
+### Academic
 
 {% for entry in site.academic %}
    <a href="{{ entry.url }}" target="_blank"><i class="{{ entry.icon }}"></i> &nbsp; {{ entry.name }}</a>
