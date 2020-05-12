@@ -36,9 +36,6 @@ nav:
    link: "/contact"
 
 social:
-  - name: keybase/jpdias
-    icon: fab fa-keybase
-    url: https://keybase.io/jpdias
   - name: twitter/jpd1as
     icon: fab fa-twitter
     url: https://twitter.com/jpd1as
