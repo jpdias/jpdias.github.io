@@ -5,16 +5,18 @@ confs:
     authors: "João Pedro Dias, Bruno Lima, João Pascoal Faria, André Restivo and Hugo Sereno Ferreira"
     conference: "International Conference on Computational Science"
     year: 2020
-    url: "/404"
-    status: "In Press"
+    url: "https://doi.org/10.1007/978-3-030-50426-7_27"
+    doi: 10.1007/978-3-030-50426-7_27
+    status: "Published"
     pub: Springer
     
   - title: "Conversational Interface for Managing Non-Trivial Internet-of-Things Systems"
     authors: "André Sousa Lago, João Pedro Dias, and Hugo Sereno Ferreira"
     conference: "International Conference on Computational Science"
     year: 2020
-    url: "/404"
-    status: "In Press"
+    url: "https://doi.org/10.1007/978-3-030-50426-7_29"
+    doi: 10.1007/978-3-030-50426-7_29
+    status: "Published"
     pub: Springer
     
   - title: "Live Software Development --- Tightening the feedback loops"
