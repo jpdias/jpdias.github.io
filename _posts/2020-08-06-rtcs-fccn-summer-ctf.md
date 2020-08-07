@@ -579,5 +579,5 @@ Some other write-ups of these challenges around the web:
 - [forensics-250 by João Varelas](https://vrls.ws/posts/rcts-cert-summer-ctf-2020-forensics-250-writeup/)
 
 <center>
-<img style="width: 50%;" src="/images/rctsctf20/certrcts.bmp"/>
+<img style="width: 50%;" src="/images/rctsctf20/certrcts.jpg"/>
 </center>
