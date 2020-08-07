@@ -19,6 +19,15 @@ confs:
     status: "Published"
     pub: Springer
     
+  - title: "Testing and Deployment Patterns for the Internet-of-Things"
+    authors: "João Pedro Dias, Hugo Sereno Ferreira, Tiago Boldt Sousa"
+    conference: "24th European Conference on Pattern Languages of Programs (EuroPLoP 2019)"
+    year: 2019
+    url: "https://doi.org/10.1145/3361149.3361165"
+    doi: 10.1145/3361149.3361165
+    status: "Published"
+    pub: ACM
+    
   - title: "Live Software Development --- Tightening the feedback loops"
     authors: "Ademar Aguiar, André Restivo, Filipe Figueiredo Correia, Hugo Sereno Ferreira, João Pedro Dias"
     conference: "5th Programming Experience (PX) Workshop -- Part of the International Conference on the Art, Science, and Engineering of Programming (‹Programming› 2019)"
