@@ -1,0 +1,29 @@
+function checkpassword($user_supplied_password,$systempass){
+  
+   $login_password_length=strlen($systempass);
+   $supplied_password_len=strlen($user_supplied_password);
+   if($supplied_password_len!=0){ 
+    for($i=0;$i<$supplied_password_len;$i++){
+       
+       if($i<$login_password_length) #Validar se a password do utilizador nao é maior que a password do sistema
+       {
+
+         if($user_supplied_password[$i]!=$systempass[$i]){
+            echo $GLOBALS['wrongpass']; #Mensagem de erro "palavra pass errada"
+            break;
+
+         }else 
+         { 
+            if($i==($login_password_length-1)) 
+              echo $GLOBALS['flaganswer'];  #Chegou ao fim da string e os caractares estao todos certos
+           
+         }
+       }else
+       {
+         echo $GLOBALS['wrongpass'];
+         break;
+       }
+    }  
+   #Mensagem de erro "palavra pass errada" - nao foi introduzido palavra passe
+   }else echo $GLOBALS['wrongpass'];
+}   
