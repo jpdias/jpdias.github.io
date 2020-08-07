@@ -389,7 +389,7 @@ By analyzing the code we could see that the password was verified char by char, 
 Using Burp Intruder feature, we could just send chars and then order by the response length to get the password. 
 
 <center>
-<img style="width: 50%;" src="/assets/rctsctf20/burp.png"/>
+<img style="width: 60%;" src="/assets/rctsctf20/burp.jpg"/>
 </center>
 
 The password was BAD22757B321. After entering it, we were given the flag:
