@@ -1,0 +1,22 @@
+_main proc near
+var_18 = byte ptr -18h
+var_10 = word ptr -10h
+var_8 = qword ptr -8
+
+push rbp
+mov rbp, rsp
+sub rsp, 20h
+mov rax, 373073EAFD76FDEAh
+mov qword ptr [rbp+var_18], rax
+mov [rbp+var_10], 3Eh
+mov word ptr [rbp+var_18], 6572h
+mov word ptr [rbp+var_18+3], 7265h
+mov word ptr [rbp+var_18+6], 6E69h
+mov byte ptr [rbp+var_10], 67h
+lea rdi, [rbp+var_18]
+call _puts
+xor eax, eax
+add rsp, 20h
+pop rbp
+retn
+_main endp*
