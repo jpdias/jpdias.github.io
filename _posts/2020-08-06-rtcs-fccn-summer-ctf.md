@@ -401,7 +401,8 @@ flag{VULN3R@BLEP@SSW0RD_CH3CK3R}
 ### crypto-100 (100 pts)
 
 > Find the Flag by deciphering the following text:
-> **N erfcbfgn nb qrfnsvb é synt{E0G13$@%%}**
+
+`N erfcbfgn nb qrfnsvb é synt{E0G13$@%%}`
 
 This seemed to be a ROT cypher. Using [CyberChef](https://gchq.github.io/CyberChef/), we found out that this was indeed a ROT13 cypher.
 
