@@ -478,7 +478,7 @@ Booting the machine, and checking the bash history we got the flag.
 
 > The following file comes from an Apache server which was compromised. It is known that the attack was an RCE (remote code execution) and it was carried over the Apache service.
 
-> Find the pieces of evidence of the attack in the log file and submit the flag using the following structure: flag{<ip_address>_<vulnerability_name>}. 
+> Find the pieces of evidence of the attack in the log file and submit the flag using the following structure: flag{\<ip_address\>_\<vulnerability_name\>}. 
 
 <a href="/assets/rctsctf20/apache_logs"><i class="fa fa-file" aria-hidden="true"></i> apache_logs<a/>
 
