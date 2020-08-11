@@ -546,13 +546,13 @@ The file has only squares with different colors. Analysing the HTML code somethi
 [11, 6b],[29, 48],[26, 56],[17, 56],[08, 61],[20, 5a],[06, 74],[09, 57],[14, 52],[04, 5a],[27, 66],[24, 62],[23, 6b],[10, 35],[15, 6f],[01, 6d],[16, 5a],[03, 68],[13, 33],[00, 5a],[02, 78],[05, 33],[12, 58],[31, 3d],[28, 51],[19, 75],[22, 56],[18, 39],[30, 30],[21, 57],[07, 6d],[25, 47]
 ```
 
-Using [CyberChef](https://gchq.github.io/CyberChef/) to sort the values by ID, convert the resulting ordered hex values (colors) to chars, and finally convert it from base64 to plain-text we get the flag: flag{find_the_needle_@}
+Using [CyberChef](https://gchq.github.io/CyberChef/) to sort the values by ID, convert the resulting ordered hex values (the last two digits from the hex color codes) to chars, and finally convert it from base64 to plain-text string, we get the flag: flag{find_the_needle_@}
 
 ### misc-200 (200 pts)
 
 > Find the flag in the following file: flag.zip.
 
-Using a zip cracker script (e.g. <a href="/assets/rctsctf20/zipcracker.py"><i class="fa fa-file" aria-hidden="true"></i> zipcracker.py<a/>) and using the [rockyou](https://github.com/danielmiessler/SecLists/tree/master/Passwords/Leaked-Databases) dictionary we find out that the password was `josh123`.
+Using a zip cracker script (e.g. <a target="_blank" href="https://gist.github.com/jpdias/6e19fb84d49bfd8c7d858d74c31958de"><i class="fa fa-file" aria-hidden="true"></i> zipcracker.py<a/>) and using the [rockyou](https://github.com/danielmiessler/SecLists/tree/master/Passwords/Leaked-Databases) dictionary we find out that the password was `josh123`.
 
 Inside the zip was a text file which content was the flag: flag{br3@k_th3_z1P}.
 
