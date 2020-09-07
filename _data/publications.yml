@@ -2,6 +2,14 @@
 #type: Workshop, Conference
 confs:
   - title: "Real-time Feedback in Node-RED for IoT Development: An Empirical Study"
+    authors: "João Pedro Dias, Tiago Boldt Sousa, André Restivo and Hugo Sereno Ferreira"
+    conference: "25th European Conference on Pattern Languages of Programs (EuroPLoP 2020)"
+    year: 2020
+    url: "/404"
+    status: "To Appear"
+    pub: ACM
+
+  - title: "Real-time Feedback in Node-REEED for IoT Development: An Empirical Study"
     authors: "Diogo Torres, João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
     conference: "IEEE/ACM 24th International Symposium on Distributed Simulation and Real Time Applications (DS-RT)"
     year: 2020
