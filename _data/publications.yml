@@ -1,6 +1,14 @@
 #status: Accepted, In Press, Published, Submitted, Under revision
 #type: Workshop, Conference
 confs:
+  - title: "Real-time Feedback in Node-RED for IoT Development: An Empirical Study"
+    authors: "Diogo Torres, João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
+    conference: "IEEE/ACM 24th International Symposium on Distributed Simulation and Real Time Applications (DS-RT)"
+    year: 2020
+    url: "/404"
+    status: "To Appear"
+    pub: IEEE
+
   - title: "Visual Self-Healing Modelling for Reliable Internet-of-Things Systems"
     authors: "João Pedro Dias, Bruno Lima, João Pascoal Faria, André Restivo and Hugo Sereno Ferreira"
     conference: "International Conference on Computational Science"
