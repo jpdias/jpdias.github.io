@@ -1,7 +1,16 @@
 #status: Accepted, In Press, Published, Submitted, Under revision
 #type: Workshop, Conference
 confs:
-  - title: "Real-time Feedback in Node-RED for IoT Development: An Empirical Study"
+
+  - title: "An Empirical Study on Visual Programming Docker Compose Configurations"
+    authors: "Bruno Piedade, João Pedro Dias and Filipe F. Correia"
+    conference: "1st LowCode Workshop, part of the ACM/IEEE 23rd International Conference on Model Driven Engineering Languages and Systems (MODELS '20)"
+    year: 2020
+    url: "/404"
+    status: "To Appear"
+    pub: ACM
+    
+  - title: "A Pattern-Language for Self-Healing Internet-of-Things Systems"
     authors: "João Pedro Dias, Tiago Boldt Sousa, André Restivo and Hugo Sereno Ferreira"
     conference: "25th European Conference on Pattern Languages of Programs (EuroPLoP 2020)"
     year: 2020
@@ -9,7 +18,7 @@ confs:
     status: "To Appear"
     pub: ACM
 
-  - title: "Real-time Feedback in Node-REEED for IoT Development: An Empirical Study"
+  - title: "Real-time Feedback in Node-RED for IoT Development: An Empirical Study"
     authors: "Diogo Torres, João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
     conference: "IEEE/ACM 24th International Symposium on Distributed Simulation and Real Time Applications (DS-RT)"
     year: 2020
