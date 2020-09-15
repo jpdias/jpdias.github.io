@@ -180,6 +180,7 @@ journals:
     doi: "10.1007/978-3-030-40223-5_4"
     status: "Published"
     pub: Springer
+    
   - title: "Live Software Development Environment using Virtual Reality: a Prototype and Experiment"
     authors: "Diogo Amaral, Gil Domingues, João Pedro Dias, Hugo Sereno Ferreira, Ademar Aguiar, Rui Nóbrega and Filipe Figueiredo Correia"
     conference: "Communications in Computer and Information Science"
@@ -189,6 +190,7 @@ journals:
     doi: "10.1007/978-3-030-40223-5_5"
     status: "Published"
     pub: Springer
+    
   - title: "A Blockchain-based Approach for Access Control in eHealth Scenarios"
     authors: "João Pedro Dias, Ângelo Martins and Hugo Sereno Ferreira"
     conference: "Journal of Information Assurance and Security, Volume 13, Issue 4"
@@ -199,6 +201,12 @@ journals:
     pub: MIR Labs
 
 informal:
+  - title: "Multi-Approach Debugging of Industrial IoT Workflows"
+    authors: "Andreia Rodrigues, José Pedro Silva, João Pedro Dias and Hugo Sereno Ferreira"
+    year: 2020
+    url: "https://arxiv.org/abs/2009.05828"
+    pdf: "https://arxiv.org/pdf/2009.05828"
+    
   - title: "State of the Software Development Life-Cycle for the Internet-of-Things"
     authors: "João Pedro Dias and Hugo Sereno Ferreira"
     year: 2018
