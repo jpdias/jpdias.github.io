@@ -6,7 +6,6 @@
   --code-bg-color: #202020;
   --code-font-color: #d0d0d0;
 }
-
 html {
   height: 100%;
   margin: 0;
@@ -15,7 +14,6 @@ html {
 }
 body {
   margin: 0;
-  font-family: "Fira Mono", monospace;
   color: var(--main-font-color);
   font-family: 'Fira Mono',monospace;
   font-size: 0.95em;
@@ -288,7 +286,9 @@ div > .highlighter-rouge {
   border-left: 5px solid #333333;
   margin: 20px 0 20px 0;
   padding: 2px 8px 2px 8px;
-  font-size: 0.98em;
+}
+.highlighter-rouge {
+  font-size: 1.3em;
 }
 .social-links {
   text-align: center;
