@@ -225,6 +225,9 @@ The flag is flag{ROP_TO_GET_THE_FLAG}.
 
 By the flag content (ROP) and the possible buffer overflow, we conclude that we could jump to the `get_the_flag()` function by overflowing the function address pointer. However, we didn't need to exploit in such a way to get the flag.
 
+> There was someone that shared the following solution after the end of the challenge (for future reference):
+> `$ ./reverse500 $(python -c "print 'A'*27 + '\x87\x9b\x04\x08'")`
+
 ## Steganography
 
 ### stega-100 (100 pts)
