@@ -22,8 +22,9 @@ confs:
     authors: "Diogo Torres, João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
     conference: "IEEE/ACM 24th International Symposium on Distributed Simulation and Real Time Applications (DS-RT)"
     year: 2020
-    url: "/404"
-    status: "To Appear"
+    url: "https://doi.org/10.1109/DS-RT50469.2020.9213544"
+    doi: 10.1109/DS-RT50469.2020.9213544
+    status: "Published"
     pub: IEEE
 
   - title: "Visual Self-Healing Modelling for Reliable Internet-of-Things Systems"
