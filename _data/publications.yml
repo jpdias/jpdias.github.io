@@ -6,8 +6,9 @@ confs:
     authors: "Bruno Piedade, João Pedro Dias and Filipe F. Correia"
     conference: "1st LowCode Workshop, part of the ACM/IEEE 23rd International Conference on Model Driven Engineering Languages and Systems (MODELS '20)"
     year: 2020
-    url: "/404"
-    status: "To Appear"
+    url: "https://doi.org/10.1145/3417990.3420194"
+    doi: 10.1145/3417990.3420194
+    status: "Published"
     pub: ACM
     
   - title: "A Pattern-Language for Self-Healing Internet-of-Things Systems"
