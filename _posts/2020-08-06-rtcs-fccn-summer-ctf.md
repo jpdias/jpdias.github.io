@@ -13,7 +13,7 @@ This year the Computer Emergency Response Team (CERT) of the RCTS – The Scienc
 
 The scoreboard by the end of the competition was the following: 
 <center>
-<img style="width: 70%;" src="/images/rctsctf20/scoreboard.png"/>
+<img style="max-width: 70%;" src="/images/rctsctf20/scoreboard.png"/>
 </center>
 The challenges were solved with [@0xz3z4d45](https://twitter.com/0xz3z4d45), which was the team MVP! Kudos.
 
