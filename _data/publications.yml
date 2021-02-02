@@ -2,28 +2,39 @@
 #type: Workshop, Conference
 confs:
 
+  - title: "Visually-defined Real-Time Orchestration of IoT Systems"
+    authors: "Margarida Silva, João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
+    conference: "17th EAI International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services (EAI MobiQuitous 2020)"
+    year: 2020
+    url: "/404"
+    status: "To Appear"
+    pub: ACM
+
   - title: "An Empirical Study on Visual Programming Docker Compose Configurations"
     authors: "Bruno Piedade, João Pedro Dias and Filipe F. Correia"
     conference: "1st LowCode Workshop, part of the ACM/IEEE 23rd International Conference on Model Driven Engineering Languages and Systems (MODELS '20)"
     year: 2020
-    url: "/404"
-    status: "To Appear"
+    url: "https://doi.org/10.1145/3417990.3420194"
+    doi: 10.1145/3417990.3420194
+    status: "Published"
     pub: ACM
     
   - title: "A Pattern-Language for Self-Healing Internet-of-Things Systems"
     authors: "João Pedro Dias, Tiago Boldt Sousa, André Restivo and Hugo Sereno Ferreira"
     conference: "25th European Conference on Pattern Languages of Programs (EuroPLoP 2020)"
     year: 2020
-    url: "/404"
-    status: "To Appear"
+    url: "https://doi.org/10.1145/3424771.3424804"
+    doi: 10.1145/3424771.3424804
+    status: "Published"
     pub: ACM
 
   - title: "Real-time Feedback in Node-RED for IoT Development: An Empirical Study"
     authors: "Diogo Torres, João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
     conference: "IEEE/ACM 24th International Symposium on Distributed Simulation and Real Time Applications (DS-RT)"
     year: 2020
-    url: "/404"
-    status: "To Appear"
+    url: "https://doi.org/10.1109/DS-RT50469.2020.9213544"
+    doi: 10.1109/DS-RT50469.2020.9213544
+    status: "Published"
     pub: IEEE
 
   - title: "Visual Self-Healing Modelling for Reliable Internet-of-Things Systems"
