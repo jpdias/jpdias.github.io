@@ -3,6 +3,7 @@ layout: post
 title: "Adventures in Reverse: D-Link DVA-G3170i"
 categories: [hardware]
 tags: [hardware, reverse, iot, router]
+thumbnail: /images/dlink21/uart3.jpg
 description: "Hardware and Software Reverse Engineering an ADSL modem + router, the D-Link DVA-G3170i/PT (2011)"
 ---
 
@@ -38,7 +39,7 @@ Opening the router by removing the two screws under the rubber protections lets 
 
 - **PEF 4268T** SLIC-DC Subscriber Line Interface Circuit with Integrated DC/DC Converter.
 
-It also has what seems a UART port with already soldered pins, and a lot of unpopulated spots. This goes according to the idea that DLink produced a base PCB and then configured features accordingly to agreements with different ISPs. As an example, the SoC supports USB and SD card interfaces, but no socket is present. The SoC also exposes a JTAG interface (that probably corresponds to the pins just by the * WiFi antenna* label), but they were not explored since UART worked.
+It also has what seems a UART port with already soldered pins, a JTAG-like pinout, and a lot of unpopulated spots. This goes according to the idea that DLink produced a base PCB and then configured features accordingly to agreements with different ISPs. As an example, the SoC supports USB and SD card interfaces, but no socket is present. The SoC also exposes a JTAG interface (that probably corresponds to the pins just by the *WiFi antenna* label), but this was not explored since UART worked.
 
 ## Admin Interface
 
