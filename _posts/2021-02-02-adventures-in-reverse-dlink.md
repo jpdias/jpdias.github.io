@@ -23,6 +23,8 @@ The DVA-G3170i ADSL2+ VoIP is an ADSL router with one 10/100BASE-T RJ45 LAN port
 
 The device itself has 7 front-panel LEDs, from top to bottom: Internet status, DSL (Link/Act), VoIP, WLAN, LAN (Link/Act), Init and Power. It also has a RESET button. This information comes from the [User Manual (PT)](http://imgs.sapo.pt/images/AJUDA2009/Manual_DVA-G3170i.pdf) which also states that the credentials to the admin interface are *admin* / *admin*.
 
+The first step will be a full visual inspection and understanding what the different system's parts do by searching for their documentation. The Web Admin interface is then presented, but without much detail (since it's not the main focus). Moving to *breaking things* we'll look for different ways to access the device (both by hardware and software means) and getting to **root**. A focus will be given on understanding how the device operates (boot, reset, SSID/Wireless Password generation). Finally, we will inspect some curious binaries and dump some stuff. *Let's Get to It!*
+
 ## Visual Inspection and Hardware Overview
 
 ![PCB view](/images/dlink21/physical.jpeg)
@@ -514,6 +516,18 @@ All of this modifications can also be carried using the Web Admin GUI, e.g.: [19
 </center>
 
 ## Wrap Up
+
+The D-Link DVA-G3170i/PT proved to be a good practice target for hardware reverse engineering, by (1) the diversity of components used and (2) the various ways to use to get access to it. Main take-aways:
+
+- The device has a lot of unpopulated sockets which indicates that D-Link produced several products using the same base PCB;
+- The Web Admin GUI loads all the credentials from the configurations; if one gains access to the device, can extract all the credentials;
+- Telnet is available, and login is made using default credentials (*admin* / *admin*);  UART and the Web Admin interface also uses the same credentials;
+- Exfil files is an easy task if `tftp` or any other file transfer binary is present; alternatively, things such as `screen -L` can be used;
+- Looking at the boot logs (especially when a  `RESET` happens) is crucial to understand how the device bootstraps, and let us find the used scripts; it can also be useful to look at the running processes (`top`) and open ports `netstat -tulpn`;
+- To find how the `wpa_passphrase` is generated (or configured) look for standard WiFi-related configurations such as `hostapd` and follow the *crumbs* (boot logs, etc.);
+- Look for *uncommon* binaries since they're typically device (or brand) -specific and may have access to essential system parts. In this case, `xmldbc` and `rgbd` provide access to configuration files, and allows to retrieve and change them;
+ISPs typically limit what you can do with *your* router, but this is accomplished most of the time by using manufacturer-tools, and one can use them to *unlock* those features.
+
 
 While this is by now a mostly-unused router, an advanced search using the [WiGLE](https://wigle.net/) shows that 138 unique APs are broadcasting an SSID with a similar format (`DLink-______`) and that share the same first three pairs of hex digits of the MAC address (manufacturer code), `00:22:B0`, in Portugal last seen of Jan of 2019. Given the history of people not changing default passwords, this can still be a problem today.
 
