@@ -182,6 +182,16 @@ confs:
     pub: SCITEPRESS
     
 journals:
+  - title: "Managing Non-Trivial Internet-of-Things Systems with Conversational Assistants: A Prototype and a Feasibility Experiment"
+    authors: "André Lago, João Pedro Dias, and Hugo Sereno Ferreira"
+    conference: "Journal of Computational Science"
+    year: 2021
+    url: "https://doi.org/10.1016/j.jocs.2021.101324"
+    issn: "1877-7503"
+    doi: "10.1016/j.jocs.2021.101324"
+    status: "Published"
+    pub: Elsevier
+
   - title: "Experimenting with Liveness in Cloud Infrastructure Management"
     authors: "Pedro Lourenço, João Pedro Dias, Ademar Aguiar, Hugo Sereno Ferreira and André Restivo"
     conference: "Communications in Computer and Information Science"
