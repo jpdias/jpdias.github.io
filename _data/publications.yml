@@ -1,6 +1,13 @@
 #status: Accepted, In Press, Published, Submitted, Under revision
 #type: Workshop, Conference
 confs:
+  - title: "Empowering Visual Internet-of-Things Mashups with Self-Healing Capabilities"
+    authors: "João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
+    conference: "3rd International Workshop on Software Engineering Research & Practices for the Internet of Things (SERP4IoT 2021), part of 43rd International Conference on Software Engineering (ICSE 2021)"
+    year: 2020
+    url: "https://arxiv.org/abs/2103.07395"
+    status: "To Appear (pre-print available)"
+    pub: Pre-Print
 
   - title: "Visually-defined Real-Time Orchestration of IoT Systems"
     authors: "Margarida Silva, João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
