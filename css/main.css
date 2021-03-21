@@ -293,7 +293,16 @@ div > .highlighter-rouge {
 }
 .highlighter-rouge {
   font-size: 1.3em;
-}
+} 
+p > .highlighter-rouge {
+  font-size: 1.3em;
+  background-color: #434444;
+} 
+li > .highlighter-rouge {
+  font-size: 1.3em;
+  background-color: #434444;
+} 
+
 .social-links {
   text-align: center;
   margin-bottom: 10px;
