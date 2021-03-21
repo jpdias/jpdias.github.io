@@ -15,7 +15,7 @@ Back in 2012, a new thingy appeared that reshaped the meaning of low-cost and sm
 
 
 <center>
-<img style="max-width: 70%;" src="/images/picluster/all.jpeg"/>
+<img style="max-width: 80%;" src="/images/picluster/all.jpeg"/>
 </center>
 
 ## Bill of Material
@@ -226,7 +226,7 @@ For building the main dashboard with all the metrics on Grafana, I used as base 
 <img style="max-width: 100%;" src="/images/picluster/grafana.png"/>
 </center>
 
-While I would like to access metrics related to the router (DD-WRT) and showcase them in the Grafana but this router does not have [JFFS](), thus the only build compatible is a _micro_ version that neither provides [snmp](https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol) (which could be fectch using Prometheus [snmp_exporter](https://github.com/prometheus/snmp_exporter)) nor allows to run additional applications (which would enable us to use the `Node exporter` MIPS build).
+Additionally, I would like to access metrics related to the router (DD-WRT) and showcase them in the Grafana. However, the TP-Link router does not have [JFFS](https://wiki.dd-wrt.com/wiki/index.php/JFFS), thus the only build compatible is a _micro_ version that neither provides [snmp](https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol) (which could be fectch using Prometheus [snmp_exporter](https://github.com/prometheus/snmp_exporter)) nor allows to run additional applications (which would enable us to use the `Node exporter` MIPS build).
 
 
 ## Automating Stuff
