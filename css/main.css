@@ -48,6 +48,7 @@ strong {
 
 .footnotes {
   line-height: 1.1em;
+  font-size: smaller;
 }
 .content > h2::before {
   color: var(--main-headers-color);
