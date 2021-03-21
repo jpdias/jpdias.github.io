@@ -26,9 +26,9 @@ One of the objectives was to reduce the new purchases to a minimum (but, as alwa
 |------|----------------------------------------------------------------------------------------------------------------------------|------|
 | 1    | [ewent 4-port USB Charger 5.4A](https://www.ewent.com/en-us/4-port-smart-usb-charger-5-4a-ew1304)                          | Yes  |
 | 1    | [Raspberry Pi Cluster Case 6-Layers](https://www.amazon.com/GeeekPi-Raspberry-Heatsinks-Stackable-Enclosure/dp/B085XT8W9S) | Yes  |
-| 2    | Raspberry Pi 2 Model B Rev 1.1                                                                                             | 0,1  |
-| 1    | Raspberry Pi 3 Model B Rev 1.2                                                                                             | 2    |
-| 1    | Raspberry Pi Model B Rev 2                                                                                                 | 3    |
+| 2    | Raspberry Pi 2 Model B Rev 1.1                                                                                             |  |
+| 1    | Raspberry Pi 3 Model B Rev 1.2                                                                                             |     |
+| 1    | Raspberry Pi Model B Rev 2                                                                                                 |    |
 | 1    | TP-Link TL-WR841N v.9 (factory firmware)                                                                                   |      |
 | 4    | Ethernet Cat. 5 (short, homemade from old cables)                                                                          |      |
 | 4    | USB to Micro USB cable                                                                                                     | Yes  |
@@ -38,6 +38,8 @@ One of the objectives was to reduce the new purchases to a minimum (but, as alwa
 
 
 The 4-port USB Charger 5.4A is not the best option since each RPi can take around 2A; however, it was available in a nearby store, and since some of the Raspberry are older versions, it will likely suffice for the intended purpose. I, however, intend to upgrade all the system to use a common power supply unit (including the router).
+
+From the bottom to the top of the stack we can find: (0) Raspberry Pi 2 Model B Rev 1, (1) Raspberry Pi 2 Model B Rev 1, (2) Raspberry Pi 3 Model B Rev 1, and, by the top, (3) Raspberry Pi Model B Rev 2. 
 
 ## Operating System
 
