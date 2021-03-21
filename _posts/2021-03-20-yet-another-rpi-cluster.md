@@ -7,7 +7,7 @@ thumbnail: /images/picluster/all.jpeg
 description: "Yet another Raspberry Pi cluster build with some network, monitoring and automation perks."
 ---
 
-Those who are hardware tinkers and hackers know how easy it is to accumulate hardware thingies: single-board computers, microcontrollers, sensors and so on. One of those are Raspberry Pi's of different version that lay around accomulating dust. It was time to give some usage to those idle computing resources in the form of a cluster.
+Those who are hardware tinkers and hackers know how easy it is to accumulate hardware thingies: single-board computers, microcontrollers, sensors and so on. One of those are Raspberry Pi's of different version that lay around accomulating dust. It was time to give some usage to those idle computing resources in the form of a cluster for doing some experiments with networking, distributed computing, automation, etc.
 
 <!--more-->
 
@@ -179,10 +179,39 @@ scrape_configs:
 With the configuration of Prometheus done, we can build our `docker-compose.yml` with Prometheus and Grafana.
 
 ```yml
+version: '3'
 
+volumes:
+  prometheus_data: {}
+  grafana_data: {}
+
+services:
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./prometheus/:/etc/prometheus/
+      - prometheus_data:/prometheus
+    command:
+      - '-config.file=/etc/prometheus/prometheus.yml'
+      - '-storage.local.path=/prometheus'
+    expose:
+      - 9090
+    ports:
+      - 9090:9090
+
+  grafana:
+    image: grafana/grafana
+    depends_on:
+      - prometheus
+    expose:
+      - 3000
+    ports:
+      - 3000:3000
+    volumes:
+      - grafana_data:/var/lib/grafana
 ```
 
-Prometheus provide an out-of-the-box Web UI that allows running queries over the collected metrics -- the [expression browser](https://prometheus.io/docs/visualization/browser/) and to check the status of the monitoring targets in `Status->Targets`.
+Prometheus provide an out-of-the-box Web UI that allows running queries over the collected metrics -- the [expression browser](https://prometheus.io/docs/visualization/browser/) and to check the status of the monitoring targets in `Status->Targets`. The query language documentation can be found [here](https://prometheus.io/docs/prometheus/latest/querying/basics/) but the autocomplete feature of the expression browser is a good starting point.
 
 <center>
 <img style="max-width: 75%;" src="/images/picluster/allhosts.png"/>
@@ -197,12 +226,14 @@ For building the main dashboard with all the metrics on Grafana, I used as base 
 <img style="max-width: 100%;" src="/images/picluster/grafana.png"/>
 </center>
 
+While I would like to access metrics related to the router (DD-WRT) and showcase them in the Grafana but this router does not have [JFFS](), thus the only build compatible is a _micro_ version that neither provides [snmp](https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol) (which could be fectch using Prometheus [snmp_exporter](https://github.com/prometheus/snmp_exporter)) nor allows to run additional applications (which would enable us to use the `Node exporter` MIPS build).
+
 
 ## Automating Stuff
 
 The final setup consists of 4 different RPis connected by SSH. However, to carry simple tasks, such an update implied manually create an SSH session to each host and run the command. While searching for a solution to quickly run a command in all the hosts at the same time [Ansible](https://www.ansible.com/) was repeatedly recommended, since it only requires an SSH connection to the host and a Python interpreter installed in the target machine (which already comes installed in the Raspberry OS).
 
-After [installing Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) in my laptop the first thing was to create an `inventory.yml` with all my hosts:
+After [installing Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) in my laptop the first thing was to create an `inventory.yml` with all my hosts, default Python interpreter (ansible does auto-discovery of the Python interpreter available if not specified) and SSH username:
 
 ```yml
 all:
