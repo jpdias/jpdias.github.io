@@ -232,7 +232,7 @@ Prometheus provide an out-of-the-box Web UI that allows running queries over the
 
 For configuring Grafana to retrieve data from Prometheus, go to Data Sources and add a new Prometheus data source, specifying the name of the container as the connection string, `prometheus`.
 
-For building the main dashboard with all the metrics on Grafana, I used as base the [Node Exporter for Prometheus Dashboard](https://grafana.com/grafana/dashboards/11074?pg=dashboards&plcmt=featured-sub1) by [starsliau](https://github.com/starsliao/Prometheus). However, some minor changes were required: add a panel with the different RPis temperatures and modify the `Job` drop-down to let all jobs (since each RPi is a different job). 
+For building the main dashboard with all the metrics on Grafana, I used as base the [Node Exporter for Prometheus Dashboard](https://grafana.com/grafana/dashboards/11074?pg=dashboards&plcmt=featured-sub1) by [starsliau](https://github.com/starsliao/Prometheus). However, some minor changes were required: add a panel with the different RPis temperatures and modify the `Job` drop-down to let all jobs (since each RPi is a different job). You can find the modified version in this [gist](https://gist.github.com/jpdias/87475dba768224e8fa50fd6354a3ad21).
 
 <center>
 <img style="max-width: 100%;" src="/images/picluster/grafana.png"/>
