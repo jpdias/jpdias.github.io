@@ -118,6 +118,16 @@ The next step was to connect the RPis one-by-one to the router ports and connect
 <img style="max-width: 90%;" src="/images/picluster/ddwrt.png"/>
 </center>
 
+#### Addendum (08/04/2021)
+
+The DD-WRT presented several operational problems after some time, such as random reboots and reboot loops (which, eventually, lead to everything stop working). I was able to upgrade the router to an [OpenWRT firmware](https://openwrt.org/toh/tp-link/tl-wr841nd) using the [TFTP recovery instructions](https://openwrt.org/toh/tp-link/tl-wr841nd). The manual configurations needed are:
+- Change base IPv4 address in `Interfaces - LAN` for something different from the third-party network, e.g. `192.168.10.1`.
+- Bridge the LAN interface to the WAN port: `Interfaces - LAN` -> `Physical Settings` and then check Bridge interfaces and select both `eth0` and `eth1`.
+- Connect to the WiFi Access Point: `Network -> Wifi -> Scan` and then connect.
+- Change `Firewall` settings for `wan`: Select networks `wan`, `wan6` and `wwan`.
+
+More info [here](https://openwrt.org/docs/guide-user/network/wifi/connect_client_wifi).
+
 ### Connectivity problems
 
 For some reason, while I could talk with the Raspberries from my laptop, I could ping an RPi from another unit with the error `no route to host`. This [seemed](https://forum.dd-wrt.com/phpBB2/viewtopic.php?p=934698#934698) a known issue with the router VLANs and WAN port reassignment, which could be fixed by adding the following to the router startup scripts:
@@ -255,11 +265,11 @@ After that, with the already configured `ssh-agent`, we can quickly check if we 
 
 ```bash
 # Update and upgrade
-ansible -i inventory.yml -m apt -a "upgrade=yes update_cache=yes" -b
+ansible -i inventory.yml -m apt -a "upgrade=yes update_cache=yes" -b all
 # Reboot all
-ansible -i inventory.yml -a "reboot" -s
+ansible -i inventory.yml -a "reboot" -s all
 # Run command to shutdown all
-ansible -i inventory.yml -m shell -a "shutdown -h now"
+ansible -i inventory.yml -m shell -a "shutdown -h now" all
 ```
 
 More complex tasks can now be automated with [ansible-playbooks](https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html).
