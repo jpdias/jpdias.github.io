@@ -30,7 +30,7 @@ nav:
    link: "/publications"
 # - name: "open_source"
 #   link: "/projects"
- - name: "curriculum_vitae"
+ - name: "cv.pdf"
    link: "/assets/jpdias.pdf"
  - name: "contact"
    link: "/contact"
