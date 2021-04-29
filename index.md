@@ -6,7 +6,7 @@ description: "Engineer. Developer. Photography enthusiast. Researching on the th
 
 ## About Me
 
-<img class="profile-picture" src="images/profile.jpg" alt="Profile picture">
+<img class="profile-picture" src="images/profile.png" alt="Profile picture">
 
 > Engineer. Developer. Photography enthusiast.
 
