@@ -476,7 +476,13 @@ pre a:only-of-type::before {
   content: "";
   margin-left: -0.65rem;
 }
+
+.content ul {
+  padding-left: 0;
+}
+
 .content ul > li {
+  list-style-type: none;
   margin: 5px 0 5px 0;
 }
 .content ol {
@@ -580,4 +586,9 @@ pre a:only-of-type::before {
   bottom: 0;
   left: 0;
   margin: 5px;
+}
+
+/*overrides*/
+.fa-ul {
+  margin-left: 0;
 }
