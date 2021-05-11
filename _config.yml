@@ -45,9 +45,6 @@ social:
   - name: 500px/jpdias
     icon: fab fa-500px
     url: https://500px.com/jpdias
-  - name: instagram/jpdias.photo
-    icon: fab fa-instagram
-    url: https://www.instagram.com/jpdias.photo
   - name: github/jpdias
     icon: fab fa-github
     url: https://github.com/jpdias
