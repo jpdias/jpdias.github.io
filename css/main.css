@@ -6,6 +6,66 @@
   --code-bg-color: #202020;
   --code-font-color: #d0d0d0;
 }
+
+/* anonymous-pro-regular - latin */
+@font-face {
+  font-family: 'Anonymous Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/anonymous-pro-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/anonymous-pro-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/anonymous-pro-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/anonymous-pro-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/anonymous-pro-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/anonymous-pro-regular.svg#AnonymousPro') format('svg'); /* Legacy iOS */
+}
+
+
+/* lato-300 - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/lato-v17-latin-300.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/lato-v17-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/lato-v17-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/lato-v17-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/lato-v17-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/lato-v17-latin-300.svg#Lato') format('svg'); /* Legacy iOS */
+}
+
+/* lato-regular - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/lato-v17-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/lato-v17-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/lato-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/lato-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/lato-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/lato-v17-latin-regular.svg#Lato') format('svg'); /* Legacy iOS */
+}
+
+/* lato-700 - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/lato-v17-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/lato-v17-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/lato-v17-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/lato-v17-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/lato-v17-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/lato-v17-latin-700.svg#Lato') format('svg'); /* Legacy iOS */
+}
+
+
+
 html {
   height: 100%;
   margin: 0;
@@ -15,11 +75,10 @@ html {
 body {
   margin: 0;
   color: var(--main-font-color);
-  font-family: 'Fira Mono',monospace;
-  font-size: 0.95em;
-  font-weight: 300;
-  letter-spacing: .03em;
-  line-height: 1.5em;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 1.15rem;
+  line-height: 1.4rem;
+  line-height: 1.4;
   text-align: justify;
   text-justify: distribute;
   overflow-wrap: break-word;
@@ -33,17 +92,19 @@ a:hover {
   text-decoration: underline;
 }
 h1 {
-  font-size: 1.8em;
-  letter-spacing: -1px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
   text-align: left;
 }
 h2,h3,h4 {
-  letter-spacing: -1px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
   text-align: left;
 }
 strong {
   font-weight: bold;
-  letter-spacing: -1px;
 }
 
 .footnotes {
@@ -342,7 +403,7 @@ table tr th:first-child,
 table tr td:first-child {
   margin: 0;
 }
-table tr th: last-child,table tr td: last-child {
+table tr th:last-child,table tr td:last-child {
   margin: 0;
 }
 .rouge-table {
@@ -389,13 +450,13 @@ pre a::before {
   -ms-user-select: none;
   user-select: none;
 }
-pre a: first-of-type::before {
+pre a:first-of-type::before {
   padding-top: 10px;
 }
-pre a: last-of-type::before {
+pre a:last-of-type::before {
   padding-bottom: 10px;
 }
-pre a: only-of-type::before {
+pre a:only-of-type::before {
   padding: 10px;
 }
 .content a:hover {
