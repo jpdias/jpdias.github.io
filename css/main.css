@@ -479,6 +479,10 @@ pre a:only-of-type::before {
   list-style-type: none;
   margin: 5px 0 5px 0;
 }
+.content ul > li > ul > li {
+  margin-left: 15px;
+  list-style-type: square;
+}
 .content ol {
   padding: 0 30px 0 30px;
 }
