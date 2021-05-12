@@ -353,18 +353,12 @@ div > .highlighter-rouge {
   margin: 20px 0 20px 0;
   padding: 2px 8px 2px 8px;
 }
-.highlighter-rouge {
-  font-size: 1.3em;
-} 
 p > .highlighter-rouge {
-  font-size: 1.3em;
   background-color: #434444;
 } 
 li > .highlighter-rouge {
-  font-size: 1.3em;
   background-color: #434444;
 } 
-
 .social-links {
   text-align: center;
   margin-bottom: 10px;
