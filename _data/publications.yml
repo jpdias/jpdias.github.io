@@ -9,6 +9,7 @@ confs:
     url: "/404"
     status: "Published"
     pub: Springer
+    
   - title: "Programming IoT-Spaces: A User-Survey on Home Automation Rules"
     authors: "Danny Soares, João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
     conference: "International Conference on Computational Science"
@@ -17,6 +18,7 @@ confs:
     url: "/404"
     status: "Published"
     pub: Springer
+    
   - title: "Empowering Visual Internet-of-Things Mashups with Self-Healing Capabilities"
     authors: "João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
     conference: "3rd International Workshop on Software Engineering Research & Practices for the Internet of Things (SERP4IoT 2021), part of 43rd International Conference on Software Engineering (ICSE 2021)"
