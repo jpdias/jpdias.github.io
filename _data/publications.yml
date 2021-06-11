@@ -1,10 +1,27 @@
 #status: Accepted, In Press, Published, Submitted, Under revision
 #type: Workshop, Conference
 confs:
+  - title: "A Review on Visual Programming for Distributed Computation in IoT"
+    authors: "Margarida Silva, João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
+    conference: "International Conference on Computational Science"
+    year: 2021
+    doi: 10.1007/978-3-030-77970-2_34
+    url: "/404"
+    status: "Published"
+    pub: Springer
+  - title: "Programming IoT-Spaces: A User-Survey on Home Automation Rules"
+    authors: "Danny Soares, João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
+    conference: "International Conference on Computational Science"
+    year: 2021
+    doi: 10.1007/978-3-030-77970-2_39
+    url: "/404"
+    status: "Published"
+    pub: Springer
   - title: "Empowering Visual Internet-of-Things Mashups with Self-Healing Capabilities"
     authors: "João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
     conference: "3rd International Workshop on Software Engineering Research & Practices for the Internet of Things (SERP4IoT 2021), part of 43rd International Conference on Software Engineering (ICSE 2021)"
     year: 2020
+    doi: SERP4IoT52556.2021.00014
     url: "https://arxiv.org/abs/2103.07395"
     status: "To Appear (pre-print available)"
     pub: Pre-Print
@@ -13,6 +30,7 @@ confs:
     authors: "Margarida Silva, João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
     conference: "17th EAI International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services (EAI MobiQuitous 2020)"
     year: 2020
+    doi: 10.1145/3448891.3448938
     url: "/404"
     status: "To Appear"
     pub: ACM
