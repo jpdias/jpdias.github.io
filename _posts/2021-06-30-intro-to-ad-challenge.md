@@ -373,7 +373,6 @@ Microsoft Windows [Version 10.0.14393]
 
 C:\Windows>hostname
 APP1
-
 ```
 
 ## Wrap-Up
