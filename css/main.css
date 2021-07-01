@@ -352,13 +352,27 @@ div > .highlighter-rouge {
   border-left: 5px solid #333333;
   margin: 20px 0 20px 0;
   padding: 2px 8px 2px 8px;
+  font-size: 1rem;
 }
+
 p > .highlighter-rouge {
   background-color: #434444;
+  font-size: 1rem;
+} 
+td > .highlighter-rouge {
+  background-color: #434444;
+  font-size: 1rem;
+} 
+
+ul > .highlighter-rouge {
+  background-color: #434444;
+  font-size: 1rem;
 } 
 li > .highlighter-rouge {
   background-color: #434444;
+  font-size: 1rem;
 } 
+
 .social-links {
   text-align: center;
   margin-bottom: 10px;
@@ -476,7 +490,7 @@ pre a:only-of-type::before {
 }
 
 .content ul > li {
-  list-style-type: none;
+  list-style-type: square;
   margin: 5px 0 5px 0;
 }
 .content ul > li > ul > li {
