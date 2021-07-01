@@ -25,7 +25,7 @@ oposec.local\user1
 l%^nMv0+A4XYKVgkUseA
 ```
 
-We believe this `oposec.local` domain is accessible at `5x.1xx.2xx.4x` (full IP address hidden for the purposes of this write-up).
+We believe this `oposec.local` domain is accessible at `5x.1xx.206.45` (full IP address hidden for the purposes of this write-up).
 
 Good luck."
 
@@ -80,7 +80,7 @@ At the top of the structure is the **forest**. A forest is a collection of trees
 So first things first, we have a username and a password which should be valid AD credentials. To assert if they are indeed valid we can simply use an SMB Client to check if we can establish a connection. For simplicity’s sake, we are going to use some tools part of [Impacket](https://github.com/SecureAuthCorp/impacket), including their [smbclient.py](https://github.com/SecureAuthCorp/impacket/blob/impacket_0_9_23/examples/smbclient.py).
 
 ```bash
-$ smbclient.py 'user1':l%^nMv0+A4XYKVgkUseA@5x.1xx.2xx.4x
+$ smbclient.py 'user1':l%^nMv0+A4XYKVgkUseA@5x.1xx.206.45
 Impacket v0.9.22 - Copyright 2020 SecureAuth Corporation
 Type help for list of commands
 
@@ -104,7 +104,7 @@ In our case we used the [SharpHound](https://bloodhound.readthedocs.io/en/latest
 
 ```powershell
 PS C:\> Import-module sharphound.ps1
-PS C:\> Invoke-BloodHound --CollectionMethod All --DomainController 5x.1xx.2xx.4x --OutputDirectory C:\temp\
+PS C:\> Invoke-BloodHound --CollectionMethod All --DomainController 5x.1xx.206.45 --OutputDirectory C:\temp\
 ```
 
 This creates a new data dump in `temp` which we can then import to Bloodhound, resulting in something similar to the following image:
@@ -130,7 +130,7 @@ Using most of the tools of PowerSploit requires a `PSCredential` object to be pa
 
 **Note**: In AD, if we want to find out what a preceding object can do upon another object, we need to enumerate the ACLs of the second.
 
-`> Get-DomainObjectAcl -Identity writeradmin -domain oposec.local -Server 5x.1xx.2xx.4x -Credential $user1credObject | Out-GridView`
+`> Get-DomainObjectAcl -Identity writeradmin -domain oposec.local -Server 5x.1xx.206.45 -Credential $user1credObject | Out-GridView`
 
 **Note**: Piping to `Out-GridView` gives us a searchable CSV interface, which simplifies some tasks.
 
