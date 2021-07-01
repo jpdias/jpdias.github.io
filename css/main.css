@@ -519,7 +519,7 @@ pre a:only-of-type::before {
   margin: 5px 0 5px 0;
 }
 
-.posts > li {
+.content .posts li {
   list-style-type: none;
 }
 
