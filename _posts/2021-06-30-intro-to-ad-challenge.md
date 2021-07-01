@@ -383,6 +383,6 @@ APP1
 
 This was one of the most demanding challenges I ever put myself into, mostly due to (1) being Windows which is a platform with little to no focus on CTFs and other challenges, (2) the dependency on the Windows ecosystem and its tools -- making it hard to impossible to complete using Linux, and (3) the large number of tools and scripts required.
 
-The resolution of this challenges would not be possible without the help of [@darkcookie](https://twitter.com/Pedro_SEC_R), kudos! Also, a thank you note to [@Moreira] for providing me some of the screenshots used in this writeup.
+The resolution of this challenges would not be possible without the help of [@darkcookie](https://twitter.com/Pedro_SEC_R), kudos! Also, a thank you note to [@Moreira](https://twitter.com/moreiranf) for providing me some of the screenshots used in this writeup.
 
 Lastly, thanks [@ArmyS1ck]( https://twitter.com/ArmyS1ck) for setting up the challenge!
