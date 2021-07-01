@@ -549,7 +549,7 @@ pre a:only-of-type::before {
   position: relative;
   margin: -60px 0 0 15px;
   float: right;
-  border: solid #96969d 2px;
+  border: solid #111 5px;
   margin-bottom: 10px;
 }
 @media (max-width: 480px) {
