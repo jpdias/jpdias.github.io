@@ -124,16 +124,16 @@ We can see by the image that `user1` has `AllExtendedRights` over `writeradmin`.
 Using most of the tools of PowerSploit requires a `PSCredential` object to be pass as an access `Credential`.
 
 ```powershell
-> [string]$userName = "user1"
-> [string]$userPassword = "l%^nMv0+A4XYKVgkUseA"
-> [securestring]$secStringPassword = ConvertTo-SecureString $userPassword -AsPlainText -Force
-> [pscredential]$user1credObject = New-Object System.Management.Automation.PSCredential ($userName, $secStringPassword)
+PS C:\> [string]$userName = "user1"
+PS C:\> [string]$userPassword = "l%^nMv0+A4XYKVgkUseA"
+PS C:\> [securestring]$secStringPassword = ConvertTo-SecureString $userPassword -AsPlainText -Force
+PS C:\> [pscredential]$user1credObject = New-Object System.Management.Automation.PSCredential ($userName, $secStringPassword)
 ```
 
 **Note**: In AD, if we want to find out what a preceding object can do upon another object, we need to enumerate the ACLs of the second.
 
 ```powershell
-PS C:\> Get-DomainObjectAcl -Identity writeradmin -domain oposec.local -Server 5x.1xx.206.45 -Credential $user1credObject | Out-GridView`
+PS C:\> Get-DomainObjectAcl -Identity writeradmin -domain oposec.local -Server 5x.1xx.206.45 -Credential $user1credObject | Out-GridView
 ```
 
 **Note**: Piping to `Out-GridView` gives us a searchable CSV interface, which simplifies some tasks.
