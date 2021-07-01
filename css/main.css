@@ -518,6 +518,11 @@ pre a:only-of-type::before {
   list-style-type: square;
   margin: 5px 0 5px 0;
 }
+
+.posts > li {
+  list-style-type: none;
+}
+
 .content ul > li > ul > li {
   margin-left: 15px;
   list-style-type: square;
