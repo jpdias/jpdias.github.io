@@ -80,7 +80,7 @@ At the top of the structure is the **forest**. A forest is a collection of trees
 So first things first, we have a username and a password which should be valid AD credentials. To assert if they are indeed valid we can simply use an SMB Client to check if we can establish a connection. For simplicity’s sake, we are going to use some tools part of [Impacket](https://github.com/SecureAuthCorp/impacket), including their [smbclient.py](https://github.com/SecureAuthCorp/impacket/blob/impacket_0_9_23/examples/smbclient.py).
 
 ```bash
-$ smbclient.py 'user1':l%^nMv0+A4XYKVgkUseA@5x.1xx.2xx.4x'
+$ smbclient.py 'user1':l%^nMv0+A4XYKVgkUseA@5x.1xx.2xx.4x
 Impacket v0.9.22 - Copyright 2020 SecureAuth Corporation
 Type help for list of commands
 
@@ -230,7 +230,7 @@ By searching for attacks that leverage this `AllowedToActOnBehalfOfOtherIdentity
 
 1. `msDS-AllowedToActOnBehalfOfOtherIdentity` enables `App2$` to impersonate and authenticate any domain user that can then access the target system `App1$`. In simple terms this means that the target computer `App1$` is happy for the computer resource `App2$` to impersonate any domain user if they want to access anything on `App1$`;
 2. `App1$` trusts `App2$` (due to the `msDS-AllowedToActOnBehalfOfOtherIdentity`);
-3. We request kerberos tickets for `App2$` with ability to impersonate `oposec.local\app1admin` who is admin of `App1$`;
+3. We request Kerberos tickets for `App2$` with ability to impersonate `oposec.local\app1admin` who is admin of `App1$`;
 4. Takeover complete.
 
 In order to carry such attack we need something that can craft Kerberos tickets for our purposes. By following the tutorial of *ired.team*, we can use [Rubeus](https://github.com/GhostPack/Rubeus) for that. You can find pre-compiled binaries [here](https://github.com/r3motecontrol/Ghostpack-CompiledBinaries).
