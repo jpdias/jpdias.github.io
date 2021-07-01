@@ -113,7 +113,9 @@ This creates a new data dump in `temp` which we can then import to Bloodhound, r
 
 If you are stuck in a Linux machine, you can use a [Python port of the SharpHoud](https://github.com/fox-it/BloodHound.py) and follow a similar process:
 
-`$ bloodhound-python -u User1 -p l%^nMv0+A4XYKVgkUseAWe -ns 51.137.206.45 -d oposec.local -c All`
+```bash
+$ bloodhound-python -u User1 -p l%^nMv0+A4XYKVgkUseAWe -ns 51.137.206.45 -d oposec.local -c All`
+```
 
 We can see by the image that `user1` has `AllExtendedRights` over `writeradmin`. To collect more information about what other users can do over `writeradmin` object, we proceed to enumerated all the **Access Control Policies** (ACL) that apply to `writeradmin` using `Recon/PowerView` from [PowerSploit](https://github.com/PowerShellMafia/PowerSploit).
 
@@ -130,7 +132,9 @@ Using most of the tools of PowerSploit requires a `PSCredential` object to be pa
 
 **Note**: In AD, if we want to find out what a preceding object can do upon another object, we need to enumerate the ACLs of the second.
 
-`> Get-DomainObjectAcl -Identity writeradmin -domain oposec.local -Server 5x.1xx.206.45 -Credential $user1credObject | Out-GridView`
+```powershell
+PS C:\> Get-DomainObjectAcl -Identity writeradmin -domain oposec.local -Server 5x.1xx.206.45 -Credential $user1credObject | Out-GridView`
+```
 
 **Note**: Piping to `Out-GridView` gives us a searchable CSV interface, which simplifies some tasks.
 
