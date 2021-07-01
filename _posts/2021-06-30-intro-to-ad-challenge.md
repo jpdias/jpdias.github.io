@@ -11,7 +11,7 @@ Yet another month, yet another ØxＯＰＯＳɆＣ meetup. This is a write-up o
 
 <!--more-->
 
-The meetup happens in a monthly-basis, feel free to [join in](https://www.meetup.com/0xOPOSEC/). Challenge by [@ArmySick](/404).
+The meetup happens in a monthly-basis, feel free to [join in](https://www.meetup.com/0xOPOSEC/). Challenge by [@ArmyS1ck]( https://twitter.com/ArmyS1ck).
 
 This challenge was solved with the helpful support of [@darkcookie](https://twitter.com/Pedro_SEC_R).
 
@@ -148,7 +148,7 @@ ADExplorer presents a tree-view of the target DC, allowing us to navigate among 
 
 ADExplorer eases the process of searching for objects and check what is their accessible information, including `description`, `SAMAccountName`, `ObjectSid`, etc. This eases our task of understanding the output of `Get-DomainObjectAcl`, since we can now quickly search by the `user1` `SID` to see what are the ACLs applied over this object for `writeradmin` object.
 
-Summarizing, here is a collection of all important Objects and their SIDs. While at this point we still do not known `App2$` SID, it is already presented for simplicity sake.
+Summarizing, here is a collection of all important Objects and their SIDs. While at this point we still do not known `App2$` SID, it is already presented for simplicity’s sake.
 
 | Object            | SID                                           | IP             |
 |-------------------|-----------------------------------------------|----------------|
@@ -366,4 +366,4 @@ This was one of the most demanding challenges I ever put myself into, mostly due
 
 The resolution of this challenges would not be possible without the help of [@darkcookie](https://twitter.com/Pedro_SEC_R), kudos! Also, a thank you note to [@Moreira] for providing me some of the screenshots used in this writeup.
 
-Lastly, thanks [@ArmySick] for setting up the challenge!
+Lastly, thanks [@ArmyS1ck]( https://twitter.com/ArmyS1ck) for setting up the challenge!
