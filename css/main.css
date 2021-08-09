@@ -173,7 +173,6 @@ strong {
 /* * Navbar */
 #author-name {
   font-size: 25px;
-  color: var(--main-font-color);
   display: inline-block;
 }
 .navbar {
