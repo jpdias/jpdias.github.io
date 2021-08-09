@@ -99,7 +99,8 @@ a {
   color: var(--main-headers-color);
 }
 a:hover {
-  text-decoration: underline;
+  background-color: var(--main-headers-color);
+  color: var(--code-bg-color);
 }
 h1 {
   font-family: "Lato", sans-serif;
