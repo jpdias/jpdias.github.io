@@ -100,7 +100,7 @@ a {
 }
 a:hover {
   background-color: var(--main-headers-color);
-  color: var(--code-bg-color);
+  color: var(--main-bg-color);
 }
 h1 {
   font-family: "Lato", sans-serif;
