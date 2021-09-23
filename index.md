@@ -39,7 +39,7 @@ Currently working as a researcher on the thin line between hardware and software
 {% assign counter = counter | plus:1 %}
 
 <div class="pub-item">
-<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" _target="blank"><b>{{ pub.title }}</b></a><br></div>
+<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank"><b>{{ pub.title }}</b></a><br></div>
 <li><i class="ri-group-line"></i> {{ pub.authors }}</li>
 <li><i class="ri-book-3-line"></i>  {{ pub.conference }}</li>
 </div>
@@ -51,7 +51,7 @@ Currently working as a researcher on the thin line between hardware and software
 {% assign counter = counter | plus:1 %}
 
 <div class="pub-item">
-<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" _target="blank"><b>{{ pub.title }}</b></a><br></div>
+<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank"><b>{{ pub.title }}</b></a><br></div>
 <li><i class="ri-group-line"></i> {{ pub.authors }}</li>
 <li><i class="ri-book-3-line"></i>  {{ pub.conference }}</li>
 </div>

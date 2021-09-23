@@ -14,12 +14,12 @@ title: "./jpdias/publications"
 {% assign counter = counter | plus:1 %}
 
 <div class="pub-item">
-<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" _target="blank"><b>{{ pub.title }}</b></a><br></div>
+<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank"><b>{{ pub.title }}</b></a><br></div>
 <li><span class="shield shield-grey"><span><i class="ri-refresh-line"></i> </span>{{ pub.status }}</span>
     <span class="shield shield-blue"><span><i class="ri-calendar-event-line"></i></span>{{ pub.year }}</span>
     {% if pub.pub %}<span class="shield shield-green"><span><i class="ri-book-3-line"></i></span>{{ pub.pub }}</span>{% endif %}
     {% if pub.doi %}<span class="shield shield-yellow"><span><i class="ri-fingerprint-line"></i></span>{{ pub.doi }}</span>{% endif %}
-    {% if pub.pdf %}<a href="{{ pub.pdf }}" _target="blank" class="shield shield-red"><span><i class="ri-file-pdf-line"></i></span>PDF</a>{% endif %}
+    {% if pub.pdf %}<a href="{{ pub.pdf }}" target="_blank" class="shield shield-red"><span><i class="ri-file-pdf-line"></i></span>PDF</a>{% endif %}
     <br>
 </li>
 <li><i class="ri-group-line"></i> {{ pub.authors }}</li>
@@ -45,12 +45,12 @@ title: "./jpdias/publications"
 {% assign counter = counter | plus:1 %}
 
 <div class="pub-item">
-<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" _target="blank"><b>{{ pub.title }}</b></a><br></div>
+<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank"><b>{{ pub.title }}</b></a><br></div>
 <li><span class="shield shield-grey"><span><i class="ri-refresh-line"></i> </span>{{ pub.status }}</span>
     <span class="shield shield-blue"><span><i class="ri-calendar-event-line"></i></span>{{ pub.year }}</span>
     {% if pub.pub %}<span class="shield shield-green"><span><i class="ri-book-3-line"></i></span>{{ pub.pub }}</span>{% endif %}
     {% if pub.doi %}<span class="shield shield-yellow"><span><i class="ri-fingerprint-line"></i></span>{{ pub.doi }}</span>{% endif %}
-    {% if pub.pdf %}<a href="{{ pub.pdf }}" _target="blank" class="shield shield-red"><span><i class="ri-file-pdf-line"></i></span>PDF</a>{% endif %}
+    {% if pub.pdf %}<a href="{{ pub.pdf }}" target="_blank" class="shield shield-red"><span><i class="ri-file-pdf-line"></i></span>PDF</a>{% endif %}
     <br>
 </li>
 <li><i class="ri-group-line"></i> {{ pub.authors }}</li>
@@ -75,12 +75,12 @@ title: "./jpdias/publications"
 {% assign counter = counter | plus:1 %}
 
 <div class="pub-item">
-<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" _target="blank"><b>{{ pub.title }}</b></a><br></div>
+<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank"><b>{{ pub.title }}</b></a><br></div>
 <li>
     <span class="shield shield-blue"><span><i class="ri-calendar-event-line"></i></span>{{ pub.year }}</span>
     {% if pub.pub %}<span class="shield shield-green"><span><i class="ri-book-3-line"></i></span>{{ pub.pub }}</span>{% endif %}
     {% if pub.doi %}<span class="shield shield-yellow"><span><i class="ri-fingerprint-line"></i></span>{{ pub.doi }}</span>{% endif %}
-    {% if pub.pdf %}<a href="{{ pub.pdf }}" _target="blank" class="shield shield-red"><span><i class="ri-file-pdf-line"></i></span>PDF</a>{% endif %}
+    {% if pub.pdf %}<a href="{{ pub.pdf }}" target="_blank" class="shield shield-red"><span><i class="ri-file-pdf-line"></i></span>PDF</a>{% endif %}
     <br>
 </li>
 <li><i class="ri-group-line"></i> {{ pub.authors }}</li>
@@ -103,12 +103,12 @@ title: "./jpdias/publications"
 {% assign counter = counter | plus:1 %}
 
 <div class="pub-item">
-<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" _target="blank"><b>{{ pub.title }}</b></a><br></div>
+<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank"><b>{{ pub.title }}</b></a><br></div>
 <li>
     <span class="shield shield-blue"><span><i class="ri-calendar-event-line"></i></span>{{ pub.year }}</span>
     {% if pub.pub %}<span class="shield shield-green"><span><i class="ri-book-3-line"></i></span>{{ pub.pub }}</span>{% endif %}
     {% if pub.doi %}<span class="shield shield-yellow"><span><i class="ri-fingerprint-line"></i></span>{{ pub.doi }}</span>{% endif %}
-    {% if pub.pdf %}<a href="{{ pub.pdf }}" _target="blank" class="shield shield-red"><span><i class="ri-file-pdf-line"></i></span>PDF</a>{% endif %}
+    {% if pub.pdf %}<a href="{{ pub.pdf }}" target="_blank" class="shield shield-red"><span><i class="ri-file-pdf-line"></i></span>PDF</a>{% endif %}
     <br>
 </li>
 <li><i class="ri-group-line"></i> {{ pub.supervision }}</li>
@@ -131,12 +131,12 @@ title: "./jpdias/publications"
 {% assign counter = counter | plus:1 %}
 
 <div class="pub-item">
-<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" _target="blank"><b>{{ pub.title }}</b></a><br></div>
+<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank"><b>{{ pub.title }}</b></a><br></div>
 <li>
     <span class="shield shield-blue"><span><i class="ri-calendar-event-line"></i></span>{{ pub.year }}</span>
     {% if pub.pub %}<span class="shield shield-green"><span><i class="ri-book-3-line"></i></span>{{ pub.pub }}</span>{% endif %}
     {% if pub.doi %}<span class="shield shield-yellow"><span><i class="ri-fingerprint-line"></i></span>{{ pub.doi }}</span>{% endif %}
-    {% if pub.pdf %}<a href="{{ pub.pdf }}" _target="blank" class="shield shield-red"><span><i class="ri-file-pdf-line"></i></span>PDF</a>{% endif %}
+    {% if pub.pdf %}<a href="{{ pub.pdf }}" target="_blank" class="shield shield-red"><span><i class="ri-file-pdf-line"></i></span>PDF</a>{% endif %}
     <br>
 </li>
 <li><i class="ri-group-line"></i> {{ pub.authors }}</li>
