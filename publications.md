@@ -23,7 +23,7 @@ title: "./jpdias/publications"
     <br>
 </li>
 <li><i class="ri-group-line"></i> {{ pub.authors }}</li>
-<li><i class="ri-map-pin-time-line"></i> {{ pub.conference }}</li>
+<li><i class="ri-book-3-line"></i> {{ pub.conference }}</li>
 <li>
   <details class="description-item is-expandable">
     <summary class="description-item-title"> <i class="ri-add-circle-line"></i>  Abstract</summary>
@@ -54,7 +54,7 @@ title: "./jpdias/publications"
     <br>
 </li>
 <li><i class="ri-group-line"></i> {{ pub.authors }}</li>
-<li><i class="ri-map-pin-time-line"></i> {{ pub.conference }}</li>
+<li><i class="ri-book-3-line"></i> {{ pub.conference }}</li>
 <li>
   <details class="description-item is-expandable">
     <summary class="description-item-title"> <i class="ri-add-circle-line"></i>  Abstract</summary>
@@ -140,7 +140,7 @@ title: "./jpdias/publications"
     <br>
 </li>
 <li><i class="ri-group-line"></i> {{ pub.authors }}</li>
-<li><i class="ri-map-pin-time-line"></i> {{ pub.conference }}</li>
+<li><i class="ri-book-3-line"></i> {{ pub.conference }}</li>
 <li>
   <details class="description-item is-expandable">
     <summary class="description-item-title"> <i class="ri-add-circle-line"></i>  Abstract</summary>
