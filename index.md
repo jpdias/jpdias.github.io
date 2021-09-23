@@ -41,7 +41,7 @@ Currently working as a researcher on the thin line between hardware and software
 <div class="pub-item">
 <div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" _target="blank"><b>{{ pub.title }}</b></a><br></div>
 <li><i class="ri-group-line"></i> {{ pub.authors }}</li>
-<li><i class="ri-map-pin-time-line"></i> {{ pub.conference }}</li>
+<li><i class="ri-book-3-line"></i>  {{ pub.conference }}</li>
 </div>
 
 {% endfor %}
@@ -53,7 +53,7 @@ Currently working as a researcher on the thin line between hardware and software
 <div class="pub-item">
 <div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" _target="blank"><b>{{ pub.title }}</b></a><br></div>
 <li><i class="ri-group-line"></i> {{ pub.authors }}</li>
-<li><i class="ri-map-pin-time-line"></i> {{ pub.conference }}</li>
+<li><i class="ri-book-3-line"></i>  {{ pub.conference }}</li>
 </div>
 
 {% endfor %}
