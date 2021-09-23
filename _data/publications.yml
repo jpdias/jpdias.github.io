@@ -9,7 +9,9 @@ confs:
     url: "https://doi.org/10.1007/978-3-030-77970-2_34"
     status: "Published"
     pub: Springer
-    
+    abstract: Internet-of-Things (IoT) systems are considered one of the most notable examples of complex, large-scale systems. Some authors have proposed visual programming (VP) approaches to address part of their inherent complexity. However, in most of these approaches, the orchestration of devices and system components is still dependent on a centralized unit, preventing higher degrees of dependability. In this work, we perform a systematic literature review (SLR) of the current approaches that provide visual and decentralized orchestration to define and operate IoT systems, reflecting upon a total of 29 proposals. We provide an in-depth discussion of these works and find out that only four of them attempt to tackle this issue as a whole, although still leaving a set of open research challenges. Finally, we argue that addressing these challenges could make IoT systems more fault-tolerant, with an impact on their dependability, performance, and scalability.
+    bibtex: 10.1007_978-3-030-77970-2_34.bib
+
   - title: "Programming IoT-Spaces: A User-Survey on Home Automation Rules"
     authors: "Danny Soares, João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
     conference: "International Conference on Computational Science"
@@ -18,24 +20,30 @@ confs:
     url: "https://doi.org/10.1007/978-3-030-77970-2_39"
     status: "Published"
     pub: Springer
-    
+    abstract: The Internet-of-Things (IoT) has transformed everyday manual tasks into digital and automatable ones, giving way to the birth of several end-user development solutions that attempt to ease the task of configuring and automating IoT systems without requiring prior technical knowledge. While some studies reflect on the automation rules that end-users choose to program into their spaces, they are limited by the number of devices and possible rules that the tool under study supports. There is a lack of systematic research on (1) the automation rules that users wish to configure on their homes, (2) the different ways users state their intents, and (3) the complexity of the rules themselves—without the limitations imposed by specific IoT devices systems and end-user development tools. This paper surveyed twenty participants about home automation rules given a standard house model and device’s list, without limiting their creativity and resulting automation complexity. We analyzed and systematized the collected 177 scenarios into seven different interaction categories, representing the most common smart home interactions.
+    bibtex: 10.1007_978-3-030-77970-2_39.bib
+
   - title: "Empowering Visual Internet-of-Things Mashups with Self-Healing Capabilities"
     authors: "João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
     conference: "3rd International Workshop on Software Engineering Research & Practices for the Internet of Things (SERP4IoT 2021), part of 43rd International Conference on Software Engineering (ICSE 2021)"
     year: 2020
     doi: 10.1109/SERP4IoT52556.2021.00014
-    url: "https://arxiv.org/abs/2103.07395"
-    status: "To Appear (pre-print available)"
-    pub: Pre-Print
+    url: "https://doi.org/10.1109/SERP4IoT52556.2021.00014"
+    status: "Published"
+    pub: IEEE/ACM
+    abstract: Internet-of-Things (IoT) systems have spread among different application domains, from home automation to industrial manufacturing processes. The rushed development by competing vendors to meet the market demand of IoT solutions, the lack of interoperability standards, and the overall lack of a defined set of best practices have resulted in a highly complex, heterogeneous, and frangible ecosystem. Several works have been pushing towards visual programming solutions to abstract the underlying complexity and help humans reason about it. As these solutions begin to meet widespread adoption, their building blocks usually do not consider reliability issues. Node-RED, being one of the most popular tools, also lacks such mechanisms, either built-in or via extensions. In this work we present SHEN (Self-Healing Extensions for Node-RED) which provides 17 nodes that collectively enable the implementation of self-healing strategies within this visual framework. We proceed to demonstrate the feasibility and effectiveness of the approach using real devices and fault injection techniques.
+    bibtex: 10.1109_SERP4IoT52556.2021.00014.bib
 
   - title: "Visually-defined Real-Time Orchestration of IoT Systems"
     authors: "Margarida Silva, João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
     conference: "17th EAI International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services (EAI MobiQuitous 2020)"
     year: 2020
     doi: 10.1145/3448891.3448938
-    url: "/404"
-    status: "To Appear"
+    url: "https://doi.org/10.1145/3448891.3448938"
+    status: "Published"
     pub: ACM
+    abstract: In this work, we propose a method for extending Node-RED to allow the automatic decomposition and partitioning of the system towards higher decentralization. We provide a custom firmware for constrained devices to expose their resources, as well as new nodes and modifications in the Node-RED engine that allow automatic orchestration of tasks. The firmware is responsible for low-level management of health and capabilities, as well as executing MicroPython scripts on demand. Node-RED then takes advantage of this firmware by (1) providing a device registry allowing devices to announce themselves, (2) generating MicroPython code from dynamic analysis of flow and nodes, and (3) automatically (re-)assigning nodes to devices based on pre-specified properties and priorities. A mechanism to automatically detect abnormal run-time conditions and provide dynamic self-adaptation was also explored. Our solution was tested using synthetic home automation scenarios, where several experiments were conducted with both virtual and physical devices. We then exhaustively measured each scenario to allow further understanding of our proposal and how it impacts the system’s resiliency, efficiency, and elasticity.
+    bibtex: 10.1145_3448891.3448938.bib
 
   - title: "An Empirical Study on Visual Programming Docker Compose Configurations"
     authors: "Bruno Piedade, João Pedro Dias and Filipe F. Correia"
@@ -45,7 +53,7 @@ confs:
     doi: 10.1145/3417990.3420194
     status: "Published"
     pub: ACM
-    
+
   - title: "A Pattern-Language for Self-Healing Internet-of-Things Systems"
     authors: "João Pedro Dias, Tiago Boldt Sousa, André Restivo and Hugo Sereno Ferreira"
     conference: "25th European Conference on Pattern Languages of Programs (EuroPLoP 2020)"
@@ -72,7 +80,7 @@ confs:
     doi: 10.1007/978-3-030-50426-7_27
     status: "Published"
     pub: Springer
-    
+
   - title: "Conversational Interface for Managing Non-Trivial Internet-of-Things Systems"
     authors: "André Sousa Lago, João Pedro Dias, and Hugo Sereno Ferreira"
     conference: "International Conference on Computational Science"
@@ -81,7 +89,7 @@ confs:
     doi: 10.1007/978-3-030-50426-7_29
     status: "Published"
     pub: Springer
-    
+
   - title: "Testing and Deployment Patterns for the Internet-of-Things"
     authors: "João Pedro Dias, Hugo Sereno Ferreira, Tiago Boldt Sousa"
     conference: "24th European Conference on Pattern Languages of Programs (EuroPLoP 2019)"
@@ -90,7 +98,7 @@ confs:
     doi: 10.1145/3361149.3361165
     status: "Published"
     pub: ACM
-    
+
   - title: "Live Software Development --- Tightening the feedback loops"
     authors: "Ademar Aguiar, André Restivo, Filipe Figueiredo Correia, Hugo Sereno Ferreira, João Pedro Dias"
     conference: "5th Programming Experience (PX) Workshop -- Part of the International Conference on the Art, Science, and Engineering of Programming (‹Programming› 2019)"
@@ -99,7 +107,7 @@ confs:
     doi: 10.1145/3328433.3328456
     status: "Published"
     pub: ACM
-  
+
   - title: "Live Software Development Environment for Java using Virtual Reality"
     authors: "Diogo Amaral, Gil Domingues, João Pedro Dias, Rui Nobrega, Hugo Sereno Ferreira and Ademar Aguiar"
     conference: "14th International Conference on Evaluation of Novel Software Approaches to Software Engineering"
@@ -108,7 +116,7 @@ confs:
     doi: 10.5220/0007699800370046
     status: "Published"
     pub: SCITEPRESS
-    
+
   - title: "CloudCity: A Live Environment for the Management of Cloud Infrastructures"
     authors: "Pedro Lourenço, João Pedro Dias, Hugo Sereno Ferreira and Ademar Aguiar"
     conference: "14th International Conference on Evaluation of Novel Software Approaches to Software Engineering"
@@ -135,7 +143,7 @@ confs:
     doi: 10.1007/978-3-030-17065-3_24
     status: "Published"
     pub: Springer
-  
+
   - title: "Growing Smart Cities on an Open-Data-Centric Cyber-Physical Platform"
     authors: " José Pedro Pinto, João Pedro Dias and Rosaldo J. F. Rossetti"
     conference: "2018 IEEE International Smart Cities Conference (ISC2)"
@@ -144,7 +152,7 @@ confs:
     doi: 10.1109/ISC2.2018.8656989
     status: "Published"
     pub: IEEE
-  
+
   - title: "Dynamic Allocation of Serverless Functions in IoT Environments"
     authors: "Duarte Pinto, João Pedro Dias and Hugo Sereno Ferreira"
     conference: "16th IEEE International Conference on Embedded and Ubiquitous Computing"
@@ -153,7 +161,7 @@ confs:
     doi: 10.1109/EUC.2018.00008
     status: "Published"
     pub: IEEE
-  
+
   - title: "A Reactive and Model-based Approach for Developing Internet-of-Things Systems"
     authors: "João Pedro Dias, João Pascoal Faria and Hugo Sereno Ferreira"
     conference: "7th Software Engineering Doctoral Symposium (SEDES 2018) -- Part of the 11th International Conference on the Quality of Information and Communications Technology (QUATIC’2018)"
@@ -180,7 +188,7 @@ confs:
     pdf: "https://www.hillside.net/plop/2017/papers/proceedings/papers/07-ramadas.pdf"
     status: "Published"
     pub: ACM
-  
+
   - title: "Towards a Framework for Agent-based Simulation of User Behaviour in E-Commerce Context"
     authors: "Duarte Duarte, João Pedro Dias, Hugo Sereno Ferreira and Zaf. Kokkinogenis"
     conference: "15th International Conference on Practical Applications of Agents and Multi-Agent Systems (PAAMS'17)"
@@ -189,7 +197,7 @@ confs:
     doi: 10.1007/978-3-319-61578-3_3
     status: "Published"
     pub: Springer
-  
+
   - title: "Automating the Extraction of Static Content and Dynamic Behaviour from e-Commerce Websites"
     authors: "João Pedro Dias and Hugo Sereno Ferreira"
     conference: "8th International Conference on Ambient Systems, Networks and Technologies (ANT'17)"
@@ -198,7 +206,7 @@ confs:
     doi: 10.1016/j.procs.2017.05.355
     status: "Published"
     pub: Elsevier
-  
+
   - title: "A Hands-on Approach on Botnets for Behavior Exploration"
     authors: "João Pedro Dias, José Pedro Pinto and José Magalhães Cruz"
     conference: "2nd International Conference on Internet of Things, Big Data and Security (IoTBDS 2017)"
@@ -207,7 +215,7 @@ confs:
     doi: 10.5220/0006392404630469
     status: "Published"
     pub: SCITEPRESS
-    
+
 journals:
   - title: "Managing Non-Trivial Internet-of-Things Systems with Conversational Assistants: A Prototype and a Feasibility Experiment"
     authors: "André Lago, João Pedro Dias, and Hugo Sereno Ferreira"
@@ -228,7 +236,7 @@ journals:
     doi: "10.1007/978-3-030-40223-5_4"
     status: "Published"
     pub: Springer
-    
+
   - title: "Live Software Development Environment using Virtual Reality: a Prototype and Experiment"
     authors: "Diogo Amaral, Gil Domingues, João Pedro Dias, Hugo Sereno Ferreira, Ademar Aguiar, Rui Nóbrega and Filipe Figueiredo Correia"
     conference: "Communications in Computer and Information Science"
@@ -238,7 +246,7 @@ journals:
     doi: "10.1007/978-3-030-40223-5_5"
     status: "Published"
     pub: Springer
-    
+
   - title: "A Blockchain-based Approach for Access Control in eHealth Scenarios"
     authors: "João Pedro Dias, Ângelo Martins and Hugo Sereno Ferreira"
     conference: "Journal of Information Assurance and Security, Volume 13, Issue 4"
@@ -254,7 +262,7 @@ informal:
     year: 2020
     url: "https://arxiv.org/abs/2009.05828"
     pdf: "https://arxiv.org/pdf/2009.05828"
-    
+
   - title: "State of the Software Development Life-Cycle for the Internet-of-Things"
     authors: "João Pedro Dias and Hugo Sereno Ferreira"
     year: 2018
@@ -275,7 +283,6 @@ informal:
 #    year: 2018
 #    url: "https://arxiv.org/abs/1805.12267"
 #    pdf: "https://arxiv.org/pdf/1805.12267"
-
 
 abstracts:
   - title: "A Preliminary Study on Mesh Networks and IoT"

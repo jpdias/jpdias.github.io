@@ -402,6 +402,10 @@ li > .highlighter-rouge {
   margin-bottom: 10px;
   font-size: 25px;
 }
+.social-icons > a {
+  padding-top: 5px;
+}
+
 table {
   margin: 15px 0;
   border-collapse: collapse;
@@ -492,24 +496,10 @@ pre a:last-of-type::before {
 pre a:only-of-type::before {
   padding: 10px;
 }
-.content a:hover {
-  text-decoration: underline;
-}
-.content ol {
-  counter-reset: list;
-}
-.content ol > li {
-  list-style-position: none;
+.pub-item > li {
   position: relative;
   list-style: none;
-  margin-top: 5px;
-  margin-bottom: 5px;
 }
-.content ol > li:before {
-  content: "";
-  margin-left: -0.65rem;
-}
-
 .content ul {
   padding-left: 0;
 }
@@ -527,22 +517,15 @@ pre a:only-of-type::before {
   margin-left: 15px;
   list-style-type: square;
 }
-.content ol {
-  padding: 0 30px 0 30px;
+
+.pub-item > .pub-title > span {
+  margin-left: -35px;
+  margin-right: 3px;
 }
-.content ol > li:before {
-  content: "[" counter(list, decimal) "] ";
-  counter-increment: list;
-  position: absolute;
-  left: -30px;
+.pub-item > .pub-title {
+  margin-bottom: 5px;
 }
-.content ol > li > ul {
-  padding-left: 0px;
-  display: flow-root;
-}
-.content ol > li > ul > li {
-  list-style: none;
-}
+
 .content blockquote {
   border-left: 5px solid #333333;
   margin: 20px 0 20px 0;
@@ -622,14 +605,44 @@ pre a:only-of-type::before {
   fill: var(--main-headers-color);
 }
 
-.easter {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  margin: 5px;
+summary {
+  display: initial;
+  cursor: pointer;
+  outline: 0;
+  text-decoration: none;
+  color: var(--main-headers-color);
+}
+summary:hover {
+  background-color: var(--main-headers-color);
+  color: var(--main-bg-color);
 }
 
-/*overrides*/
-.fa-ul {
-  margin-left: 0;
+.description-item {
+  display: block;
+  position: relative;
+}
+
+.description-item > div {
+  font-size: 1.05rem;
+}
+
+.description-item.is-expandable::before {
+  border-left: var(--hr-border-settings);
+  content: "";
+  height: 100%;
+  left: 0.8rem;
+  position: absolute;
+  top: 2rem;
+  height: calc(100% - 2.4rem);
+}
+.description-item .description-item {
+  margin-left: 2.4rem;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.description-item-title::-webkit-details-marker {
+  display: none;
 }

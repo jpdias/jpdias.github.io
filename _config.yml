@@ -22,37 +22,37 @@ plugins_dir:
 footer: yes
 
 nav:
- - name: "about"
-   link: "/"
- - name: "notes"
-   link: "/notes/"
- - name: "publications"
-   link: "/publications"
-# - name: "open_source"
-#   link: "/projects"
- - name: "cv.pdf"
-   link: "/assets/jpdias.pdf"
- - name: "contact"
-   link: "/contact"
+  - name: "about"
+    link: "/"
+  - name: "notes"
+    link: "/notes/"
+  - name: "publications"
+    link: "/publications"
+  # - name: "open_source"
+  #   link: "/projects"
+  - name: "cv.pdf"
+    link: "/assets/jpdias.pdf"
+  - name: "contact"
+    link: "/contact"
 
 social:
   - name: twitter/jpd1as
-    icon: fab fa-twitter
+    icon: ri-twitter-line
     url: https://twitter.com/jpd1as
   - name: linkedin/joaopdias
-    icon: fab fa-linkedin
+    icon: ri-linkedin-box-line
     url: https://www.linkedin.com/in/joaopdias/
   - name: 500px/jpdias
-    icon: fab fa-500px
+    icon: ri-camera-line
     url: https://500px.com/jpdias
   - name: github/jpdias
-    icon: fab fa-github
+    icon: ri-github-line
     url: https://github.com/jpdias
   - name: gitlab/joaopdias
-    icon: fab fa-gitlab
+    icon: ri-gitlab-line
     url: https://gitlab.com/joaopdias
   - name: speakerdeck/jpd1as
-    icon: fas fa-bullhorn
+    icon: ri-slideshow-line
     url: https://speakerdeck.com/jpdias
 
 academic:
@@ -69,7 +69,7 @@ academic:
     icon: ai ai-publons
     url: https://publons.com/researcher/1883812/joao-pedro-dias/
   - name: scopus/57194725990
-    icon: fab fa-etsy
+    icon: ai ai-scopus
     url: http://www.scopus.com/authid/detail.uri?authorId=57194725990
   - name: researchGate/Joao_Dias29
     icon: ai ai-researchgate
