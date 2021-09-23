@@ -9,7 +9,7 @@ confs:
     url: "https://doi.org/10.1007/978-3-030-77970-2_34"
     status: "Published"
     pub: Springer
-    abstract: Internet-of-Things (IoT) systems are considered one of the most notable examples of complex, large-scale systems. Some authors have proposed visual programming (VP) approaches to address part of their inherent complexity. However, in most of these approaches, the orchestration of devices and system components is still dependent on a centralized unit, preventing higher degrees of dependability. In this work, we perform a systematic literature review (SLR) of the current approaches that provide visual and decentralized orchestration to define and operate IoT systems, reflecting upon a total of 29 proposals. We provide an in-depth discussion of these works and find out that only four of them attempt to tackle this issue as a whole, although still leaving a set of open research challenges. Finally, we argue that addressing these challenges could make IoT systems more fault-tolerant, with an impact on their dependability, performance, and scalability.
+    abstract: "Internet-of-Things (IoT) systems are considered one of the most notable examples of complex, large-scale systems. Some authors have proposed visual programming (VP) approaches to address part of their inherent complexity. However, in most of these approaches, the orchestration of devices and system components is still dependent on a centralized unit, preventing higher degrees of dependability. In this work, we perform a systematic literature review (SLR) of the current approaches that provide visual and decentralized orchestration to define and operate IoT systems, reflecting upon a total of 29 proposals. We provide an in-depth discussion of these works and find out that only four of them attempt to tackle this issue as a whole, although still leaving a set of open research challenges. Finally, we argue that addressing these challenges could make IoT systems more fault-tolerant, with an impact on their dependability, performance, and scalability."
     bibtex: 10.1007_978-3-030-77970-2_34.bib
 
   - title: "Programming IoT-Spaces: A User-Survey on Home Automation Rules"
@@ -20,7 +20,7 @@ confs:
     url: "https://doi.org/10.1007/978-3-030-77970-2_39"
     status: "Published"
     pub: Springer
-    abstract: The Internet-of-Things (IoT) has transformed everyday manual tasks into digital and automatable ones, giving way to the birth of several end-user development solutions that attempt to ease the task of configuring and automating IoT systems without requiring prior technical knowledge. While some studies reflect on the automation rules that end-users choose to program into their spaces, they are limited by the number of devices and possible rules that the tool under study supports. There is a lack of systematic research on (1) the automation rules that users wish to configure on their homes, (2) the different ways users state their intents, and (3) the complexity of the rules themselves—without the limitations imposed by specific IoT devices systems and end-user development tools. This paper surveyed twenty participants about home automation rules given a standard house model and device’s list, without limiting their creativity and resulting automation complexity. We analyzed and systematized the collected 177 scenarios into seven different interaction categories, representing the most common smart home interactions.
+    abstract: "The Internet-of-Things (IoT) has transformed everyday manual tasks into digital and automatable ones, giving way to the birth of several end-user development solutions that attempt to ease the task of configuring and automating IoT systems without requiring prior technical knowledge. While some studies reflect on the automation rules that end-users choose to program into their spaces, they are limited by the number of devices and possible rules that the tool under study supports. There is a lack of systematic research on (1) the automation rules that users wish to configure on their homes, (2) the different ways users state their intents, and (3) the complexity of the rules themselves—without the limitations imposed by specific IoT devices systems and end-user development tools. This paper surveyed twenty participants about home automation rules given a standard house model and device’s list, without limiting their creativity and resulting automation complexity. We analyzed and systematized the collected 177 scenarios into seven different interaction categories, representing the most common smart home interactions."
     bibtex: 10.1007_978-3-030-77970-2_39.bib
 
   - title: "Empowering Visual Internet-of-Things Mashups with Self-Healing Capabilities"
@@ -31,7 +31,7 @@ confs:
     url: "https://doi.org/10.1109/SERP4IoT52556.2021.00014"
     status: "Published"
     pub: IEEE/ACM
-    abstract: Internet-of-Things (IoT) systems have spread among different application domains, from home automation to industrial manufacturing processes. The rushed development by competing vendors to meet the market demand of IoT solutions, the lack of interoperability standards, and the overall lack of a defined set of best practices have resulted in a highly complex, heterogeneous, and frangible ecosystem. Several works have been pushing towards visual programming solutions to abstract the underlying complexity and help humans reason about it. As these solutions begin to meet widespread adoption, their building blocks usually do not consider reliability issues. Node-RED, being one of the most popular tools, also lacks such mechanisms, either built-in or via extensions. In this work we present SHEN (Self-Healing Extensions for Node-RED) which provides 17 nodes that collectively enable the implementation of self-healing strategies within this visual framework. We proceed to demonstrate the feasibility and effectiveness of the approach using real devices and fault injection techniques.
+    abstract: "Internet-of-Things (IoT) systems have spread among different application domains, from home automation to industrial manufacturing processes. The rushed development by competing vendors to meet the market demand of IoT solutions, the lack of interoperability standards, and the overall lack of a defined set of best practices have resulted in a highly complex, heterogeneous, and frangible ecosystem. Several works have been pushing towards visual programming solutions to abstract the underlying complexity and help humans reason about it. As these solutions begin to meet widespread adoption, their building blocks usually do not consider reliability issues. Node-RED, being one of the most popular tools, also lacks such mechanisms, either built-in or via extensions. In this work we present SHEN (Self-Healing Extensions for Node-RED) which provides 17 nodes that collectively enable the implementation of self-healing strategies within this visual framework. We proceed to demonstrate the feasibility and effectiveness of the approach using real devices and fault injection techniques."
     bibtex: 10.1109_SERP4IoT52556.2021.00014.bib
 
   - title: "Visually-defined Real-Time Orchestration of IoT Systems"
@@ -42,7 +42,7 @@ confs:
     url: "https://doi.org/10.1145/3448891.3448938"
     status: "Published"
     pub: ACM
-    abstract: In this work, we propose a method for extending Node-RED to allow the automatic decomposition and partitioning of the system towards higher decentralization. We provide a custom firmware for constrained devices to expose their resources, as well as new nodes and modifications in the Node-RED engine that allow automatic orchestration of tasks. The firmware is responsible for low-level management of health and capabilities, as well as executing MicroPython scripts on demand. Node-RED then takes advantage of this firmware by (1) providing a device registry allowing devices to announce themselves, (2) generating MicroPython code from dynamic analysis of flow and nodes, and (3) automatically (re-)assigning nodes to devices based on pre-specified properties and priorities. A mechanism to automatically detect abnormal run-time conditions and provide dynamic self-adaptation was also explored. Our solution was tested using synthetic home automation scenarios, where several experiments were conducted with both virtual and physical devices. We then exhaustively measured each scenario to allow further understanding of our proposal and how it impacts the system’s resiliency, efficiency, and elasticity.
+    abstract: "In this work, we propose a method for extending Node-RED to allow the automatic decomposition and partitioning of the system towards higher decentralization. We provide a custom firmware for constrained devices to expose their resources, as well as new nodes and modifications in the Node-RED engine that allow automatic orchestration of tasks. The firmware is responsible for low-level management of health and capabilities, as well as executing MicroPython scripts on demand. Node-RED then takes advantage of this firmware by (1) providing a device registry allowing devices to announce themselves, (2) generating MicroPython code from dynamic analysis of flow and nodes, and (3) automatically (re-)assigning nodes to devices based on pre-specified properties and priorities. A mechanism to automatically detect abnormal run-time conditions and provide dynamic self-adaptation was also explored. Our solution was tested using synthetic home automation scenarios, where several experiments were conducted with both virtual and physical devices. We then exhaustively measured each scenario to allow further understanding of our proposal and how it impacts the system’s resiliency, efficiency, and elasticity."
     bibtex: 10.1145_3448891.3448938.bib
 
   - title: "An Empirical Study on Visual Programming Docker Compose Configurations"
@@ -53,6 +53,8 @@ confs:
     doi: 10.1145/3417990.3420194
     status: "Published"
     pub: ACM
+    abstract: "Infrastructure-as-Code tools, such as Docker and Docker Compose, play a crucial role in the development and orchestration of cloud-native and at-scale software. However, as IaC relies mostly on the development of text-only specifications, these are prone to misconfigurations and hard to debug. Several works suggest the use of models as a way to abstract their complexity, and some point to the use of visual metaphors. Yet, few empirical studies exist in this domain. We propose a visual programming notation and environment for specifying Docker Compose configurations and proceed to empirically validate its merits when compared with the standard text-only specification. The goal of this work is to produce evidence of the impact that visual approaches may have on the development of IaC. We observe that the use of our solution reduced the development time and error proneness, primarily for configurations definition activities. We also observed a preference for the approach in terms of ease of use, a positive sentiment of its usefulness and intention to use."
+    bibtex: 10.1145_3417990.3420194.bib
 
   - title: "A Pattern-Language for Self-Healing Internet-of-Things Systems"
     authors: "João Pedro Dias, Tiago Boldt Sousa, André Restivo and Hugo Sereno Ferreira"
@@ -62,6 +64,8 @@ confs:
     doi: 10.1145/3424771.3424804
     status: "Published"
     pub: ACM
+    abstract: "Internet-of-Things systems are assemblies of highly-distributed and heterogeneous parts that, in orchestration, work to provide valuable services to end-users in many scenarios. These systems depend on the correct operation of sensors, actuators, and third-party services, and the failure of a single one can hinder the proper functioning of the whole system, making error detection and recovery of paramount importance, but often overlooked. By drawing inspiration from other research areas, such as cloud, embedded, and mission-critical systems, we present a set of patterns for self-healing IoT systems. We discuss how their implementation can improve system reliability by providing error detection, error recovery, and health mechanisms maintenance."
+    bibtex: 10.1145_3424771.3424804.bib
 
   - title: "Real-time Feedback in Node-RED for IoT Development: An Empirical Study"
     authors: "Diogo Torres, João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
@@ -71,6 +75,8 @@ confs:
     doi: 10.1109/DS-RT50469.2020.9213544
     status: "Published"
     pub: IEEE
+    abstract: "The continuous spreading of the Internet-of-Things across application domains, aided by the continuous growth on the number of devices and systems that are Internet-connected, created both a rise in the complexity of these systems and made noticeable a lack of human resources with the expertise to design, develop and maintain them. Recent works try to mitigate these issues by creating solutions that abstract the complexity of the systems, such as using visual programming languages. Node-RED, as one of the most common solutions for the visual development IoT systems, stills has several limitations, such as the lack of observability and inadequate debugging mechanisms. In this work, we address some of these limitations by enhancing Node-RED with new features that improve the user's system development, debugging, and understanding tasks. We proceed to empirically evaluate the impact of these enhancements, concluding that, overall, such enhancements reduce the development time and the number of failed attempts to deploy the system."
+    bibtex: 10.1109_DS-RT50469.2020.9213544.bib
 
   - title: "Visual Self-Healing Modelling for Reliable Internet-of-Things Systems"
     authors: "João Pedro Dias, Bruno Lima, João Pascoal Faria, André Restivo and Hugo Sereno Ferreira"
@@ -80,6 +86,8 @@ confs:
     doi: 10.1007/978-3-030-50426-7_27
     status: "Published"
     pub: Springer
+    abstract: "Internet-of-Things systems are comprised of highly heterogeneous architectures, where different protocols, application stacks, integration services, and orchestration engines co-exist. As they permeate our everyday lives, more of them become safety-critical, increasing the need for making them testable and fault-tolerant, with minimal human intervention. In this paper, we present a set of self-healing extensions for Node-RED, a popular visual programming solution for IoT systems. These extensions add runtime verification mechanisms and self-healing capabilities via new reusable nodes, some of them leveraging meta-programming techniques. With them, we were able to implement self-modification of flows, empowering the system with self-monitoring and self-testing capabilities, that search for malfunctions, and take subsequent actions towards the maintenance of health and recovery. We tested these mechanisms on a set of scenarios using a live physical setup that we called SmartLab. Our results indicate that this approach can improve a system’s reliability and dependability, both by being able to detect failing conditions, as well as reacting to them by self-modifying flows, or triggering countermeasures."
+    bibtex: 10.1007_978-3-030-50426-7_27.bib
 
   - title: "Conversational Interface for Managing Non-Trivial Internet-of-Things Systems"
     authors: "André Sousa Lago, João Pedro Dias, and Hugo Sereno Ferreira"
@@ -89,6 +97,8 @@ confs:
     doi: 10.1007/978-3-030-50426-7_29
     status: "Published"
     pub: Springer
+    abstract: "Internet-of-Things has reshaped the way people interact with their surroundings. In a smart home, controlling the lights is as simple as speaking to a conversational assistant since everything is now Internet-connected. But despite their pervasiveness, most of the existent IoT systems provide limited out-of-the-box customization capabilities. Several solutions try to attain this issue leveraging end-user programming features that allow users to define rules to their systems, at the cost of discarding the easiness of voice interaction. However, as the number of devices increases, along with the number of household members, the complexity of managing such systems becomes a problem, including finding out why something has happened. In this work we present Jarvis, a conversational interface to manage IoT systems that attempts to address these issues by allowing users to specify time-based rules, use contextual awareness for more natural interactions, provide event management and support causality queries. A proof-of-concept was used to carry out a quasi-experiment with non-technical participants that provides evidence that such approach is intuitive enough to be used by common end-users."
+    bibtex: 10.1007_978-3-030-50426-7_29.bib
 
   - title: "Testing and Deployment Patterns for the Internet-of-Things"
     authors: "João Pedro Dias, Hugo Sereno Ferreira, Tiago Boldt Sousa"
@@ -98,6 +108,8 @@ confs:
     doi: 10.1145/3361149.3361165
     status: "Published"
     pub: ACM
+    abstract: "As with every software, Internet-of-Things (IoT) systems have their own life-cycle, from conception to construction, deployment, and operation. However, the testing requirements from these systems are slightly different due to their inherent coupling with hardware and human factors. Hence, the procedure of delivering new software versions in a continuous integration/delivery fashion must be adopted. Based on existent solutions (and inspired in other closely-related domains), we describe two common strategies that developers can use for testing IoT systems, (1) Testbed and (2) Simulation-based Testing, as well as one recurrent solution for its deployment (3) Middleman Update."
+    bibtex: 10.1145_3361149.3361165.bib
 
   - title: "Live Software Development --- Tightening the feedback loops"
     authors: "Ademar Aguiar, André Restivo, Filipe Figueiredo Correia, Hugo Sereno Ferreira, João Pedro Dias"
@@ -107,6 +119,8 @@ confs:
     doi: 10.1145/3328433.3328456
     status: "Published"
     pub: ACM
+    abstract: "Live Programming is an idea pioneered by programming environments from the earliest days of computing, such as those for Lisp and Smalltalk. One thing they had in common is liveness: an always accessible evaluation and nearly instantaneous feedback, usually focused on coding activities. In this paper, we argue for Live Software Development (LiveSD), bringing liveness to software development activities beyond coding, to make software easier to visualize, simpler to understand, and faster to evolve. Multiple challenges may vary with the activity and application domain. Research on this topic needs to consider the more important liveness gaps in software development, which representations and abstractions better support developers, and which tools are needed to support it.."
+    bibtex: 10.1145_3328433.3328456.bib
 
   - title: "Live Software Development Environment for Java using Virtual Reality"
     authors: "Diogo Amaral, Gil Domingues, João Pedro Dias, Rui Nobrega, Hugo Sereno Ferreira and Ademar Aguiar"
@@ -116,6 +130,8 @@ confs:
     doi: 10.5220/0007699800370046
     status: "Published"
     pub: SCITEPRESS
+    abstract: "Any software system that has a considerable growing number of features will suffer from essential complexity, which makes the understanding of the software artifacts increasingly costly and time-consuming. A common approach for reducing the software understanding complexity is to use software visualizations techniques. There are already several approaches for visualizing software, as well as for extracting the information needed for those visualizations. This paper presents a novel approach to tackle the software complexity, delving into the common approaches for extracting information about software artifacts and common software visualization metaphors, allowing users to dive into the software system in a live way using virtual reality (VR). Experiments were carried out in order to validate the correct extraction of metadata from the software artifact and the corresponding VR visualization. With this work, we intend to present a starting point towards a Live Software Development app roach."
+    bibtex: 10.5220_0007699800370046.bib
 
   - title: "CloudCity: A Live Environment for the Management of Cloud Infrastructures"
     authors: "Pedro Lourenço, João Pedro Dias, Hugo Sereno Ferreira and Ademar Aguiar"
@@ -125,6 +141,8 @@ confs:
     doi: "10.5220/0007699700270036"
     status: "Published"
     pub: SCITEPRESS
+    abstract: "Cloud computing has emerged as the de facto approach for providing services over the Internet. Although having increased popularity, challenges arise in the management of such environments, especially when the cloud service providers are constantly evolving their services and technology stack in order to maintain position in a demanding market. This usually leads to a combination of different services, each one managed individually, not providing a big picture of the architecture. In essence, the end state will be too many resources under management in an overwhelming heterogeneous environment. An infrastructure that has considerable growth will not be able to avoid its increasing complexity. Thus, this papers introduces liveness as an attempt to increase the feedback-loop to the developer in the management of cloud architectures. This aims to ease the process of developing and integrating cloud-based systems, by giving the possibility to understand the system and manage it in an int eractive and immersive experience, thus perceiving how the infrastructure reacts to change. This approach allows the real-time visualization of a cloud infrastructure composed of a set of Amazon Web Services resources, using visual city metaphors."
+    bibtex: 10.5220_0007699700270036.bib
 
   - title: "Blockchain-based PKI for Crowdsourced IoT Sensor Information"
     authors: "Guilherme Pinto, João Pedro Dias and Hugo Sereno Ferreira"
@@ -134,6 +152,8 @@ confs:
     status: "Published"
     doi: 10.1007/978-3-030-17065-3_25
     pub: Springer
+    abstract: "The Internet of Things is progressively getting broader, evolving its scope while creating new markets and adding more to the existing ones. However, both generation and analysis of large amounts of data, which are integral to this concept, may require the proper protection and privacy-awareness of some sensitive information. In order to control the access to this data, allowing devices to verify the reliability of their own interactions with other endpoints of the network is a crucial step to ensure this required safeness. Through the implementation of a blockchain-based Public Key Infrastructure connected to the Keybase platform, it is possible to achieve a simple protocol that binds devices’ public keys to their owner accounts, which are respectively supported by identity proofs. The records of this blockchain represent digital signatures performed by this Keybase users on their respective devices’ public keys, claiming their ownership. Resorting to this distributed and decentralized PKI, any device is able to autonomously verify the entity in control of a certain node of the network and prevent future interactions with unverified parties."
+    bibtex: 10.1007_978-3-030-17065-3_25.bib
 
   - title: "A Blockchain-based Scheme for Access Control in e-Health Scenarios"
     authors: "João Pedro Dias, Hugo Sereno Ferreira and Ângelo Martins"
@@ -143,6 +163,8 @@ confs:
     doi: 10.1007/978-3-030-17065-3_24
     status: "Published"
     pub: Springer
+    abstract: "Access control is a crucial part of a system’s security, restricting what actions users can perform on resources. Therefore, access control is a core component when dealing with e-Health data and resources, discriminating which is available for a certain party. We consider that current systems that attempt to assure the share of policies between facilities are mostly centralized, being prone to system’s and network’s faults and do not assure the integrity of policies lifecycle. Using a blockchain as store system for access policies we are able to ensure that the different entities have knowledge about the policies in place while maintaining a record of all permission requests, thus assuring integrity, auditability and authenticity."
+    bibtex: 10.1007_978-3-030-17065-3_24.bib
 
   - title: "Growing Smart Cities on an Open-Data-Centric Cyber-Physical Platform"
     authors: " José Pedro Pinto, João Pedro Dias and Rosaldo J. F. Rossetti"
@@ -152,6 +174,8 @@ confs:
     doi: 10.1109/ISC2.2018.8656989
     status: "Published"
     pub: IEEE
+    abstract: "Considering an environment that consists of several services, applications and platforms, each present entity produces a certain amount of data. With so many sources of data, there are a number of things bound to exist: different formats of information, redundancy and no consistent standards of information. In environments as these, the collaboration between different entities creates an opportunity for innovation, where data interoperability allows for the re-use of information, the possibility of different services taking advantage of other third-party sources and the development of new businesses from existing information. This, however, is only possible if there is some sort of interoperability between the data, a way for it to be transmitted from entity to entity, always with the possibility of creating value with its manipulation and consumption. This paper exposes the work done in the development of a platform focused on data, looking into its forms of representation and how to solve the problems caused by the ever existing necessity of data interoperability between systems. The possibility for maintaining and creating Open Data Ecosystems is also analysed in the scope of the proposed platform.."
+    bibtex: 10.1109_ISC2.2018.8656989.bib
 
   - title: "Dynamic Allocation of Serverless Functions in IoT Environments"
     authors: "Duarte Pinto, João Pedro Dias and Hugo Sereno Ferreira"
@@ -161,6 +185,8 @@ confs:
     doi: 10.1109/EUC.2018.00008
     status: "Published"
     pub: IEEE
+    abstract: "The IoT area has grown significantly in the last few years and is expected to reach a gigantic amount of 50 billion devices by 2020. The appearance of serverless architectures, specifically highlighting FaaS, raises the question of the suitability of using them in IoT environments. Combining IoT with a serverless architectural design can effective when trying to make use of local processing power that exists in a local network of IoT devices and creating a fog layer that leverages computational capabilities that are closer to the end-user. In this approach, which is placed between the device and the serverless function, when a device requests for the execution of a serverless function will decide based on previous metrics of execution if the serverless function should be executed locally, in the fog layer of a local network of IoT devices, or if it should be executed remotely, in one of the available cloud servers. Therefore, this approach allows dynamically allocating functions to the most suitable layer."
+    bibtex: 10.1109_EUC.2018.00008.bib
 
   - title: "A Reactive and Model-based Approach for Developing Internet-of-Things Systems"
     authors: "João Pedro Dias, João Pascoal Faria and Hugo Sereno Ferreira"
@@ -170,6 +196,8 @@ confs:
     doi: 10.1109/QUATIC.2018.00049
     status: "Published"
     pub: IEEE
+    abstract: "Software has a longstanding association with a state of crisis considering its success rate. The explosion of Internet-connected devices - Internet-of-Things - adds to the complexity of software systems. The particular characteristics of these systems, such as its large-scale and heterogeneity, pose increasingly new challenges. Model-based approaches have been widely used as a mechanism to abstract low-level programming details and processes. By using such approaches, and leveraging concepts as reactive design, visual notations, and live programming, we believe to be able to reduce the complexity of creating, operate/monitor and evolve such systems. The main objective of this Ph.D. is to delve into the software engineering practices for developing IoT systems and systems of systems, exploiting models as a suitable abstraction, expecting to reduce the complexity of managing most of the software development lifecycle that targets IoT systems and to develop the prototype that will aid on the validation of such approach."
+    bibtex: 10.1109_QUATIC.2018.00049.bib
 
   - title: "A Brief Overview of Existing Tools for Testing the Internet-of-Things"
     authors: "João Pedro Dias, Flávio Couto, Ana C.R. Paiva, Hugo Sereno Ferreira"
@@ -179,6 +207,8 @@ confs:
     doi: 10.1109/ICSTW.2018.00035
     status: "Published"
     pub: IEEE
+    abstract: "Systems are error-prone. Big systems have lots of errors. The Internet-of-Things poses us one of the biggest and widespread systems, where errors directly impact people's lives. Testing and validating is how one deals with errors; but testing and validating a planetary-scale, heterogeneous, and evergrowing ecosystem has its own challenges and idiosyncrasies. As of today, the solutions available for testing these systems are insufficient and fragmentary. In this paper we provide an overview on test approaches, tools and methodologies for the Internet-of-Things, its software and its devices. Our conclusion is that we are still lagging behind on the best practices and lessons learned from the Software Engineering community in the past decades."
+    bibtex: 10.1109_ICSTW.2018.00035.bib
 
   - title: "Patterns for Things that Fail"
     authors: "António Ramadas, Gil Domingues, João Pedro Dias, Ademar Aguiar, Hugo Sereno Ferreira"
@@ -188,6 +218,8 @@ confs:
     pdf: "https://www.hillside.net/plop/2017/papers/proceedings/papers/07-ramadas.pdf"
     status: "Published"
     pub: ACM
+    abstract: "Internet of Things is a paradigm that empowers the Internet-connected heterogeneous devices alongside with their capabilities to sense the physical world and act on it. Internet of Things has a wide range of application in a variety of areas and contexts, such as smart spaces like smart homes and smart cities. These systems have to deal with device-related problems, such as heterogeneity, fault-tolerance, privacy and security. This paper addresses some patterns about some recurring problems when designing and implementing Internet of Things systems. More concretely, the patterns address how to deal with highly-changeable, error-prone and failing devices and their networks. Device Registry demonstrates how to deal with devices that can change over time. Device Raw Data Collector explains how to check the health of heterogeneous devices by a constant collection of raw device data. Device Error Data Supervisor shows how to leverage the continuous data-flow coming from devices to enable error detection and, consequently, processing and handling those errors. Lastly, Predictive Device Monitor show how to pro-actively predict devices operation behavior enabling maintenance actions."
+    bibtex: 10.5555_3290281.3290290.bib
 
   - title: "Towards a Framework for Agent-based Simulation of User Behaviour in E-Commerce Context"
     authors: "Duarte Duarte, João Pedro Dias, Hugo Sereno Ferreira and Zaf. Kokkinogenis"
@@ -197,6 +229,8 @@ confs:
     doi: 10.1007/978-3-319-61578-3_3
     status: "Published"
     pub: Springer
+    abstract: "In order to increase sales and profits, it is common that e-commerce website owners resort to several marketing and advertising techniques, attempting to influence user actions. Summarizing and analysing user behaviour is a complex task since it is hard to extrapolate patterns that never occurred before and the causality aspects of the system are not usually taken into consideration. There has been studies about characterizing user behaviour and interactions in e-commerce websites that could be used to improve this process. This paper presents an agent-based framework for simulating models of user behaviour created through data mining processes within an e-commerce context. The purpose of framework is to study the reaction of user to stimuli that influence their actions while navigating the website. Furthermore a scalability analysis is performed on a case-study."
+    bibtex: 10.1007_978-3-319-61578-3_3.bib
 
   - title: "Automating the Extraction of Static Content and Dynamic Behaviour from e-Commerce Websites"
     authors: "João Pedro Dias and Hugo Sereno Ferreira"
@@ -206,6 +240,8 @@ confs:
     doi: 10.1016/j.procs.2017.05.355
     status: "Published"
     pub: Elsevier
+    abstract: "E-commerce website owners rely heavily on analysing and summarising the behaviour of costumers, making efforts to influence user actions and optimize success metrics. Machine learning and data mining techniques have been applied in this field, greatly influencing the Internet marketing activities. When faced with a new e-commerce website, the data scientist starts a process of collecting real-time and historical data about it, analysing and transforming this data in order to get a grasp into the website and its users. Data scientists commonly resort to tracking domain-specific events, requiring code modification of the web pages. This paper proposes an alternative approach to retrieve information from a given e-commerce website, collecting data from the site's structure, retrieving semantic information in predefined locations and analysing user's access logs, thus enabling the development of accurate models for predicting users’ future behaviour. This is accomplished by the application of a web mining process, comprehending the site's structure, content and usage in a pipeline, resulting in a web graph of the website, complemented with a categorization of each page and the website's archetypical user profiles."
+    bibtex: 10.1016_j.procs.2017.05.355.bib
 
   - title: "A Hands-on Approach on Botnets for Behavior Exploration"
     authors: "João Pedro Dias, José Pedro Pinto and José Magalhães Cruz"
@@ -215,6 +251,8 @@ confs:
     doi: 10.5220/0006392404630469
     status: "Published"
     pub: SCITEPRESS
+    abstract: "A botnet consists of a network of computers that run a special software that allows a third-party to remotely control them. This characteristic presents a major issue regarding security in the Internet. Although common malicious software infect the network with almost immediate visible consequences, there are cases where that software acts stealthy without direct visible effects on the host machine. This is the normal case of botnets. However, not always the bot software is created and used for illicit purposes. There is a need for further exploring the concepts behind botnets and network security. For this purpose, this paper presents and discusses an educational tool that consists of an open-source botnet software kit with built-in functionalities. The tool enables anyone with some computer technical knowledge, to experiment and find out how botnets work and can be changed and adapted to a variety of useful applications, such as introducing and exemplifying security and distributed systems’ concepts."
+    bibtex: 10.5220_0006392404630469.bib
 
 journals:
   - title: "Managing Non-Trivial Internet-of-Things Systems with Conversational Assistants: A Prototype and a Feasibility Experiment"
@@ -226,6 +264,8 @@ journals:
     doi: "10.1016/j.jocs.2021.101324"
     status: "Published"
     pub: Elsevier
+    abstract: "Internet-of-Things has reshaped the way people interact with their surroundings and automatize the once manual actions. In a smart home, controlling the Internet-connected lights is as simple as speaking to a nearby conversational assistant. However, specifying interaction rules, such as making the lamp turn on at specific times or when someone enters the space is not a straightforward task. The complexity of doing such increases as the number and variety of devices increases, along with the number of household members. Thus, managing such systems becomes a problem, including finding out why something has happened. This issue lead to the birth of several low-code development solutions that allow users to define rules to their systems, at the cost of discarding the easiness and accessibility of voice interaction. In this paper we extend the previous published work on Jarvis [1], a conversational interface to manage IoT systems that attempts to address these issues by allowing users to specify time-based rules, use contextual awareness for more natural interactions, provide event management and support causality queries. A proof-of-concept is presented, detailing its architecture and natural language processing capabilities. A feasibility experiment was carried with mostly non-technical participants, providing evidence that Jarvis is intuitive enough to be used by common end-users, with participants showcasing an overall preference by conversational assistants over visual low-code solutions."
+    bibtex: 10.1016_j.jocs.2021.101324.bib
 
   - title: "Experimenting with Liveness in Cloud Infrastructure Management"
     authors: "Pedro Lourenço, João Pedro Dias, Ademar Aguiar, Hugo Sereno Ferreira and André Restivo"
@@ -236,6 +276,8 @@ journals:
     doi: "10.1007/978-3-030-40223-5_4"
     status: "Published"
     pub: Springer
+    abstract: "Cloud computing has been playing a significant role in the provisioning of services over the Internet since its birth. However, developers still face several challenges limiting its full potential. The difficulties are mostly due to the large, ever-growing, and ever-changing catalog of services offered by cloud providers. As a consequence, developers must deal with different cloud services in their systems; each managed almost individually and continually growing in complexity. This heterogeneity may limit the view developers have over their system architectures and make the task of managing these resources more complex. This work explores the use of liveness as a way to shorten the feedback loop between developers and their systems in an interactive and immersive way, as they develop and integrate cloud-based systems. The designed approach allows real-time visualization of cloud infrastructures using a visual city metaphor. To assert the viability of this approach, the authors conceived a proof-of-concept and carried on experiments with developers to assess its feasibility."
+    bibtex: 10.1007_978-3-030-40223-5_4.bib
 
   - title: "Live Software Development Environment using Virtual Reality: a Prototype and Experiment"
     authors: "Diogo Amaral, Gil Domingues, João Pedro Dias, Hugo Sereno Ferreira, Ademar Aguiar, Rui Nóbrega and Filipe Figueiredo Correia"
@@ -246,6 +288,8 @@ journals:
     doi: "10.1007/978-3-030-40223-5_5"
     status: "Published"
     pub: Springer
+    abstract: "Successful software systems tend to grow considerably, ending up suffering from essential complexity, and very hard to understand as a whole. Software visualization techniques have been explored as one approach to ease software understanding. This work presents a novel approach and environment for software development that explores the use of liveness and virtual reality (VR) as a way to shorten the feedback loop between developers and their software systems in an interactive and immersive way. As a proof-of-concept, the authors developed a prototype that uses a visual city metaphor and allows developers to visit and dive into the system, in a live way. To assess the usability and viability of the approach, the authors carried on experiments to evaluate the effectiveness of the approach, and how to best support a live approach for software development."
+    bibtex: 10.1007_978-3-030-40223-5_5.bib
 
   - title: "A Blockchain-based Approach for Access Control in eHealth Scenarios"
     authors: "João Pedro Dias, Ângelo Martins and Hugo Sereno Ferreira"
@@ -255,6 +299,8 @@ journals:
     issn: 1554-1010
     status: "Published"
     pub: MIR Labs
+    abstract: "Access control is a crucial part of a system’s security, restricting what actions users can perform on resources. Therefore, access control is a core component when dealing with eHealth data and resources, discriminating which is available for a certain party. We consider that current systems that attempt to assure the share of policies between facilities are prone to system’s and network’s faults and do not assure the integrity of policies life-cycle. By approaching this problem with a blockchain where the operations are stored as transactions, we can ensure that the different facilities have knowledge about all the parts that can act over the eHealth resources while maintaining integrity, auditability, and authenticity."
+    bibtex: jias18.bib
 
 informal:
   - title: "Multi-Approach Debugging of Industrial IoT Workflows"
@@ -262,13 +308,17 @@ informal:
     year: 2020
     url: "https://arxiv.org/abs/2009.05828"
     pdf: "https://arxiv.org/pdf/2009.05828"
+    abstract: "Industrial Internet-of-Things (IIoT) results from the addition of sensing and actuating capabilities to industrial environments to improve the overall manufacturing processes. Some of these systems have highly-complex tasks of monitorization and control and need to be programmed accordingly. The use of visual programming, such as workflows, is common in these systems due to the abstraction they provide to the systems programmer. However, such programming environments have several deficiencies on what regards debugging capabilities, mostly due to the constraints that difficult the use of traditional mechanisms. The work presented in this paper approaches these issues, delving into the design and implementation of a multi-strategy debugging mechanism into a commercial-grade Manufacturing Execution System. To validate the approach, a proof-of-concept was then developed and validated against different debugging scenarios."
+    bibtex: 2009.05828.bib
 
   - title: "State of the Software Development Life-Cycle for the Internet-of-Things"
     authors: "João Pedro Dias and Hugo Sereno Ferreira"
     year: 2018
     url: "https://arxiv.org/abs/1811.04159"
     pdf: "https://arxiv.org/pdf/1811.04159"
-#  - title: "Blockchain-based PKI for Crowdsourced IoT Sensor Information"
+    abstract: "Software has a longstanding association with a state of crisis considering its success rate. The explosion of Internet-connected devices, Internet-of-Things, adds to the complexity of software systems. The particular characteristics of these systems, such as being large-scale and its heterogeneity, pose increasingly new challenges. In this paper, we first briefly introduce the IoT paradigm and the current state of art of software development. Then, we delve into the particularities of developing software for IoT systems and systems of systems, given an overview of what are the current methodologies and tools for design, develop and test such systems. The findings are discussed, revealing open issues and research directions, and reveal that the nowadays IoT software development practices are still lagging behind of what are the current best practices."
+    bibtex: 1811.04159.bib
+    #  - title: "Blockchain-based PKI for Crowdsourced IoT Sensor Information"
 #    authors: "Guilherme Pinto, João Pedro Dias, Hugo Sereno Ferreira"
 #    year: 2018
 #    url: "https://arxiv.org/abs/1807.03863"
@@ -291,18 +341,26 @@ abstracts:
     year: 2018
     url: "https://ijup.up.pt"
     pdf: "https://ijup.up.pt/2019/wp-content/uploads/sites/269/2018/10/LivroResumos2018.pdf"
+    abstract: "Internet of Things (IoT) is a cutting-edge paradigm originating from the advances in information and communication technologies, towards a worldwide network of inter-connected heterogeneous entities. From this context an old area of networks as emerged again being that the concept of mesh networks. In such topology each node relays data for the network. These nodes collaborate in the dissemination of data by either wired or wireless networks. For a broad range of low-data-rate, low-power IoT applications mesh networking is coming forth as an alluring option for it has the purpose of enabling connected devices to communicate with each other not leaning on dedicated hub services or computers. Being inexpensive this solution thus provides a straightforward approach when building a network of connected devices. Our case study consisted of connecting five ESP8266 relying on communication through end-to-end MQTT queues. These ESP8266 were to collect different types of data through their sensors  and to act, through their relayed actuators, upon that same data. Two approaches were considered for this implementation relying both in open source libraries. The first one was ESP8266MQTTMesh being that problems emerged from its deployment. The second one was painlessMesh and it worked as expected for being able to easily extract information on how the network was structured and changed during its life-cycle, thus meaning we could visualize the network and the messages going through it. With this mesh as a functional proof of concept a visualization system was developed using Elasticsearch and Kibana as well as an elemental web application with the sole purpose of providing visualization of quasi-real-time of the network mesh behavior. The feasibility of use of mesh networks in IoT scenarios like smart houses was demonstrated. However, there is still space for exploring large-scale test scenarios.."
+    bibtex: LivroResumos2018.bib
+
   - title: "Automating the Extraction of Static Content and Dynamic Behaviour from e-Commerce Websites"
     authors: "João Pedro Dias and Hugo Sereno Ferreira"
     conference: "10th Meeting of Young Researchers of University of Porto (IJUP 2017)"
     year: 2017
     url: "https://ijup.up.pt"
     pdf: "https://ijup.up.pt/2019/wp-content/uploads/sites/269/2018/10/LivroResumos2017.pdf"
+    abstract: "E-commerce website owners rely heavily on analysing and summarising the behaviour of costumers, making efforts to influence user actions and optimize success metrics. Machine learning and data mining techniques have been applied in this field, greatly influencing the Internet marketing activities. When faced with a new e-commerce website, the data scientist starts a process of collecting real-time and historical data about it, analysing and transforming and analysing user’s access logs, thus enabling the development of accurate models for predicting users’ future behaviour. This is accomplished by the application of a web mining process, comprehending the site’s structure, content and usage in a pipeline, resulting in a web graph of the website, complemented with a categorization of each page and the website’s archetypical user profiles."
+    bibtex: LivroResumos2017.bib
+
   - title: "A hands-on approach on botnets for a learning purpose"
     authors: "João Pedro Dias, José Pedro Pinto and José Magalhães Cruz"
     conference: "9th Meeting of Young Researchers of University of Porto (IJUP 2016)"
     year: 2016
     url: "https://ijup.up.pt"
     pdf: "https://ijup.up.pt/2019/wp-content/uploads/sites/269/2018/10/LivroResumos2016.pdf"
+    abstract: "A Botnet is, by definition, a collection of computers that varies from tens to millions. It runs special software that effectively allows the machines to be remotely controlled. In the most common situation, computers are recruited for a Botnet by an attacker that is able to exploit vulnerabilities, either of the system software or of human users (by social engineering), to infect the computers with the special crafted software that allows the remote control of the individual machines (now, 'bots'). Types of malicious usage of these Botnets are: spam (delivery of unsolicited email), manipulation of online polls/contests, denial of service attacks. But there are also cases where 'botnet software' is installed on purpose and authorized by the computers' owners, to be used for beneficial purposes. Such is the case of the SETI@home initiative. There is a need for an easy way to learn about Botnets: what they are, how they work, how they can be given good use. For that, we have developed an educational software project that on one hand, consists of a wiki with information on botnets, its anatomy, architecture and impact on the Internet. On the other hand, consists of an open-source botnet software kit with built-in functionalities useful to anyone with some computer technical knowledge, to experiment and find out how botnets work and can be changed and adapted to a variety of useful applications, such as introducing and exemplifying security and distributed systems' concepts."
+    bibtex: LivroResumos2016.bib
 
 thesis:
   - title: "Reverse Engineering Static Content and Dynamic Behaviour of E-Commerce Websites for Fun and Profit"
@@ -311,3 +369,5 @@ thesis:
     year: 2016
     url: "http://hdl.handle.net/10216/85374"
     pdf: "https://jpdias.me/kugsha/resources/dissertation.pdf"
+    abstract: "Nowadays electronic commerce websites are one of the main transaction tools between on-line merchants and consumers or businesses. These e-commerce websites rely heavily on summarizing and analyzing the behavior of customers, making an effort to influence user actions towards the optimization of success metrics such as CTR (Click through Rate), CPC (Cost per Conversion), Basket and Lifetime Value and User Engagement. Knowledge extraction from the existing e-commerce websites datasets, using data mining and machine learning techniques, have been greatly influencing the Internet marketing activities. When faced with a new e-commerce website, the machine learning practitioner starts a web mining process by collecting historical and real-time data of the website and analyzing/transforming this data in order to be capable of extracting information about the website structure and content and its users' behavior. Only after this process the data scientists are able to build relevant models and algorithms to enhance marketing activities. This is an expensive process in resources and time since that it will depend always on the condition in which the data is presented to the data scientist, since data with more quality (i.e. no incomplete data) will make the data scientist work easier and faster. On the other hand, in most of the cases, data scientists would usually resort to tracking domain-specific events throughout a user's visit to the website in order to fulfill the objective of discovering the users' behavior and, for this, it is necessary code modifications to the pages themselves, that will result in a larger risk of not capturing all the relevant information by not enabling tracking mechanisms. For example, we may not know apriori that a visit to a Delivery Conditions page is relevant to the prediction of a user's willingness to buy and therefore would not enable tracking on those pages. Within this problem context, the proposed solution consists of a tool capable of extracting and combining information about a e-commerce website through a process of web mining, comprehending the structure as well as the content of the website pages, relying mostly on identifying dynamic content and semantic information in predefined locations, complemented with the capability of, using the user's access logs, be capable of extracting more accurate models to predict the users future behavior. This will permit the creation of a data model representing an e-commerce website and its archetypical users that can be useful, for example, in simulation systems."
+    bibtex: mastersthesis.bib
