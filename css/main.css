@@ -98,11 +98,7 @@ a {
   text-decoration: none;
   color: var(--main-headers-color);
 }
-a:hover {
-  background-color: var(--main-headers-color);
-  color: var(--main-bg-color);
-}
-
+a:hover,
 a > b:hover {
   background-color: var(--main-headers-color);
   color: var(--main-bg-color);
