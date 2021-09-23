@@ -102,6 +102,12 @@ a:hover {
   background-color: var(--main-headers-color);
   color: var(--main-bg-color);
 }
+
+a > b:hover {
+  background-color: var(--main-headers-color);
+  color: var(--main-bg-color);
+}
+
 h1 {
   font-family: "Lato", sans-serif;
   font-weight: 300;
