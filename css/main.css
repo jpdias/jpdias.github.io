@@ -177,6 +177,9 @@ strong {
   font-size: 25px;
   display: inline-block;
 }
+#author-name > i {
+  margin-left: -40px;
+}
 .navbar {
   padding: 50px 0 50px 0;
 }
