@@ -27,7 +27,7 @@ title: "./jpdias/publications"
 <li>
   <details class="description-item is-expandable">
     <summary class="description-item-title"> <i class="ri-add-circle-line"></i>  Abstract</summary>
-    <div class="description-item">{{ pub.abstract }} <span><a href="/assets/bibtex/{{ pub.bibtex }}" download><i class="ri-external-link-line"></i>&nbsp;bibtex</a></span></div>
+    <div class="description-item">{{ pub.abstract }} <span><a href="/assets/bibtex/{{ pub.bibtex }}" download><i class="ri-file-download-line"></i>&nbsp;bibtex</a></span></div>
   </details>
 </li>
 </div>
@@ -58,7 +58,7 @@ title: "./jpdias/publications"
 <li>
   <details class="description-item is-expandable">
     <summary class="description-item-title"> <i class="ri-add-circle-line"></i>  Abstract</summary>
-    <div class="description-item">{{ pub.abstract }}<span><a href="/assets/bibtex/{{ pub.bibtex }}" download><i class="ri-external-link-line"></i>&nbsp;bibtex</a></span></div>
+    <div class="description-item">{{ pub.abstract }}<span><a href="/assets/bibtex/{{ pub.bibtex }}" download><i class="ri-file-download-line"></i>&nbsp;bibtex</a></span></div>
   </details>
 </li>
 </div>
@@ -87,7 +87,7 @@ title: "./jpdias/publications"
 <li>
   <details class="description-item is-expandable">
     <summary class="description-item-title"> <i class="ri-add-circle-line"></i>  Abstract</summary>
-    <div class="description-item">{{ pub.abstract }}<span><a href="/assets/bibtex/{{ pub.bibtex }}" download><i class="ri-external-link-line"></i>&nbsp;bibtex</a></span></div>
+    <div class="description-item">{{ pub.abstract }}<span><a href="/assets/bibtex/{{ pub.bibtex }}" download><i class="ri-file-download-line"></i>&nbsp;bibtex</a></span></div>
   </details>
 </li>
 </div>
@@ -115,7 +115,7 @@ title: "./jpdias/publications"
 <li>
   <details class="description-item is-expandable">
     <summary class="description-item-title"> <i class="ri-add-circle-line"></i>  Abstract</summary>
-    <div class="description-item">{{ pub.abstract }}<span><a href="/assets/bibtex/{{ pub.bibtex }}" download><i class="ri-external-link-line"></i>&nbsp;bibtex</a></span></div>
+    <div class="description-item">{{ pub.abstract }}<span><a href="/assets/bibtex/{{ pub.bibtex }}" download><i class="ri-file-download-line"></i>&nbsp;bibtex</a></span></div>
   </details>
 </li>
 </div>
@@ -144,7 +144,7 @@ title: "./jpdias/publications"
 <li>
   <details class="description-item is-expandable">
     <summary class="description-item-title"> <i class="ri-add-circle-line"></i>  Abstract</summary>
-    <div class="description-item">{{ pub.abstract }}<span><a href="/assets/bibtex/{{ pub.bibtex }}" download><i class="ri-external-link-line"></i>&nbsp;bibtex</a></span></div>
+    <div class="description-item">{{ pub.abstract }}<span><a href="/assets/bibtex/{{ pub.bibtex }}" download><i class="ri-file-download-line"></i>&nbsp;bibtex</a></span></div>
   </details>
 </li>
 </div>
