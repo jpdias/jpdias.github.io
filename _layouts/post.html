@@ -5,16 +5,16 @@ layout: default
     <h1>{{ page.title }}</h1>
     <div class="tagline">
         <span class="shield shield-blue">
-            <span><i class="fas fa-calendar-alt"></i></span>
+            <span><i class="ri-calendar-2-line"></i></span>
             {{ page.date | date: '%B %d, %Y' }}
         </span>
         {% for tag in page.tags %}
-        <span class="shield shield-grey"><span><i class="fas fa-hashtag"></i></span>
+        <span class="shield shield-grey"><span><i class="ri-hashtag"></i></span>
             {{tag}}
         </span>
         {% endfor %}
         <span class="shield shield-yellow">
-            <span><i class="fas fa-stopwatch "></i></span>
+            <span><i class="ri-timer-line"></i></span>
             {% include reading-time.html %}
         </span>
     </div>
