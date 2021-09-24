@@ -13,10 +13,10 @@ title: "./jpdias/notes"
       </h2>
       <div class="tagline">
         <span class="shield shield-blue"><span>
-        <i class="fas fa-calendar-alt"></i>
+          <i class="ri-calendar-2-line"></i>
         </span>{{ post.date | date: '%B %d, %Y' }}</span>
         {% for tag in post.tags %}
-          <span class="shield shield-grey"><span><i class="fas fa-hashtag"></i></span>{{tag}}</span>
+          <span class="shield shield-grey"><span><i class="ri-hashtag"></i></span>{{tag}}</span>
         {% endfor %}
       </div>
       {{ post.excerpt }}
