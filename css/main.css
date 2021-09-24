@@ -3,7 +3,7 @@
   --main-bg-color: #202020;
   --main-font-color: rgba(255, 255, 255, 0.8);
   --hr-border-settings: 2px solid rgba(255, 255, 255, 0.3);
-  --code-bg-color: #202020;
+  --code-bg-color: #1c1a1a;
   --code-font-color: #d0d0d0;
 }
 
@@ -379,7 +379,6 @@ div > .highlighter-rouge {
   margin: 20px 0 20px 0;
   padding: 2px 8px 2px 8px;
   font-size: 1rem;
-  background-color: #111;
 }
 
 p > .highlighter-rouge {
@@ -469,7 +468,7 @@ pre {
   word-break: inherit;
   word-wrap: inherit;
   font-size: 1rem;
-  background-color: #1c1a1a;
+  background-color: var(--code-bg-color);
 }
 pre a::before {
   content: counter(line-numbering);
