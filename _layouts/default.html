@@ -73,14 +73,12 @@
             </ul>
         </div>
         <div style="clear:both"></div>
-        <br>
         {% if page.is_contact == true %}
             <div class="container content contact">
         {% else %}
             <div class="container content">
         {% endif %}
                 {{ content }}
-                <br>
                 <p class="social-links">
                     {% for page in site.social %}
                     <span><a href="{{ page.url }}" target="_blank"><i class="{{ page.icon }}"></i></a></span> &nbsp;
