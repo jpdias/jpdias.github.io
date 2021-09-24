@@ -83,3 +83,6 @@ academic:
   - name: arXiv/Dias%2C+J+P
     icon: ai ai-arxiv
     url: https://arxiv.org/search/cs?searchtype=author&query=Dias%2C+J+P
+  - name: Ciência ID/1C1D-2179-32EC
+    icon: ai ai-ciencia-vitae
+    url: https://www.cienciavitae.pt/portal/pt/1C1D-2179-32EC
