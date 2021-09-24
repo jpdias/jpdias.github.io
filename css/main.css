@@ -177,9 +177,7 @@ strong {
   font-size: 25px;
   display: inline-block;
 }
-#author-name > i {
-  margin-left: -40px;
-}
+
 .navbar {
   padding: 50px 0 50px 0;
 }
@@ -412,7 +410,6 @@ li > .highlighter-rouge {
 }
 
 table {
-  margin: 15px 0;
   border-collapse: collapse;
   width: 100%;
   padding: 0;
@@ -466,12 +463,13 @@ pre {
   counter-reset: line-numbering;
   border-radius: 0;
   padding: 0;
-  line-height: 23px;
-  margin-bottom: 30px;
+  line-height: 18px;
   white-space: pre;
   overflow-x: auto;
   word-break: inherit;
   word-wrap: inherit;
+  font-size: 1rem;
+  background-color: #1c1a1a;
 }
 pre a::before {
   content: counter(line-numbering);
