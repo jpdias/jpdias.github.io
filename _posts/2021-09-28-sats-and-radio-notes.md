@@ -35,7 +35,7 @@ Antennas are typically built in a way that they interact ("_create resistance_")
 
 The dimensions of an antenna are directly related to the `λ` of a given signal. There are many kinds of antennas, but for simplicity, consider the following examples:
 
-<div class="row" style="text-align:center;overflow: scroll;">
+<div class="row" style="text-align:center;overflow-x: scroll;">
   <div class="column">
     <img style="height: 150px;width: auto;" alt="monopole" src="/images/satsandradio21/monopole.png">
     <p>Monopole</p>
