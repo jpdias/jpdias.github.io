@@ -82,7 +82,10 @@ For audio signals, the most common modulations are the following (which are typi
 - DSB (Dual or Double Side Band), is like AM (USB+LSB) but with no carrier;
 - CW (Continuous Wave), is used for sending Morse Code, the process simply turns the carrier on and off (pure carrier).
 
-Taken from [here](https://forums.hak5.org/topic/33773-modes/).
+Taken from [here](https://forums.hak5.org/topic/33773-modes/). Some modes / protocols can be directly decoded using multimon-ng](https://github.com/EliasOenal/multimon-ng/). Example usage with [rtl_fm](https://github.com/osmocom/rtl-sdr), decoding MORSE at 433.92MHz:
+```bash
+$ rtl_fm -g 19 -f 433.92e6 -M am -s 200e3 -r 22050 - | multimon-ng -a MORSE_CW -t raw /dev/stdin
+```
 
 ## SDR Hardware 101
 
