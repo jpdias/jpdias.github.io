@@ -7,11 +7,15 @@ thumbnail: /images/sats21/iss.jpg
 description: "Notes on listenning to satellites and other space- and earth-craft."
 ---
 
-Radio communications always had my curiosity, but little to no focus. Recently I brought a Software-defined Radio (SDR) and started doing some experiments... and now I'm building my own antennas for receiving satellite images. These are some field notes on radio waves and others.
+Radio communications always had my curiosity, but little to no focus. Recently I brought a Software-defined Radio (SDR) and started doing some experiments… and now I'm building my own antennas for receiving satellite images. These are some field notes on radio waves and others.
 
 <!--more-->
 
-A SDR is a _radio communication system where components that have been traditionally implemented in hardware are instead implemented by means of software_[^1]. Components such as modulators, demodulators, and tuners that are traditionally implemented in analogue hardware components, can be nowadays implemented in software by leveraging technology such as analogue to digital converters (ADC). There are several use-cases for SDR technology since they enable the changing radio protocols in real time while using the same hardware.
+An SDR is a _radio communication system where components that have been traditionally implemented in hardware are instead implemented by means of software_[^1]. Components such as modulators, demodulators, and tuners that are traditionally implemented in analogue hardware components, can be nowadays implemented in software by leveraging technology such as analogue to digital converters (ADC). There are several use-cases for SDR technology since they enable the changing radio protocols in real time while using the same hardware.
+
+**Disclaimer 1**: Note that not all the applications listed may be legal in your country. Please be responsible.
+
+**Disclaimer 2**: Some information presented here is based on my own experience and experiments and should not be considered as technically correct.
 
 ## Waves and Antennas
 
@@ -24,6 +28,8 @@ Radio waves are a subset of _electromagnetic radiation with wavelengths in the e
     <img style="width: 50%;" alt="Waves interacting with antennas" src="/images/satsandradio21/waves_antennas.gif">
   </div>
 </div>
+
+### Antennas
 
 Antennas are typically built in a way that they interact ("_create resistance_") as the waves moves across them (see animation above). There are several types of antennas, which are directly correlated to the wavelength of the signal they want to capture. The wavelenght (`λ`) of a signal is given by `λ = c / f`, where `f` is the signal frequency and `c` the speed of light (~300,000 km/sec).
 
@@ -44,7 +50,9 @@ The dimensions of an antenna are directly related to the `λ` of a given signal.
   </div>
 </div>
 
-An antenna has always two poles, one positive and other negative. In some cases, such as the monopole, the negative pole is connected to ground plane (e.g., Earth). Different types of antenna are more suitable to certain wavelengths, e.g., in some cases monopoles can be as high as `λ/2`. Additionally, as the frequency increases more specific antennas are required (e.g., dish-shaped parabolic or quadrifilar helicoidal antennas). Other worth mention antennas are the [YouLoop Magnetic Antenna](https://airspy.com/youloop/) for HF frequencies, and the [MiniWhip](https://www.pa3fwm.nl/technotes/tn07.html) which is an active antenna[^5] for the LF, MF and HF bands.
+An antenna has always two poles, one positive and other negative. In some cases, such as the monopole, the negative pole is connected to ground plane (e.g., Earth). Different types of antenna are more suitable to certain wavelengths, e.g., in some cases monopoles can be as high as `λ/2`. Additionally, as the frequency increases more specific antennas are required (e.g., dish-shaped parabolic or quadrifilar helicoidal antennas). Other worth mention antennas are the [YouLoop Magnetic Antenna](https://airspy.com/youloop/) for HF frequencies, and the [MiniWhip](https://www.pa3fwm.nl/technotes/tn07.html) which is an active antenna[^5] for the LF, MF, and HF bands.
+
+## Spectrum and Modes
 
 <div class="row" style="text-align:center">
   <div class="column">
@@ -63,11 +71,18 @@ The used spectrum of radio waves is presented in the figure above (from [terasen
   </div>
 </div>
 
-Signals (e.g., messages, audio,...) can be _encoded_ (i.e., modulated) in radio waves using different strategies. A summary of all the different strategies is given in the figure above (left)[^4]. The most common modulations are done by changing the amplitude and/or frequency, as given in the animated GIF on the right. In some cases, combinations of more than one strategy is used to modulate a given signal.
+Signals that are messages are typically _encoded_ (i.e., modulated) in radio waves using different strategies. A summary of all the different strategies is given in the figure above (left)[^4]. The most common modulations are done by changing the amplitude and/or frequency, as given in the animated GIF on the right. In some cases, combinations of more than one strategy is used to modulate a given signal.
 
-<div class="row" style="text-align:center">
- 
-</div>
+For audio signals, the most common modulations are the following (which are typical present in almost all _power-user_ radios and software):
+
+- WFM (Wideband Frequency Modulation), a greater % of carrier is modulated to a much higher deviation to provide high fidelity;
+- NFM (Narrow Frequency Modulation), a small % of the carrier is deviated and so can be spaced closer to other carriers but with very reduced fidelity;
+- AM (Amplitude Modulation), the information is carried in the sidebands on either side of the carrier by injecting the sound energy onto the carrier;
+- L/USB or SSB (Lower/Upper Side band or Single Side Band), similar to AM but without a carrier and all sound energy is imposed on ONE sideband;
+- DSB (Dual or Double Side Band), is like AM (USB+LSB) but with no carrier;
+- CW (Continuous Wave), is used for sending Morse Code, the process simply turns the carrier on and off (pure carrier).
+
+Taken from [here](https://forums.hak5.org/topic/33773-modes/).
 
 ## SDR Hardware 101
 
@@ -80,7 +95,7 @@ There are some characteristics of these low-cost SDRs that are a good insight to
 - Rx only:
   - Reduces the capability of creating radio interferences and make other mistakes while experimenting with it;
 - SMA Female antenna connector:
-  - Another adapter hell (SMA/BNC/UHF/N/F/...);
+  - Another adapter hell (SMA/BNC/UHF/N/F/…);
 - Maximum sample rate is 3.2 MS/s (mega samples per second):
   - Too low sample rates can cause problems when demodulating/decoding signals;
   - Too high sample rates can have limited use since they can be _downgraded_ due to the used communication bus (most dongles use USB 2.0) or CPU;
@@ -93,7 +108,7 @@ There are some characteristics of these low-cost SDRs that are a good insight to
   - Impedance should be close among the components in a given setup (mismatch in impedance leads to voltage and current reflections);
   - For consistency’s sake, all other hardware, antennas, and such will be considered to work at 50 Ohm.
 
-This gives an overview of the key hardware terms of the functioning of an SDR. Other hardware concepts will be introduced as needed (filters, antennas, and others).
+This gives an overview of the key hardware terms of the functioning of an SDR. Other hardware concepts will be introduced as needed (filters, antennas, and others). If you don't have an SDR, you can always use one of the available [WebSDR](http://www.websdr.org/).
 
 ## SDR Software 101
 
@@ -141,7 +156,7 @@ Allocating 15 zero-copy buffers
 baseband_demod_FM: low pass filter for 250000 Hz at cutoff 25000 Hz, 40.0 us
 ```
 
-After initialization, we start to see the first data appearing: 
+After initialization, we start to see the first data appearing:
 
 <div class="row" style="text-align:center">
   <div class="column">
@@ -150,6 +165,12 @@ After initialization, we start to see the first data appearing:
 </div>
 
 There are other interesting projects to explore on the Rx/Tx of 433Mhz signals, including the [RFQuack](https://github.com/rfquack/RFQuack) and [io433](https://github.com/kripthor/io433), that are hardware-specific Rx/Tx tools, that support replaying messages and other attacks.
+
+If one wishes to record the raw data to further manual analysis, they can also use a combination of [rtl_433](https://github.com/merbanan/rtl_433) with [aplay](https://linux.die.net/man/1/aplay) (`rtl_433` tuned to a narrow FM channel at 162.5 Mhz with a 22 Khz sample rate):
+
+```
+$ rtl_433 -M fm -f 433.92M -s 22k | play -t raw -r 22k -es -b 16 -c 1 -V1 -
+```
 
 There are other applications running on 433 Mhz, which include [CubeSats](https://en.wikipedia.org/wiki/CubeSat). As an example, the [Norby cubesat](https://www.nanosats.eu/sat/norbi) transmits telemetry data using the [LoRa](https://en.wikipedia.org/wiki/LoRa) protocol at 436.703 Mhz.
 
@@ -161,7 +182,7 @@ There is a whole world of aircraft communications, with some being open and othe
 
 > ACARS (Aircraft Communications Addressing and Reporting System) is a digital datalink system for transmission of short messages between aircraft and ground stations via airband radio or satellite. The protocol was designed by ARINC and extended by SITA.
 
-In Linux we can Rx and decode ACARS messages using [acarsdec](https://github.com/TLeconte/acarsdec). 
+In Linux, we can Rx and decode ACARS messages using [acarsdec](https://github.com/TLeconte/acarsdec).
 
 ```bash
 $ acarsdec -r 0 131.525 131.725 131.825
@@ -171,29 +192,33 @@ Allocating 32 zero-copy buffers
 
 ```
 
-There are [several frequencies used for ACARS](https://www.sigidwiki.com/wiki/Aircraft_Communications_Addressing_and_Reporting_System_(ACARS)), the presented ones are a mere example. An example output is the following:
+There are [several frequencies used for ACARS](<https://www.sigidwiki.com/wiki/Aircraft_Communications_Addressing_and_Reporting_System_(ACARS)>), the presented ones are a mere example. An example output is the following:
+
 ```text
 [#2 (F:131.725 L: -10 E:0) 27/09/2021 23:36:44 --------------------------------
-Mode : g Label : SQ 
+Mode : g Label : SQ
 00XS
 
 [#3 (F:131.825 L: -17 E:3) 27/09/2021 23:37:11 --------------------------------
-Mode : 2 Label : SQ 
+Mode : 2 Label : SQ
 R14115N00841WB136975/ARINC
 
 ```
+
+ACARS messages may be related to air traffic control (used to request or provide clearances), aeronautical operational control, and airline administrative control.
+
 ### Airport ATC Communications
 
-By tunning Gqrx or other client in the frequencies used by the nearby airport we are able to listen to the ATC and other plane <-> tower and plane <-> plane communications. Below is an example of the ATC Porto Arrival in AM mode (with info such as landing lanes and weather).
+By setting Gqrx (or other client) to tune in the frequencies used by the nearby airport we are able to listen to the ATC and other plane <-> tower and plane <-> plane communications. Below is an example of the ATC Porto Arrival in AM mode (with info such as landing lanes and weather).
 
 <audio controls>
   <source src="/images/satsandradio21/porto_beacon.wav" type="audio/mpeg">
 Your browser does not support the audio element.
-</audio> 
+</audio>
 
 ### Aviation Transponder Interrogation Comms
 
-> The aviation transponder interrogation modes are the standard formats of pulsed sequences from an interrogating Secondary Surveillance Radar (SSR) or similar Automatic Dependent Surveillance-Broadcast (ADS-B) system. The reply format is usually referred to as a "code" from a transponder, which is used to determine detailed information from a suitably equipped aircraft. 
+> The aviation transponder interrogation modes are the standard formats of pulsed sequences from an interrogating Secondary Surveillance Radar (SSR) or similar Automatic Dependent Surveillance-Broadcast (ADS-B) system. The reply format is usually referred to as a "code" from a transponder, which is used to determine detailed information from a suitably equipped aircraft.
 
 1090 MHz is the standard for ADS-B reporting. With a tool such [dump1090](https://github.com/antirez/dump1090) one can scan for transmitted messages and plot them in a map (by visiting `localhost:8080`).
 
@@ -207,15 +232,24 @@ $ dump1090 --modeac --aggressive --net --interactive
   </div>
 </div>
 
+Most of the _flight radar_ websites use crowdsourced data from ADS-B scanners around the world. You deploy one for free if you are in an area that is yet to be covered, more info [here (flightradar24)](https://www.flightradar24.com/apply-for-receiver) and [here (FlightAware)](https://flightaware.com/adsb/flightfeeder/).
 
 ## Receiving Weather Images
 
 There are several weather satellites deployed in different Earth orbits. While most recent ones use above 1Ghz signals (requiring more specialized antennas and material), some use more _friendly_ bands in the VHF range and broadcast APT (Automatic Picture Transmission) / LRPT (Low Resolution Picture Transmission) signals which are easily decoded using existent software tools. Examples are the NOAA and some Meteor ones.
 
-- NOAA 15 - 137.6200 MHz (APT)
-- NOAA 18 - 137.9125 MHz (APT)
-- NOAA 19 - 137.1000 MHz (APT)
-- Meteor-M N2 - 137.1 MHz (LRPT)
+- NOAA 15 – 137.6200 MHz (APT)
+- NOAA 18 – 137.9125 MHz (APT)
+- NOAA 19 – 137.1000 MHz (APT)
+- Meteor-M N2 — 137.1 MHz (LRPT)
+
+The post by [Lucas Teske](https://lucasteske.dev/2016/02/recording-noaa-apt-signals-with-gqrx-and-rtl-sdr-on-linux/) gives detailed info on how to configure Gqrx for capturing the signal. Summarizing the key points:
+
+- 40kHz bandwidth required: set the decimation to 32x, and 2.56Msps of input rate (sample rate);
+- **Filter width**: Wide; **Filter Shape**: Normal, **Mode**: WFM (mono)
+- **Hardware AGC**: off, **Swap I/Q**: off, **No Limits**: off, **DC Remove**: on, **IQ Balance**: on, and **LNA Gain**: 20dB.
+
+However, depending on your SDR and setup, you can (and should) play around with these settings until you reach the best results.
 
 As these satellites orbit the earth they only transmit images to a certain point of the globe at a given window. One can easily track the satellites in real-time using [Gpredict](http://gpredict.oz9aec.net/) or [Look4Sat (Android App)](https://github.com/rt-bishop/Look4Sat).
 
@@ -237,10 +271,9 @@ APT signals can be decoded using software such as the [noaa-apt image decoder](h
 
 **Note**: While receiving signals from space you have to deal with the [Doppler effect](https://en.wikipedia.org/wiki/Doppler_effect), i.e., periodically adjust the frequency to center the signal as it moves.
 
-
 ## ISS Signals
 
-The International Space Station can be considered an enormous transmitter station. Both voice and SSTV signals are transmitted in a regular basis on the 145.8 MHz band. 
+The International Space Station can be considered an enormous transmitter station. Both voice and SSTV signals are transmitted in a regular basis on the 145.8 MHz band.
 
 > Slow Scan Television (SSTV) is transmitted by the ARISS Russia Team from the amateur radio station in the Russian Service Module of the International Space Station using the callsign RS0ISS. (...) The ISS puts out a strong signal on 145.800 MHz FM and a 2m handheld with a 1/4 wave antenna will be enough to receive it. (From [amsat-uk](https://amsat-uk.org/beginners/iss-sstv/))
 
@@ -257,15 +290,128 @@ Similarly to the NOAA satellites, I would say that a V-dipole or QFH is good eno
 
 Above are some SSTV pictures that I managed to received in the past. When you successfully receive a SSTV image you can apply for the corresponding ARISS SSTV diploma (typically consists on filling a Google Forms, but it is unique for each Rx event).
 
+## Navigation and Mobile Comms
+
+### GPS
+
+The number one navigation system deployed in almost all smartphones uses satellites to triangulate your position (in reality, typically, the location given by a smartphone uses other data sources including mobile stations information and others).
+
+At this moment there are 6 GPS systems deployed in orbit: BeiDou (China), Galileo (EU), GLONASS (Russia), GPS (USA), NavIC (India), and QZSS (Japan). There are five main bands used for these satellites, namely:
+
+- L1 (1575.42 MHz), broadcasts CDMA encoded messages, namely, the coarse/acquisition (`C/A`) code, which is accessible by the general public, and the precise `P(Y)` code, which is encrypted (U.S. military);
+- L2 (1227.60 MHz), `P(Y)` code, plus the `L2C` (second civilian signal), and military codes;
+- L3 (1381.05 MHz), used for nuclear detonation (`NUDET`) detection;
+- L4 (1379.913 MHz), studied for additional ionospheric correction;
+- L5 (1176.45 MHz), proposed for use as a civilian safety-of-life (`SoL`) signal.
+
+Since we cannot decrypt the military-only messsages, we can only use and plot the `C/A` messages. For such, we can use either [GNSS-SDR](https://gnss-sdr.org/) software that is compatible with almost any SDR (all frequencies fall within the range of capture of a standard SDR), or use a dedicated GPS reciever, such as the [u-blox](https://www.u-blox.com/en/positioning-chips-and-modules) ones.
+
+u-blox provides a software to experiment with GPS reception named [u-center](https://www.u-blox.com/en/product/u-center). The older version, [u-center for Windows v.21.05](https://www.u-blox.com/en/product/u-center), is compatible with Wine (just [bridge the serial port to the corresponding Wine COM port](https://www.scivision.dev/wine-serial-port-links/)), thus can be used in a Linux machine. This following image shows a lock on the coordinates of FEUP building, Porto.
+
+<div class="row" style="text-align:center">
+  <div class="column">
+    <img  src="/images/satsandradio21/gps.png">
+  </div>
+</div>
+
+### GSM, LTE, 3G, ...
+
+> Cellular frequencies are the sets of frequency ranges within the ultra high frequency band that have been assigned for cellular-compatible mobile devices, such as mobile phones, to connect to cellular networks. (from [Wikipedia](https://en.wikipedia.org/wiki/Cellular_frequencies))
+
+There are a lot of frequencies that are used for cellular comms, depending on the version that you are using and where you are located ([ITU Regions](https://en.wikipedia.org/wiki/ITU_Region)). As an example, the first GSM version adopted in Europe used the 900 MHz band (lower frequency band that allow carriers to provide coverage over a larger area), while nowadays most use the 1,800 MHz band (band that allows carriers to provide service to more customers in a smaller area). This resulted in many GSM devices supporting several frequencies (e.g., 850/900/1,800/1,900 MHz). More info available on [Wikipedia](https://en.wikipedia.org/wiki/Cellular_frequencies).
+
+As a motivational example, one can use the [gr-gsm](https://github.com/ptrkrysik/gr-gsm) tool package to inspect cellular signals.
+
+- `grgsm_scanner` gives a list of the used frequencies;
+- `grgsm_livemon -f 925.4M` to decode GSM signals in the `925.4 Mhz`.
+
+One popular application among surveillance community is the use of `IMSI catchers` that collect unique identification of the phones in a given area (data includes IMSI numbers, country, brand, and operator). A PoC of such tool is available [here](https://github.com/Oros42/IMSI-catcher) (please remember _Disclaimer 1_).
+
+Understanding how mobile communications work is another story, and there is a lot of content around [BTS stations](https://www.evilsocket.net/2016/03/31/How-To-Build-Your-Own-Rogue-GSM-BTS-For-Fun-And-Profit/) and [such](https://github.com/W00t3k/Awesome-Cellular-Hacking/blob/master/README.md).
+
 ## Weather Forecasts, Number Stations, and World Radio
 
-### Shannon Volmet Weather Station
+In the short wave spectrum we can find a lot of signals, ranging from Morse code comms to mysterious _cold war_ signals. The following are a few examples of what one can find in these waves.
+
+### VOLMET stations
+
+One of the most easy to capture signals in the Short Wave band are the [VOLMET stations](https://en.wikipedia.org/wiki/VOLMET):
+
+> VOLMET (French origin vol (flight) and météo (weather report)), is a worldwide network of radio stations that broadcast TAF, SIGMET and METAR reports on shortwave frequencies, and in some countries on VHF too.
+
+Example audio from a Shannon VOLMET station (Republic of Ireland on 5505 kHz):
+
 <audio controls>
   <source src="/images/satsandradio21/shannon_volmet.wav" type="audio/mpeg">
 Your browser does not support the audio element.
-</audio> 
+</audio>
 
-## Above 1.8Ghz
+### Number Stations
+
+> A numbers station is a shortwave radio station characterized by broadcasts of formatted numbers, which are believed to be addressed to intelligence officers operating in foreign countries (from [Wikipedia](https://en.wikipedia.org/wiki/Numbers_station)).
+
+There is a lot of _lore_ and _theories_ about the use of number stations beyond the _cold war_ period, however, the reality is, that some station keep transmitting today in well known frequencies. The [Priyom](https://priyom.org/) organization focuses on _research and bring to light the mysterious reality of intelligence, military and diplomatic communication via shortwave radio_. They have a list of known radio stations, including their broadcasting schedule, mode, and target area. I still did not manage to recieve number stations comms using my radio setup, but you can easily pick one up using a [WebSDR](http://www.websdr.org/).
+
+One of the most known stations is [UVB-76, aka The Buzzer](https://en.wikipedia.org/wiki/UVB-76), captured from a [Russian WebSDR](http://tulasdr.fvds.ru:8901/):
+
+<audio controls>
+  <source src="/images/satsandradio21/websdr_buzzer_4625.wav" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+### World Radio
+
+There are a lot of radio stations being broadcasted in short wave, you can find them [here](https://www.short-wave.info/index.php). You can also use the website to find out which radio is transmitting in a given frequency. Most of the transmissions are AM, but you can already find some FM ones too. Next is an example of BBC radio on 7.445 MHz giving some football news.
+
+<audio controls>
+  <source src="/images/satsandradio21/bbc_radio_7445.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+### FST4, FST4W, FT4, FT8, ...
+
+[WSJT-X](https://physics.princeton.edu/pulsar/k1jt/wsjtx.html) _implements communication protocols or "modes" called_ FST4, FST4W, FT4, FT8, JT4, JT9, JT65, Q65, MSK144, and WSPR, _as well as one called_ Echo _for detecting and measuring your own radio signals reflected from the Moon. These modes were all designed for **making reliable, confirmed QSOs under extreme weak-signal conditions**._
+
+> The digital signal processing techniques in WSJT make it substantially easier for amateur radio operators to employ esoteric propagation modes, such as high-speed meteor scatter and moonbounce (from [Wikipedia](<https://en.wikipedia.org/wiki/WSJT_(amateur_radio_software)>)).
+
+Receiving these signals can be a little complex due to the number of different software necessary. [This post](https://www.onetransistor.eu/2019/11/ft8-ham-wsjtx-hackrf-sdr.html) by Cornelius presents it clearly. Summarily:
+
+- Create a virtual cable to pass the raw audio data between GQRX and WSJT-X;
+
+```bash
+$ pacmd load-module module-null-sink sink_name=Virtual_Sink sink_properties=device.description=Virtual_Sink
+```
+
+- Open GQRX, change the audio output to the `Virtual_Sink`, and note down the UDP Remote control address (default is `127.0.0.1:7356`);
+- Open WSJT-X and set the following configurations:
+  - (Radio) Select the `Hamlib NET rigctl` rig and insert the GQRX address;
+  - (Audio) Select `Virtual_Sink.monitor`;
+  - (Main Window) Select the target mode (e.g., `FT8`).
+- Lastly, open [GridTracker](https://gridtracker.org/downloads/) to plot the data comms in a map. [More Info](https://gitlab.com/gridtracker.org/gridtracker/-/wikis/Getting-Started).
+
+With a cheap YouLoop antenna I was able to receive messages from long distances (see figure bellow). Once again, for transmitting signals and confirm the reception (e.g., [DX contests](https://europeanft8club.wordpress.com/)) an amateur radio license is required in Portugal.
+
+<div class="row" style="text-align:center">
+  <div class="column">
+    <img style="width:80%" src="/images/satsandradio21/ft8.png">
+  </div>
+</div>
+
+### On the case of Shortwave
+
+HF signals are highly-sensible to solar activity, i.e., _solar activity can aid or hamper HF propagation beyond line-of-sight range._ More info [here](https://www.arrl.org/here-comes-the-sun). A common plot of relevant solar activity that is present around amateur radio websites is the following, that provides the most recent data about solar events and its influence in the radio bands. Similarly, some bands work better during daytime and others during nighttime.
+
+<center>
+<img style="width:70%" src="https://www.hamqsl.com/solar101vhfpic.php">
+</center>
+
+## 1.8Ghz and Beyond
+
+The SDR I have only works until ~1.8GHz. However, we work every day with signals above that (mainly last parts of the UHF band), including Wi-Fi (2.4GHz and 5GHz), Bluetooth, and other IoT protocols. You can also start exploring those signals, e.g., using Wi-Fi chipsets which support monitor mode and other tools. But that's a story for another post.
+
+Other signals, part of the SHF and EHF bands required large dishes and special equipment ($$$++) just to start exploring...
+
+A final note of thanks to [Zezadas](https://sefod.eu/) for reviewing early stages of this post.
 
 ## Other links
 
@@ -276,10 +422,8 @@ Your browser does not support the audio element.
 - [Lessons on Software Defined Radio with HackRF by Great Scott Gadgets](https://greatscottgadgets.com/sdr/)
 - [Signal Identification Wiki](https://www.sigidwiki.com/)
 
-## References
-
 [^1]: [Software-defined radio, Wikipedia](https://en.wikipedia.org/wiki/Software-defined_radio).
 [^2]: [Impedance of the electrical load should matche the impedance of the power or driving source](https://www.data-alliance.net/blog/vswr-impedance-matching-in-antennas/).
 [^3]: [Radio Wave](https://en.wikipedia.org/wiki/Radio_wave)
-[^4]: [Michel Bakni - Own work, CC BY-SA 4.0](https://commons.wikimedia.org/w/index.php?curid=109678259)
+[^4]: [Michel Bakni — Own work, CC BY-SA 4.0](https://commons.wikimedia.org/w/index.php?curid=109678259)
 [^5]: _An active antenna is an antenna that contains active electronic components such as transistors (...) and are primarily used in situations where a larger passive antenna is impractical_, [Active antenna, Wikipedia](https://en.wikipedia.org/wiki/Active_antenna)
