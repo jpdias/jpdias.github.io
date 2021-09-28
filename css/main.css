@@ -618,3 +618,7 @@ summary::-webkit-details-marker {
 .description-item-title::-webkit-details-marker {
   display: none;
 }
+
+audio {
+  width: 100%;
+}

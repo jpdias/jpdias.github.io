@@ -63,7 +63,7 @@ The used spectrum of radio waves is presented in the figure above (from [terasen
   </div>
 </div>
 
-Signals (e.g., messages, audio,...) can be _encoded_ (i.e., modulated) in radio waves using different strategies. A summary of all the different strategies is given in the figure above, left[^4]. The most common modulations are done by changing the amplitude and/or frequency, as given in the animated GIF on the right.
+Signals (e.g., messages, audio,...) can be _encoded_ (i.e., modulated) in radio waves using different strategies. A summary of all the different strategies is given in the figure above (left)[^4]. The most common modulations are done by changing the amplitude and/or frequency, as given in the animated GIF on the right. In some cases, combinations of more than one strategy is used to modulate a given signal.
 
 <div class="row" style="text-align:center">
  
@@ -83,6 +83,7 @@ There are some characteristics of these low-cost SDRs that are a good insight to
   - Another adapter hell (SMA/BNC/UHF/N/F/...);
 - Maximum sample rate is 3.2 MS/s (mega samples per second):
   - Too low sample rates can cause problems when demodulating/decoding signals;
+  - Too high sample rates can have limited use since they can be _downgraded_ due to the used communication bus (most dongles use USB 2.0) or CPU;
 - ADC native resolution is 8 bits:
   - This impacts directly the Signal to Noise Ratio (SNR), value that compares the level of a desired signal to the level of background noise;
   - The [theoretical SNR](htthttps://en.wikipedia.org/wiki/Radio_waveps://www.analog.com/en/analog-dialogue/articles/adc-input-noise.html) of a perfect **N**-bit ADC is given by 6.02 dB \* **N** + 1.76 dB;
@@ -104,6 +105,8 @@ In a Linux machine start by installing the RTL-SDR drivers from your package man
 - [SDR++](https://github.com/AlexandreRouma/SDRPlusPlus), SDR software with the aim of being bloat free and simple to use.
 - [gnuradio](https://github.com/gnuradio/gnuradio), toolkit that provides signal processing blocks to implement software radios.
 - [SDRangel](https://github.com/f4exb/sdrangel), SDR and signal analyzer frontend to various hardware.
+- [UHR](https://github.com/jopohl/urh), is a suite for wireless protocol investigation, allowing demodulation of signals combined with an automatic detection of modulation parameters.
+- [inspectrum](https://github.com/miek/inspectrum), a ready-to-use radio signal analyser.
 
 Similarly, other software will be introduced as needed.
 
@@ -111,13 +114,13 @@ Similarly, other software will be introduced as needed.
 
 Part of the **industrial, scientific and medical (ISM) radio band** (which includes 433.92 MHz, 915 MHz, and 2400 MHz) it is widely used for common appliances such as garage door openers, wireless alarm or monitoring systems, industrial remote controls, smart sensor applications, tires pressure sensors, and wireless home automation systems.
 
-Due to its widespread use, this is one of the bands easier to receive, analyze, demodulate and decode. A simple and cheap monopole (e.g., telescopic) or dipole antenna approximately tuned to these frequencies is able to receive signals.
+Due to its widespread use, this is one of the bands easier to receive, analyze, demodulate and decode. A simple and cheap monopole (e.g., telescopic) or dipole antenna approximately tuned to these frequencies is able to receive signals. In the case of a monopole, for the 433 MHz band, the `λ` is `c / 433000000 = 69,24 cm`, `λ/2 = 34,62 cm`, and `λ/4 = 17,31 cm`. Thus, for a `1/4` wave monopole, a piece of wire with ~17.31 cm should be enough.
 
 After connecting such antenna to the SDR, and the SDR to a Linux machine, we can start analyzing the spectrum with Gqrx.
 
 <div class="row" style="text-align:center">
   <div class="column">
-    <img style="width: 70%;" src="/images/satsandradio21/gqrx433.png">
+    <img style="width: 70%;" src="/images/satsandradio21/gqrx_433.png">
   </div>
 </div>
 
@@ -125,17 +128,142 @@ We could now save the raw digital signal and analyze it manually (demodulate). T
 
 A easier and quicker way to get it done is to use the [rtl_433](https://github.com/merbanan/rtl_433): `rtl_433` _(despite the name) is a generic data receiver, mainly for the 433.92 MHz, 868 MHz (SRD), 315 MHz, 345 MHz, and 915 MHz ISM bands._
 
+```bash
+$ rtl_433
+Use -h for usage help and see https://triq.org/ for documentation.
+Registered 157 out of 186 device decoding protocols [ 1-4 8 11-12 15-17 19-23 25-26 29-36 38-60 63 67-71 73-100 102-105 108-116 119 121 124-128 130-149 151-161 163-168 170-175 177-186 ]
+Found Rafael Micro R820T/2 tuner
+Exact sample rate is: 250000.000414 Hz
+Sample rate set to 250000 S/s.
+Tuner gain set to Auto.
+Tuned to 433.920MHz.
+Allocating 15 zero-copy buffers
+baseband_demod_FM: low pass filter for 250000 Hz at cutoff 25000 Hz, 40.0 us
 ```
 
-```
+After initialization, we start to see the first data appearing: 
+
+<div class="row" style="text-align:center">
+  <div class="column">
+    <img style="width: 80%;" src="/images/satsandradio21/rtl_433_out.png">
+  </div>
+</div>
+
+There are other interesting projects to explore on the Rx/Tx of 433Mhz signals, including the [RFQuack](https://github.com/rfquack/RFQuack) and [io433](https://github.com/kripthor/io433), that are hardware-specific Rx/Tx tools, that support replaying messages and other attacks.
+
+There are other applications running on 433 Mhz, which include [CubeSats](https://en.wikipedia.org/wiki/CubeSat). As an example, the [Norby cubesat](https://www.nanosats.eu/sat/norbi) transmits telemetry data using the [LoRa](https://en.wikipedia.org/wiki/LoRa) protocol at 436.703 Mhz.
 
 ## Airplanes and Stuff
 
+There is a whole world of aircraft communications, with some being open and others encrypted. [Frugal Radio](https://frugalradio.com/) has a lot of content around Rx and demodulating aircraft communications which I recommend as a good starting point. Most of the aircraft communications (including Air Traffic Control Towers comms) use specific bands that are mostly well documented per airport ([Porto example](https://www.nav.pt/docs/AIS/aerodromos/portoAD.pdf)).
+
+### ACARS
+
+> ACARS (Aircraft Communications Addressing and Reporting System) is a digital datalink system for transmission of short messages between aircraft and ground stations via airband radio or satellite. The protocol was designed by ARINC and extended by SITA.
+
+In Linux we can Rx and decode ACARS messages using [acarsdec](https://github.com/TLeconte/acarsdec). 
+
+```bash
+$ acarsdec -r 0 131.525 131.725 131.825
+Found Rafael Micro R820T/2 tuner
+Exact sample rate is: 2500000.107620 Hz
+Allocating 32 zero-copy buffers
+
+```
+
+There are [several frequencies used for ACARS](https://www.sigidwiki.com/wiki/Aircraft_Communications_Addressing_and_Reporting_System_(ACARS)), the presented ones are a mere example. An example output is the following:
+```text
+[#2 (F:131.725 L: -10 E:0) 27/09/2021 23:36:44 --------------------------------
+Mode : g Label : SQ 
+00XS
+
+[#3 (F:131.825 L: -17 E:3) 27/09/2021 23:37:11 --------------------------------
+Mode : 2 Label : SQ 
+R14115N00841WB136975/ARINC
+
+```
+### Airport ATC Communications
+
+By tunning Gqrx or other client in the frequencies used by the nearby airport we are able to listen to the ATC and other plane <-> tower and plane <-> plane communications. Below is an example of the ATC Porto Arrival in AM mode (with info such as landing lanes and weather).
+
+<audio controls>
+  <source src="/images/satsandradio21/porto_beacon.wav" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> 
+
+### Aviation Transponder Interrogation Comms
+
+> The aviation transponder interrogation modes are the standard formats of pulsed sequences from an interrogating Secondary Surveillance Radar (SSR) or similar Automatic Dependent Surveillance-Broadcast (ADS-B) system. The reply format is usually referred to as a "code" from a transponder, which is used to determine detailed information from a suitably equipped aircraft. 
+
+1090 MHz is the standard for ADS-B reporting. With a tool such [dump1090](https://github.com/antirez/dump1090) one can scan for transmitted messages and plot them in a map (by visiting `localhost:8080`).
+
+```bash
+$ dump1090 --modeac --aggressive --net --interactive
+```
+
+<div class="row" style="text-align:center">
+  <div class="column">
+    <img style="width: 60%;" src="/images/satsandradio21/dump1090_plane.png">
+  </div>
+</div>
+
+
 ## Receiving Weather Images
+
+There are several weather satellites deployed in different Earth orbits. While most recent ones use above 1Ghz signals (requiring more specialized antennas and material), some use more _friendly_ bands in the VHF range and broadcast APT (Automatic Picture Transmission) / LRPT (Low Resolution Picture Transmission) signals which are easily decoded using existent software tools. Examples are the NOAA and some Meteor ones.
+
+- NOAA 15 - 137.6200 MHz (APT)
+- NOAA 18 - 137.9125 MHz (APT)
+- NOAA 19 - 137.1000 MHz (APT)
+- Meteor-M N2 - 137.1 MHz (LRPT)
+
+As these satellites orbit the earth they only transmit images to a certain point of the globe at a given window. One can easily track the satellites in real-time using [Gpredict](http://gpredict.oz9aec.net/) or [Look4Sat (Android App)](https://github.com/rt-bishop/Look4Sat).
+
+The image bellow is an example of an APT signal being received. There are several guides on how to configure the receiving software and how to build proper antennas for receiving data from these satellites, including a good post from [RTL-SDR blog](https://www.rtl-sdr.com/rtl-sdr-tutorial-receiving-noaa-weather-satellite-images/) gives some info. By experience, either a well-made and correctly oriented [V-dipole](https://www.rtl-sdr.com/simple-noaameteor-weather-satellite-antenna-137-mhz-v-dipole/) or a poorly-made [QFH](https://lucasteske.dev/2016/01/qfh-antenna-and-my-first-reception-of-noaa/) antenna gives the best results.
+
+<div class="row" style="text-align:center">
+  <div class="column">
+    <img style="width: 70%;" src="/images/satsandradio21/gqrx_noaa.png">
+  </div>
+</div>
+
+APT signals can be decoded using software such as the [noaa-apt image decoder](https://noaa-apt.mbernardi.com.ar/). The best result I got with a dipole from a balcony:
+
+<div class="row" style="text-align:center">
+  <div class="column">
+    <img  src="/images/satsandradio21/noaa_fail.png">
+  </div>
+</div>
+
+**Note**: While receiving signals from space you have to deal with the [Doppler effect](https://en.wikipedia.org/wiki/Doppler_effect), i.e., periodically adjust the frequency to center the signal as it moves.
+
 
 ## ISS Signals
 
-## Morse, Number Stations, and World Radio
+The International Space Station can be considered an enormous transmitter station. Both voice and SSTV signals are transmitted in a regular basis on the 145.8 MHz band. 
+
+> Slow Scan Television (SSTV) is transmitted by the ARISS Russia Team from the amateur radio station in the Russian Service Module of the International Space Station using the callsign RS0ISS. (...) The ISS puts out a strong signal on 145.800 MHz FM and a 2m handheld with a 1/4 wave antenna will be enough to receive it. (From [amsat-uk](https://amsat-uk.org/beginners/iss-sstv/))
+
+Similarly to the NOAA satellites, I would say that a V-dipole or QFH is good enough. You can find more information about ARISS on the [official website](https://www.ariss.org/), including the schedule for planned SSTV transmissions.
+
+<div class="row" style="text-align:center">
+  <div class="column">
+    <img  src="/images/satsandradio21/ariss_fail.png">
+  </div>
+  <div class="column">
+    <img  src="/images/satsandradio21/ariss_ok.jpg">
+  </div>
+</div>
+
+Above are some SSTV pictures that I managed to received in the past. When you successfully receive a SSTV image you can apply for the corresponding ARISS SSTV diploma (typically consists on filling a Google Forms, but it is unique for each Rx event).
+
+## Weather Forecasts, Number Stations, and World Radio
+
+### Shannon Volmet Weather Station
+<audio controls>
+  <source src="/images/satsandradio21/shannon_volmet.wav" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> 
 
 ## Above 1.8Ghz
 
@@ -144,6 +272,9 @@ A easier and quicker way to get it done is to use the [rtl_433](https://github.c
 - [Where and which SDR to buy?](https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/)
 - [SDR quick start guide](https://www.rtl-sdr.com/rtl-sdr-quick-start-guide/)
 - [Shortwave Radio Guide](https://www.klingenfuss.org/swfguide.htm)
+- [Decoding POCSAG (Pager) Signals](https://github.com/zezadas/pypocsag/blob/master/challenge/0x6F_0xOPOSEC_CHALLENGE.pdf)
+- [Lessons on Software Defined Radio with HackRF by Great Scott Gadgets](https://greatscottgadgets.com/sdr/)
+- [Signal Identification Wiki](https://www.sigidwiki.com/)
 
 ## References
 
