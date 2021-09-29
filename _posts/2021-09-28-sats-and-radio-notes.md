@@ -3,7 +3,7 @@ layout: post
 title: "Listening to Satellites and Other Adventures"
 categories: [radio, space, sdr]
 tags: [radio, satellites, sdr]
-thumbnail: /images/sats21/iss.jpg
+thumbnail: /images/satsandradio21/gqrx_433.png
 description: "Notes on listenning to satellites and other space- and earth-craft."
 ---
 
@@ -83,6 +83,7 @@ For audio signals, the most common modulations are the following (which are typi
 - CW (Continuous Wave), is used for sending Morse Code, the process simply turns the carrier on and off (pure carrier).
 
 Taken from [here](https://forums.hak5.org/topic/33773-modes/). Some modes / protocols can be directly decoded using [multimon-ng](https://github.com/EliasOenal/multimon-ng/). Example usage with [rtl_fm](https://github.com/osmocom/rtl-sdr), decoding MORSE at 433.92MHz:
+
 ```bash
 $ rtl_fm -g 19 -f 433.92e6 -M am -s 200e3 -r 22050 - | multimon-ng -a MORSE_CW -t raw /dev/stdin
 ```
