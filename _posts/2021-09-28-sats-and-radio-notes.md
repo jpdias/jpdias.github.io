@@ -7,11 +7,11 @@ thumbnail: /images/satsandradio21/gqrx_433.png
 description: "Notes on listenning to satellites and other space- and earth-craft."
 ---
 
-Radio communications always had my curiosity, but little to no focus. Recently I brought a Software-defined Radio (SDR) and started doing some experiments… and now I'm building my own antennas for receiving satellite images. These are some field notes on radio waves and others.
+Radio communications always had my curiosity, but little to no focus. Recently I bought a Software-defined Radio (SDR) and started doing some experiments… and now I'm building my own antennas for receiving satellite images. These are some field notes on radio waves and others.
 
 <!--more-->
 
-An SDR is a _radio communication system where components that have been traditionally implemented in hardware are instead implemented by means of software_[^1]. Components such as modulators, demodulators, and tuners that are traditionally implemented in analogue hardware components, can be nowadays implemented in software by leveraging technology such as analogue to digital converters (ADC). There are several use-cases for SDR technology since they enable the changing radio protocols in real time while using the same hardware.
+An SDR is a _radio communication system where components that have been traditionally implemented in hardware are, instead, implemented by means of software_[^1]. Components such as modulators, demodulators, and tuners that are traditionally implemented in analogue hardware components, can, nowadays, be implemented in software by leveraging technology such as analogue to digital converters (ADC). SDR technology has several use-cases since it enables changing radio protocols in real-time while using the same hardware.
 
 **Disclaimer 1**: Note that not all the applications listed may be legal in your country. Please be responsible.
 
@@ -31,7 +31,7 @@ Radio waves are a subset of _electromagnetic radiation with wavelengths in the e
 
 ### Antennas
 
-Antennas are typically built in a way that they interact ("_create resistance_") as the waves moves across them (see animation above). There are several types of antennas, which are directly correlated to the wavelength of the signal they want to capture. The wavelenght (`λ`) of a signal is given by `λ = c / f`, where `f` is the signal frequency and `c` the speed of light (~300,000 km/sec).
+Antennas are typically built in a way to interact ("_create resistance_") as the waves move across them (see animation above). There are several types of antennas, which are directly correlated to the wavelength of the signal they want to capture. The signal's wavelength (`λ`) is given by `λ = c / f`, where `f` is the signal frequency and `c` the speed of light (~300,000 km/sec).
 
 The dimensions of an antenna are directly related to the `λ` of a given signal. There are many kinds of antennas, but for simplicity, consider the following examples:
 
@@ -50,7 +50,7 @@ The dimensions of an antenna are directly related to the `λ` of a given signal.
   </div>
 </div>
 
-An antenna has always two poles, one positive and other negative. In some cases, such as the monopole, the negative pole is connected to ground plane (e.g., Earth). Different types of antenna are more suitable to certain wavelengths, e.g., in some cases monopoles can be as high as `λ/2`. Additionally, as the frequency increases more specific antennas are required (e.g., dish-shaped parabolic or quadrifilar helicoidal antennas). Other worth mention antennas are the [YouLoop Magnetic Antenna](https://airspy.com/youloop/) for HF frequencies, and the [MiniWhip](https://www.pa3fwm.nl/technotes/tn07.html) which is an active antenna[^5] for the LF, MF, and HF bands.
+An antenna has always two poles, one positive and other negative. In some cases, such as the monopole, the negative pole is connected to ground plane (e.g., Earth). Different types of antenna are more suitable to certain wavelengths, e.g., in some cases monopoles can be as high as `λ/2`. Additionally, as the frequency increases, more specific antennas are required (e.g., dish-shaped parabolic or quadrifilar helicoidal antennas). Other antennas worth mentioning are the [YouLoop Magnetic Antenna](https://airspy.com/youloop/) for HF frequencies, and [MiniWhip](https://www.pa3fwm.nl/technotes/tn07.html) which is an active antenna[^5] for the LF, MF, and HF bands.
 
 ## Spectrum and Modes
 
@@ -71,7 +71,7 @@ The used spectrum of radio waves is presented in the figure above (from [terasen
   </div>
 </div>
 
-Signals that are messages are typically _encoded_ (i.e., modulated) in radio waves using different strategies. A summary of all the different strategies is given in the figure above (left)[^4]. The most common modulations are done by changing the amplitude and/or frequency, as given in the animated GIF on the right. In some cases, combinations of more than one strategy is used to modulate a given signal.
+Signals that are messages are typically _encoded_ (i.e., modulated) in radio waves using different strategies. A summary of all the different strategies is given in the figure above (left)[^4]. The most common modulations are done by changing the amplitude and/or frequency, as shown in the animated GIF on the right. In some cases, a combination of more than one strategy is used to modulate a given signal.
 
 For audio signals, the most common modulations are the following (which are typical present in almost all _power-user_ radios and software):
 
@@ -90,12 +90,12 @@ $ rtl_fm -g 19 -f 433.92e6 -M am -s 200e3 -r 22050 - | multimon-ng -a MORSE_CW -
 
 ## SDR Hardware 101
 
-The one I brought was a [Nooelec NESDR SMArt v4 SDR](https://www.nooelec.com/store/nesdr-smart-sdr.html) (~30€). This model, similarly to other popular ones, including the [RTL-SDR](https://www.rtl-sdr.com/about-rtl-sdr/), share the same [RTL2832U](https://www.realtek.com/en/products/communications-network-ics/item/rtl2832u) chipset, which was originally developed by Realtek as a high-performance DVB-T COFDM demodulator with USB 2.0 support. Palosaari _et al._ found out that it was possible to access the raw I/Q data of these cheap DVB-T dongle, access made simple by the [custom software driver](https://osmocom.org/projects/rtl-sdr/wiki/Rtl-sdr) developed by Steve Markgraf.
+The one I bought was a [Nooelec NESDR SMArt v4 SDR](https://www.nooelec.com/store/nesdr-smart-sdr.html) (~30€). This model, similarly to other popular ones, including the [RTL-SDR](https://www.rtl-sdr.com/about-rtl-sdr/), share the same [RTL2832U](https://www.realtek.com/en/products/communications-network-ics/item/rtl2832u) chipset, which was originally developed by Realtek as a high-performance DVB-T COFDM demodulator with USB 2.0 support. Palosaari _et al._ found out that it was possible to access the raw I/Q data of these cheap DVB-T dongle, which was made simple by the [custom software driver](https://osmocom.org/projects/rtl-sdr/wiki/Rtl-sdr) developed by Steve Markgraf.
 
 There are some characteristics of these low-cost SDRs that are a good insight to their functioning (using the mentioned Nooelec as a reference):
 
 - Approx. Frequency Range: 24MHz — 1750MHz
-  - Lower frequencies -- i.e., shortwaves -- can be reach using a cheap [upconverter](https://www.nooelec.com/store/sdr/sdr-addons/ham-it-up.html);
+  - Lower frequencies -- i.e., shortwaves -- can be reached using a cheap [upconverter](https://www.nooelec.com/store/sdr/sdr-addons/ham-it-up.html);
 - Rx only:
   - Reduces the capability of creating radio interferences and make other mistakes while experimenting with it;
 - SMA Female antenna connector:
@@ -104,7 +104,7 @@ There are some characteristics of these low-cost SDRs that are a good insight to
   - Too low sample rates can cause problems when demodulating/decoding signals;
   - Too high sample rates can have limited use since they can be _downgraded_ due to the used communication bus (most dongles use USB 2.0) or CPU;
 - ADC native resolution is 8 bits:
-  - This impacts directly the Signal to Noise Ratio (SNR), value that compares the level of a desired signal to the level of background noise;
+  - This directly impacts the Signal to Noise Ratio (SNR) value that compares the level of a desired signal to the level of background noise;
   - The [theoretical SNR](htthttps://en.wikipedia.org/wiki/Radio_waveps://www.analog.com/en/analog-dialogue/articles/adc-input-noise.html) of a perfect **N**-bit ADC is given by 6.02 dB \* **N** + 1.76 dB;
   - This results in a ~50 dB Signal to noise ratio, [but most signals do not come closer to that value](https://www.reddit.com/r/RTLSDR/comments/e96308/comment/fagpnui/);
 - ~75 Ohm input impedance[^2]:
@@ -116,9 +116,9 @@ This gives an overview of the key hardware terms of the functioning of an SDR. O
 
 ## SDR Software 101
 
-Since we reduce the reliance on hardware parts, we require _lots_ of software to complete the missing pieces. If you are in a Windows machine, [SDR# from Airspy](https://airspy.com/download/) is a good place to start (and brings together all the drivers and stuff you need to start playing around).
+Since we reduce the reliance on hardware parts, we require _lots_ of software to complete the missing pieces. If you are using a Windows machine, [SDR# from Airspy](https://airspy.com/download/) is a good place to start (and brings together all the drivers and stuff you need to start playing around).
 
-In a Linux machine start by installing the RTL-SDR drivers from your package manager or [source](https://osmocom.org/projects/rtl-sdr/wiki/Rtl-sdr). After that, it is time to start to navigate in the spectrum. There are several _clients_, the next are a few ones:
+In a Linux machine, start by installing the RTL-SDR drivers from your package manager or [source](https://osmocom.org/projects/rtl-sdr/wiki/Rtl-sdr). After that, it is time to start navigating in the spectrum. There are several _clients_, from which the next are just some:
 
 - [Gqrx](https://github.com/gqrx-sdr/gqrx), SDR receiver implemented using GNU Radio and the Qt GUI toolkit (will be used as a reference).
 - [SDR++](https://github.com/AlexandreRouma/SDRPlusPlus), SDR software with the aim of being bloat free and simple to use.
@@ -131,9 +131,9 @@ Similarly, other software will be introduced as needed.
 
 ## Listening to 433Mhz Signals
 
-Part of the **industrial, scientific and medical (ISM) radio band** (which includes 433.92 MHz, 915 MHz, and 2400 MHz) it is widely used for common appliances such as garage door openers, wireless alarm or monitoring systems, industrial remote controls, smart sensor applications, tires pressure sensors, and wireless home automation systems.
+Part of the **industrial, scientific, and medical (ISM) radio band** (which includes 433.92 MHz, 915 MHz, and 2400 MHz) is widely used for common appliances such as garage door openers, wireless alarm or monitoring systems, industrial remote controls, smart sensor applications, tires pressure sensors, and wireless home automation systems.
 
-Due to its widespread use, this is one of the bands easier to receive, analyze, demodulate and decode. A simple and cheap monopole (e.g., telescopic) or dipole antenna approximately tuned to these frequencies is able to receive signals. In the case of a monopole, for the 433 MHz band, the `λ` is `c / 433000000 = 69,24 cm`, `λ/2 = 34,62 cm`, and `λ/4 = 17,31 cm`. Thus, for a `1/4` wave monopole, a piece of wire with ~17.31 cm should be enough.
+Due to its widespread use, this is one of the bands which is easier to receive, analyze, demodulate and decode. A simple and cheap monopole (e.g., telescopic) or dipole antenna approximately tuned to these frequencies can receive signals. In the case of a monopole, for the 433 MHz band, the `λ` is `c / 433000000 = 69,24 cm`, `λ/2 = 34,62 cm`, and `λ/4 = 17,31 cm`. Thus, for a `1/4` wave monopole, a piece of wire with ~17.31 cm should be enough.
 
 After connecting such antenna to the SDR, and the SDR to a Linux machine, we can start analyzing the spectrum with Gqrx.
 
@@ -168,19 +168,19 @@ After initialization, we start to see the first data appearing:
   </div>
 </div>
 
-There are other interesting projects to explore on the Rx/Tx of 433Mhz signals, including the [RFQuack](https://github.com/rfquack/RFQuack) and [io433](https://github.com/kripthor/io433), that are hardware-specific Rx/Tx tools, that support replaying messages and other attacks.
+There are other interesting projects to explore on the Rx/Tx of 433Mhz signals, including [RFQuack](https://github.com/rfquack/RFQuack) and [io433](https://github.com/kripthor/io433), that are hardware-specific Rx/Tx tools, that support replaying messages and other attacks.
 
-If one wishes to record the raw data to further manual analysis, they can also use a combination of [rtl_433](https://github.com/merbanan/rtl_433) with [aplay](https://linux.die.net/man/1/aplay) (`rtl_433` tuned to a narrow FM channel at 162.5 Mhz with a 22 Khz sample rate):
+If one wishes to record the raw data to further manual analysis, one can also use a combination of [rtl_433](https://github.com/merbanan/rtl_433) with [aplay](https://linux.die.net/man/1/aplay) (`rtl_433` tuned to a narrow FM channel at 162.5 Mhz with a 22 Khz sample rate):
 
 ```
 $ rtl_433 -M fm -f 433.92M -s 22k | play -t raw -r 22k -es -b 16 -c 1 -V1 -
 ```
 
-There are other applications running on 433 Mhz, which include [CubeSats](https://en.wikipedia.org/wiki/CubeSat). As an example, the [Norby cubesat](https://www.nanosats.eu/sat/norbi) transmits telemetry data using the [LoRa](https://en.wikipedia.org/wiki/LoRa) protocol at 436.703 Mhz.
+There are other applications running on 433 Mhz, which include [CubeSats](https://en.wikipedia.org/wiki/CubeSat). As an example, [Norby cubesat](https://www.nanosats.eu/sat/norbi) transmits telemetry data using the [LoRa](https://en.wikipedia.org/wiki/LoRa) protocol at 436.703 Mhz.
 
 ## Airplanes and Stuff
 
-There is a whole world of aircraft communications, with some being open and others encrypted. [Frugal Radio](https://frugalradio.com/) has a lot of content around Rx and demodulating aircraft communications which I recommend as a good starting point. Most of the aircraft communications (including Air Traffic Control Towers comms) use specific bands that are mostly well documented per airport ([Porto example](https://www.nav.pt/docs/AIS/aerodromos/portoAD.pdf)).
+There is a whole world of aircraft communications, with some being open and others encrypted. [Frugal Radio](https://frugalradio.com/) has a lot of content around Rx and demodulating aircraft communications which I recommend as a good starting point. Most of aircraft communications (including Air Traffic Control Towers comms) use specific bands that are mostly well documented per airport ([Porto example](https://www.nav.pt/docs/AIS/aerodromos/portoAD.pdf)).
 
 ### ACARS
 
@@ -240,7 +240,7 @@ Most of the _flight radar_ websites use crowdsourced data from ADS-B scanners ar
 
 ## Receiving Weather Images
 
-There are several weather satellites deployed in different Earth orbits. While most recent ones use above 1Ghz signals (requiring more specialized antennas and material), some use more _friendly_ bands in the VHF range and broadcast APT (Automatic Picture Transmission) / LRPT (Low Resolution Picture Transmission) signals which are easily decoded using existent software tools. Examples are the NOAA and some Meteor ones.
+There are several weather satellites deployed in different Earth orbits. While most recent ones use above 1Ghz signals (requiring more specialized antennas and material), some use more _friendly_ bands in the VHF range and broadcast APT (Automatic Picture Transmission) / LRPT (Low Resolution Picture Transmission) signals which are easily decoded using existent software tools. Some examples are the NOAA and some Meteor ones.
 
 - NOAA 15 – 137.6200 MHz (APT)
 - NOAA 18 – 137.9125 MHz (APT)
@@ -255,9 +255,9 @@ The post by [Lucas Teske](https://lucasteske.dev/2016/02/recording-noaa-apt-sign
 
 However, depending on your SDR and setup, you can (and should) play around with these settings until you reach the best results.
 
-As these satellites orbit the earth they only transmit images to a certain point of the globe at a given window. One can easily track the satellites in real-time using [Gpredict](http://gpredict.oz9aec.net/) or [Look4Sat (Android App)](https://github.com/rt-bishop/Look4Sat).
+As these satellites orbit the Earth they only transmit images to a certain point of the globe at a given window. One can easily track the satellites in real-time using [Gpredict](http://gpredict.oz9aec.net/) or [Look4Sat (Android App)](https://github.com/rt-bishop/Look4Sat).
 
-The image bellow is an example of an APT signal being received. There are several guides on how to configure the receiving software and how to build proper antennas for receiving data from these satellites, including a good post from [RTL-SDR blog](https://www.rtl-sdr.com/rtl-sdr-tutorial-receiving-noaa-weather-satellite-images/) gives some info. By experience, either a well-made and correctly oriented [V-dipole](https://www.rtl-sdr.com/simple-noaameteor-weather-satellite-antenna-137-mhz-v-dipole/) or a poorly-made [QFH](https://lucasteske.dev/2016/01/qfh-antenna-and-my-first-reception-of-noaa/) antenna gives the best results.
+The image bellow is an example of an APT signal being received. There are several guides on how to configure the receiving software and how to build proper antennas for receiving data from these satellites, including a good post from [RTL-SDR blog](https://www.rtl-sdr.com/rtl-sdr-tutorial-receiving-noaa-weather-satellite-images/) which gives some info on it. By experience, either a well-made and correctly oriented [V-dipole](https://www.rtl-sdr.com/simple-noaameteor-weather-satellite-antenna-137-mhz-v-dipole/) or a poorly-made [QFH](https://lucasteske.dev/2016/01/qfh-antenna-and-my-first-reception-of-noaa/) antenna gives the best results.
 
 <div class="row" style="text-align:center">
   <div class="column">
@@ -265,7 +265,7 @@ The image bellow is an example of an APT signal being received. There are severa
   </div>
 </div>
 
-APT signals can be decoded using software such as the [noaa-apt image decoder](https://noaa-apt.mbernardi.com.ar/). The best result I got with a dipole from a balcony:
+APT signals can be decoded using software such as the [noaa-apt image decoder](https://noaa-apt.mbernardi.com.ar/). The best result I got with a dipole from a balcony was the following:
 
 <div class="row" style="text-align:center">
   <div class="column">
@@ -273,7 +273,7 @@ APT signals can be decoded using software such as the [noaa-apt image decoder](h
   </div>
 </div>
 
-**Note**: While receiving signals from space you have to deal with the [Doppler effect](https://en.wikipedia.org/wiki/Doppler_effect), i.e., periodically adjust the frequency to center the signal as it moves.
+**Note**: While receiving signals from space you have to deal with [Doppler effect](https://en.wikipedia.org/wiki/Doppler_effect), i.e., periodically adjust the frequency to center the signal as it moves.
 
 ## ISS Signals
 
@@ -292,7 +292,7 @@ Similarly to the NOAA satellites, I would say that a V-dipole or QFH is good eno
   </div>
 </div>
 
-Above are some SSTV pictures that I managed to received in the past. When you successfully receive a SSTV image you can apply for the corresponding ARISS SSTV diploma (typically consists on filling a Google Forms, but it is unique for each Rx event).
+Above are some SSTV pictures that I managed to receive in the past. When you successfully receive a SSTV image you can apply for the corresponding ARISS SSTV diploma (typically consisting on filling a Google Forms, but it is unique for each Rx event).
 
 ## Navigation and Mobile Comms
 
@@ -354,7 +354,7 @@ Your browser does not support the audio element.
 
 > A numbers station is a shortwave radio station characterized by broadcasts of formatted numbers, which are believed to be addressed to intelligence officers operating in foreign countries (from [Wikipedia](https://en.wikipedia.org/wiki/Numbers_station)).
 
-There is a lot of _lore_ and _theories_ about the use of number stations beyond the _cold war_ period, however, the reality is, that some station keep transmitting today in well known frequencies. The [Priyom](https://priyom.org/) organization focuses on _research and bring to light the mysterious reality of intelligence, military and diplomatic communication via shortwave radio_. They have a list of known radio stations, including their broadcasting schedule, mode, and target area. I still did not manage to recieve number stations comms using my radio setup, but you can easily pick one up using a [WebSDR](http://www.websdr.org/).
+There is a lot of _lore_ and _theories_ about the use of number stations beyond the _cold war_ period. However, the reality is, that some stations keep transmitting today in well known frequencies. The [Priyom](https://priyom.org/) organization focuses on _research and bring to light the mysterious reality of intelligence, military and diplomatic communication via shortwave radio_. They have a list of known radio stations, including their broadcasting schedule, mode, and target area. I still haven't managed to receive number stations comms using my radio setup, but you can easily pick one up using a [WebSDR](http://www.websdr.org/).
 
 One of the most known stations is [UVB-76, aka The Buzzer](https://en.wikipedia.org/wiki/UVB-76), captured from a [Russian WebSDR](http://tulasdr.fvds.ru:8901/):
 
@@ -365,7 +365,7 @@ Your browser does not support the audio element.
 
 ### World Radio
 
-There are a lot of radio stations being broadcasted in short wave, you can find them [here](https://www.short-wave.info/index.php). You can also use the website to find out which radio is transmitting in a given frequency. Most of the transmissions are AM, but you can already find some FM ones too. Next is an example of BBC radio on 7.445 MHz giving some football news.
+There are a lot of radio stations being broadcasted in short wave. You can find them [here](https://www.short-wave.info/index.php). You can also use the website to find out which radio is transmitting in a given frequency. Most of the transmissions are AM, but you can already find some FM ones too. Next is an example of BBC radio on 7.445 MHz giving some football news.
 
 <audio controls>
   <source src="/images/satsandradio21/bbc_radio_7445.mp3" type="audio/mpeg">
@@ -413,9 +413,9 @@ HF signals are highly-sensible to solar activity, i.e., _solar activity can aid 
 
 The SDR I have only works until ~1.8GHz. However, we work every day with signals above that (mainly last parts of the UHF band), including Wi-Fi (2.4GHz and 5GHz), Bluetooth, and other IoT protocols. You can also start exploring those signals, e.g., using Wi-Fi chipsets which support monitor mode and other tools. But that's a story for another post.
 
-Other signals, part of the SHF and EHF bands required large dishes and special equipment ($$$++) just to start exploring...
+Other signals, that are part of the SHF and EHF bands, require large dishes and special equipment ($$$++) just to start exploring...
 
-A final note of thanks to [Zezadas](https://sefod.eu/) for reviewing early stages of this post.
+A final note of thanks to [Zezadas](https://sefod.eu/) for some useful insights to this post.
 
 ## Other links
 
