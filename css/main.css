@@ -101,11 +101,11 @@ hr {
   background-position: 50%;
   box-sizing: border-box;
   height: 10px;
-  color: var(--main-font-color);
+  color: var(--main-headers-color);
   background-image: linear-gradient(
     currentColor,
     currentColor 15%,
-    transparent 15%,
+    transparent 33%,
     transparent 100%
   );
   background-size: 100% 3px;
