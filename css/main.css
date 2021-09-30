@@ -94,6 +94,23 @@ body {
   overflow-wrap: break-word;
   background-color: var(--main-bg-color);
 }
+hr {
+  border: 0;
+  margin: 1.35em auto;
+  max-width: 100%;
+  background-position: 50%;
+  box-sizing: border-box;
+  height: 10px;
+  color: var(--main-font-color);
+  background-image: linear-gradient(
+    currentColor,
+    currentColor 15%,
+    transparent 15%,
+    transparent 100%
+  );
+  background-size: 100% 3px;
+  width: 100%;
+}
 a {
   text-decoration: none;
   color: var(--main-headers-color);
