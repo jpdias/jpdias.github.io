@@ -426,6 +426,8 @@ A final note of thanks to [Zezadas](https://sefod.eu/) for some useful insights 
 - [Lessons on Software Defined Radio with HackRF by Great Scott Gadgets](https://greatscottgadgets.com/sdr/)
 - [Signal Identification Wiki](https://www.sigidwiki.com/)
 
+---
+
 [^1]: [Software-defined radio, Wikipedia](https://en.wikipedia.org/wiki/Software-defined_radio).
 [^2]: [Impedance of the electrical load should matche the impedance of the power or driving source](https://www.data-alliance.net/blog/vswr-impedance-matching-in-antennas/).
 [^3]: [Radio Wave](https://en.wikipedia.org/wiki/Radio_wave)
