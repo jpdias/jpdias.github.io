@@ -492,6 +492,13 @@ pre a:only-of-type::before {
 .content ul {
   padding-left: 0;
 }
+.content ol {
+  padding-left: 0;
+}
+
+.content ol > li {
+  margin: 5px 0 5px 0;
+}
 
 .content ul > li {
   list-style-type: square;
