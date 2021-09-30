@@ -18,12 +18,12 @@ There are places over Portugal where fibre connections are still a mirage, and a
 The DVA-G3170i ADSL2+ VoIP is an ADSL router with one 10/100BASE-T RJ45 LAN port and wireless access point IEEE 802.11g-2003. It supports wireless security with WEP, WPA, WPA2 or WPA/WPA2. Internet connectivity can be established using Dynamic IP Address, Static IP Address, PPPoE (PPP over Ethernet), PPPoA (PPP over ATM) and Bridge Mode. The device also has VoIP capabilities.
 
 | Default IP   | Mask          |
-|--------------|---------------|
+| ------------ | ------------- |
 | 192.168.10.1 | 255.255.255.0 |
 
-The device itself has 7 front-panel LEDs, from top to bottom: Internet status, DSL (Link/Act), VoIP, WLAN, LAN (Link/Act), Init and Power. It also has a RESET button. This information comes from the [User Manual (PT)](http://imgs.sapo.pt/images/AJUDA2009/Manual_DVA-G3170i.pdf) which also states that the credentials to the admin interface are *admin* / *admin*.
+The device itself has 7 front-panel LEDs, from top to bottom: Internet status, DSL (Link/Act), VoIP, WLAN, LAN (Link/Act), Init and Power. It also has a RESET button. This information comes from the [User Manual (PT)](http://imgs.sapo.pt/images/AJUDA2009/Manual_DVA-G3170i.pdf) which also states that the credentials to the admin interface are _admin_ / _admin_.
 
-The first step will be a full visual inspection and understanding what the different system's parts do by searching for their documentation. The Web Admin interface is then presented, but without much detail (since it's not the main focus). Moving to *breaking things* we'll look for different ways to access the device (both by hardware and software means) and getting to **root**. A focus will be given on understanding how the device operates (boot, reset, SSID/Wireless Password generation). Finally, we will inspect some curious binaries and dump some stuff. *Let's Get to It!*
+The first step will be a full visual inspection and understanding what the different system's parts do by searching for their documentation. The Web Admin interface is then presented, but without much detail (since it's not the main focus). Moving to _breaking things_ we'll look for different ways to access the device (both by hardware and software means) and getting to **root**. A focus will be given on understanding how the device operates (boot, reset, SSID/Wireless Password generation). Finally, we will inspect some curious binaries and dump some stuff. _Let's Get to It!_
 
 ## Visual Inspection and Hardware Overview
 
@@ -31,21 +31,21 @@ The first step will be a full visual inspection and understanding what the diffe
 
 Opening the router by removing the two screws under the rubber protections lets us take a better look at the PCB:
 
-- **RTL8201CP** is a single-chip/single-port PHYceiver with an MII (Media Independent Interface)/SNI (Serial Network Interface). It implements all 10/100M Ethernet  Physical-layer functions including the Physical Coding Sublayer (PCS), Physical  Medium Attachment (PMA), Twisted Pair Physical Medium Dependent Sublayer (TP-PMD), with an auto crossover detection function, 10Base-Tx Encoder/Decoder, and Twisted Pair Media Access Unit (TPMAU). [Datasheet.](http://realtek.info/pdf/rtl8201cp.pdf)
+- **RTL8201CP** is a single-chip/single-port PHYceiver with an MII (Media Independent Interface)/SNI (Serial Network Interface). It implements all 10/100M Ethernet Physical-layer functions including the Physical Coding Sublayer (PCS), Physical Medium Attachment (PMA), Twisted Pair Physical Medium Dependent Sublayer (TP-PMD), with an auto crossover detection function, 10Base-Tx Encoder/Decoder, and Twisted Pair Media Access Unit (TPMAU). [Datasheet.](http://realtek.info/pdf/rtl8201cp.pdf)
 
 - **Infineon PSB 50702E** Infineon® DANUBEADSL2/2+ IAD-on-Chip Solution for CPE Applications is a Single-chip solution for ADSL2/2+ with integrated 2-Channel Analog CODEC for IADs and Home Gateways. It has (1) Protocol Acceleration FW for MPoA, NAT and others for CPU off-load, (2) Dual 32-bit MIPS 24KEc RISC processors @333 MHz, (3) Multi Media Card Interface (SD/MMCI), (4) USB 2.0 host/device, and (5) SPI with DMA support. [More details.](https://www.infineon.com/dgdl/CPE_Brochure.pdf?fileId=db3a3043156fd5730115c6e3248c0fec)
 
-- **NANYA NT5DS16M16CS-6K** is a DRAM Chip DDR SDRAM 256Mbit 16Mx16 2.5V 66-Pin TSOP-II. 
+- **NANYA NT5DS16M16CS-6K** is a DRAM Chip DDR SDRAM 256Mbit 16Mx16 2.5V 66-Pin TSOP-II.
 
-- **Eon Silicon Solution EN29LV640B-90TIP** (not visible in the image --- backplane): 8 Megabit (1024K x 8-bit / 512K x 16-bit), electrically erasable, read/write non-volatile flash memory, CMOS 3.0 Volt-only. 
+- **Eon Silicon Solution EN29LV640B-90TIP** (not visible in the image --- backplane): 8 Megabit (1024K x 8-bit / 512K x 16-bit), electrically erasable, read/write non-volatile flash memory, CMOS 3.0 Volt-only.
 
 - **PEF 4268T** SLIC-DC Subscriber Line Interface Circuit with Integrated DC/DC Converter.
 
-It also has what seems a UART port with already soldered pins, a JTAG-like pinout, and a lot of unpopulated spots. This goes according to the idea that DLink produced a base PCB and then configured features accordingly to agreements with different ISPs. As an example, the SoC supports USB and SD card interfaces, but no socket is present. The SoC also exposes a JTAG interface (that probably corresponds to the pins just by the *WiFi antenna* label), but this was not explored since UART worked.
+It also has what seems a UART port with already soldered pins, a JTAG-like pinout, and a lot of unpopulated spots. This goes according to the idea that DLink produced a base PCB and then configured features accordingly to agreements with different ISPs. As an example, the SoC supports USB and SD card interfaces, but no socket is present. The SoC also exposes a JTAG interface (that probably corresponds to the pins just by the _WiFi antenna_ label), but this was not explored since UART worked.
 
 ## Admin Interface
 
-Regarding the admin interface, running on `192.168.10.1:8080`, the login is made using *basic access authentication* with the credentials stated in the user manual. From there we can access the available menus which are common to any modem+router: DSL connection, WiFi management, Firewall, Updates, Statues...
+Regarding the admin interface, running on `192.168.10.1:8080`, the login is made using _basic access authentication_ with the credentials stated in the user manual. From there we can access the available menus which are common to any modem+router: DSL connection, WiFi management, Firewall, Updates, Statues...
 
 <div class="row" style="text-align:center">
   <div class="column">
@@ -56,7 +56,7 @@ Regarding the admin interface, running on `192.168.10.1:8080`, the login is made
   </div>
 </div>
 
-A quick look into the interface did not reveal any significant information. A minor detail is that the credentials for everything (WiFi, DSL, and so on) are rendered on the interface, so removing the input type *password* makes them visible. This would provide an attacker direct access to these credentials once they bypassed the *basic auth*.
+A quick look into the interface did not reveal any significant information. A minor detail is that the credentials for everything (WiFi, DSL, and so on) are rendered on the interface, so removing the input type _password_ makes them visible. This would provide an attacker direct access to these credentials once they bypassed the _basic auth_.
 
 ## Getting Access
 
@@ -70,11 +70,11 @@ A quick `nmap shows that the router exposes several open ports:
 7002/tcp  open  afs3-prserver?
 7004/tcp  open  afs3-kaserver?
 50000/TCP open  upnp
-``` 
+```
 
 We also have physical UART and JTAG ports that we can use. Since I wanted to explore UART more than `telnet`, my first approach was to understand the UART port (I know it would be wiser to start by telnet, but why not?). However, it requires to find the right GND/RX/TX pins combination first.
 
-With a multimeter, it was easy to find out the GND pin with a connectivity test, and the VCC with a volt check, which showed that the board ran at 3.3V. However, finding the right RX / TX required some extra work. Connecting a cheap logic analyzer to the GND/RX/TX pins, and using the [Saleae Logic 2 Alpha *software*](https://www.saleae.com/downloads/), allowed to find the right combination. You may have to adjust the capture frequency in the Saleae software for the device's proper functioning.
+With a multimeter, it was easy to find out the GND pin with a connectivity test, and the VCC with a volt check, which showed that the board ran at 3.3V. However, finding the right RX / TX required some extra work. Connecting a cheap logic analyzer to the GND/RX/TX pins, and using the [Saleae Logic 2 Alpha _software_](https://www.saleae.com/downloads/), allowed to find the right combination. You may have to adjust the capture frequency in the Saleae software for the device's proper functioning.
 
 <div class="row" style="text-align:center">
   <div class="column">
@@ -90,7 +90,7 @@ With a multimeter, it was easy to find out the GND pin with a connectivity test,
 
 ![Logic analyzer view](/images/dlink21/logic.png)
 
-The only missing thing was to find the right baud rate to connect to the UART port, which can be achieved by checking the transmission time of one bit, calculate the inverse and multiply by 1 000 000. The transmission time is approximately 8.688uS: (1/8.688)*1000000 = 115101, which is close to the common baudrate of 115200. 
+The only missing thing was to find the right baud rate to connect to the UART port, which can be achieved by checking the transmission time of one bit, calculate the inverse and multiply by 1 000 000. The transmission time is approximately 8.688uS: (1/8.688)\*1000000 = 115101, which is close to the common baudrate of 115200.
 
 Connecting the USB to UART (FT232 USB UART) to the exposed pins (do not forget, RX of the router to TX of the FT and TX of the router to the FT RX), connecting to the device using `screen`, and connecting the device to power, and we have a UBoot loading!
 
@@ -123,7 +123,7 @@ danube SwitchDO GPIO30 SW_RESET OK
 
 Type "run flash_flash" to start Linux kernel
 
-Hit any key to stop autoboot:  3 ... 2 ... 1 ... 0 
+Hit any key to stop autoboot:  3 ... 2 ... 1 ... 0
 ## Booting image at b0080000 ...
    Image Name:   MIPS Linux-2.4.31
    Created:      2009-10-01   9:55:04 UTC
@@ -142,14 +142,15 @@ flash_start=0xb0000000
 flash_size=8388608l
 ```
 
-We have some new information as a result of this capture: 
+We have some new information as a result of this capture:
+
 - 32 MB of DRAM (which checks with the NANYA NT5DS16M16CS-6K chip description)
 - 8 MB of flash (which also matches the EN29LV640B-90TIP specification)
-- The processor is MIPS and runs Linux (`Image Name:   MIPS Linux-2.4.31`)
+- The processor is MIPS and runs Linux (`Image Name: MIPS Linux-2.4.31`)
 - The image is `lzma compressed`, [relevant man page](https://linux.die.net/man/1/lzma).
 - The flash size is `8388608l` and starts at address `0xb0000000`.
 
-By interrupting the boot by pressing any key (`Hit any key to stop autoboot:  3 ... 2 ... 1 ... 0`) we enter U-boot. The U-boot is the device bootloader, understands the device's memory map, starts the main firmware execution and carries other low-level tasks. For more about the common commands and features [RTFM](https://www.denx.de/wiki/view/DULG/UBootCommandLineInterface).
+By interrupting the boot by pressing any key (`Hit any key to stop autoboot: 3 ... 2 ... 1 ... 0`) we enter U-boot. The U-boot is the device bootloader, understands the device's memory map, starts the main firmware execution and carries other low-level tasks. For more about the common commands and features [RTFM](https://www.denx.de/wiki/view/DULG/UBootCommandLineInterface).
 
 Two main tasks can be done using the U-boot CLI for reverse engineering purposes: (1) understanding the memory map and, potentially, exfil the firmware and (2) bypass the authentication protection of the Linux image with the `init=/bin/sh` trick. [@cybergibbons](https://twitter.com/cybergibbons) has two very good videos on that: [Rooting via Uboot](https://www.youtube.com/watch?v=fvYpDx9nI78) and [Firmware Recovery](https://www.youtube.com/watch?v=v6ihoqTNuKg).
 
@@ -163,6 +164,7 @@ printenv- print environment variables
 setenv  - set environment variables
 tftpboot- boot image via network using TFTP protocol
 ```
+
 And some extra information can be collected using `bdinfo`:
 
 ```text
@@ -177,6 +179,7 @@ ethaddr     = 00:22:B0:F0:15:9B
 ip_addr     = 5.26.62.222
 baudrate    = 115200 bps
 ```
+
 And also from the environment variables using `printenv` (only a few selected entries are shown):
 
 ```text
@@ -187,11 +190,12 @@ f_firmware_addr=0xb0040000
 ipaddr=5.26.62.222
 serverip=5.26.62.23
 ```
+
 We could carry tasks such as boot a firmware over TFTP or change the bootcmd to anything we needed. However, as it will be shown, this was not required since the device has default credentials to **root**.
 
 ## I'm Root
 
-Letting the device boot completely while connected over UART we can click any key for the Login prompt to appear. Using the default credentials of most DLink routers, *admin* / *admin*, we can log in as **root**. 
+Letting the device boot completely while connected over UART we can click any key for the Login prompt to appear. Using the default credentials of most DLink routers, _admin_ / _admin_, we can log in as **root**.
 
 ```bash
 BusyBox v1.00 (2009.10.01-09:47+0000) Built-in shell (msh)
@@ -228,10 +232,11 @@ One strategy used was to log all the interactions using `screen` to a file and t
 
 Another strategy would be to extract the firmware from the SPI flash chip with a similar process as the one carried in a [previous blog post](/hardware/msi/bios/2020/05/10/back-from-the-dead.html).
 
-The available `telnet` service was used for quickest access: `$ telnet 192.168.10.1` with the same credentials as the Web Admin GUI: *admin* / *admin*.
+The available `telnet` service was used for quickest access: `$ telnet 192.168.10.1` with the same credentials as the Web Admin GUI: _admin_ / _admin_.
 
 With this, and using one of the applets available in the BusyBox, the `tftp` client, it was possible to retrieve/send files from/to a remote host. This allows to quickly transfer files from the device, easing the process of inspecting them. For creating an instant and temporary TFTP server, the [`py3tftp`](https://github.com/sirMackk/py3tftp) was used (after trying several other options without success). As an example, to extract the `firmware.bin` which can be found in the `/firmware` folder one can do:
-1. In the local machine: `$ py3tftp --host 0.0.0.0 -p 2121 -v` 
+
+1. In the local machine: `$ py3tftp --host 0.0.0.0 -p 2121 -v`
 2. In the router: `DVA-G3170i/PT # tftp -p -l /firmware/firmware.bin 192.168.10.x 2121`
 
 ## What happens at boot?
@@ -244,6 +249,7 @@ To better understand what happens when the device boots more cleanly, a factory 
 00:06:12 HOUSEKEEPER: factory reset button pressed for 5 secs
 00:06:14 HOUSEKEEPER: trigger FACTORY RESET...
 ```
+
 Most of the called scripts are either stopping or resetting services. After that, some extra scripts are called to do what seems to be the device's bootstrapping. After that, the device reboots itself and does a standard boot procedure (as shown before).
 
 ```text
@@ -271,7 +277,8 @@ PHP [/etc/defnodes/S50showdect.php] ...
 The system is going down NOW !!
 
 ```
-The scripts are located in the `/etc` folder in different folders, with some being `sh's and others ` PHP's. This is useful since now we known where to look to understand specific parts of the behaviour of the router, including how it generates the WiFi passkey or how it sets the transmit power of the WiFi (which implies that it stores information about the country of operation). 
+
+The scripts are located in the `/etc` folder in different folders, with some being `sh's and others ` PHP's. This is useful since now we known where to look to understand specific parts of the behaviour of the router, including how it generates the WiFi passkey or how it sets the transmit power of the WiFi (which implies that it stores information about the country of operation).
 
 ## Wireless and WPA Key Generation
 
@@ -284,7 +291,8 @@ Start ALL WLAN ...
 Start setup WLAN interface ath0 ...
 ```
 
-Looking into the `/etc/templates/wlan.sh` script we can observe several curious things: 
+Looking into the `/etc/templates/wlan.sh` script we can observe several curious things:
+
 ```sh
 TEMPLATES="/etc/templates/wifi"
 WLAN=`rgdb -i -g /runtime/lan/wlan/enable`
@@ -293,16 +301,17 @@ OPERATE_MODE=`rgdb -i -g /wireless/ap_mode`
 case "$1" in
 1|start|restart)
 #...
-        if [ "$OPERATE_MODE" = "0" -o "$OPERATE_MODE" = "" ]; then 
+        if [ "$OPERATE_MODE" = "0" -o "$OPERATE_MODE" = "" ]; then
                 rgdb -A $TEMPLATES/wlan_if_run.php -V generate_start=1 -V wlanid=$2 > /var/run/wlan_if_start$2.sh
                 rgdb -A $TEMPLATES/wlan_if_run.php -V generate_start=0 -V wlanid=$2 > /var/run/wlan_if_stop$2.sh
 #...
 ```
+
 First, there is a utility called `rgdb` that allows one to retrieve configuration values, e.g. the `OPERATE_MODE`. `rgdb` is an alias for the `rgbin` binary, and from [here](https://forum.kitz.co.uk/index.php?topic=10635.90):" `/usr/sbin/bin` appears to be the userspace utility for reading and writing the "NVRAM" area of flash. In the NVRAM area is that gzip'ed XML MIB file which contains the configuration parameters to disable LAN access and lock the device."
 
 ### `hostapd` file
 
-Looking into the PHP script `wlan_if_run.php` which is located in the folder `/etc/templates/WiFi`, we can see that it checks for any changes in the system configuration (I supposed that these changes correspond to the ones made using the Web Admin GUI) and updates the system files accordingly, including the `hostapd` config file: 
+Looking into the PHP script `wlan_if_run.php` which is located in the folder `/etc/templates/WiFi`, we can see that it checks for any changes in the system configuration (I supposed that these changes correspond to the ones made using the Web Admin GUI) and updates the system files accordingly, including the `hostapd` config file:
 `$hostapd_conf = "/var/run/hostapd".$wlanid.".conf";`. Looking for the config file in the `/var/run/` we can find it:
 
 ```text
@@ -327,10 +336,11 @@ wpa_passphrase=8XYXNqrqX85XX5rN8q8Y
 ```
 
 Here we can see the SSID of the network, in this case, `DLink-F0159B` and the generated password (remember that we did a RESET): `8XYXNqrqX85XX5rN8q8Y`.
-- The generation of **SSID** was evident: the MAC address of the device is `00:22:B0:F0:15:9B` and the SSID is `DLink-` plus the last 3 pairs of hex digits without the separator: `F0159B`. 
-- The generation of the **password** was a little more *fun* to discover. While this could be configured manually in the device's firmware, this would imply extra costs for the manufacturer (each device would have to persist a unique token); thus, it is not common. More common is that the *script* that generates the passwords is stored on the device and *when the device is booted for the first time (or RESETed)* it uses some `logic` to define a unique password. This password can either be always the same for a specific device or not depending on the *seed* used, but, once again, the first is more common.
 
-Further looking into the boot logs and the WLAN related scripts something pop-out with the word keygen in it (file `/etc/defnodes/S13setext.sh`): 
+- The generation of **SSID** was evident: the MAC address of the device is `00:22:B0:F0:15:9B` and the SSID is `DLink-` plus the last 3 pairs of hex digits without the separator: `F0159B`.
+- The generation of the **password** was a little more _fun_ to discover. While this could be configured manually in the device's firmware, this would imply extra costs for the manufacturer (each device would have to persist a unique token); thus, it is not common. More common is that the _script_ that generates the passwords is stored on the device and _when the device is booted for the first time (or RESETed)_ it uses some `logic` to define a unique password. This password can either be always the same for a specific device or not depending on the _seed_ used, but, once again, the first is more common.
+
+Further looking into the boot logs and the WLAN related scripts something pop-out with the word keygen in it (file `/etc/defnodes/S13setext.sh`):
 
 ```sh
 #!/bin/sh
@@ -369,7 +379,8 @@ A new curious binary appears, the `xmldbc`, which is located in `/usr/sbin/xmldb
 
 ### Reversing the `wpakeygen`
 
-Looking for the `wpakeygen` binary, we can find it in the same folder: `/usr/sbin/wpakeygen`. Transfering the binary to my machine using the configured TFTP allows one to debug it and understand what it does to generate the key. Firing up Ghidra with it we can confirm that it is indeed a MIPS binary: 
+Looking for the `wpakeygen` binary, we can find it in the same folder: `/usr/sbin/wpakeygen`. Transfering the binary to my machine using the configured TFTP allows one to debug it and understand what it does to generate the key. Firing up Ghidra with it we can confirm that it is indeed a MIPS binary:
+
 ```text
 ELF 32-bit MSB executable
     MIPS
@@ -385,8 +396,7 @@ Looking for the main function in the function tree we can find the `wpakeygen_ma
 <img style="max-width: 65%;" src="/images/dlink21/ghidra-pcode.png"/>
 </center>
 
-
-The first part of the code, which is not shown, defines the variables and reads the `MAC` as the argument. Then the function `Alpha_MACString_Remove_Separator` is called, and, by its name, we can conclude that it removes the MAC address separator between the pairs of hex digits. In the following lines, this function's return is stored (including repetitions), in a mostly-random way, in a *string* with 20 chars of size.
+The first part of the code, which is not shown, defines the variables and reads the `MAC` as the argument. Then the function `Alpha_MACString_Remove_Separator` is called, and, by its name, we can conclude that it removes the MAC address separator between the pairs of hex digits. In the following lines, this function's return is stored (including repetitions), in a mostly-random way, in a _string_ with 20 chars of size.
 
 Lastly, an iteration over those 20 chars is carried, and in the last lines of the loop, a resulting `index` value is used to get something (a char) from a memory position. Searching for that position in the memory, we find the scalar `XrqaHNpdSYw86215U`. So the password is made of chars taken from random positions of that scalar string (of 17 chars), giving a final password of 20 chars, which meaning that bruteforcing would result in 17^20 possibilities, which equals: `4 064 231 406 647 572 522 401 601`. So, bruteforcing would take some time...
 
@@ -394,10 +404,10 @@ So, let us reverse the remaining p-code:
 
 - `uVar1 = (int)local_60[i] - 0x30;` : Takes the char at pos `i` and subtracts `0x30`;
 - The following `if` does a lot of things, breaking it into parts by the `&&`:
-    - `(9 < (uVar1 & 0xff)` verifies that `uVar1 & 0xff` is greater than `9`;
-    - `(iVar2 = (int)*(char *)(local_60[i] * 2 + __ctype_toupper + 1), uVar1 = iVar2 - 0x37, 5 < ())` also does lots of stuff using the `comma operator`. In a condition, the comma operator runs all the instructions but only evaluates the value of the rightmost one, which is `iVar2 - 0x41U & 0xff > 5`. The remaning ones:
-        - `iVar2 = (int)*(char *)(local_60[i] * 2 + __ctype_toupper + 1)` converts the `local_60[i]` to uppercase;
-        - `uVar1 = iVar2 - 0x37` just updates the value of `uVar1` by subtracting `0x37` to `iVar2`.
+  - `(9 < (uVar1 & 0xff)` verifies that `uVar1 & 0xff` is greater than `9`;
+  - `(iVar2 = (int)*(char *)(local_60[i] * 2 + __ctype_toupper + 1), uVar1 = iVar2 - 0x37, 5 < ())` also does lots of stuff using the `comma operator`. In a condition, the comma operator runs all the instructions but only evaluates the value of the rightmost one, which is `iVar2 - 0x41U & 0xff > 5`. The remaning ones:
+    - `iVar2 = (int)*(char *)(local_60[i] * 2 + __ctype_toupper + 1)` converts the `local_60[i]` to uppercase;
+    - `uVar1 = iVar2 - 0x37` just updates the value of `uVar1` by subtracting `0x37` to `iVar2`.
 
 At last, the resulting `wpa-psk` is printed with `printf`.
 
@@ -406,7 +416,7 @@ Converting all of this logic to Python gives something similar to the following:
 {% highlight python linenos %}
 magic_key = "XrqaHNpdSYw86215U"
 mac = list("0022B0F0159B".replace(':', ''))
-str1 = [""]*20
+str1 = [""]\*20
 
 str1[1] = mac[0]
 str1[7] = mac[3]
@@ -430,15 +440,15 @@ str1[9] = mac[4];
 str1[10] = mac[6];
 
 i=0
-result=[""]*20
+result=[""]\*20
 index = ""
 tempvar1 = 0
 tempvar2 = 0
 while(True):
-    t = ord(str1[i]);
+t = ord(str1[i]);
 
     tempvar1 = t - 0x30
-    
+
     if (tempvar1 & 0xff) > 9:
         tempvar2 = ord(str1[i].upper())
         tempvar1 = tempvar2 - 0x37
@@ -451,6 +461,7 @@ while(True):
     if i >= 20:
         print("".join(result))
         break
+
 {% endhighlight %}
 
 ## Exploring the `xmldbc` and `rgbd` binaries
@@ -466,7 +477,7 @@ DVA-G3170i/PT # cat /tmp/dump.xml
 </dlink_dvag3170i_pt_A1LWFg_8f32r_1S>
 
 DVA-G3170i/PT # tftp -p -l /tmp/dump.xml 192.168.x.x 2121
-``` 
+```
 
 And we now have all the router configs which include:
 
@@ -505,7 +516,7 @@ And we now have all the router configs which include:
 We can now use the same utility to change some configuration values, e.g.:
 
 - Remove the PPPoE ISP block: `xmldbc -i -s /runtime/web/pppoelock 0`
-- Remove the VoIP lock:  `xmldbc -i -s /runtime/web/voiplock 0`
+- Remove the VoIP lock: `xmldbc -i -s /runtime/web/voiplock 0`
 - Show the TR-069 menu on the Web Admin GUI: `xmldbc -i -s /runtime/web/tr069hide 0`
 - Change the Firmware Description: `xmldbc -i -s /runtime/sys/info/firmwareVersion AmazingFirmware`
 
@@ -521,20 +532,21 @@ The D-Link DVA-G3170i/PT proved to be a good practice target for hardware revers
 
 - The device has a lot of unpopulated sockets which indicates that D-Link produced several products using the same base PCB;
 - The Web Admin GUI loads all the credentials from the configurations; if one gains access to the device, can extract all the credentials;
-- Telnet is available, and login is made using default credentials (*admin* / *admin*);  UART and the Web Admin interface also uses the same credentials;
+- Telnet is available, and login is made using default credentials (_admin_ / _admin_); UART and the Web Admin interface also uses the same credentials;
 - Exfil files is an easy task if `tftp` or any other file transfer binary is present; alternatively, things such as `screen -L` can be used;
-- Looking at the boot logs (especially when a  `RESET` happens) is crucial to understand how the device bootstraps, and let us find the used scripts; it can also be useful to look at the running processes (`top`) and open ports `netstat -tulpn`;
-- To find how the `wpa_passphrase` is generated (or configured) look for standard WiFi-related configurations such as `hostapd` and follow the *crumbs* (boot logs, etc.);
-- Look for *uncommon* binaries since they're typically device (or brand) -specific and may have access to essential system parts. In this case, `xmldbc` and `rgbd` provide access to configuration files, and allows to retrieve and change them;
-ISPs typically limit what you can do with *your* router, but this is accomplished most of the time by using manufacturer-tools, and one can use them to *unlock* those features.
-
+- Looking at the boot logs (especially when a `RESET` happens) is crucial to understand how the device bootstraps, and let us find the used scripts; it can also be useful to look at the running processes (`top`) and open ports `netstat -tulpn`;
+- To find how the `wpa_passphrase` is generated (or configured) look for standard WiFi-related configurations such as `hostapd` and follow the _crumbs_ (boot logs, etc.);
+- Look for _uncommon_ binaries since they're typically device (or brand) -specific and may have access to essential system parts. In this case, `xmldbc` and `rgbd` provide access to configuration files, and allows to retrieve and change them;
+  ISPs typically limit what you can do with _your_ router, but this is accomplished most of the time by using manufacturer-tools, and one can use them to _unlock_ those features.
 
 While this is by now a mostly-unused router, an advanced search using the [WiGLE](https://wigle.net/) shows that 138 unique APs are broadcasting an SSID with a similar format (`DLink-______`) and that share the same first three pairs of hex digits of the MAC address (manufacturer code), `00:22:B0`, in Portugal last seen of Jan of 2019. Given the history of people not changing default passwords, this can still be a problem today.
 
 Query (must have an account on WiGLE): [https://wigle.net/search?lastupdt=20190101000000&netid=00%3A22%3AB0&ssidlike=DLink-\_\_\_\_\_\_&country=PT#fullSearch](https://wigle.net/search?lastupdt=20190101000000&netid=00%3A22%3AB0&ssidlike=DLink-______&country=PT#fullSearch)
 
-Another *fun* binary to do reverse would be the `led_gpio_ctl` which seems to be controlling the status LEDs. Maybe adventures for another time.
+Another _fun_ binary to do reverse would be the `led_gpio_ctl` which seems to be controlling the status LEDs. Maybe adventures for another time.
 
 This post would not be possible without the help and contributions of [@Pedro_SEC_R](https://twitter.com/Pedro_SEC_R), [@0xz3z4d45](https://twitter.com/0xz3z4d45) and [@mluis](https://twitter.com/mluis). Kudos!
+
+---
 
 [^1]: [TR-069](https://en.wikipedia.org/wiki/TR-069) "is a technical specification of the Broadband Forum that defines an application layer protocol for remote management of customer-premises equipment (CPE) connected to an Internet Protocol (IP) network."
