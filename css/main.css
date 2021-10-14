@@ -622,6 +622,10 @@ summary:hover {
   font-size: 1.05rem;
 }
 
+.description-item > span {
+  display: inline-block;
+}
+
 .description-item.is-expandable::before {
   border-left: var(--hr-border-settings);
   content: "";
