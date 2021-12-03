@@ -51,7 +51,7 @@ For scientific literature, the first go-to solution is the _big_ scientific inde
 
 - [Web of Science](https://www.webofscience.com/), which is behind a paywall[^1], but is one of the most used indexes (most universities have access to it).
 - [Scopus](https://www.scopus.com/), another well-known indexer, also behind a paywall[^1]. Once again, most universities have access to it.
-- [Google Scholar](https://scholar.google.com/), one of the most widely used indexers but with dubious indexing process (any PDF public stored in a university network is indexed). Use with caution. Most of the time, systematic literature [^2] made using Google Scholar is not considered valid.
+- [Google Scholar](https://scholar.google.com/), one of the most widely used indexers but with dubious indexing process (any PDF public stored in a university network is indexed). Use with caution. Most of the time, systematic literature reviews[^2] made using Google Scholar is not considered valid.
 
 Another solution is to search directly within the digital libraries of specific publishers (being limited to the papers published by them): [IEEEXplore](https://ieeexplore.ieee.org/), [ACM Digital Library](https://dl.acm.org/), [Elsevier](https://www.elsevier.com/search-results), and others. Most of the time, the access to the full papers is behind a paywall[^1], with a few being open access. Once again, most universities pay for full access.
 
