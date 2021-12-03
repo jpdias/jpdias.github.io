@@ -3,7 +3,7 @@ layout: post
 title: "Notes on (Software Engineering) Research"
 categories: [research, engineering, software]
 tags: [research, phd, engineering, software]
-thumbnail: /images/satsandradio21/gqrx_433.png
+thumbnail: /images/code.jpg
 description: "Notes on research from a software engineering perspective."
 ---
 
