@@ -13,7 +13,7 @@ Now that I've finally delivered my PhD thesis (awaiting public defense), and aft
 
 While I will try to present these tips and hints in a way they are common to most research fields in computer science, a bias will exist towards software engineering and Internet-of-Things research. This post will be split into 5 parts. [Gather](#gather) will focus on the means to gather knowledge, find relevant research challenges and pending issues, discover trends, and keep up-to-date with the latest publications. [Systematize](#systematize) will describe the means by which one can be more _efficient_ reading and summarizing published works. [Apply](#apply) presents the tools for writing, evolving, and maintaining documents, papers, thesis, etc. [Publish](#publish) and [Broadcast](#broadcast) focuses on the publishing process and broadcasting _your own work_.
 
-I will try to be as concise as possible, mostly pointing to external resources.
+I will try to be as concise as possible, mostly pointing to external resources. If you want some tips and tricks from a _process_ view, I recommend the paper [Towards a pattern language for the masters student](https://dl.acm.org/doi/10.1145/3361149.3361184).
 
 ## Gather
 
