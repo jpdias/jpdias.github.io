@@ -255,6 +255,18 @@ confs:
     bibtex: 10.5220_0006392404630469.bib
 
 journals:
+  - title: "Developing Docker and Docker-Compose Specifications: A Developers’ Survey"
+    authors: "David Reis, Bruno Piedade, Filipe F. Correia, João Pedro Dias and Ademar Aguiar"
+    conference: "IEEE Access"
+    year: 2021
+    url: "https://doi.org/10.1109/ACCESS.2021.3137671"
+    issn: "2169-3536"
+    doi: "10.1109/ACCESS.2021.3137671"
+    status: "Early Access"
+    pub: IEEE
+    abstract: "Cloud computing and Infrastructure-as-Code (IaC), supported by technologies such as Docker, have shaped how many software systems are built and deployed. Previous research has identified typical issues for some types of IaC specification but not why they come to be, or they have delved into collaboration aspects but not into technical ones. This work aims to characterize the activities around two particular kinds of IaC specification—Dockerfiles and docker-compose.yml files. We seek to know how they can be better supported and therefore study also what approaches and tools practitioners employ. We used an online questionnaire to gather data. The first part of the study reached 68 graduate students from a study program on informatics engineering, and the second one 120 professional software developers. The results show that most of the activities of the process of developing a Dockerfile are perceived as time-consuming, especially when the respondents are beginners with this technology. We also found that solving issues using trial-and-error approaches is very common and that many developers do not use ancillary tools to support the development of Dockerfiles and docker-compose.yml files."
+    bibtex: 10.1109_ACCESS.2021.3137671.bib
+    
   - title: "Managing Non-Trivial Internet-of-Things Systems with Conversational Assistants: A Prototype and a Feasibility Experiment"
     authors: "André Lago, João Pedro Dias, and Hugo Sereno Ferreira"
     conference: "Journal of Computational Science"
