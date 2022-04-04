@@ -10,16 +10,15 @@ description: "Engineer. Developer. Photography enthusiast. Researching on the th
 
 {% highlight bash %}
 $ whoami
-jpdias: engineer. developer. photography enthusiast.
+jpdias: phd. engineer. developer. photography enthusiast.
 {% endhighlight %}
 
-Currently working as a researcher on the thin line between hardware and software, João Pedro Dias has a BSc+MSc in [Informatics and Computing Engineering](https://sigarra.up.pt/feup/en/cur_geral.cur_view?pv_ano_lectivo=2018&pv_origem=CUR&pv_tipo_cur_sigla=MI&pv_curso_id=742) by the [Faculty of Engineering, University of Porto (FEUP)](https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL). He is a Ph.D. student of the Doctoral Program in Informatics Engineering by the same university since 2017 (holding a FCT grant). He is an Invited Assistant Lecturer at FEUP since 2017, lecturing various courses ranging from Software Engineering to Operating Systems. He has co-supervised 5 MSc dissertations and participated as a Researcher in two projects at LIACC and INESC TEC (Porto, Portugal). He works in the area of Software Engineering, with a special interest in Design Patterns, Internet-of-Things, Security and Privacy with more than 20 published and indexed papers. In his leisure time, he can be found participating in Capture The Flag competitions, messing around with Software-defined Radio, doing web development, learning how to reverse engineer hardware and photographing while wandering in nature.
+Currently working as a researcher on the thin line between hardware and software, João Pedro Dias has a BSc+MSc in [Informatics and Computing Engineering](https://sigarra.up.pt/feup/en/cur_geral.cur_view?pv_ano_lectivo=2018&pv_origem=CUR&pv_tipo_cur_sigla=MI&pv_curso_id=742) by the [Faculty of Engineering, University of Porto (FEUP)](https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL). He has a Ph.D. in Informatics Engineering by the same university since 2022 (under a FCT grant). He is an Invited Assistant Lecturer at FEUP since 2017, lecturing various courses ranging from Software Engineering to Operating Systems. He has co-supervised 5 MSc dissertations and participated as a Researcher in two projects at LIACC and INESC TEC (Porto, Portugal). He works in the area of Software Engineering, with a special interest in Design Patterns, Internet-of-Things, Security and Privacy with more than 20 published and indexed papers. In his leisure time, he can be found participating in Capture The Flag competitions, messing around with Software-defined Radio, doing web development, learning how to reverse engineer hardware and photographing while wandering in nature.
 
 ## Work & Study
 
 - Software Engineering Specialist @ [BUILT CoLAB](https://builtcolab.pt/)
 - Invited Assistant Lecturer @ [FEUP](https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL)
-- PhD Student @ [Doctoral Program in Informatics Engineering (FEUP)](https://sigarra.up.pt/feup/en/cur_geral.cur_view?pv_curso_id=679)
 
 ## Research Interests
 
