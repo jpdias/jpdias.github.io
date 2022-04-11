@@ -446,6 +446,8 @@ table tr td:last-child {
   margin: 0px;
   background: var(--code-bg-color);
   color: var(--code-font-color);
+  padding-bottom: 2px;
+  padding-top: 2px;
 }
 pre {
   counter-reset: line-numbering;
