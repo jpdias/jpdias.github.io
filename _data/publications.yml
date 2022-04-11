@@ -1,6 +1,17 @@
 #status: Accepted, In Press, Published, Submitted, Under revision
 #type: Workshop, Conference
 confs:
+  - title: "Evaluation of IoT Self-healing Mechanisms using Fault-Injection in Message Brokers"
+    authors: "Miguel Duarte, João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
+    conference: "2022 IEEE/ACM 4th International Workshop on Software Engineering Research Practices for the Internet of Things (SERP4IoT)"
+    year: 2022
+    doi: 10.1145/3528227.3528567
+    url: "https://doi.org/10.1145/3528227.3528567"
+    status: "In Press"
+    pub: ACM
+    abstract: "The widespread use of Internet-of-Things (IoT) across different application domains leads to an increased concern regarding their dependability, especially as the number of potentially mission-critical systems becomes considerable. Fault-tolerance has been used to reduce the impact of faults in systems, and their adoption in IoT is becoming a necessity. This work focuses on how to exercise fault-tolerance mechanisms by deliberately provoking its malfunction. We start by describing a proof-of-concept fault-injection add-on to a commonly used publish/subscribe broker. We then present several experiments mimicking real-world IoT scenarios, focusing on injecting faults in systems with (and without) active self-healing mechanisms and comparing their behavior to the baseline without faults. We observe evidence that fault-injection can be used to (a) exercise in-place fault-tolerance apparatus, and (b) detect when these mechanisms are not performing nominally, providing insights into enhancing in-place fault-tolerance techniques."
+    bibtex: 10.1145_3528227.3528567.bib
+
   - title: "A Review on Visual Programming for Distributed Computation in IoT"
     authors: "Margarida Silva, João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
     conference: "International Conference on Computational Science"
@@ -255,6 +266,16 @@ confs:
     bibtex: 10.5220_0006392404630469.bib
 
 journals:
+  - title: "Designing and Constructing Internet-of-Things Systems: An Overview of the Ecosystem"
+    authors: "João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
+    conference: "Internet of Things"
+    year: 2022
+    issn: "2542-6605"
+    status: "In Press"
+    pub: Elsevier
+    abstract: "The current complexity of IoT systems and devices is a barrier to reach a healthy ecosystem, mainly due to technological fragmentation and inherent heterogeneity. Meanwhile, the field has scarcely adopted any engineering practices currently employed in other types of large-scale systems. Although many researchers and practitioners are aware of the current state of affairs and strive to address these problems, compromises have been hard to reach, making them settle for sub-optimal solutions. This paper surveys the current state of the art in designing and constructing IoT systems from the software engineering perspective, without overlooking hardware concerns, revealing current trends and research directions."
+    bibtex: surveyiot.bib
+
   - title: "Developing Docker and Docker-Compose Specifications: A Developers’ Survey"
     authors: "David Reis, Bruno Piedade, Filipe F. Correia, João Pedro Dias and Ademar Aguiar"
     conference: "IEEE Access"
@@ -266,7 +287,7 @@ journals:
     pub: IEEE
     abstract: "Cloud computing and Infrastructure-as-Code (IaC), supported by technologies such as Docker, have shaped how many software systems are built and deployed. Previous research has identified typical issues for some types of IaC specification but not why they come to be, or they have delved into collaboration aspects but not into technical ones. This work aims to characterize the activities around two particular kinds of IaC specification—Dockerfiles and docker-compose.yml files. We seek to know how they can be better supported and therefore study also what approaches and tools practitioners employ. We used an online questionnaire to gather data. The first part of the study reached 68 graduate students from a study program on informatics engineering, and the second one 120 professional software developers. The results show that most of the activities of the process of developing a Dockerfile are perceived as time-consuming, especially when the respondents are beginners with this technology. We also found that solving issues using trial-and-error approaches is very common and that many developers do not use ancillary tools to support the development of Dockerfiles and docker-compose.yml files."
     bibtex: 10.1109_ACCESS.2021.3137671.bib
-    
+
   - title: "Managing Non-Trivial Internet-of-Things Systems with Conversational Assistants: A Prototype and a Feasibility Experiment"
     authors: "André Lago, João Pedro Dias, and Hugo Sereno Ferreira"
     conference: "Journal of Computational Science"
