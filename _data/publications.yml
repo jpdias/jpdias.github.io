@@ -270,6 +270,8 @@ journals:
     authors: "João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
     conference: "Internet of Things"
     year: 2022
+    doi: "10.1016/j.iot.2022.100529"
+    url: "https://doi.org/10.1016/j.iot.2022.100529"
     issn: "2542-6605"
     status: "In Press"
     pub: Elsevier
