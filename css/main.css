@@ -120,7 +120,6 @@ a > b:hover {
   background-color: var(--main-headers-color);
   color: var(--main-bg-color);
   border-radius: 5px;
-  padding: 1px;
 }
 
 h1 {
