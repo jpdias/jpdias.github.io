@@ -7,7 +7,7 @@ thumbnail: /images/phd/phd.png
 description: "Abstract of my PhD thesis in Informatics Engineering."
 ---
 
-Today, 1 April of 2022, I have successfully defended my PhD thesis work on Software Engineering and Internet-of-Things entitled "Increasing the Dependability of Internet-of-Things Systems in the context of End-User Development Environments". Here follows the abstract.
+Today, 1 April of 2022, I have successfully defended my [PhD thesis](http://hdl.handle.net/10216/85374) work on Software Engineering and Internet-of-Things entitled "Increasing the Dependability of Internet-of-Things Systems in the context of End-User Development Environments". Here follows the abstract.
 
 <!--more-->
 
@@ -33,4 +33,12 @@ As IoT users have different expertise levels, we also attempt to improve the int
 
 These contributions materialize into a core set of building blocks that, in assemble, can be used to improve the dependability of IoT systems while leveraging abstractions that do not hinder the (end-)user capability to configure, use, and evolve them. The experimental counterparts of the contributions provide empirical supporting evidence for the plausibility of the hypothesis.
 
+## Presentation
+
 <script async class="speakerdeck-embed" data-id="18b538f15d3d4213981406270b2662ab" data-ratio="1.77966101694915" src="//speakerdeck.com/assets/embed.js"></script>
+
+## Thesis Document
+
+- Open Repository: [https://hdl.handle.net/10216/140853](https://hdl.handle.net/10216/140853)
+- PDF File: [https://repositorio-aberto.up.pt/bitstream/10216/140853/2/553182.pdf](https://repositorio-aberto.up.pt/bitstream/10216/140853/2/553182.pdf)
+- Bibtex: [phdthesis.bib](assets/bibtex/phdthesis.bib)
