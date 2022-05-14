@@ -41,4 +41,4 @@ These contributions materialize into a core set of building blocks that, in asse
 
 - Open Repository: [https://hdl.handle.net/10216/140853](https://hdl.handle.net/10216/140853)
 - PDF File: [https://repositorio-aberto.up.pt/bitstream/10216/140853/2/553182.pdf](https://repositorio-aberto.up.pt/bitstream/10216/140853/2/553182.pdf)
-- Bibtex: [phdthesis.bib](assets/bibtex/phdthesis.bib)
+- Bibtex: [phdthesis.bib](/assets/bibtex/phdthesis.bib)
