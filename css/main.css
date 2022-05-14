@@ -12,16 +12,14 @@
   font-family: "Anonymous Pro";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/anonymous-pro-regular.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/IBMPlexMono-Regular.eot"); /* IE9 Compat Modes */
   src: local(""),
-    url("../fonts/anonymous-pro-regular.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/anonymous-pro-regular.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("../fonts/anonymous-pro-regular.woff")
+    url("../fonts/IBMPlexMono-Regular.eot") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/IBMPlexMono-Regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/IBMPlexMono-Regular.woff")
       format("woff"),
-    /* Modern Browsers */ url("../fonts/anonymous-pro-regular.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("../fonts/anonymous-pro-regular.svg#AnonymousPro") format("svg"); /* Legacy iOS */
+    /* Modern Browsers */ url("../fonts/IBMPlexMono-Regular.ttf")
+      format("truetype"); /* Legacy iOS */
 }
 
 /* lato-300 - latin */
@@ -86,9 +84,8 @@ body {
   margin: 0;
   color: var(--main-font-color);
   font-family: "Anonymous Pro", monospace;
-  font-size: 1.15rem;
-  line-height: 1.4rem;
-  line-height: 1.4;
+  font-size: 1rem;
+  line-height: 1.6rem;
   text-align: justify;
   text-justify: distribute;
   overflow-wrap: break-word;
@@ -125,13 +122,15 @@ a > b:hover {
 h1 {
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 1.65rem;
+  line-height: 2rem;
   text-align: left;
 }
 h2 {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
   text-align: left;
 }
 h3 {
