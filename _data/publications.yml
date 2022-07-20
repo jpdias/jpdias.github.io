@@ -266,14 +266,24 @@ confs:
     bibtex: 10.5220_0006392404630469.bib
 
 journals:
+  - title: "Visual Notations in Container Orchestrations: An Empirical Study with Docker Compose"
+    authors: " Bruno Piedade, João Pedro Dias, and Filipe F. Correia"
+    conference: "Software and Systems Modeling"
+    year: 2022
+    url: "https://arxiv.org/abs/2207.09167"
+    issn: "1619-1374"
+    status: "In Press"
+    pub: Springer
+    abstract: "Container orchestration tools supporting infrastructure-as-code allow new forms of collaboration between developers and operatives. Still, their text-based nature permits naive mistakes and is more difficult to read as complexity increases. We can find few examples of low-code approaches for defining the orchestration of containers, and there seems to be a lack of empirical studies showing the benefits and limitations of such approaches. We hypothesize that a complete visual notation for Docker-based orchestrations could reduce the effort, the error rate, and the development time. Therefore, we developed a tool featuring such a visual notation for Docker Compose configurations, and we empirically evaluated it in a controlled experiment with novice developers. The results show a significant reduction in development time and error-proneness when defining Docker Compose files, supporting our hypothesis. The participants also thought the prototype easier to use and useful, and wanted to use it in the future."
+    
   - title: "Designing and Constructing Internet-of-Things Systems: An Overview of the Ecosystem"
-    authors: "João Pedro Dias, André Restivo and Hugo Sereno Ferreira"
+    authors: "João Pedro Dias, André Restivo, and Hugo Sereno Ferreira"
     conference: "Internet of Things"
     year: 2022
     doi: "10.1016/j.iot.2022.100529"
     url: "https://doi.org/10.1016/j.iot.2022.100529"
     issn: "2542-6605"
-    status: "In Press"
+    status: "Published"
     pub: Elsevier
     abstract: "The current complexity of IoT systems and devices is a barrier to reach a healthy ecosystem, mainly due to technological fragmentation and inherent heterogeneity. Meanwhile, the field has scarcely adopted any engineering practices currently employed in other types of large-scale systems. Although many researchers and practitioners are aware of the current state of affairs and strive to address these problems, compromises have been hard to reach, making them settle for sub-optimal solutions. This paper surveys the current state of the art in designing and constructing IoT systems from the software engineering perspective, without overlooking hardware concerns, revealing current trends and research directions."
     bibtex: surveyiot.bib
