@@ -7,8 +7,8 @@ confs:
     year: 2022
     doi: 10.1145/3528227.3528567
     url: "https://doi.org/10.1145/3528227.3528567"
-    status: "In Press"
-    pub: ACM
+    status: "Published"
+    pub: IEEE
     abstract: "The widespread use of Internet-of-Things (IoT) across different application domains leads to an increased concern regarding their dependability, especially as the number of potentially mission-critical systems becomes considerable. Fault-tolerance has been used to reduce the impact of faults in systems, and their adoption in IoT is becoming a necessity. This work focuses on how to exercise fault-tolerance mechanisms by deliberately provoking its malfunction. We start by describing a proof-of-concept fault-injection add-on to a commonly used publish/subscribe broker. We then present several experiments mimicking real-world IoT scenarios, focusing on injecting faults in systems with (and without) active self-healing mechanisms and comparing their behavior to the baseline without faults. We observe evidence that fault-injection can be used to (a) exercise in-place fault-tolerance apparatus, and (b) detect when these mechanisms are not performing nominally, providing insights into enhancing in-place fault-tolerance techniques."
     bibtex: 10.1145_3528227.3528567.bib
 
