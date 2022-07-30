@@ -147,14 +147,14 @@ This seems to be a sync file of the company that designed the website since it s
 
 When looking at the source code of the `htm` file, we can find some *breadcrumbs* such as typos and variable names that, most probably, are unique to this payload. More concretely, let us take the following hints:
 - Regarding the AJAX payload, we know that, typically, the object keys are hardcoded for the server to be able to parse them; in this case, the variables `ai` and `pr`.
-    -  In PHP, given that the AJAX makes a POST request, probably the received using `$_POST` feature. So, most probably the `def.php` has, somewhere, a call to `$_POST['ai']` and `$_POST['pr'].
+    -  In PHP, given that the AJAX makes a POST request, probably the received using `$_POST` feature. So, most probably the `def.php` has, somewhere, a call to `$_POST['ai']` and `$_POST['pr']`.
 - Some error messages have typos, such as `Password field is empty.!`
 
 Doing some code searches on GitHub, we quickly found several possible correspondence results. Taking into account all the information that we collected so far, the most similar/supicious one was found in a GitHub account with a repository with several WordPress (*PHP*) malware samples: [stefanpejcic/wordpress-malware](https://github.com/stefanpejcic/wordpress-malware), more concretely (WordPress-malware/11.02.2021/)[https://github.com/stefanpejcic/wordpress-malware/tree/master/11.02.2021]. 
 
 Taking a look into the `next.php` [file](https://github.com/stefanpejcic/wordpress-malware/blob/master/11.02.2021/next.php):
 
-```PHP
+```php
 <?PHP
 include 'email.php';
 $email = trim($_POST['ai']);
