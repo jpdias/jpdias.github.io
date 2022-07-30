@@ -212,6 +212,8 @@ Other ranks can be useful, such as [G. Scholar Rankings](https://scholar.google.
 
 As a complement, search in websites such as [EasyChair](https://easychair.org/cfp/), [WikiCFP](http://www.wikicfp.com/), and create an account at [Conference Partner](https://www.myhuiban.com/).
 
+Another good search engine is [confsearch](https://confsearch.ethz.ch/) by [DISCO, TIK, ETH Zurich](https://disco.ethz.ch/).
+
 If the conference/journal lets you publish a pre-print, publish it as soon as the paper is accepted in the [arXiv](https://phdcomics.com/).
 
 ## Broadcast
@@ -235,6 +237,8 @@ You have finished your paper, and it is now published. But will somebody read it
 Participate and present your work when possible. Go to [meetups](https://www.meetup.com/home/) and other informal gatherings. Advertise, advertise, advertise...
 
 And that's it. I hope you take some new info from this! If not, go have some fun: [xkcd](https://xkcd.com/) and [PHD Comics](https://phdcomics.com/).
+
+<hr>
 
 [^1]: [Skirting Around Paywalls: How Scientists Quickly Get the Articles They Need](https://incubator.rockefeller.edu/skirting-around-paywalls-how-scientists-quickly-get-the-articles-they-need/). More info [#ICanHazPDF](https://en.wikipedia.org/wiki/ICanHazPDF), [Sci-Hub](https://en.wikipedia.org/wiki/Sci-Hub), and [The Library Genesis Project](https://en.wikipedia.org/wiki/Library_Genesis).
 [^2]: [Conducting a Systematic Review](https://libguides.umn.edu/systematicreviews) and [Preferred Reporting Items for Systematic Reviews and Meta-Analyses](http://prisma-statement.org/)
