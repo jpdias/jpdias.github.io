@@ -59,9 +59,9 @@ academic:
   - name: orcid/0000-0001-9066-6436
     icon: ai ai-orcid
     url: https://orcid.org/0000-0001-9066-6436
-  - name: gscholar/NYavJ60AAAAJ
+  - name: gscholar/sQ2vKI0AAAAJ
     icon: ai ai-google-scholar
-    url: https://scholar.google.pt/citations?user=NYavJ60AAAAJ
+    url: https://scholar.google.pt/citations?user=sQ2vKI0AAAAJ
   - name: dblp/d/Dias:Jo=atilde=o_Pedro
     icon: ai ai-dblp
     url: http://www.informatik.uni-trier.de/~ley/pers/hd/d/Dias:Jo=atilde=o_Pedro.html
