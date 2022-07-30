@@ -48,7 +48,7 @@ The first approach for deobfuscating JS for me is to use [JSNice](http://jsnice.
 
 However, some parts, such as the string array, still remained. After searching for some time I found out [synchrony by relative](https://github.com/relative/synchrony), a pretty neat javascript cleaner & deobfuscator, primarily target for [javascript-obfuscator](https://github.com/javascript-obfuscator/javascript-obfuscator) tool.
 
-The several outputs of the different tools can be seen in (1) [JSnice](https://gist.github.com/jpdias/6d200c746f335ff86b5c809795e5af47#file-js-nice-output-js) and (2)[synchrony](https://gist.github.com/jpdias/6d200c746f335ff86b5c809795e5af47#file-synchrony-output-js). And, after some final, manual, adjustment, the readable result can be found on [here](https://gist.github.com/jpdias/6d200c746f335ff86b5c809795e5af47#file-manual-adjustment-js).
+The several outputs of the different tools can be seen in [JSnice](https://gist.github.com/jpdias/6d200c746f335ff86b5c809795e5af47#file-js-nice-output-js) and [synchrony](https://gist.github.com/jpdias/6d200c746f335ff86b5c809795e5af47#file-synchrony-output-js). And, after some final, manual, adjustment, the readable result can be found on [here](https://gist.github.com/jpdias/6d200c746f335ff86b5c809795e5af47#file-manual-adjustment-js).
 
 Why the use of jQuery in 2022?...
 
