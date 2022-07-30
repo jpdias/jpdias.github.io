@@ -7,7 +7,7 @@ thumbnail: /images/phd/phd.png
 description: "Abstract of my PhD thesis in Informatics Engineering."
 ---
 
-Today, 1 April of 2022, I have successfully defended my [PhD thesis](http://hdl.handle.net/10216/85374) work on Software Engineering and Internet-of-Things entitled "Increasing the Dependability of Internet-of-Things Systems in the context of End-User Development Environments". Here follows the abstract.
+Today, 1 April of 2022, I have successfully defended my [PhD thesis](https://hdl.handle.net/10216/140853) work on Software Engineering and Internet-of-Things entitled "Increasing the Dependability of Internet-of-Things Systems in the context of End-User Development Environments". Here follows the abstract.
 
 <!--more-->
 

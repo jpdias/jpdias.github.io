@@ -83,6 +83,7 @@ html {
 body {
   margin: 0;
   color: var(--main-font-color);
+  border: 1px solid var(--main-headers-color);
   font-family: "Anonymous Pro", monospace;
   font-size: 1rem;
   line-height: 1.6rem;
