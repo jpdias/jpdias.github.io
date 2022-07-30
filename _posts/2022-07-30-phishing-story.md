@@ -23,7 +23,7 @@ As usual, the juice is in the attachments. So we have an `ATT26270.htm` which, w
 
 Opening the `htm` file, we encounter the following code in an enormous one-liner:
 
-```HTML
+```html
 <script language="javascript">
   document.write(
     unescape(
@@ -122,7 +122,7 @@ Let's look more carefully at the other end. Opening the remote address, I found 
 
 This is a known security problem, *Adobe Dreamweaver dwsync.xml Remote Information Disclosure*, as listed in [Nessus](https://www.tenable.com/plugins/nessus/33926).
 
-```XML
+```xml
 <dwsync>
     <file name="class.phpmailer.php" server="example_company_one.com.br/public_html" local="347870503" remote="-4611698281370955880" Dst="-1"/>
     <file name="classe.funcoes.php" server="example_company_one.com.br/public_html" lecal="3478705403" remote="-4611698281370955880" Dst="-1"/>
