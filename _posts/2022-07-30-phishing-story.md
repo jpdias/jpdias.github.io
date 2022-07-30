@@ -13,7 +13,9 @@ Phishing campaigns are standard, but they are typically poorly done and low-effo
 
 ## The Welcoming Message
 
-The entry point for this attempt was an email message sent to one of the top-tier individuals at the target organization. The email contained the subject "Payment_Processed_for_Inv_92994_July 26, 2022" and was sent from an [gmx.net](gmx.net) email account. The sender details did appear legit, with something similar to `COMPANY_NAME | Account`.
+The entry point for this attempt was an email message sent to one of the top-tier individuals at the target organization. 
+
+The email contained the subject "Payment_Processed_for_Inv_92994_July 26, 2022" and was sent from an [gmx.net](gmx.net) email account. The sender details did appear legit, with something similar to `COMPANY_NAME | Account`.
 
 As usual, the juice is in the attachments. So we have an `ATT26270.htm` which, when open, presents us with the following well-crafted fake Microsoft login page:
 
