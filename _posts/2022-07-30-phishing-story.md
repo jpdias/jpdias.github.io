@@ -210,6 +210,6 @@ So, the case is closed. As of today, the `def.php` appears to have been removed 
 
 Looking further on GitHub, we find a lot of accounts with low activity with derivations of these payloads ([try it](https://github.com/search?q=%24email+%3D+trim%28%24_POST%5B%27ai%27%5D%29%3B+%24password+%3D+trim%28%24_POST%5B%27pr%27%5D%29%3B&type=code)). Seems like attackers are adopting open-source and code versioning.
 
-<hr>
-
 [^1]: `base64string==` is a dummy placeholder just to keep the *destination* URL hidden.
+
+<hr>
