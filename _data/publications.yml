@@ -267,13 +267,14 @@ confs:
 
 journals:
   - title: "Visual Notations in Container Orchestrations: An Empirical Study with Docker Compose"
-    authors: " Bruno Piedade, João Pedro Dias, and Filipe F. Correia"
+    authors: "Bruno Piedade, João Pedro Dias, and Filipe F. Correia"
     conference: "Software and Systems Modeling"
     year: 2022
-    url: "https://arxiv.org/abs/2207.09167"
+    url: "https://doi.org/10.1007/s10270-022-01027-8"
     issn: "1619-1374"
-    status: "In Press"
+    status: "Published"
     pub: Springer
+    doi: 10.1007/s10270-022-01027-8
     abstract: "Container orchestration tools supporting infrastructure-as-code allow new forms of collaboration between developers and operatives. Still, their text-based nature permits naive mistakes and is more difficult to read as complexity increases. We can find few examples of low-code approaches for defining the orchestration of containers, and there seems to be a lack of empirical studies showing the benefits and limitations of such approaches. We hypothesize that a complete visual notation for Docker-based orchestrations could reduce the effort, the error rate, and the development time. Therefore, we developed a tool featuring such a visual notation for Docker Compose configurations, and we empirically evaluated it in a controlled experiment with novice developers. The results show a significant reduction in development time and error-proneness when defining Docker Compose files, supporting our hypothesis. The participants also thought the prototype easier to use and useful, and wanted to use it in the future."
     
   - title: "Designing and Constructing Internet-of-Things Systems: An Overview of the Ecosystem"
