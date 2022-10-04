@@ -183,6 +183,10 @@ from(bucket: "bucket")
 
 This gives us a view of temperature per device (tagged by location and mac address). InfluxDB also has built-in features to [trigger alerts](https://docs.influxdata.com/influxdb/cloud/monitor-alert/checks/create/) when some `threshold` is bypassed and to create `deadman` checks that trigger when some measurement has no new data for a period of time.
 
+## Next Steps
+
+Given the 30 days retention limit of InfluxDB free tier, one solution for backing up old data could be built using some FaaS service (e.g. [Cloudflare Workers](https://workers.cloudflare.com/)). As an example, the backup _serverless_ function could be like a _cron job_ that runs each 30 days and downloads all the data from InfluxDB as a CSV and uploads it to some cloud data storage provider.
+
 <hr>
 
 [^1]: [https://xkcd.com/927/](https://xkcd.com/927/)
