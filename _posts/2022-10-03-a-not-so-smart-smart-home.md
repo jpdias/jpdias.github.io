@@ -7,7 +7,7 @@ thumbnail: /images/smarthome/xiaomi.jpeg
 description: "A DIY guide on creating a 'dummy' smart home, or how to monitor temperature and humidity for cheap."
 ---
 
-Internet-of-Things, cyber-physical systems, smart spaces, smart anything... All these buzzwords and keywords are either vendor-generated for pushing ever-complex devices and things from WiFi-controlled kettles to health monitoring devices or created by academia (e.g., Internet-of-Everything, Web-of-Things, Connected Devices, Smart Devices) to sustain minor works by reinventing well-known technologies and approaches.
+Internet-of-Things, cyber-physical systems, smart spaces, smart anything... All these buzzwords and keywords are either vendor-generated for pushing ever-complex devices and things from WiFi-controlled kettles to health monitoring devices or created by academia (e.g., Internet-of-Everything, Web-of-Things, Connected Devices, Smart Devices) to sustain minor works by reinventing well-known technologies and approaches. In this post we will go back to the basics of IoT, without all the keyword-driven buzz, and build a simple temperature/humidity monitoring system with a straightforward architecture and with minimal programming/configuration needs.
 
 <!--more-->
 
