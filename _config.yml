@@ -13,11 +13,11 @@ paginate_path: "/notes/page:num/"
 plugins: [jekyll-paginate]
 
 plugins_dir:
-  - jekyll-paginate
   - jekyll-compress-images
   - rouge
   - kramdown
   - jekyll-paginate
+  - jekyll-last-modified-at
 
 footer: yes
 
