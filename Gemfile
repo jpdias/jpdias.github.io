@@ -6,5 +6,5 @@ group :jekyll_plugins do
     gem 'rouge', "~> 3.0"
     gem 'jekyll-watch'
     gem 'webrick'
-    gem "jekyll-last-modified-at"
+    gem 'kramdown'
 end
