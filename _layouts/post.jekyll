@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<div class="blog-content">
+    <h1>{{ page.title }}</h1>
+    <div class="tagline">
+        <span class="shield shield-blue">
+            <span>
+                <i class="ri-calendar-2-line"></i>
+            </span>
+            {{ page.date | date: '%B %d, %Y' }}
+        </span>
+        {% for tag in page.tags %}
+            <span class="shield shield-grey">
+                <span>
+                    <i class="ri-hashtag"></i>
+                </span>
+                {{tag}}
+            </span>
+        {% endfor %}
+        <span class="shield shield-yellow">
+            <span>
+                <i class="ri-timer-line"></i>
+            </span>
+            {% include reading-time.html %}
+        </span>
+    </div>
+    {{ content }}
+</div>
+
+<div class="post-footer">
+    <table class="footer-table">
+        <tr>
+            <td>published date</td>
+            <td>{{page.date | date_to_rfc822}}</td>
+        </tr>
+        <tr>
+            <td>last modified</td>
+            <td>{{ page.last_modified_at | date_to_rfc822 }}</td>
+        </tr>
+    </table>
+</div>
+{% include share.html %}
