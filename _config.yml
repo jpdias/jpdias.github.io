@@ -10,14 +10,7 @@ highlighter: rouge
 paginate: 8
 paginate_path: "/notes/page:num/"
 
-plugins: [jekyll-paginate]
-
-plugins_dir:
-  - jekyll-compress-images
-  - rouge
-  - kramdown
-  - jekyll-paginate
-  - jekyll-last-modified-at
+plugins: [rouge,kramdown,jekyll-paginate]
 
 footer: yes
 
