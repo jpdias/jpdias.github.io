@@ -37,7 +37,7 @@ layout: default
         </tr>
         <tr>
             <td>last modified</td>
-            <td>{{ page.last_modified_at | date_to_rfc822 }}</td>
+            <td>{% capture lastmod_date %}{% last_modified {{ post.path }} %}{% endcapture %}{{ lastmod_date | date_to_rfc822 }}</td>
         </tr>
     </table>
 </div>
