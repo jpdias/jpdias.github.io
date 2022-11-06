@@ -32,6 +32,9 @@ social:
   - name: twitter/jpd1as
     icon: ri-twitter-line
     url: https://twitter.com/jpd1as
+  - name: mastodon/jpdias
+    icon: ri-mastodon-line
+    url: https://mastodon.social/@jpdias
   - name: linkedin/joaopdias
     icon: ri-linkedin-box-line
     url: https://www.linkedin.com/in/joaopdias/
