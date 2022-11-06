@@ -30,15 +30,5 @@ layout: default
 </div>
 
 <div class="post-footer">
-    <table class="footer-table">
-        <tr>
-            <td>published date</td>
-            <td>{{page.date | date_to_rfc822}}</td>
-        </tr>
-        <tr>
-            <td>last modified</td>
-            <td>{{ page.last_modified_at | date_to_rfc822 }}</td>
-        </tr>
-    </table>
 </div>
 {% include share.html %}
