@@ -192,4 +192,4 @@ Given the 30 days retention limit of InfluxDB free tier, one solution for backin
 [^1]: [https://xkcd.com/927/](https://xkcd.com/927/)
 [^2]: The [ATC_MiThermometer firmware by pvvx](https://github.com/pvvx/ATC_MiThermometer) supports Xiaomi Mijia (LYWSD03MMC) as well as the Xiaomi Miaomiaoce (MHO-C401), the Qingping Temp & RH Monitor (CGG1-Mijia), and the CGDK2 Qingping Temp & RH Monitor Lite.
 [^3]: [InfluxDB MQTT Native Collector](https://www.influxdata.com/integration/mqtt-native-collector/) has the potential to fill in this gap by requiring only a broker but no middleware, but it is a paid-tier only feature. @InfluxDB, why not a free tier?
-[^4]: An alternative to InfluxDB was to use the [Google Sheets API](https://developers.google.com/sheets/api/) to store data in sheets by making REST requests and then add some charts that update automatically when new lines are added.
+[^4]: An alternative to InfluxDB would be to use the [Google Sheets API](https://developers.google.com/sheets/api/) to store data in sheets by making REST requests and, then, add some charts that update automatically when new lines are added.
