@@ -187,7 +187,7 @@ This gives us a view of temperature per device (tagged by location and mac addre
 
 Given the 30 days retention limit of InfluxDB free tier, one solution for backing up old data could be built using some FaaS service (e.g. [Cloudflare Workers](https://workers.cloudflare.com/)). As an example, the backup _serverless_ function could be like a _cron job_ that runs each 30 days and downloads all the data from InfluxDB as a CSV and uploads it to some cloud data storage provider.
 
-<hr>
+<br>
 
 [^1]: [https://xkcd.com/927/](https://xkcd.com/927/)
 [^2]: The [ATC_MiThermometer firmware by pvvx](https://github.com/pvvx/ATC_MiThermometer) supports Xiaomi Mijia (LYWSD03MMC) as well as the Xiaomi Miaomiaoce (MHO-C401), the Qingping Temp & RH Monitor (CGG1-Mijia), and the CGDK2 Qingping Temp & RH Monitor Lite.
