@@ -299,8 +299,6 @@ summary:hover {
 /*share*/
 .share-page {
   text-align: center;
-  padding: 8px 15px;
-  border-radius: 5px;
 }
 .share-page a {
   font-weight: 700;
@@ -672,4 +670,12 @@ summary::-webkit-details-marker {
   .content ol {
     padding: 0 0 0 30px;
   }
+}
+.post-footer {
+  margin-top: 30px;
+  font-size: 14px;
+  text-align: center;
+  border-left: 2px dotted var(--main-headers-color);
+  border-right: 2px dotted var(--main-headers-color);
+  padding-left: 10px;
 }

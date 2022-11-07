@@ -238,7 +238,7 @@ Participate and present your work when possible. Go to [meetups](https://www.mee
 
 And that's it. I hope you take some new info from this! If not, go have some fun: [xkcd](https://xkcd.com/) and [PHD Comics](https://phdcomics.com/).
 
-<hr>
+<br>
 
 [^1]: [Skirting Around Paywalls: How Scientists Quickly Get the Articles They Need](https://incubator.rockefeller.edu/skirting-around-paywalls-how-scientists-quickly-get-the-articles-they-need/). More info [#ICanHazPDF](https://en.wikipedia.org/wiki/ICanHazPDF), [Sci-Hub](https://en.wikipedia.org/wiki/Sci-Hub), and [The Library Genesis Project](https://en.wikipedia.org/wiki/Library_Genesis).
 [^2]: [Conducting a Systematic Review](https://libguides.umn.edu/systematicreviews) and [Preferred Reporting Items for Systematic Reviews and Meta-Analyses](http://prisma-statement.org/)
