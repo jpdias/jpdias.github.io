@@ -250,6 +250,16 @@ summary:hover {
   display: inline-block;
 }
 
+#author-name::before {
+  color: var(--main-headers-color);
+  margin-right: 10px;
+  position: absolute;
+  margin-left: -24px;
+  content: "\ebbe";
+  content: "\ebbe";
+  font-family: "remixicon" !important;
+}
+
 .navbar {
   padding: 25px 0 25px 0;
 }
