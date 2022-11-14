@@ -385,7 +385,7 @@ All the data is available by checking the respective `href`, and we know _a prio
 
 In a future post, we gonna talk about accessing the Indoor Sensing Hub data, storing it and, then, visualizing it. And, also, adding MQTT support to it.
 
----
+### References
 
 [^1]: <a href="https://www.oreilly.com/ideas/the-iot-needs-a-defrag">The IoT needs a defrag</a>
 [^2]: <a href="https://www.qualcomm.com/news/onq/2016/02/19/fragmentation-enemy-internet-things">Fragmentation is the enemy of the Internet of Things</a>

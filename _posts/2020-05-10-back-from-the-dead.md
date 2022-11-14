@@ -88,7 +88,7 @@ So, after dumping the current (and, believed, broken) firmware to a file, I flas
 
 SUCCESS! Everything went better than expected. I was able to correctly set-up everything, format and install Windows 10. It's now up and running after being declared dead by two different hardware stores.
 
----
+### References
 
 [^1]: [CH341A Mini Programmer Schematic and Drivers](https://www.onetransistor.eu/2017/08/ch341a-mini-programmer-schematic.html)
 [^2]: Just as a reminder, there is absolutely no official documentation (such as schematics) about the motherboard.

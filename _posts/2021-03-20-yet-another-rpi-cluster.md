@@ -275,7 +275,7 @@ ansible -i inventory.yml -m shell -a "shutdown -h now" all
 
 More complex tasks can now be automated with [ansible-playbooks](https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html).
 
----
+### References
 
 [^1]: [_As of December 2019, more than thirty million boards have been sold._](https://twitter.com/EbenUpton/status/1205646606504275968)
 [^2]: While writing this post, I found out that [this one](https://www.dinofizzotti.com/blog/2020-04-10-raspberry-pi-cluster-part-1-provisioning-with-ansible-and-temperature-monitoring-using-prometheus-and-grafana/) is pretty close (almost equal) to what I have built with a pretty similar motivation.

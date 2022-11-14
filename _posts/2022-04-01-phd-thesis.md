@@ -37,7 +37,7 @@ These contributions materialize into a core set of building blocks that, in asse
 
 <script async class="speakerdeck-embed" data-id="18b538f15d3d4213981406270b2662ab" data-ratio="1.77966101694915" src="//speakerdeck.com/assets/embed.js"></script>
 
-## Thesis Document
+### References
 
 - Open Repository: [https://hdl.handle.net/10216/140853](https://hdl.handle.net/10216/140853)
 - PDF File: [https://repositorio-aberto.up.pt/bitstream/10216/140853/2/553182.pdf](https://repositorio-aberto.up.pt/bitstream/10216/140853/2/553182.pdf)
