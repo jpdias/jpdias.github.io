@@ -685,7 +685,5 @@ summary::-webkit-details-marker {
   margin-top: 30px;
   font-size: 14px;
   text-align: center;
-  border-left: 2px dotted var(--main-headers-color);
-  border-right: 2px dotted var(--main-headers-color);
   padding-left: 10px;
 }
