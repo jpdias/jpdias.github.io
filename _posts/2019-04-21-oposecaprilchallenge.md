@@ -73,6 +73,3 @@ SecLists/Passwords/Common-Credentials/best1050.txt```](https://github.com/daniel
 The password was quickly found: *admin123*. 
 
 >> flag{ThisIsaOldTrickInTheBook} 
-
-
-##### *That's all folks!*

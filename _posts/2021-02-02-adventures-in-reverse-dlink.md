@@ -547,6 +547,6 @@ Another _fun_ binary to do reverse would be the `led_gpio_ctl` which seems to be
 
 This post would not be possible without the help and contributions of [@Pedro_SEC_R](https://twitter.com/Pedro_SEC_R), [@0xz3z4d45](https://twitter.com/0xz3z4d45) and [@mluis](https://twitter.com/mluis). Kudos!
 
----
+### References
 
 [^1]: [TR-069](https://en.wikipedia.org/wiki/TR-069) "is a technical specification of the Broadband Forum that defines an application layer protocol for remote management of customer-premises equipment (CPE) connected to an Internet Protocol (IP) network."
