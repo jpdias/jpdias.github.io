@@ -3,7 +3,7 @@ layout: post
 title: "Portuguese Cybersecurity Competition CTF Write-up"
 categories: [security]
 tags: [security,ctf,hackrocks,hacking]
-thumbnail: /images/phd/phd.png
+thumbnail: /images/hackrocks22/20221112112111.png
 description: "Write-up of the Portuguese Cybersecurity Competition CTF by InvestAmarante and hackrocks."
 ---
 
@@ -284,7 +284,9 @@ Trying to access the `admin` page with the crafted `x-access-token` reveals the 
 
 So another steg/crypto challenge with an `sounds.wav` file.  Listing to the audio it is obviously Morse code, so using [Morse Code Adaptive Audio Decoder](https://morsecode.world/international/decoder/audio-decoder-adaptive.html) we get the message `SAYFRIENDANDCOMEIN`. But this was not the flag.
 
-![](/images/hackrocks22/20221112120006.png)
+<center>
+<img style="max-width: 60%;" alt="morse decoder" src="/images/hackrocks22/20221112120006.png"/>
+</center>
 
 In this part I've wasted too much time looking at this as a reference to Lord of the Rings when _Gandalf_ tries to enter Moria by the Western Gate, given that the challenge was similar:
 
@@ -310,7 +312,9 @@ We get an image and nothing more. I've wasted too much time also on this challen
 
 Using `maigret` or, more knownly, `sherlock`, both tools to find usernames in social networks, would quickly lead us to a Twitter account with only one post:
 
-![](/images/hackrocks22/20221201204640.png)
+<center>
+<img style="max-width: 80%;" alt="leak image" src="/images/hackrocks22/20221201204640.png"/>
+</center>
 
 And we get our last flag: `flag{well_i_am_exposed_through_one_pic}`
 
