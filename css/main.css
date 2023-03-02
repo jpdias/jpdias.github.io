@@ -258,6 +258,30 @@ summary:hover {
   font-family: "remixicon" !important;
 }
 
+.sponsor {
+  width: 100px;
+  position: relative;
+  margin: 20px 0 0 15px;
+  margin-bottom: 0px;
+  float: right;
+  border: solid #111 5px;
+  margin-bottom: 10px;
+}
+
+.sponsor .btn {
+  color: #24292e;
+  background-color: #fafbfc;
+  color: #d2d2d2;
+  background-color: #fe5c35;
+}
+.sponsor  .btn:hover, .btn.hover, [open] > .btn {
+  background-color: #f3f4f6;
+}
+.sponsor   .octicon {
+  fill: currentColor;
+  fill: #d2d2d2;
+}
+
 .navbar {
   padding: 25px 0 25px 0;
 }
