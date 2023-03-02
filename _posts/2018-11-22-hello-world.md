@@ -26,6 +26,6 @@ console.log(greeter.greet())
 
 {% endhighlight %}
 
-So, if you're reading this, **welcome to Tales of I/O**. 
+So, if you're reading this, **welcome to `/notes`**. 
 
 For any feedback, ideas, doubts ~~and bugs and typos~~ feel free to [contact me](/contact).

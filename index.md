@@ -18,7 +18,7 @@ Currently working as a researcher on the thin line between hardware and software
 ## Work & Study
 
 - Software Engineering Specialist @ [BUILT CoLAB](https://builtcolab.pt/)
-- Invited Assistant Lecturer @ [FEUP](https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL)
+- Invited Assistant Professor @ [FEUP](https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL)
 
 ## Research Interests
 
