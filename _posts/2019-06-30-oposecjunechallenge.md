@@ -148,5 +148,3 @@ So that's it. Challenge complete!
 
 It was a fun riddle, and kudos @aap for setting it up! Also, kudos @hugosf for put up with my addiction to security while I should be writing my thesis.
 
-
-##### *Together we hit harder.*
