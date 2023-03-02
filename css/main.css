@@ -252,10 +252,8 @@ summary:hover {
 
 #author-name::before {
   color: var(--main-headers-color);
-  margin-right: 10px;
   position: absolute;
-  margin-left: -24px;
-  content: "\ebbe";
+  margin-left: -28px;
   content: "\ebbe";
   font-family: "remixicon" !important;
 }
