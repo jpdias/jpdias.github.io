@@ -80,6 +80,28 @@ html {
   padding: 0;
   overflow-x: hidden;
 }
+
+/* Works on Firefox */
+* {
+  scrollbar-color: var(--main-headers-color) var(--main-bg-color);
+  scrollbar-width: thin;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--main-bg-color);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--main-bg-color);
+  border-radius: 20px;
+  border: 3px solid var(--main-headers-color);
+}
+
 body {
   margin: 0;
   color: var(--main-font-color);
