@@ -1,11 +1,26 @@
 #status: Accepted, In Press, Published, Submitted, Under revision
 #type: Workshop, Conference
 confs:
+  - title: "Management Of Road Paving Processes – Application Case"
+    authors: "Pedro Pinto, Carolina Catorze, Luís Lima, Luís Guardão, João Moutinho, João Dias, Margarida Amândio, Pedro Martins, Lígia Silva, João Afonso, João Figeiredo"
+    conference: "11th International Conference on Project MANagement (ProjMAN)"
+    year: 2023
+    status: "In Press"
+    pub: Elsevier
+
+
+  - title: "Digitalization Of The Concreting Process In Construction"
+    authors: "Pedro Pinto, Carolina Catorze, Luís Guardão, Luís Lima, João Moutinho, João Dias, Margarida Amândio, Pedro Martins, Ligia Silva, Ricardo Rodrigues"
+    conference: "11th International Conference on Project MANagement (ProjMAN)"
+    year: 2023
+    status: "In Press"
+    pub: Elsevier
+
   - title: "SIMoT: A Low-fidelity Orchestrator Simulator for Task Allocation in IoT Devices"
     authors: "Tiago Fragoso, David Silva, João Pedro Dias, André Restivo, Hugo Sereno Ferreira"
     conference: "1st International Workshop on Verification & Validation of Dependable Cyber-Physical Systems part of the 53rd Annual IEEE/IFIP International Conference on Dependable Systems and Networks"
     year: 2023
-    status: "In Press"
+    status: "Published"
     pub: IEEE
     doi: 10.1109/DSN-W58399.2023.00070
     url: "https://doi.org/10.1109/DSN-W58399.2023.00070"
