@@ -1,0 +1,7 @@
+talks:
+  - title: "AsyncAPI For Platform Self Service: A GitOps Tale"
+    speakers: "João Pedro Dias and Rui Eusébio"
+    venue: "APIDays Paris 2023 (AsyncAPI on Tour Conference 2023)"
+    location: "Paris, France"
+    year: 2023
+    slides: "https://files.speakerdeck.com/presentations/c92d4b64d68b4146a8f1a8f0cc170a64/AsyncAPI_SelfService_GitOps_Presentation_2023.pdf"
