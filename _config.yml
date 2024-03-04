@@ -30,12 +30,9 @@ nav:
     link: "/contact"
 
 social:
-  - name: twitter/jpd1as
-    icon: ri-twitter-line
-    url: https://twitter.com/jpd1as
-  - name: mastodon/jpdias
-    icon: ri-mastodon-line
-    url: https://mastodon.social/@jpdias
+  - name: bsky.app/jpdias.me
+    icon: ri-bluesky-line
+    url: https://bsky.app/profile/jpdias.me
   - name: linkedin/joaopdias
     icon: ri-linkedin-box-line
     url: https://www.linkedin.com/in/joaopdias/
