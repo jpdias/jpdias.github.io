@@ -12,7 +12,7 @@ title: "./jpdias/talks"
 {% assign counter = counter | plus:1 %}
 
 <div class="pub-item">
-<div class="pub-title"><span>[{{ counter }}]{{ pub.title }}</b></a><br></div>
+<div class="pub-title"><span>[{{ counter }}]{{ pub.title }}</b></a><br></span></div>
 <div>
     <span class="shield shield-blue"><span><i class="ri-calendar-event-line"></i></span>{{ pub.year }}</span>
 </div>
