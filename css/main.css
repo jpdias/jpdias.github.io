@@ -243,7 +243,7 @@ summary:hover {
   color: var(--main-headers-color);
   margin-right: 10px;
   position: absolute;
-  margin-left: -35px;
+  margin-left: -30px;
 }
 .blog-content h2:before {
   content: "##";
@@ -531,7 +531,7 @@ pre a:only-of-type::before {
 }
 
 .pub-item > .pub-title > span {
-  margin-left: -35px;
+  margin-left: -30px;
   margin-right: 3px;
 }
 .pub-item > .pub-title {
