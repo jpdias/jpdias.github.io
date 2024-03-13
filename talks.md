@@ -5,20 +5,17 @@ title: "./jpdias/talks"
 
 ## Talks (dump)
 
-{% assign counter = 0 %}
+{% for talk in site.data.talks.talks %}
 
-{% for pub in site.data.talks.talks %}
-
-{% assign counter = counter | plus:1 %}
-
-<div class="pub-item">
-<div class="pub-title"><span>[{{ counter }}] {{ pub.title }}<br></span></div>
+<div class="talk-item">
+<div class="talk-title"><span><i class="ri-presentation-fill"></i> {{ talk.title }}<br></span></div>
 <div>
-    <span><i class="ri-calendar-event-line"></i> {{ pub.year }}</span>
+    <span><i class="ri-calendar-schedule-fill"></i> {{ talk.year }}</span>
+    <span><i class="ri-map-pin-fill"></i> {{ talk.location }}</span>
 </div>
-<div><i class="ri-group-line"></i> {{ pub.speakers }}</div>
-<div><i class="ri-book-3-line"></i> {{ pub.venue }}</div>
-<div><a href="{{ pub.slides }}"><i class="ri-file-pdf-2-line"></i> Slides (pdf)</a></div>
+<div><i class="ri-group-line"></i> {{ talk.speakers }}</div>
+<div><i class="ri-tent-fill"></i> {{ talk.venue }}</div>
+<div><a href="{{ talk.slides }}"><i class="ri-file-download-fill"></i> Slides (pdf)</a></div>
 </div>
 
 {% endfor %}
