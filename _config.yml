@@ -22,8 +22,8 @@ nav:
     link: "/notes/"
   - name: "publications"
     link: "/publications"
-  # - name: "open_source"
-  #   link: "/projects"
+  - name: "talks"
+    link: "/talks"
   - name: "cv.pdf"
     link: "/assets/jpdias.pdf"
   - name: "contact"
@@ -45,9 +45,6 @@ social:
   - name: gitlab/joaopdias
     icon: ri-gitlab-line
     url: https://gitlab.com/joaopdias
-  - name: speakerdeck/jpd1as
-    icon: ri-slideshow-line
-    url: https://speakerdeck.com/jpdias
 
 academic:
   - name: orcid/0000-0001-9066-6436
