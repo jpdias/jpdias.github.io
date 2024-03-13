@@ -5,9 +5,7 @@ title: "./jpdias/publications"
 
 ## Publications
 
-### Journal Articles
-
-#### Peer-Reviewed
+### Journal Articles [^1]
 
 {% assign counter = 0 %}
 
@@ -36,9 +34,7 @@ title: "./jpdias/publications"
 
 {% endfor %}
 
-### Conference Publications
-
-#### Peer-Reviewed
+### Conference Publications [^1]
 
 {% assign counter = 0 %}
 
@@ -66,9 +62,7 @@ title: "./jpdias/publications"
 </div>
 {% endfor %}
 
-### Pre-Prints
-
-#### Non-Peer-Reviewed (arxiv)
+### Pre-Prints [^2]
 
 {% assign counter = 0 %}
 
@@ -152,3 +146,6 @@ title: "./jpdias/publications"
 </div>
 
 {% endfor %}
+
+[^1]: Peer-reviewed.
+[^2]: No peer-reviewed / draft.
