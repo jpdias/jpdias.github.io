@@ -169,6 +169,14 @@ h4 {
   font-size: 1rem;
   text-align: left;
 }
+
+h1 .footnote,
+h2 .footnote,
+h3 .footnote,
+h4 .footnote {
+  font-size: xx-small;
+}
+
 strong {
   font-weight: bold;
 }
@@ -536,6 +544,28 @@ pre a:only-of-type::before {
 }
 .pub-item > .pub-title {
   margin-bottom: 5px;
+}
+
+.pub-item {
+  margin-bottom: 0.45em;
+  background-color: #80808005;
+  padding-left: 0.15em;
+  padding-right: 0.15em;
+}
+
+.talk-item > .talk-title > span {
+  margin-left: -30px;
+  margin-right: 3px;
+}
+.talk-item > .talk-title {
+  margin-bottom: 5px;
+}
+
+.talk-item {
+  margin-bottom: 0.45em;
+  background-color: #80808005;
+  padding-left: 0.15em;
+  padding-right: 0.15em;
 }
 
 .content blockquote {
