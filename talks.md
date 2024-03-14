@@ -12,8 +12,8 @@ title: "./jpdias/talks"
     <div>
         <span><i class="ri-calendar-schedule-fill"></i> {{ talk.year }}</span>
         <span><i class="ri-map-pin-fill"></i> {{ talk.location }}</span>
+        <span><i class="ri-group-line"></i> {{ talk.speakers }}</span>
     </div>
-    <div><i class="ri-group-line"></i> {{ talk.speakers }}</div>
     <div><i class="ri-tent-fill"></i> {{ talk.venue }}</div>
     <div><a href="{{ talk.slides }}" target="_blank" rel="noopener noreferrer"><i class="ri-file-download-fill"></i> Slides (pdf)</a></div>
 </article>
