@@ -563,10 +563,11 @@ pre a:only-of-type::before {
 }
 
 .talk-item {
-  margin-bottom: 0.45em;
+  margin-bottom: 0.5em;
   background-color: #80808005;
   padding-left: 0.15em;
-  padding-right: 0.15em;
+  padding-right: 0.4em;
+  border-right: 2px solid #fe5c3575;
 }
 
 .content blockquote {
