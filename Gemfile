@@ -8,4 +8,7 @@ group :jekyll_plugins do
     gem 'webrick'
     gem 'kramdown'
     gem 'json'
+    gem 'csv'
+    gem 'base64'
+    gem 'bigdecimal'
 end

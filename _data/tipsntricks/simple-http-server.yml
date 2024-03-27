@@ -1,0 +1,11 @@
+title: Simple HTTP server
+obs: some observation
+content: |
+  abcd
+  efg
+  `some code`
+  fun fun
+date: 27-03-2024
+tags: 
+  - http
+  - web
