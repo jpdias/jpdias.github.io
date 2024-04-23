@@ -1,4 +1,10 @@
 talks:
+  - title: "Securing the Cloud – Principles, Patterns, and Tales from the Battlefield"
+    speakers: "João Pedro Dias"
+    venue: "Kuehne+Nagel Porto IT Hub DevOps Community "
+    location: "Porto, Portugal"
+    year: 2024
+    slides: "assets/talks/DevOps-KN-Securing-the-Cloud-Public-Apr-2024.pdf"
   - title: "AsyncAPI For Platform Self Service: A GitOps Tale"
     speakers: "João Pedro Dias and Rui Eusébio"
     venue: "APIDays Paris 2023 (AsyncAPI on Tour Conference 2023)"
