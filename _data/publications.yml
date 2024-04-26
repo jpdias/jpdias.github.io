@@ -292,6 +292,18 @@ confs:
     bibtex: 10.5220_0006392404630469.bib
 
 journals:
+  - title: "WASMICO: Micro-containers in microcontrollers with webassembly"
+    authors: "Eduardo Ribeiro, André Restivo, Hugo Sereno Ferreira and João Pedro Dias"
+    conference: "Journal of Systems and Software"
+    year: 2024
+    url: "https://doi.org/10.1016/j.jss.2024.112081"
+    issn: "1873-1228"
+    status: "Published"
+    pub: Elsevier
+    doi: 10.1016/j.jss.2024.112081"
+    abstract: "The Internet-of-Things (IoT) has created a complex environment where hardware and software interact in complex ways. Despite being a prime candidate for applying well-established software engineering practices, IoT has not seen the same level of adoption as other areas, such as cloud development. This discrepancy is even more evident in the case of edge devices, where programming and managing applications can be challenging due to their heterogeneous nature and dependence on specific toolchains and languages. However, the emergence of WebAssembly as a viable solution for running high-level languages on some devices presents an opportunity to streamline development practices, such as DevOps. In this paper, we present WASMICO — a firmware and command-line utility that allows for the execution and management of application lifecycles in microcontrollers. Our solution has been benchmarked against other state-of-the-art tools, demonstrating its feasibility, novel features, and empirical evidence that it outperforms some of the most widely used solutions for running high-level code on these devices. Overall, our work aims to promote the use of well-established software engineering practices in the IoT domain, helping to bridge the gap between cloud and edge development."
+    bibtex: S0164121224001262.bib
+    
   - title: "Visual Notations in Container Orchestrations: An Empirical Study with Docker Compose"
     authors: "Bruno Piedade, João Pedro Dias, and Filipe F. Correia"
     conference: "Software and Systems Modeling"
@@ -302,6 +314,7 @@ journals:
     pub: Springer
     doi: 10.1007/s10270-022-01027-8
     abstract: "Container orchestration tools supporting infrastructure-as-code allow new forms of collaboration between developers and operatives. Still, their text-based nature permits naive mistakes and is more difficult to read as complexity increases. We can find few examples of low-code approaches for defining the orchestration of containers, and there seems to be a lack of empirical studies showing the benefits and limitations of such approaches. We hypothesize that a complete visual notation for Docker-based orchestrations could reduce the effort, the error rate, and the development time. Therefore, we developed a tool featuring such a visual notation for Docker Compose configurations, and we empirically evaluated it in a controlled experiment with novice developers. The results show a significant reduction in development time and error-proneness when defining Docker Compose files, supporting our hypothesis. The participants also thought the prototype easier to use and useful, and wanted to use it in the future."
+    bibtex: piedade2022visual.bib
     
   - title: "Designing and Constructing Internet-of-Things Systems: An Overview of the Ecosystem"
     authors: "João Pedro Dias, André Restivo, and Hugo Sereno Ferreira"
