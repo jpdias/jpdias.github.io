@@ -21,7 +21,7 @@ João Pedro Dias is part researcher on the thin line between hardware and softwa
 - Software Engineer @ [Kuehne+Nagel](https://kuehne-nagel.com)
 - Invited Assistant Professor @ [FEUP](https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL)
 
-## Research Interests
+## Research & Work Interests
 
 - Software Engineering
   - Design Patterns, Development Methodologies, Software Development, Edge/Fog/Cloud Computing, Live Programming, Visual Programming and Fault-Tolerance
@@ -30,32 +30,42 @@ João Pedro Dias is part researcher on the thin line between hardware and softwa
 - Security & Privacy
   - Surveillance Self-Defense, Capture the Flag (CTF) and Security Education
 
+## Recent Talks
+
+{% assign counter = 0 %}
+{% for talk in site.data.talks.talks limit:2 %}
+
+<article class="talk-item">
+    <div class="talk-title"><span><i class="ri-presentation-fill"></i> </span><b>{{ talk.title }}</b><br></div>
+    <div>
+        <span><i class="ri-calendar-schedule-fill"></i> {{ talk.year }}</span>
+        <span><i class="ri-map-pin-fill"></i> {{ talk.location }}</span>
+        <span><i class="ri-group-line"></i> {{ talk.speakers }}</span>
+    </div>
+    <div><i class="ri-tent-fill"></i> {{ talk.venue }}</div>
+    <div><a href="{{ talk.slides }}" target="_blank" rel="noopener noreferrer"><i class="ri-file-download-fill"></i> Slides (pdf)</a></div>
+</article>
+
+{% endfor %}
+
 ## Recent Publications
 
 {% assign counter = 0 %}
 
-{% for pub in site.data.publications.confs limit:3 %}
-
-{% assign counter = counter | plus:1 %}
-
-<div class="pub-item">
-<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank"><b>{{ pub.title }}</b></a><br></div>
-<div><i class="ri-group-line"></i> {{ pub.authors }}</div>
-<div><i class="ri-book-3-line"></i>  {{ pub.conference }}</div>
-</div>
-
-{% endfor %}
-
 {% for pub in site.data.publications.journals limit:2 %}
-
 {% assign counter = counter | plus:1 %}
-
 <div class="pub-item">
 <div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank"><b>{{ pub.title }}</b></a><br></div>
 <div><i class="ri-group-line"></i> {{ pub.authors }}</div>
 <div><i class="ri-book-3-line"></i>  {{ pub.conference }}</div>
 </div>
-
 {% endfor %}
 
-<a href="/publications"><i class="ri-add-circle-line"></i> **View More**</a>
+{% for pub in site.data.publications.confs limit:3 %}
+{% assign counter = counter | plus:1 %}
+<div class="pub-item">
+<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank"><b>{{ pub.title }}</b></a><br></div>
+<div><i class="ri-group-line"></i> {{ pub.authors }}</div>
+<div><i class="ri-book-3-line"></i>  {{ pub.conference }}</div>
+</div>
+{% endfor %}
