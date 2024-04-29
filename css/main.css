@@ -552,6 +552,7 @@ pre a:only-of-type::before {
   background-color: #80808005;
   padding-left: 0.15em;
   padding-right: 0.15em;
+  border-right: 2px solid #fe5c3575;
 }
 
 .talk-item > .talk-title > span {
