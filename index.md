@@ -33,7 +33,7 @@ João Pedro Dias is part researcher on the thin line between hardware and softwa
 ## Recent Talks
 
 {% assign counter = 0 %}
-{% for talk in site.data.talks.talks limit:2 %}
+{% for talk in site.data.talks.talks limit:3 %}
 
 <article class="talk-item">
     <div class="talk-title"><span><i class="ri-presentation-fill"></i> </span><b>{{ talk.title }}</b><br></div>
@@ -61,7 +61,7 @@ João Pedro Dias is part researcher on the thin line between hardware and softwa
 </div>
 {% endfor %}
 
-{% for pub in site.data.publications.confs limit:3 %}
+{% for pub in site.data.publications.confs limit:2 %}
 {% assign counter = counter | plus:1 %}
 <div class="pub-item">
 <div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank"><b>{{ pub.title }}</b></a><br></div>
