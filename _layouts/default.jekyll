@@ -66,27 +66,21 @@
             <ul id="navlist" class="alignable pull-right navbar-ul">
                 {% for page in site.nav %}
                     {% if page.name == "Resume" %}
-                        <li class="alignable pull-left nav-list"><a target="_blank" href="{{ page.link }}">/{{ page.name }}</a>
+                        <li class="alignable pull-left nav-list"><a target="_blank" href="{{ page.link }}">/{{ page.name }}</a></li>
                     {% else %}
-                        <li class="alignable pull-left nav-list"><a href="{{ page.link }}">/{{ page.name }}</a>
+                        <li class="alignable pull-left nav-list"><a href="{{ page.link }}">/{{ page.name }}</a></li>
                     {% endif %}
-                        </li>
                 {% endfor %}
             </ul>
         </div>
         <hr>
-        {% if page.is_contact == true %}
-            <div class="container content contact">
-        {% else %}
-            <div class="container content">
-        {% endif %}
-                {{ content }}
-                <p class="social-links">
-                    {% for page in site.social %}
-                    <span><a rel="me" href="{{ page.url }}" target="_blank"><i class="{{ page.icon }}"></i></a></span> &nbsp;
-                    {% endfor %}
-                </p>
-                
-            </div>
+        <div class={% if page.is_contact == true %}"container content contact"{% else %}"container content"{% endif %}>
+            {{ content }}
+            <p class="social-links">
+                {% for page in site.social %}
+                <span><a rel="me" href="{{ page.url }}" target="_blank"><i class="{{ page.icon }}"></i></a></span> &nbsp;
+                {% endfor %}
+            </p>
+        </div>
     </div>
 </body>

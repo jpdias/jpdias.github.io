@@ -7,7 +7,8 @@ description: "Engineer. Developer. Photography enthusiast. Researching on the th
 ## About Me
 
 <img class="profile-picture" src="images/profile.png" alt="Profile picture">
-<iframe src="https://github.com/sponsors/jpdias/button" title="Sponsor jpdias" style="border: 0; border-radius: 6px;/*! background-color: beige; */" class="sponsor" width="114" height="32"></iframe>
+
+<a href="https://github.com/sponsors/jpdias" target="blank" class="sponsor sponsor-button"><i class="ri-heart-2-line"></i> Sponsor<a/>
 
 {% highlight bash %}
 $ whoami
