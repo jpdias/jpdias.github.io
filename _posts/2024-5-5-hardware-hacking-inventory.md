@@ -4,7 +4,7 @@ title: "Hardware Hacking and Research Toolbox Inventory"
 categories: [security]
 tags: [security,inventory,hacking,toolbox]
 thumbnail: /images/hwinventory/ch341a.jpg
-description: "My inventory of my hardware hacking and research toolbox"
+description: "My inventory of my hardware hacking and research toolbox."
 ---
 
 Inspired by the blogpost [*My Red Team assessment hardware*](https://www.davidsopas.com/my-red-team-assessment-hardware-list/) by [David Sopas](https://www.davidsopas.com/) this post describes hardware tools that I have in my inventory, their purpose as well as the features/firmwares/tricks that motivated me to buy them. This is not intended to be an exhaustively detailed list, but I will try to give some rational and use-cases for each of the tools, as well as categorize them.
