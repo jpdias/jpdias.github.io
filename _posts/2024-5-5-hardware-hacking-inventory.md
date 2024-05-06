@@ -195,7 +195,7 @@ Do it yourself projects (partially or completely) will be marked as such with th
 
 1. Laptop
 
-    I left this to the end on purpose. Most probably you are thinking on a high-performance laptop. While that would be nice, for most of the cases one cheap, second hand, Thinkpad (or any other reliable brand) will suffice. I now have a Thinkpad Y370 (~250e) and a Thinkpad X240 (~200e), and the only thing that will bother your the most is RAM if you have less than 8Gb of it. Other than that just use *the cloud*. [Google Python Notebooks are nice](https://github.com/semihucann/hash_cracking_with_gpu), but there several cheap VPS machines that you can rent and use freely if needed (*riding on free credits*). 
+    I left this to the end on purpose. Most probably you are thinking on a high-performance laptop. While that would be nice, for most of the cases one cheap, second hand, Thinkpad (or any other reliable brand) will suffice. I now have a Thinkpad Y370 (~250e) and a Thinkpad X240 (~200e), and the only thing that will bother you the most is RAM if you have less than 8Gb of it. Other than that just use *the cloud*. [Google Python Notebooks are nice](https://github.com/semihucann/hash_cracking_with_gpu), but there several cheap VPS machines that you can rent and use freely if needed (*riding on free credits*). 
 
 
 1. Backpack and bags
