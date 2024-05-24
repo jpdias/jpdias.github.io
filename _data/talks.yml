@@ -1,4 +1,9 @@
 talks:
+  - title: "Unlocking obsolescence: exploiting vulnerabilities to extend system’s longevity (ICS Case Study)"
+    speakers: "João Pedro Dias"
+    venue: "[0x2E2E2F2E2E2F76343034] - The Meet, ØxＯＰＯＳɆＣ Mɇɇtuᵽ"
+    location: "Porto, Portugal"
+    year: 2024
   - title: "Securing the Cloud – Principles, Patterns, and Tales from the Battlefield"
     speakers: "João Pedro Dias"
     venue: "Kuehne+Nagel Porto IT Hub DevOps Community "
@@ -80,7 +85,7 @@ talks:
   - title: "A hands-on approach on botnets for a learning purpose"
     speakers: "José Pinto and João Pedro Dias"
     venue: "[0x33] - The Meet, ØxＯＰＯＳɆＣ Mɇɇtuᵽ"
-    location: "Lisbon, Portugal"
+    location: "Porto, Portugal"
     year: 2017
     slides: "assets/talks/piheadquarters_pixelscamp_2017.pdf"
   - title: "Web Development Workshop"
