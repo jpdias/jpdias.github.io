@@ -44,7 +44,6 @@ João Pedro Dias is part researcher on the thin line between hardware and softwa
         <span><i class="ri-group-line"></i> {{ talk.speakers }}</span>
     </div>
     <div><i class="ri-tent-fill"></i> {{ talk.venue }}</div>
-    <div><a href="{{ talk.slides }}" target="_blank" rel="noopener noreferrer"><i class="ri-file-download-fill"></i> Slides (pdf)</a></div>
 </article>
 
 {% endfor %}
