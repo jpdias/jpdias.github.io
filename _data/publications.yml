@@ -5,7 +5,9 @@ confs:
     authors: "Pedro Pinto, Carolina Catorze, Luís Lima, Luís Guardão, João Moutinho, João Dias, Margarida Amândio, Pedro Martins, Lígia Silva, João Afonso, João Figeiredo"
     conference: "11th International Conference on Project MANagement (ProjMAN)"
     year: 2023
-    status: "In Press"
+    doi: 10.1016/j.procs.2024.06.238
+    url: "https://doi.org/10.1016/j.procs.2024.06.238"
+    status: "Published"
     pub: Elsevier
 
 
@@ -13,7 +15,9 @@ confs:
     authors: "Pedro Pinto, Carolina Catorze, Luís Guardão, Luís Lima, João Moutinho, João Dias, Margarida Amândio, Pedro Martins, Ligia Silva, Ricardo Rodrigues"
     conference: "11th International Conference on Project MANagement (ProjMAN)"
     year: 2023
-    status: "In Press"
+    status: "Published"
+    doi: 10.1016/j.procs.2024.06.240
+    url: "https://doi.org/10.1016/j.procs.2024.06.240"
     pub: Elsevier
 
   - title: "SIMoT: A Low-fidelity Orchestrator Simulator for Task Allocation in IoT Devices"
