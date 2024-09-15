@@ -17,10 +17,17 @@ jpdias: phd. engineer. developer. photography enthusiast.
 
 João Pedro Dias is part researcher on the thin line between hardware and software, and part Software Engineer. He has a BSc+MSc in [Informatics and Computing Engineering](https://sigarra.up.pt/feup/en/cur_geral.cur_view?pv_ano_lectivo=2018&pv_origem=CUR&pv_tipo_cur_sigla=MI&pv_curso_id=742) by the [Faculty of Engineering, University of Porto (FEUP)](https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL). He earned his Ph.D. in Informatics Engineering from FEUP in 2022 (with FCT research grant). He maintains a Software Engineer position as a day-to-day job at [Kuehne+Nagel](https://kuehne-nagel.com/). Since 2017, he has been an Invited Assistant Professor at FEUP, where he teaches courses in Software Engineering, Operating Systems, among others. He has (co-)supervised  +5 MSc dissertations and contributed to two projects at LIACC and INESC TEC. His research focuses on Internet-of-Things systems, software engineering, security and privacy, and his work has been published in several top-tier conferences and journals ([h-index 19, i10-index 24](https://scholar.google.com/citations?user=sQ2vKI0AAAAJ)). In his free time, he enjoys participating in Capture The Flag competitions, experimenting with Software-defined Radio, building web applications, reverse-engineering hardware, and photographing while wandering in nature.
 
-## Work
+## Current Positions
 
-- Senior Software Engineer @ [Kuehne+Nagel](https://kuehne-nagel.com)
-- Invited Assistant Professor @ [FEUP](https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL)
+- [2023--] Senior Software Engineer @ [Kuehne+Nagel](https://kuehne-nagel.com)
+
+
+## Previous Positions
+
+- [2018-24] Invited Assistant Professor @ [FEUP](https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL)
+- [2021-23] Software Engineering Specialist @ [BUILT CoLAB](https://builtcolab.pt/)
+- [2017-21] Researcher @ [INESC Technology and Science - Associate Laboratory](https://www.inesctec.pt/en)
+- [2016-17] Researcher @ [LIACC - Artificial Intelligence and Computer Science Laboratory](https://liacc.fe.up.pt/)
 
 ## Research & Work Interests
 
