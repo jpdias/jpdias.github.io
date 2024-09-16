@@ -152,14 +152,16 @@ switch:
     name: "Device Restart"
 ```
 
-Of course, I also made the Home Assistant to a Tailscale node, as it makes it easier to share access to other users to it.
+I will not delve into the IKEA Vindriktning hardware  _hack_ itself as there are plenty of [tutorials out there on how to do it](https://www.instructables.com/IKEA-VINDRIKTNING-BME280/). Just want to point that this is, by far, one of the easiest things to hack out there, with easily accessible power and data lines, and plenty of space for additional hardware inside of the "box" (however, the heat of the components shifts a bit the ambient temperature read by the BME sensor).
+
+Of course, I also added the Home Assistant Raspberry Pi to my tailnet as a node, as it makes it easier to share access to it.
 
 
 ## The Finale (Current Setup)
 
 ![Network map](/images/homelab/map.png)
 
-At last, the _grande finale_. As stated in the beginning, simple things with simple purposes end up being complex if you give to them enough time. I brought the NAS more than 4 years ago now, and it made part of a lot of different setups, being the only piece that still stands the test of time in this big ball of mud. If you are here, maybe you are considering building your own thing, either an homelab or a smart home setup. The only piece of advice that I have for you is to try to keep the mess to a minimum, other that that, just don't trust it in life or death situations (that's why my smoke sensors work purely offline).
+At last, the _grande finale_[^1]. As stated in the beginning, simple things with simple purposes end up being complex if you give to them enough time. I brought the NAS more than 4 years ago now, and it made part of a lot of different setups, being the only piece that still stands the test of time in this big ball of mud. If you are here, maybe you are considering building your own thing, either an homelab or a smart home setup. The only piece of advice that I have for you is to try to keep the mess to a minimum, other that that, just don't trust it in life or death situations (that's why my smoke sensors work purely offline).
 
 
 ## Footnotes
