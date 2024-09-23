@@ -3,7 +3,7 @@ layout: post
 title: "From a NAS to a full-fledge homelab with spare parts"
 categories: [homelab]
 tags: [homelab,security,automation,smarthome,iot]
-thumbnail: /images/hwinventory/ch341a.jpg
+thumbnail: /images/homelab/monitoring.jpeg
 description: "From a NAS to a complete mess, a gentle intro to my homelab"
 ---
 
