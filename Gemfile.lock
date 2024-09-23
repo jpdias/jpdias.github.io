@@ -62,7 +62,7 @@ GEM
       ffi (~> 1.0)
     rexml (3.3.6)
       strscan
-    rouge (4.3.0)
+    rouge (4.4.0)
     safe_yaml (1.0.5)
     sass-embedded (1.69.5-aarch64-linux-android)
       google-protobuf (~> 3.23)
