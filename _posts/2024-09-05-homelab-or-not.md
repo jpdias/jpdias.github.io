@@ -13,7 +13,7 @@ It all started with a QNAP NAS to backup my raw photography's and have some way 
 
 ## Ground Zero: The NAS Quest
 
-So, complex things start with the simplest of the objectives, in the case, storing and backup my always growing storage of both RAW and processed photographs from my [other hobby](500px.com/jpdias). After some evaluation of the available alternatives I ended up with a [QNAP TS-328](https://www.qnap.com/en/product/ts-328/specs/hardware) 3-bay NAS with 2Gb of RAM with RAID 5 support. Loaded it up with 3 4Tb 3.5 HDDs and we are up and running with 8Tb usable storage.
+So, complex things start with the simplest of the objectives, in the case, storing and backup my always growing storage of both RAW and processed photographs from my [other hobby](https://500px.com/jpdias). After some evaluation of the available alternatives I ended up with a [QNAP TS-328](https://www.qnap.com/en/product/ts-328/specs/hardware) 3-bay NAS with 2Gb of RAM with RAID 5 support. Loaded it up with 3 4Tb 3.5 HDDs and we are up and running with 8Tb usable storage.
 
 <center>
  <img src="/images/homelab/raid5.png" alt="RAID5" style="width:40%">
