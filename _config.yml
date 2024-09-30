@@ -28,6 +28,8 @@ nav:
     link: "/assets/jpdias.pdf"
   - name: "contact"
     link: "/contact"
+  - name: "rss"
+    link: "/feed"
 
 social:
   - name: bsky.app/jpdias.me
