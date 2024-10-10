@@ -7,6 +7,7 @@ title: "./jpdias/contact"
 ## Contact
 
 <i class="far fa-envelope"></i> Email: [jpdias[at]outlook.com](mailto:jpdias@outlook.com)
+
 <i class="far fa-envelope"></i> Email: [jpdias[at]pm.me](mailto:jpdias@pm.me)
 
 ### Social
