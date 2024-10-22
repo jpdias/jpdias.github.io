@@ -24,7 +24,7 @@ João Pedro Dias is part researcher on the thin line between hardware and softwa
 
 ## Previous Positions
 
-- [2018-24] Invited Assistant Professor @ [FEUP](https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL)
+- [2018-24] Invited Assistant Professor @ [Faculty of Engineering, University of Porto](https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL)
 - [2021-23] Software Engineering Specialist @ [BUILT CoLAB](https://builtcolab.pt/)
 - [2017-21] Researcher @ [INESC Technology and Science - Associate Laboratory](https://www.inesctec.pt/en)
 - [2016-17] Researcher @ [LIACC - Artificial Intelligence and Computer Science Laboratory](https://liacc.fe.up.pt/)
