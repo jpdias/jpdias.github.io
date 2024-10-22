@@ -1,4 +1,10 @@
 talks:
+  - title: "Cybersecurity and Internet-of-Things (IoT)"
+    speakers: "João Pedro Dias"
+    venue: "UNIS Digital Seminars -- University Centre in Svalbard"
+    location: "Longyearbyen, Svalbard, Norway"
+    year: 2024
+    slides: "assets/talks/UNIS_Cybersecurity_and_Internet-of-Things_2024.pdf"
   - title: "Unlocking obsolescence: exploiting vulnerabilities to extend (ICS) system’s longevity"
     speakers: "João Pedro Dias"
     venue: "[0x2E2E2F2E2E2F76343034] - The Meet, ØxＯＰＯＳɆＣ Mɇɇtuᵽ"
