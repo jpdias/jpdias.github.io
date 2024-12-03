@@ -1,4 +1,10 @@
 talks:
+  - title: "Patterns in Software -- From Alexanders Architecture Patterns to Pattern Languages and Beyond"
+    speakers: "João Pedro Dias"
+    venue: "Kuehne+Nagel Porto IT Hub Architecture Community "
+    location: "Porto, Portugal"
+    year: 2024
+    slides: "assets/talks/ArchitectureCommunity_Dec8_2024.pdf"
   - title: "Cybersecurity and Internet-of-Things (IoT)"
     speakers: "João Pedro Dias"
     venue: "UNIS Digital Seminars -- University Centre in Svalbard"
