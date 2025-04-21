@@ -502,6 +502,10 @@ li > .highlighter-rouge {
   padding-top: 2px;
 }
 
+.highlight pre {
+  overflow-y: hidden;
+}
+
 pre {
   counter-reset: line-numbering;
   border-radius: 0;

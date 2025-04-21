@@ -20,7 +20,7 @@ João Pedro Dias is part researcher on the thin line between hardware and softwa
 
 ## Current Positions
 
-- [2023--] Senior Software Engineer @ [Kuehne+Nagel](https://kuehne-nagel.com)
+- [2023--] Team Lead and Software Architect @ [Kuehne+Nagel](https://kuehne-nagel.com)
 
 
 ## Previous Positions
