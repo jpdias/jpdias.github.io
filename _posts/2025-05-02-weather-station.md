@@ -127,10 +127,11 @@ I don't even know what to say. But summarizing the problems:
 - Using a GET and query parameters to send data
 - Only supports US units of measurement and not supporting metric
 - Only supports specific units for certain measurements that are not the most common ones (e.g. barometric pressure is commonly measured in milibar/hPa, but somehow the API accepts inches Hg[^3])
+- There is no validation on top of the values sent as part of the payload beyond their type, so completely random values will be considered valid (Windy validates the values to be within plausible sensor readings)
 
 But this seems somehow a standard across several weather services, which [The Weather Company]()[^4] defines as the [PWS Upload Protocol](https://support.weather.com/s/article/PWS-Upload-Protocol?language=en_US).
 
-Anyhow, using this hell-raised API I was finally able to post data to the PWS weather website.
+Anyhow, using this hell-raised API I was finally able to post data to the PWS weather website. There is also a "trust" rating to the station (that goes from "initializing" to "active"), but it seems to only consider the readings posting rate and nothing more.
 
 ## How It Looks Like
 
