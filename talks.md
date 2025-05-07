@@ -7,7 +7,7 @@ title: "./jpdias/talks"
 
 {% for talk in site.data.talks.talks %}
 
-<article class="talk-item">
+<article class="talk-item" id="{{ talk.title | downcase | replace: " ", "-" }}">
     <div class="talk-title"><span><i class="ri-presentation-fill"></i> </span><b>{{ talk.title }}</b><br></div>
     <div>
         <span><i class="ri-calendar-schedule-fill"></i> {{ talk.year }}</span>
