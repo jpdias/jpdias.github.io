@@ -1,7 +1,13 @@
 talks:
+  - title: "Infrastructure as Code, Git as Truth -- A Gentle Intro to GitOps"
+    speakers: "João Pedro Dias"
+    venue: "Kuehne+Nagel Porto IT Hub Cloud Adoption Sessions"
+    location: "Porto, Portugal"
+    year: 2025
+    slides: "assets/talks/GitOps_HelloWorld_2025.pdf"
   - title: "Patterns in Software -- From Alexanders Architecture Patterns to Pattern Languages and Beyond"
     speakers: "João Pedro Dias"
-    venue: "Kuehne+Nagel Porto IT Hub Architecture Community "
+    venue: "Kuehne+Nagel Porto IT Hub Architecture Community"
     location: "Porto, Portugal"
     year: 2024
     slides: "assets/talks/ArchitectureCommunity_Dec8_2024.pdf"
