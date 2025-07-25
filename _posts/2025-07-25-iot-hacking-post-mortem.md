@@ -12,6 +12,12 @@ On June 14, 2025, I organized a hardware hacking focused village as part of the 
 
 <!--more-->
 
+<div class="row" style="text-align:center">
+  <div class="column">
+    <img style="width: 50%;" alt="Weather station monitor" src="/images/hackday25/oxehack-day.jpeg">
+  </div>
+</div>
+
 ## Get the Basics Right: Learn Electronics and Hardware Programming
 
 Before diving into the world of hardware hacking, learn the basics of hardware programming and electronics. Using the craziest fault injection technique will seem like magic if you don't understand why bit flips happen and what that implies, e.g., in jumping instructions. So get your hands on a cheap Arduino Nano, or ESP32, some protoboard and some sensors, and get your hands dirty building something. You have plenty of places to find beginner projects, e.g., [Arduino ProjectHub](https://projecthub.arduino.cc/) and [Hackaday.io](https://hackaday.io/discover).
