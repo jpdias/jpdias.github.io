@@ -14,7 +14,7 @@ On June 14, 2025, I organized a hardware hacking focused village as part of the 
 
 <div class="row" style="text-align:center">
   <div class="column">
-    <img style="width: 50%;" alt="Weather station monitor" src="/images/hackday25/oxehack-day.jpeg">
+    <img style="width: 50%;" alt="Hack Day event" src="/images/hackday25/oxehack-day.jpeg">
   </div>
 </div>
 
