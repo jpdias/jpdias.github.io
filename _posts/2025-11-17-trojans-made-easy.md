@@ -54,6 +54,9 @@ So, we finally get our juicy link `https://www.upholddesktop.app/`. This is a si
   </div>
 </div>
 
+Checking the [WHOIS](https://lookup.icann.org/en/lookup) data for the domain does not provide any useful data other than the registar [NiceNIC.net](http://nicenic.net) that, at the time of writing, their website was not working at all.
+
+
 ## The Analysis
 
 The first thing that I like to do is a quick scan using [urlscan.io](https://urlscan.io/). As expected, the report is matching the expected "Malicious Activity!" (feel free to check the [public report here](https://urlscan.io/result/019a8892-f207-7119-9d6d-c37916942e11/)).
