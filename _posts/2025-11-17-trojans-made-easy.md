@@ -54,7 +54,7 @@ So, we finally get our juicy link `https://www.upholddesktop.app/`. This is a si
   </div>
 </div>
 
-Checking the [WHOIS](https://lookup.icann.org/en/lookup) data for the domain does not provide any useful data other than the registar [NiceNIC.net](http://nicenic.net) that, at the time of writing, their website was not working at all.
+Checking the [WHOIS](https://lookup.icann.org/en/lookup) data for the domain does not provide any useful data other than the registar [NiceNIC.net](http://nicenic.net). Their website, at the time of writing, was not working at all.
 
 
 ## The Analysis
