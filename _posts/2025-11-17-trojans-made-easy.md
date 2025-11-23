@@ -134,9 +134,7 @@ And by looking at the configuration, we can also find more details about the ins
 
 So, at the end of the day, we can find that the trojan, _if we can call it such_, was nothing more than a bundled version of a, let's say, shady RMM tool, which, if installed, would provide the attacker full access to the victim's computer. And I can almost bet that the attacker's are leveraging the `Free trial` provided by Syncro.
 
- The last piece of the puzzle was to understand how it bypassed so many antivirus programs, but this is easily explained by the verified signature of the RMM software by `Servably Inc.`, yet another name for the same company. The certificate details can be found in [abuse.ch](https://bazaar.abuse.ch/sample/acc6721dbddad55c6a76b460a8a53bc5d4e97d00990e4cac686b2ab2877e1a91/) where we can see that the same signature was used in at least another 15 samples.
-
-
+The last piece of the puzzle was to understand how it bypassed so many antivirus programs, but this is easily explained by the verified signature of the RMM software by `Servably Inc.`, yet another name for the same company. The certificate details can be found in [abuse.ch](https://bazaar.abuse.ch/sample/acc6721dbddad55c6a76b460a8a53bc5d4e97d00990e4cac686b2ab2877e1a91/) where we can see that the same signature was used in at least another 15 samples.
 
 ## Timeline
 
