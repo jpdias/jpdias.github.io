@@ -49,4 +49,12 @@ layout: default
     and is
     <a href="https://notbyai.fyi/hi/not-by-ai/" target="_blank">not by AI <img src="https://notbyai.fyi/img/written-by-human-not-by-ai-white.svg" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;width:auto"></a>
   </p>
+  <script type="module">
+    import { init } from '{{ site.baseurl }}/js/lite-light.min.js';
+    init();
+    document.querySelectorAll("img").forEach(img => {
+      img.dataset.lightbox = img.src
+      img.style.cursor = "zoom-in"
+    });
+  </script>
 </div>
