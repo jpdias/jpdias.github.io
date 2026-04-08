@@ -8,7 +8,7 @@ description: "Engineer. Developer. Photography enthusiast. Researching on the th
 
 <img class="profile-picture" src="images/profile.png" alt="Profile picture">
 
-<a href="https://github.com/sponsors/jpdias" target="blank" class="sponsor sponsor-button"><i class="ri-heart-2-line"></i> Sponsor<a/>
+<!--<a href="https://github.com/sponsors/jpdias" target="blank" class="sponsor sponsor-button"><i class="ri-heart-2-line"></i> Sponsor<a/>-->
 
 {% highlight bash %}
 $ whoami
