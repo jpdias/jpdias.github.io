@@ -4,6 +4,7 @@ talks:
     venue: "'Project and Seminars' course of the Information Security, Cybersecurity and Privacy Postgraduate Course at Instituto Superior de Engenharia do Porto (ISEP)"
     location: "Porto, Portugal (Online)"
     year: 2026
+    slides: "assets/talks/Compliance_Killed_Your_Curiosity_2026.pdf"
   - title: "Infrastructure as Code, Git as Truth -- A Gentle Intro to GitOps"
     speakers: "João Pedro Dias"
     venue: "Kuehne+Nagel Porto IT Hub Cloud Adoption Sessions"
