@@ -1,4 +1,9 @@
 talks:
+  - title: "Compliance Killed Your Curiosity: Why Fear-Based Security Training Makes You Worse at Your Job"
+    speakers: "João Pedro Dias"
+    venue: "'Project and Seminars' course of the Information Security, Cybersecurity and Privacy Postgraduate Course at Instituto Superior de Engenharia do Porto (ISEP)"
+    location: "Porto, Portugal (Online)"
+    year: 2026
   - title: "Infrastructure as Code, Git as Truth -- A Gentle Intro to GitOps"
     speakers: "João Pedro Dias"
     venue: "Kuehne+Nagel Porto IT Hub Cloud Adoption Sessions"
