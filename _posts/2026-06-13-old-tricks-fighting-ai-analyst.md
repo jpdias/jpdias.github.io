@@ -1,4 +1,4 @@
-⁷---
+---
 layout: post
 title: "Beyond Context Windows: When Malware Stops Fitting into Naive Automated Analysis"
 categories: [infosec]
