@@ -752,6 +752,12 @@ summary::-webkit-details-marker {
   .navbar-ul {
     margin-top: 5px;
   }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 @media (max-width: 500px) {
