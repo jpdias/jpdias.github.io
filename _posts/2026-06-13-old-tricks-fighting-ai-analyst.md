@@ -22,7 +22,7 @@ Another fun ride with a malware sample from out there in the wild. As is often t
   </div>
 </div>
 
-I received two emails, six days apart, both impersonating Endesa — a major Spanish and Portuguese electric utility — with fake overdue bill reminders written in Portuguese. This lure is not new in Spain[^1], but this particular campaign targeted Portuguese speakers and was sent from compromised or purpose-registered domains using PHPMailer 6.5.3. SPF, DKIM, and DMARC all passed Outlook's authentication checks, and both messages landed directly in the inbox.
+I received two emails, six days apart, both impersonating Endesa — a major Spanish and Portuguese electric utility — with fake overdue bill reminders written in Portuguese. This lure is not new and was sent from compromised or purpose-registered domains using PHPMailer 6.5.3. SPF, DKIM, and DMARC all passed Outlook's authentication checks, and both messages landed directly in the inbox.
 
 - 2026-04-15: `noreply@notificacionfdh7.ahcomms.net`, Lembrete de pagamento pendente – 92268, Bing redirect to `blueberginternational.com` 
 - 2026-04-21: `oficial@server-833l.appmissao.com.br`, Lembrete de pagamento pendente 82841, Wix `filesusr.com` hosted page
