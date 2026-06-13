@@ -188,7 +188,7 @@ Sections:
 
 **94% of the entire executable belonged to the `.rsrc` section.**
 
-Digging into the resources revealed that a single asset—Bitmap ID 1046—clocked in at an incredible 107,499,688 bytes. It was a massive 16768×2137 all-white pixel image utilizing a 24-bpp RGB configuration.
+Digging into the resources revealed that a single asset (`Bitmap ID 1046`) summed up to 107,499,688 bytes. It was a massive 16768×2137 all-white pixel image utilizing a 24-bpp RGB configuration.
 
 This is a classic "unpacking bomb" or bloatware strategy. Threat actors use raw, uncompressed bitmap data because the DEFLATE algorithm inside standard ZIP formats can compress millions of identical white pixels down to a few kilobytes. However, the moment the payload drops and inflates on a target machine, it blows up into a massive file designed to comfortably sail right past maximum file size limits enforced by automated cloud sandboxes and traditional AV scanners. to prove a point, [any.run](https://any.run/) only allows executables up to 16MB.
 
