@@ -1,4 +1,4 @@
----
+⁷---
 layout: post
 title: "Beyond Context Windows: When Malware Stops Fitting into Naive Automated Analysis"
 categories: [infosec]
@@ -24,10 +24,8 @@ Another fun ride with a malware sample from out there in the wild. As is often t
 
 I received two emails, six days apart, both impersonating Endesa — a major Spanish and Portuguese electric utility — with fake overdue bill reminders written in Portuguese. This lure is not new in Spain[^1], but this particular campaign targeted Portuguese speakers and was sent from compromised or purpose-registered domains using PHPMailer 6.5.3. SPF, DKIM, and DMARC all passed Outlook's authentication checks, and both messages landed directly in the inbox.
 
-| Date       | Sender                                 | Subject                                | URL                                         |
-| ---------- | --------------------------- | -------------------------- | -------------------------------------- | ------------------------------------------- |
-| 2026-04-15 | `noreply@notificacionfdh7.ahcomms.net` | Lembrete de pagamento pendente – 92268 | Bing redirect → `blueberginternational.com` |
-| 2026-04-21 | `oficial@server-833l.appmissao.com.br` | Lembrete de pagamento pendente 82841   | Wix `filesusr.com` hosted page              |
+- 2026-04-15: `noreply@notificacionfdh7.ahcomms.net`, Lembrete de pagamento pendente – 92268, Bing redirect to `blueberginternational.com` 
+- 2026-04-21: `oficial@server-833l.appmissao.com.br`, Lembrete de pagamento pendente 82841, Wix `filesusr.com` hosted page
 
 The emails follow the same template: a clean HTML message with the Endesa logo loaded directly from `endesaclientes.com`, a fake overdue balance (€137.11 and €146.21 respectively), a fake contract number, and a prominent "Regularizar Pagamento Agora" button. The URL cloaking is worth noting but common nowadays.
 
