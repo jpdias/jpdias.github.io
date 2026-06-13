@@ -22,12 +22,12 @@ Another fun ride with a malware sample from out there in the wild. As is often t
   </div>
 </div>
 
-I received two emails, six days apart, both impersonating Endesa — a major Spanish and Portuguese electric utility — with fake overdue bill reminders written in Portuguese. This lure is not new and was sent from compromised or purpose-registered domains using PHPMailer 6.5.3. SPF, DKIM, and DMARC all passed Outlook's authentication checks, and both messages landed directly in the inbox.
+I received two emails, six days apart, both impersonating Endesa with fake overdue electrical bill reminders written in _correct_ Portuguese. This lure is not new and was sent from compromised or purpose-registered domains using PHPMailer 6.5.3. SPF, DKIM, and DMARC all passed Outlook's authentication checks, and both messages landed directly in the inbox.
 
 - 2026-04-15: `noreply@notificacionfdh7.ahcomms.net`, Lembrete de pagamento pendente – 92268, Bing redirect to `blueberginternational.com` 
 - 2026-04-21: `oficial@server-833l.appmissao.com.br`, Lembrete de pagamento pendente 82841, Wix `filesusr.com` hosted page
 
-The emails follow the same template: a clean HTML message with the Endesa logo loaded directly from `endesaclientes.com`, a fake overdue balance (€137.11 and €146.21 respectively), a fake contract number, and a prominent "Regularizar Pagamento Agora" button. The URL cloaking is worth noting but common nowadays.
+The emails follow the same template: a clean HTML message with the Endesa logo loaded directly from `endesaclientes.com`, a fake overdue balance (€137.11 and €146.21 respectively), a fake contract number, and a prominent "Regularizar Pagamento Agora" button.
 
 * **April 15, 2026:** A **Bing click-tracking redirect** (`bing.com/ck/a`) chains through `blueberginternational.com` before reaching the ISO download. This makes the visible URL appear more trustworthy than the final destination. This is also a [common trend on the current phishing campaigns](https://www.levelblue.com/blogs/spiderlabs-blog/trusted-domain-hidden-danger-deceptive-url-redirections-in-email-phishing-attacks).
 * **April 21, 2026:** A **Wix `filesusr.com`** hosted landing page abuses Wix's legitimate reputation to present the ISO download prompt and bypass URL reputation checks.
@@ -36,7 +36,7 @@ The emails follow the same template: a clean HTML message with the Endesa logo l
 
 ISO files are a favored delivery vector because they frequently bypass email gateway scanners. Since the archive format is treated as a "disk image" rather than executable content, many automated scanners just shrug and let it through.
 
-Mounting the ISO reveals a folder structure deliberately designed to look like a legitimate business document package:
+Mounting the ISO reveals a folder structure with several files, from XMLs to PDFs and a VBS script:
 
 ```
 0Oficl0779...vbs (4.6 MB)       ← Entry point, sitting at the ISO root
@@ -52,13 +52,13 @@ Mounting the ISO reveals a folder structure deliberately designed to look like a
                 ├── ... [8 more decoy PDFs]
 ```
 
-The nested directories (`ahio/zrca/dfro/lizf/`) exist purely to evade simple path-based detection. But the key detail is the VBS file located at the ISO root. The `~/` directory contains only renamed PE files (the `.xml` files) and the decoy PDFs. The VBS is the entry point; everything else is discovered at runtime.
+The nested directories (`ahio/zrca/dfro/lizf/`) exist purely to create entropy. But the key detail is the VBS file located at the ISO root. The `~/` directory contains only renamed PE files (the `.xml` files) and the decoy PDFs. The VBS is the entry point while the fake XMLs are used onlyat runtime.
 
 The two `.xml` files are executables in disguise, serving vastly different purposes:
 
-- `mvck2.xml` (Delphi Registry Persistence Module): A native Delphi PE32 GUI EXE. Its import table betrays its purpose entirely. It uses FindFirstFileA to search its own directory, RegCreateKeyExA and friends to install registry persistence, and LoadLibraryExA for dynamic module loading.
+- `mvck2.xml` (Delphi Registry Persistence Module): A native Delphi PE32 GUI EXE. By its import table it uses `FindFirstFileA` to search its own directory, `RegCreateKeyExA` and friends to install registry persistence, and `LoadLibraryExA` for dynamic module loading.
 
-- `unkqgs1.xml` (Legitimate Microsoft .NET Assembly): This actually isn't malware. It's Microsoft's System.Runtime.CompilerServices.Unsafe (v5.0.20.51904). It’s included as a dependency for a second-stage .NET component likely downloaded from the C2 later.
+- `unkqgs1.xml` (Legitimate Microsoft .NET Assembly): This actually isn't malware. It's Microsoft's `System.Runtime.CompilerServices.Unsafe` (v5.0.20.51904). It’s included as a dependency for a second-stage .NET component likely downloaded from the C2 later.
 
 Neither the VBS nor the final Grandoreiro loader contains static references to these files as the follow up analysis revealed. Instead, the loader uses `FindFirstFileW` and `FindNextFileW` to enumerate files dynamically at runtime, loading valid PEs as data files or image resources.
 
@@ -68,7 +68,7 @@ Opening the 4.6 MB raw `.vbs` file revealed a heavily obfuscated wall of text. T
 
 As far as I could find no readily-available tooling was able to decode this VBS. The malware authors intentionally injected structural poison pills directly into the string values—specifically `<?_]~>` string-split markers and `STRRANDOM_placeholder` variables designed to ruin `Base64` alphabet validity and break naive regular expressions.
 
-To preserve my litle remaining sanity, I used opencode to help spin up a specialized Python static emulator. The goal was to feed it the raw script and spit out a fully reconstructed, triage-ready file. 
+To preserve my ~~litle remaining~~ sanity, I used opencode to help spin up a specialized Python static emulator. The goal was to feed it the raw script and spit out a fully reconstructed, triage-ready file. 
 
 ```
 [ Raw VBScript Input ]
@@ -192,7 +192,7 @@ Digging into the resources revealed that a single asset (`Bitmap ID 1046`) summe
 
 This is a classic "unpacking bomb" or bloatware strategy. Threat actors use raw, uncompressed bitmap data because the DEFLATE algorithm inside standard ZIP formats can compress millions of identical white pixels down to a few kilobytes. However, the moment the payload drops and inflates on a target machine, it blows up into a massive file designed to comfortably sail right past maximum file size limits enforced by automated cloud sandboxes and traditional AV scanners. to prove a point, [any.run](https://any.run/) only allows executables up to 16MB.
 
-To make this thing manageable, I had the AI generate a second tool: a resource slimmer (`pe_strip_rsrc.py`). Rather than hacking off the `.rsrc` section entirely (which causes the underlying Delphi application to instantly crash at runtime when its UI initialization routines fail), the script loops through the PE resource directory tree, pinpoints any `RT_BITMAP` entries ballooning past 100 KB, and surgically rewrites them.
+To make this thing manageable, I had the AI generate a second tool: a resource shrinker (`pe_strip_rsrc.py`). Rather than hacking off the `.rsrc` section entirely (which causes the underlying Delphi application to instantly crash at runtime when its UI initialization routines fail), the script loops through the PE resource directory tree, pinpoints any `RT_BITMAP` entries ballooning past 100 KB, and surgically rewrites them.
 
 It swaps the 107 MB block of filler with a minimal, valid 44-byte Device Independent Bitmap (DIB) header representing a tiny 1×1 black pixel:
 
