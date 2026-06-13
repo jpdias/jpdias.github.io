@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 group :jekyll_plugins do
-    gem "jekyll"
+    gem "jekyll", "~> 4.3"
     gem 'jekyll-paginate'
     gem 'rouge'
     gem 'jekyll-watch'
@@ -12,3 +12,4 @@ group :jekyll_plugins do
     gem 'base64'
     gem 'bigdecimal'
 end
+gem "yajl-ruby", "~> 1.4"
