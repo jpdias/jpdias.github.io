@@ -294,6 +294,13 @@ Once the loader validates the environment and retrieves the main banking payload
 
 ## Summary
 
+<div class="row" style="text-align:center">
+  <div class="column">
+    <img style="width: 96%;" alt="Flowchart" src="/images/delphitrojan/overview.png">
+  </div>
+</div>
+
+
 This campaign offers an insightful look into how modern malware operations continue to recycle vintage mechanisms while introducing structural roadblocks explicitly designed to counter automation and detection. As threat actors turn to multi-layered extraction loops and bloated visual assets to exhaust sandbox parameters, _payloads easily expand past conventional LLM context boundaries_. Directly feeding a 116 MB executable into an AI model is impractical and costly. Instead, the real utility of AI in modern triage lies in rapid tool engineering—generating targeted, programmatic deobfuscators and PE resource slimmers to safely reduce artifacts back down to a manageable size for human verification.
 
 Grandoreiro underscores the persistent popularity of legacy environments like **Delphi** across the Latin American cybercrime landscape. Delphi's native compilation outputs structurally dense binaries packed with extensive internal form metadata, visual components, and object overhead. This architectural verbosity produces significant noise for automated heuristic rules, while effortlessly serving as an ideal vehicle to hold oversized resources.
