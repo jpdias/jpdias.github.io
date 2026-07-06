@@ -17,7 +17,7 @@ plugins: [rouge,kramdown,jekyll-paginate]
 footer: yes
 
 nav:
-  - name: "about"
+  - name: ""
     link: "/"
   - name: "notes"
     link: "/notes/"

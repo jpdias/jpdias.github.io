@@ -3,9 +3,9 @@ layout: default
 title: "./jpdias/publications"
 ---
 
-## Publications
+# Publications
 
-### Journal Articles [^1]
+## Journal Articles
 
 {% assign counter = 0 %}
 
@@ -34,7 +34,7 @@ title: "./jpdias/publications"
 
 {% endfor %}
 
-### Conference Publications [^1]
+## Conference Publications
 
 {% assign counter = 0 %}
 
@@ -62,7 +62,7 @@ title: "./jpdias/publications"
 </div>
 {% endfor %}
 
-### Pre-Prints [^2]
+## Pre-Prints
 
 {% assign counter = 0 %}
 
@@ -90,7 +90,7 @@ title: "./jpdias/publications"
 
 {% endfor %}
 
-### Thesis
+## Thesis
 
 {% assign counter = 0 %}
 
@@ -118,7 +118,7 @@ title: "./jpdias/publications"
 
 {% endfor %}
 
-### Abstracts
+## Abstracts
 
 {% assign counter = 0 %}
 
@@ -146,6 +146,3 @@ title: "./jpdias/publications"
 </div>
 
 {% endfor %}
-
-[^1]: Peer-reviewed.
-[^2]: No peer-reviewed / draft.

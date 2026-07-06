@@ -3,7 +3,7 @@ layout: default
 title: "./jpdias/talks"
 ---
 
-## Talks (dump)
+# Talks
 
 {% for talk in site.data.talks.talks %}
 
@@ -15,7 +15,7 @@ title: "./jpdias/talks"
         <span><i class="ri-group-line"></i> {{ talk.speakers }}</span>
     </div>
     <div><i class="ri-tent-fill"></i> {{ talk.venue }}</div>
-    <div><a href="{{ talk.slides }}" target="_blank" rel="noopener noreferrer"><i class="ri-file-download-fill"></i> Slides (pdf)</a></div>
+    {% if talk.slides and talk.slides != "" %}<div><a href="{{ talk.slides }}" target="_blank" rel="noopener noreferrer"><i class="ri-file-download-fill"></i> Slides (pdf)</a></div>{% endif %}
 </article>
 
 {% endfor %}

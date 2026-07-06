@@ -1,6 +1,1 @@
-{% capture words %}
-    {{ content | number_of_words | minus: 180 }}
-{% endcapture %}
-{% unless words contains '-' %}
-    {{ words | plus: 150 | divided_by: 150 | append: ' minutes to read' }}
-{% endunless %}
+{{ content | number_of_words | divided_by: 200 | plus: 1 | append: ' minutes to read' }}

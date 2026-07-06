@@ -20,11 +20,7 @@
     {% else %}
         {% assign desc = site.description %}
     {% endif %}
-    {% if page.url %}
-        {% assign url = site.url | append: site.baseurl | append: page.url %}
-    {% else %}
-        {% assign url = site.url | append: site.baseurl | append: page.url %}
-    {% endif %}
+    {% assign url = site.url | append: site.baseurl | append: page.url %}
     <meta name="description" content="{{ desc }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS" href="/feed.xml" />
     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
@@ -32,10 +28,8 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/css/academicons.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/remixicon.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/lite-light.min.css">
-    {% if site.favicon %}
-        <link rel="icon" type="image/ico" href="{{ site.favicon_location }}">
-        <link rel="shortcut-icon" type="image/ico" href="{{ site.favicon_location }}">
-    {% endif %}
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     {% if site.twitter_username %}
         <link rel="author" href="https://twitter.com/{{ site.twitter_username }}">
     {% endif %}
@@ -64,6 +58,7 @@
     <div class="wrapper">
         <div class="navbar container">
             <a id="author-name" class="alignable pull-left" href="/">{{ site.title }}</a>
+
             <ul id="navlist" class="alignable pull-right navbar-ul">
                 {% for page in site.nav %}
                     {% if page.name == "Resume" %}
@@ -84,4 +79,26 @@
             </p>
         </div>
     </div>
+<button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme"><i class="ri-sun-line"></i></button>
+<script>
+(function() {
+  var theme = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', theme);
+  var btn = document.getElementById('theme-toggle');
+  if (btn) {
+    var icons = btn.querySelectorAll('i');
+    var setIcon = function(t) {
+      icons.forEach(function(i) { i.className = t === 'dark' ? 'ri-moon-line' : 'ri-sun-line'; });
+    };
+    setIcon(theme);
+    btn.addEventListener('click', function() {
+      var current = document.documentElement.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      setIcon(next);
+    });
+  }
+})();
+</script>
 </body>

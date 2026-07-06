@@ -4,11 +4,9 @@ title: "./jpdias/"
 description: "Engineer. Developer. Photography enthusiast. Researching on the thin line between hardware and software."
 ---
 
-## About Me
+# About Me
 
 <img class="profile-picture" src="images/profile.png" alt="Profile picture">
-
-<!--<a href="https://github.com/sponsors/jpdias" target="blank" class="sponsor sponsor-button"><i class="ri-heart-2-line"></i> Sponsor<a/>-->
 
 {% highlight bash %}
 $ whoami
@@ -49,7 +47,7 @@ João Pedro Dias is part researcher on the thin line between hardware and softwa
     <div>
         <span><i class="ri-calendar-schedule-fill"></i> {{ talk.year }}</span>
         <span><i class="ri-tent-fill"></i> {{ talk.venue }}</span>
-        <span><a href="{{ talk.slides }}" target="_blank" rel="noopener noreferrer"><i class="ri-file-download-fill"></i> Slides (pdf)</a></span>
+        {% if talk.slides and talk.slides != "" %}<span><a href="{{ talk.slides }}" target="_blank" rel="noopener noreferrer"><i class="ri-file-download-fill"></i> Slides (pdf)</a></span>{% endif %}
     </div>
    
 </article>
