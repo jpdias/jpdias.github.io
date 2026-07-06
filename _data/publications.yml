@@ -9,6 +9,7 @@ confs:
     url: "https://doi.org/10.1016/j.procs.2024.06.238"
     status: "Published"
     pub: Elsevier
+    abstract: "Infrastructure construction companies encounter numerous challenges in managing large and dispersed teams, along with fragmented or non-existent operational data. These challenges often result in delays, inefficiencies, and over-budget projects. Road pavement works are an example of this, as they heavily rely on expensive heavy construction equipment that requires detailed planning and real-time adjustments. Also, pavement quality is closely linked to the quality of the asphalt mixture in terms of viscosity and compactability, which is significantly influenced by temperature. This paper describes the features, challenges and results of a road paving real-time management system that was conceived in a co-creation environment with a construction company. Such a partnership has allowed to specify the requirements of such an application aligned with the identified needs of a real-world development. According with the state-of-the-art, this innovative system is unique in the way it is manufacturer-agnostic and designed to be compatible with most situations. It is also data production-oriented to allow future developments that may provide business analytics or scientific research in the road paving area. This work also presents the development of sensors such as a high precision geolocalized infrared matricial temperature sensor for the application of the bituminous mixture, the data and communication structure, and a web-based interface that manages the construction projects for different stakeholders."
     bibtex: 10.1016_j.procs.2024.06.238.bib
 
   - title: "Digitalization Of The Concreting Process In Construction"
@@ -16,6 +17,7 @@ confs:
     conference: "11th International Conference on Project MANagement (ProjMAN)"
     year: 2023
     status: "Published"
+    abstract: "The delivery of concrete is a crucial process in construction projects, and any delay or error can cause significant setbacks and added costs. Thus, effective real-time management of concrete delivery is essential to ensure timely and successful project completion. In this paper, we will discuss a practical and manufacturer-agnostic approach to real-time management of concrete delivery for construction named BET 4.0 that is being conceived with a close partnership with a construction company. This application provides the possibility to optimize the whole concreting process as it establishes the connection between all the relevant components and stakeholders involved in the construction process, namely the concrete plant, the transport, and the construction site, interfacing with all actors involved, and benefiting from real-time data produced by installed sensors in the several components such as machines, plants, or construction elements."
     doi: 10.1016/j.procs.2024.06.240
     url: "https://doi.org/10.1016/j.procs.2024.06.240"
     pub: Elsevier
