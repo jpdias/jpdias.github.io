@@ -775,25 +775,12 @@ pre a:only-of-type::before {
 }
 
 .description-item.is-expandable::before {
-  border-left: var(--hr-border-settings);
   content: "";
   height: 100%;
   left: 0.8rem;
   position: absolute;
   top: 2rem;
   height: calc(100% - 2.4rem);
-}
-
-.description-item .description-item {
-  margin-left: 2.4rem;
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-
-.description-item-title::-webkit-details-marker {
-  display: none;
 }
 
 .footer-table {
