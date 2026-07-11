@@ -202,7 +202,7 @@ The result is exactly what I wanted: a 3D printed, painted white world map on a 
   </div>
 </div>
 
-The old blinkenlights panels on PDP-8s and Connection Machines displayed CPU states, memory bus activity, instruction decodes: machine internals that meant something to the operator. This thing displays HTTP status codes grouped by geography, which is less useful, but equally fun. Call it a blinkenlights panel for the application layer. The lights tell you where your readers are and whether your server is having a bad day, and that's about as much as this kind of panel has ever promised.
+The old blinkenlights panels on PDP-8s and Connection Machines displayed CPU states, memory bus activity, instruction decodes: machine internals that meant something to the operator. This thing displays HTTP status codes grouped by geography, which is less useful, but equally fun. Call it a blinkenlights panel for the _application layer_. The lights tell you where your readers are and whether your server is having a bad day, and that's about as much as this kind of panel has ever promised.
 
 None of this is actually specific to Cloudflare. The map only cares about two numbers per region: how much, and whether it's good or bad. Anything with a country or region attached to it works the same way — GitHub stars by country, package downloads, flight delays, earthquake activity, etc. Swapping the data source just means writing a different `fetchXXXData()` function that fills the same `greenCount[]` / `redCount[]` arrays; the LEDs, the blink scheduling, and the map itself don't need to change at all. It went from "a Cloudflare dashboard" to "a dashboard for anything with a lat/lon," which is a better project than the one I set out to build.
 
