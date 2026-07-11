@@ -3,13 +3,19 @@ layout: post
 title: "A World of Blinkenlights"
 categories: [hardware]
 tags: [iot,harware,cloudflare,wargames]
-thumbnail: /images/blinkenlights26/blinkenmap.gif
+thumbnail: /images/blinkenlights26/boot.jpeg
 description: "A WarGames-style world map that turns Cloudflare traffic analytics into blinking lights on the wall."
 ---
 
 There is this scene in *WarGames* (1983, which I have watched an embarrassing number of times) where a teenage hacker's modem connects to what he thinks is a games company. It's actually the  War Operation Plan Response (WORP) computer and the big screen fills with a world map: bombers, submarines, missile trajectories, each ending in a flashing symbol where a warhead is about to land. For anyone passionate about old computer systems, *that map with the blinking lights* was what a serious computer looked like. These days, a printed world map, some RGB LEDs, and a WiFi-enabled microcontroller can do the same — except the cities are my Cloudflare traffic from the last hour, and the only thing about to be wiped out is a politely worded 404 page.
 
 <!--more-->
+
+<div class="row" style="text-align:center">
+  <div class="column">
+    <img style="width: 80%;" alt="Boot map" src="/images/blinkenlights26/boot.jpeg">
+  </div>
+</div>
 
 ## But why?
 
@@ -188,9 +194,9 @@ The result is exactly what I wanted: a 3D printed, painted white world map on a 
 
 <div class="row" style="text-align:center">
   <div class="column">
-    <video width="80%" controls>
+    <video width="100%" controls autoplay>
         <source src="/images/blinkenlights26/blinkenmap.mp4" type="video/mp4">
-         <source src="/images/blinkenlights26/blinkenmap.webm" type="video/webm">
+        <source src="/images/blinkenlights26/blinkenmap.webm" type="video/webm">
         Your browser does not support the video tag.
     </video>
   </div>
