@@ -27,7 +27,7 @@ The first why is the so-called ***[blinkenlights](https://en.wikipedia.org/wiki/
   </div>
 </div>
 
-The point of the joke is that engineers used to look at blinking lights and *understand something from them* — on [PDP-8](https://en.wikipedia.org/wiki/PDP-8) and DEC front panels, on the [Connection Machine](https://en.wikipedia.org/wiki/Connection_Machine) in the eighties, complete with [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) evolving on its grid of red blinkenlights. They were the diagnostic UI of last resort. The blinkier it is, the harder the CPU is working. Sometimes that was all the visibility an operator got. I always enjoyed blinkenlights myself, whether it's my router or switch's ethernet activity LEDs or my NAS's disk activity blinks, so why not build something where the blinks are the whole point?
+The point of the joke is that engineers used to look at blinking lights and *understand something from them* — on [PDP-8](https://en.wikipedia.org/wiki/PDP-8) front panels, on the [Connection Machine](https://en.wikipedia.org/wiki/Connection_Machine) in the eighties, complete with [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) evolving on its grid of red blinkenlights. They were the diagnostic UI of last resort. The blinkier it is, the harder the CPU is working. Sometimes that was all the visibility an operator got. I always enjoyed blinkenlights myself, whether it's my router or switch's ethernet activity LEDs or my NAS's disk activity blinks, so why not build something where the blinks are the whole point?
 
 <div class="row" style="text-align:center">
   <div class="column">
