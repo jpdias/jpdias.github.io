@@ -190,7 +190,7 @@ Each region's blink count is scaled against the busiest region (`maxGreen`, `max
 
 ## What It Looks Like
 
-The result is exactly what I wanted: a 3D printed, painted white world map on a black MDF backboard, hanging on the wall, with fifty LEDs poking through drilled holes behind each country cluster, blinking green for normal traffic and red when something goes wrong. At night, with the room lights off, it looks like a miniature NORAD set: the black background makes the map float, the white relief catches ambient light, and the LEDs are the only thing moving. Portugal blinks a lot because that is where most of my readers are. Antarctica, predictably, stays dark. Occasionally a random country lights up red, usually a bot probing `/wp-admin`, reacting to something actually happening on the internet in real time.
+The result is exactly what I wanted: a 3D printed, painted white world map on a black MDF backboard, hanging on the wall, with fifty LEDs poking through drilled holes behind each country cluster, blinking green for normal traffic and red when something goes wrong. At night, with the room lights off, it looks like a miniature NORAD set: the black background makes the map float, the white relief catches ambient light, and the LEDs are the only thing moving. Portugal blinks a lot because that is where most of my readers are. Occasionally (more than expected) a random country lights up red, usually a bot probing `/wp-admin`, reacting to something actually happening on the internet in real time.
 
 <div class="row" style="text-align:center">
   <div class="column">
