@@ -11,11 +11,9 @@ There is this scene in *WarGames* (1983, which I have watched an embarrassing nu
 
 <!--more-->
 
-## Where the Idea Comes From
+## But why?
 
-Two things converged in my head.
-
-The first is the so-called ***blinkenlights*** tradition. If you have spent enough time around computer rooms of a certain vintage (the [Science Museum in London](https://www.sciencemuseum.org.uk/) has some nice collections that one can visit), or around hacker culture at all, the term is unremarkable. The [Wikipedia page on Blinkenlights](https://en.wikipedia.org/wiki/Blinkenlights) is worth a detour for the classic mock-sign alone:
+The first why is the so-called ***[blinkenlights](https://en.wikipedia.org/wiki/Blinkenlights)*** tradition. If you have spent enough time around computer rooms of a certain vintage, or around hacker culture at all, the term is unremarkable. The Wikipedia page is worth a detour for the classic mock-sign alone:
 
 <div class="row" style="text-align:center">
   <div class="column">
@@ -23,7 +21,7 @@ The first is the so-called ***blinkenlights*** tradition. If you have spent enou
   </div>
 </div>
 
-The point of the joke is that engineers used to look at blinking lights and *understand something from them* — on [PDP-8](https://en.wikipedia.org/wiki/PDP-8) front panels, on the [Connection Machine](https://en.wikipedia.org/wiki/Connection_Machine) in the eighties, on network switches and routers today. The Connection Machine even had [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) running visibly across its grid of red blinkenlights. They were the diagnostic UI of last resort, which didn't depend on terminals and UIs.
+The point of the joke is that engineers used to look at blinking lights and *understand something from them* — on [PDP-8](https://en.wikipedia.org/wiki/PDP-8) and DEC front panels, on the [Connection Machine](https://en.wikipedia.org/wiki/Connection_Machine) in the eighties, complete with [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) evolving on its grid of red blinkenlights. They were the diagnostic UI of last resort. The blinkier it is, the harder the CPU is working. Sometimes that was all the visibility an operator got. I always enjoyed blinkenlights myself, whether it's my router or switch's ethernet activity LEDs or my NAS's disk activity blinks, so why not build something where the blinks are the whole point?
 
 <div class="row" style="text-align:center">
   <div class="column">
@@ -31,7 +29,8 @@ The point of the joke is that engineers used to look at blinking lights and *und
   </div>
 </div>
 
-The second source is that scene in *WarGames*, which is, in practice, the pop-culture version of the same idea. A world map behind the [WOPR](https://en.wikipedia.org/wiki/WarGames) console that lights up red wherever a Soviet warhead is about to land; that map is more or less a glorified [blinkenlights](https://en.wikipedia.org/wiki/Blinkenlights) panel, painted with the political geography of the cold war so the audience knows what they are rooting for. Replace "warhead" with "HTTP error from a Cloudflare edge," and you have, more or less, the same visual: a panel, a map, lights that flash when something is happening somewhere in the world. That is what I am after as a piece of decoration for my home work office.
+The second why is that scene in *WarGames*, which is, in practice, the pop-culture version of the same idea. A world map behind the [WOPR](https://en.wikipedia.org/wiki/WarGames) console lights up red wherever a Soviet warhead is about to land; that map is more or less a glorified blinkenlights panel, painted with the political geography of the cold war so the audience knows what they are rooting for. Replace "warhead" with "HTTP error from a Cloudflare edge," and you have, more or less, the same visual: a panel, a map, lights that flash when something is happening somewhere in the world.
+
 
 ## Building the Map
 
