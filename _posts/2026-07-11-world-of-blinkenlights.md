@@ -194,7 +194,7 @@ The result is exactly what I wanted: a 3D printed, painted white world map on a 
 
 <div class="row" style="text-align:center">
   <div class="column">
-    <video width="100%" controls autoplay>
+    <video width="100%" controls autoplay muted>
         <source src="/images/blinkenlights26/blinkenmap.mp4" type="video/mp4">
         <source src="/images/blinkenlights26/blinkenmap.webm" type="video/webm">
         Your browser does not support the video tag.
