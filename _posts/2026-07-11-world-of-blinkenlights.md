@@ -7,7 +7,7 @@ thumbnail: /images/blinkenlights26/boot.jpeg
 description: "A WarGames-style world map that turns Cloudflare traffic analytics into blinking lights on the wall."
 ---
 
-There is this scene in *WarGames* (1983, which I have watched an embarrassing number of times) where a teenage hacker's modem connects to what he thinks is a games company. It's actually the  War Operation Plan Response (WORP) computer and the big screen fills with a world map: bombers, submarines, missile trajectories, each ending in a flashing symbol where a warhead is about to land. For anyone passionate about old computer systems, *that map with the blinking lights* was what a serious computer looked like. These days, a printed world map, some RGB LEDs, and a WiFi-enabled microcontroller can do the same — except the cities are my Cloudflare traffic from the last hour, and the only thing about to be wiped out is a politely worded 404 page.
+There is this scene in *WarGames* (1983, which I have watched an embarrassing number of times) where a teenage hacker's modem connects to what he thinks is a games company. It's actually the  War Operation Plan Response (WORP) computer and the big screen fills with a world map: bombers, submarines, missile trajectories, each ending in a flashing symbol where a warhead is about to land. For anyone passionate about old computer systems, *that map with the blinking lights* was what a serious computer looked like. These days, a printed world map, some RGB LEDs, and a WiFi-enabled microcontroller can do the same: except the cities are my Cloudflare traffic from the last hour, and the only thing about to be wiped out is a politely worded 404 page.
 
 <!--more-->
 
