@@ -519,7 +519,7 @@ We were given an OVA of a BSD machine. We could bypass the password protection b
 - `/etc/master.passwd` (same as Unix `/etc/shadow`)
 - `/root/ctf.kdb`
 
-And we swapped (backup first) the root password using the [recovery instructions]((https://www.openbsd.org/faq/faq8.html)) (`passwd`).
+And we swapped (backup first) the root password using the [recovery instructions](https://www.openbsd.org/faq/faq8.html) (`passwd`).
 
 We then used SSH to exfill the `ctf.kdb` file from the machine. Having the file, we proceed to convert it using John the ripper utility tool `keepass2john`. 
 
