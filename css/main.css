@@ -363,22 +363,10 @@ summary:hover {
 /* * Navbar */
 #author-name {
   font-size: 25px;
+  margin-left: -20px;
   display: inline-block;
   position: relative;
-  padding-left: 8px;
 }
-
-#author-name::before {
-  content: "\ebbe";
-  font-family: "remixicon" !important;
-  color: var(--main-headers-color);
-  position: absolute;
-  left: -20px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-
 
 .navbar {
   padding: 25px 0 25px 0;

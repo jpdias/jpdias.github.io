@@ -17,8 +17,6 @@ plugins: [rouge,kramdown,jekyll-paginate,jekyll-target-blank]
 footer: yes
 
 nav:
-  - name: ""
-    link: "/"
   - name: "notes"
     link: "/notes/"
   - name: "publications"
