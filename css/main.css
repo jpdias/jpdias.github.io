@@ -362,7 +362,6 @@ summary:hover {
 }
 /* * Navbar */
 #author-name {
-  font-size: 25px;
   margin-left: -20px;
   display: inline-block;
   position: relative;
@@ -375,7 +374,6 @@ summary:hover {
 .navbar-ul {
   display: inline-block;
   margin: 0;
-  padding: 5px 0 5px 0;
   margin-left: 20px;
 }
 
