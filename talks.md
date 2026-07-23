@@ -3,7 +3,7 @@ layout: default
 title: "./jpdias/talks"
 ---
 
-# Talks
+# talks
 
 {% for talk in site.data.talks.talks %}
 
