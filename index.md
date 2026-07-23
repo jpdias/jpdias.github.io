@@ -14,13 +14,10 @@ jpdias: phd. engineer. developer. photography enthusiast.
 João Pedro Dias is part researcher on the thin line between hardware and software, and part Software Engineer. He has a BSc+MSc in [Informatics and Computing Engineering](https://sigarra.up.pt/feup/en/cur_geral.cur_view?pv_ano_lectivo=2018&pv_origem=CUR&pv_tipo_cur_sigla=MI&pv_curso_id=742) from the [Faculty of Engineering, University of Porto (FEUP)](https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL). He earned his Ph.D. in Informatics Engineering from FEUP in 2022 (with an FCT research grant). He maintains a Software Engineer position as a day-to-day job at [Kuehne+Nagel](https://kuehne-nagel.com/). Previously, he was an Invited Assistant Professor at FEUP, where he taught courses in Software Engineering, Operating Systems, among others. He has (co-)supervised 5+ MSc dissertations and contributed to two projects at LIACC and INESC TEC. His research focuses on Internet-of-Things systems, software engineering, security, and privacy, and his work has been published in several top-tier conferences and journals ([h-index 20, i10-index 25](https://scholar.google.com/citations?user=sQ2vKI0AAAAJ)). In his free time, he enjoys participating in Capture The Flag competitions, experimenting with Software-defined Radio, building web applications, reverse-engineering hardware, and photographing while wandering in nature.
 
 
-## Current Positions
+## Professional Appointments 
 
-- [2023--] Team Lead and Software Architect @ [Kuehne+Nagel](https://kuehne-nagel.com)
-
-
-## Previous Positions
-
+- [2025-26] Senior Software Architect @ [Kuehne+Nagel](https://kuehne-nagel.com)
+- [2023-25] Team Lead and Software Architect @ [Kuehne+Nagel](https://kuehne-nagel.com)
 - [2018-24] Invited Assistant Professor @ [Faculty of Engineering, University of Porto](https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL)
 - [2021-23] Software Engineering Specialist @ [BUILT CoLAB](https://builtcolab.pt/)
 - [2017-21] Researcher @ [INESC Technology and Science - Associate Laboratory](https://www.inesctec.pt/en)

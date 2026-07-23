@@ -30,7 +30,7 @@ nav:
   - name: "contact"
     link: "/contact"
   - name: "rss"
-    link: "/feed"
+    link: "/feed.xml"
 
 social:
   - name: bsky.app/jpdias.me
