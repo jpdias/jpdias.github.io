@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "./jpdias/"
+title: "./jpdias"
 description: "Engineer. Developer. Photography enthusiast. Researching on the thin line between hardware and software."
 ---
 
