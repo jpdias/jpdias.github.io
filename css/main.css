@@ -21,6 +21,7 @@
   --table-th-bg: #f8f8f834;
   --item-bg: #80808005;
   --sponsor-bg: #0d1117;
+  --text-muted: #ffffff73;
 }
 
 /* anonymous-pro-regular - latin */
@@ -310,7 +311,7 @@ nav {
 }
 
 .nav-list a {
-  color: var(--main-font-color);
+  color: var(--text-muted);
   padding: 0.25rem 0.5rem;
   font-size: 0.85rem;
   border-radius: 3px;
@@ -757,6 +758,8 @@ pre a:only-of-type::before {
   background-color: transparent;
 }
 
+ 
+
 /* Mobile */
 @media (max-width: 768px) {
   .container {
@@ -791,6 +794,7 @@ pre a:only-of-type::before {
   #navlist {
     padding: 0.5rem 0;
     width: 100%;
+    flex-wrap: balance;
     justify-content: center;
   }
 }
