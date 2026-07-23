@@ -650,7 +650,7 @@ pre a:only-of-type::before {
 .talk-item {
   margin-bottom: 0.5em;
   background-color: var(--item-bg);
-  padding: 0.25rem 0;
+  padding: 0.25rem 0.5rem 0.25rem 0;
   border-right: 2px solid var(--right-border);
 }
 

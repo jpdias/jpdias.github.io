@@ -23,9 +23,9 @@ nav:
     link: "/publications"
   - name: "talks"
     link: "/talks"
-  - name: "photography"
+  - name: "photography ⤴"
     link: "/photo"
-  - name: "cv.pdf"
+  - name: "cv.pdf ⤴"
     link: "/assets/jpdias.pdf"
   - name: "contact"
     link: "/contact"
@@ -39,9 +39,6 @@ social:
   - name: linkedin/joaopdias
     icon: ri-linkedin-box-line
     url: https://www.linkedin.com/in/joaopdias/
-  - name: 500px/jpdias
-    icon: ri-camera-line
-    url: https://500px.com/jpdias
   - name: github/jpdias
     icon: ri-github-line
     url: https://github.com/jpdias
