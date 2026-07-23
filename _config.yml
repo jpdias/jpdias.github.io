@@ -23,6 +23,8 @@ nav:
     link: "/publications"
   - name: "talks"
     link: "/talks"
+  - name: "photography"
+    link: "/photo"
   - name: "cv.pdf"
     link: "/assets/jpdias.pdf"
   - name: "contact"

@@ -6,8 +6,6 @@ description: "Engineer. Developer. Photography enthusiast. Researching on the th
 
 # About Me
 
-<img class="profile-picture" src="images/profile.png" alt="Profile picture">
-
 {% highlight bash %}
 $ whoami
 jpdias: phd. engineer. developer. photography enthusiast.
