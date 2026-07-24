@@ -742,10 +742,6 @@ pre a:only-of-type::before {
   position: relative;
 }
 
-.description-item > div {
-  font-size: 1.05rem;
-}
-
 .description-item > span {
   display: inline-block;
 }
@@ -757,6 +753,12 @@ pre a:only-of-type::before {
   position: absolute;
   top: 2rem;
   height: calc(100% - 2.4rem);
+}
+
+description-item-title {
+  font-weight: normal;
+  padding: 0 0;
+  margin-top: 0.2rem;
 }
 
 .footer-table {
@@ -858,9 +860,7 @@ pre a:only-of-type::before {
 /* bar on the left of the entire details block */
 details {
   margin: 0 0 1.2rem 0;
-  padding-left: 12px;
   line-height: 1.2;
-  border-left: 2px solid var(--main-headers-color);
 }
 
 /* summary (text stays aligned with content) */
