@@ -755,7 +755,7 @@ pre a:only-of-type::before {
   height: calc(100% - 2.4rem);
 }
 
-description-item-title {
+.description-item-title {
   font-weight: normal;
   padding: 0 0;
   margin-top: 0.2rem;
