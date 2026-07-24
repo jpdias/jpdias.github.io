@@ -27,10 +27,9 @@
 
 /* anonymous-pro-regular - latin */
 @font-face {
-  font-family: "Anonymous Pro";
+  font-family: "IBM Plex Mono";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/IBMPlexMono-Regular.eot"); /* IE9 Compat Modes */
   src: local(""),
     url("../fonts/IBMPlexMono-Regular.eot") format("embedded-opentype"),
     /* IE6-IE8 */ url("../fonts/IBMPlexMono-Regular.woff2") format("woff2"),
@@ -123,7 +122,7 @@ html {
 body {
   margin: 0;
   color: var(--main-font-color);
-  font-family: "Anonymous Pro", monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 1rem;
   line-height: 1.6;
   text-align: justify;
