@@ -14,7 +14,7 @@ title: "./jpdias/publications"
 {% assign counter = counter | plus:1 %}
 
 <div class="pub-item">
-<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank"><b>{{ pub.title }}</b></a><br></div>
+<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a><br></div>
 <div><span class="shield shield-grey"><span><i class="ri-refresh-line"></i></span>{{ pub.status }}</span>
     <span class="shield shield-blue"><span><i class="ri-calendar-event-line"></i></span>{{ pub.year }}</span>
     {% if pub.pub %}<span class="shield shield-green"><span><i class="ri-book-3-line"></i></span>{{ pub.pub }}</span>{% endif %}
@@ -43,7 +43,7 @@ title: "./jpdias/publications"
 {% assign counter = counter | plus:1 %}
 
 <div class="pub-item">
-<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank"><b>{{ pub.title }}</b></a><br></div>
+<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a><br></div>
 <div><span class="shield shield-grey"><span><i class="ri-refresh-line"></i> </span>{{ pub.status }}</span>
     <span class="shield shield-blue"><span><i class="ri-calendar-event-line"></i></span>{{ pub.year }}</span>
     {% if pub.pub %}<span class="shield shield-green"><span><i class="ri-book-3-line"></i></span>{{ pub.pub }}</span>{% endif %}
@@ -71,7 +71,7 @@ title: "./jpdias/publications"
 {% assign counter = counter | plus:1 %}
 
 <div class="pub-item">
-<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank"><b>{{ pub.title }}</b></a><br></div>
+<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a><br></div>
 <div>
     <span class="shield shield-blue"><span><i class="ri-calendar-event-line"></i></span>{{ pub.year }}</span>
     {% if pub.pub %}<span class="shield shield-green"><span><i class="ri-book-3-line"></i></span>{{ pub.pub }}</span>{% endif %}
@@ -99,7 +99,7 @@ title: "./jpdias/publications"
 {% assign counter = counter | plus:1 %}
 
 <div class="pub-item">
-<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank"><b>{{ pub.title }}</b></a><br></div>
+<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a><br></div>
 <div>
     <span class="shield shield-blue"><span><i class="ri-calendar-event-line"></i></span>{{ pub.year }}</span>
     {% if pub.pub %}<span class="shield shield-green"><span><i class="ri-book-3-line"></i></span>{{ pub.pub }}</span>{% endif %}
@@ -127,7 +127,7 @@ title: "./jpdias/publications"
 {% assign counter = counter | plus:1 %}
 
 <div class="pub-item">
-<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank"><b>{{ pub.title }}</b></a><br></div>
+<div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a><br></div>
 <div>
     <span class="shield shield-blue"><span><i class="ri-calendar-event-line"></i></span>{{ pub.year }}</span>
     {% if pub.pub %}<span class="shield shield-green"><span><i class="ri-book-3-line"></i></span>{{ pub.pub }}</span>{% endif %}
