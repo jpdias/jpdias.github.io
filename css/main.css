@@ -801,13 +801,15 @@ pre a:only-of-type::before {
 
   #author-name {
     width: 100%;
+    text-align: left;
+    padding-left: 0.5rem;
   }
 
   #navlist {
     padding: 0.5rem 0;
     width: 100%;
     flex-wrap: balance;
-    justify-content: center;
+    justify-content: left;
   }
 }
 
