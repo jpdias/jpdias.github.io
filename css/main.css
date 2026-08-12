@@ -809,6 +809,7 @@ pre a:only-of-type::before {
   #navlist {
     padding: 0.5rem 0;
     width: 100%;
+    flex-wrap: wrap;
     flex-wrap: balance;
     justify-content: left;
   }
