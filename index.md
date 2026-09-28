@@ -16,7 +16,7 @@ João Pedro Dias is part researcher on the thin line between hardware and softwa
 
 ## professional appointments
 
-- [2025--] Solutions Architect @ [Yonderland](https://yonderland.com)
+- [2026--] Solutions Architect @ [Yonderland](https://yonderland.com)
 - [2025-26] Senior Software Architect @ [Kuehne+Nagel](https://kuehne-nagel.com)
 - [2023-25] Team Lead and Software Architect @ [Kuehne+Nagel](https://kuehne-nagel.com)
 - [2018-24] Invited Assistant Professor @ [Faculty of Engineering, University of Porto](https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL)
