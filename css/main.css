@@ -787,10 +787,31 @@ pre a:only-of-type::before {
     margin-left: calc(50% - 47.5vw) !important;
   }
 
+  /* stack side-by-side images vertically instead of overlapping */
+  .row {
+    display: block;
+  }
+
+  .row .column {
+    width: 100%;
+  }
+
   table {
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    font-size: 0.85rem;
+  }
+
+  table tr th,
+  table tr td {
+    padding: 2px 6px;
+  }
+
+  /* fade the right edge so it is clear the table continues */
+  table[data-overflow] {
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
   }
 }
 
@@ -915,6 +936,14 @@ details > ul {
 }
 
 /* code style */
+code {
+  font-family: "Courier New", Courier, monospace;
+}
+
+pre code {
+  font-family: inherit;
+}
+
 details code {
   background: var(--details-code-bg);
   border: 1px solid var(--details-border);

@@ -81,4 +81,21 @@
         </div>
     </div>
 
+    <script>
+      (function () {
+        var tables = document.querySelectorAll("table");
+        function update() {
+          tables.forEach(function (t) {
+            var remaining = t.scrollWidth - t.clientWidth - t.scrollLeft;
+            t.toggleAttribute("data-overflow", remaining > 8);
+          });
+        }
+        update();
+        addEventListener("resize", update, { passive: true });
+        tables.forEach(function (t) {
+          t.addEventListener("scroll", update, { passive: true });
+        });
+      })();
+    </script>
+
 </body>
