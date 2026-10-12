@@ -52,7 +52,7 @@ layout: default
   <script type="module">
     import { init } from '{{ site.baseurl }}/js/lite-light.min.js';
     init();
-    document.querySelectorAll("img").forEach(img => {
+    document.querySelectorAll(".blog-content img").forEach(img => {
       img.dataset.lightbox = img.src
       img.style.cursor = "zoom-in"
     });
