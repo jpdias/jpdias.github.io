@@ -33,7 +33,7 @@ I've solved other challenges in the meanwhile, and given that this was the welco
 
 However the resulting letters does not making any sense... Maybe a little rotation solves the problem? ROT13 gave no results, but ROT23 (!?) worked perfectly!
 
-![](/images/hackrocks22/20221130173856.png)
+![CyberChef recipe decoding Morse and ROT23 to reveal the OPORTO message](/images/hackrocks22/20221130173856.png)
 
 And the flag is `OPORTO`.
 
@@ -180,13 +180,13 @@ Printing the contents, we get our flag, `flag{m4rcus_f0rg0t_t0_change_perm_env_a
 
 So this was an OSINT challenge. The first part of the challenge was pretty straightforward, just finding the place were the picture was taken, you can use Google Images, or Yandex Image search to get to the result directly.
 
-![](/images/hackrocks22/20221112112504.png)
+![Google Lens reverse image search identifying the Kopi 98 cafe](/images/hackrocks22/20221112112504.png)
 
 So, we have KOPI 98 cafe located in _Jl. Boulevard Graha Raya No.30, Paku Jaya, Kec. Serpong Utara, Kota Tangerang Selatan, Banten 15220, Indonesia_. But where to go from here now?
 
 After losing some hair trying to understand where to go from here, `mluis` suggested to look into the reviews, and we found the flag.
 
-![](/images/hackrocks22/20221112112442.png)
+![Kopi 98 Google reviews with the review containing the flag](/images/hackrocks22/20221112112442.png)
 > Author: Jameskenniyantopurica
 > Nice coffee  
 > flag{n0needToreverseImag3me!}
@@ -198,13 +198,13 @@ Flag was `flag{n0needToreverseImag3me!}`.
 >Access the website provided to us and help us rewrite the report.  
 >To access the challenge, click on the following link: [http://example.com:17821](http://example.com:17821)
 
-![](/images/hackrocks22/20221201124047.png)
+![Bad Cookie challenge home page asking visitors to register their name](/images/hackrocks22/20221201124047.png)
 
 So another web challenge. This was also a pretty straightforward challenge, but I didn't look at the source code, so I took the longest road possible. But let's get to the details. We have a web page with 3 sub pages, `Home`, `Admin`, and `Message`. Trying to access the `Admin` page gives us an alert message: `no cookie!`. So we have to get a cookie.
 
 Getting to the `Message` page, we have an input box for our `name`. Entering anything in this field gives us a cookie that set the field `x-access-token`. 
 
-![](/images/hackrocks22/20221201124137.png)
+![Message page confirming the cookie is set in the x-access-token header](/images/hackrocks22/20221201124137.png)
 
 However, if we try to access the `Admin` we still don't have the necessary cookie. Looking at the cookie we can see that it is a `jwt` token:
 `x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNfaWQiOiJndWVzdCIsImlkIjoidGVzdCIsImV4cCI6MTY2OTkwMDI3NX0.G-MCKnN3jluboyrxXCHDCU2TF8CfZWVXnyUc3HP4QfQ`
@@ -322,5 +322,5 @@ And we get our last flag: `flag{well_i_am_exposed_through_one_pic}`
 
 So this was the first CTF by InvestAmarante, and the first one that I played from _hackrocks_. As a newbie friendly CTF it was quick to solve (even quicker if I did not so much time into _rabbit holes_). A recommendation for _hackrocks_ is to be more realistic/precise about the categories, and try to stick to the common ones that typically apply. And, at last, I managed to finish in the 11<sup>th</sup> position.
 
-![](/images/hackrocks22/20221206232957.png)
+![Final competition scoreboard showing jpdias finishing in 11th place](/images/hackrocks22/20221206232957.png)
 

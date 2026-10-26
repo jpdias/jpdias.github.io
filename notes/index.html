@@ -5,6 +5,8 @@ pagination:
 title: "./jpdias/notes"
 ---
 
+<h1 class="visually-hidden">notes</h1>
+
 <ul class="posts">
   {% for post in paginator.posts %}
   <li>
@@ -14,12 +16,14 @@ title: "./jpdias/notes"
     <div class="tagline">
       <span class="shield shield-blue"
         ><span>
-          <i class="ri-calendar-2-line"></i> </span
+          <i class="ri-calendar-2-line" aria-hidden="true"></i> </span
         >{{ post.date | date: '%B %d, %Y' }}</span
       >
       {% for tag in post.tags %}
       <span class="shield shield-grey"
-        ><span><i class="ri-hashtag"></i></span>{{tag}}</span
+        ><span
+          ><i class="ri-hashtag" aria-hidden="true"></i></span
+        >{{tag}}</span
       >
       {% endfor %}
     </div>
@@ -34,14 +38,14 @@ title: "./jpdias/notes"
   <li class="next">
     <a
       href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
-      ><i class="ri-arrow-left-s-line"></i> Older Posts</a
+      ><i class="ri-arrow-left-s-line" aria-hidden="true"></i> Older Posts</a
     >
   </li>
   {% endif %} {% if paginator.previous_page %}
   <li class="previous">
     <a
       href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
-      >Newer Posts <i class="ri-arrow-right-s-line"></i
+      >Newer Posts <i class="ri-arrow-right-s-line" aria-hidden="true"></i
     ></a>
   </li>
   {% endif %} {% endif %}

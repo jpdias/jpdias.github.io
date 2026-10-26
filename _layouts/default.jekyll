@@ -55,13 +55,16 @@
     {% endif %}
 </head>
 <body>
+    <a class="skip-link" href="#content">Skip to content</a>
     <div class="wrapper">
         <header>
-            <nav>
+            <nav aria-label="Main">
                 <a id="author-name" href="/">./jpdias</a>
                 <ul id="navlist" class="navbar-ul">
                     {% for page in site.nav %}
-                        {% if page.name == "Resume" %}
+                        {% if page.name contains "⤴" %}
+                            <li class="nav-list"><a href="{{ page.link }}"><span aria-hidden="true">/{{ page.name }}</span><span class="visually-hidden">/{{ page.name | remove: " ⤴" }} (opens in new tab)</span></a></li>
+                        {% elsif page.name == "Resume" %}
                             <li class="nav-list"><a target="_blank" href="{{ page.link }}">/{{ page.name }}</a></li>
                         {% else %}
                             <li class="nav-list"><a href="{{ page.link }}">/{{ page.name }}</a></li>
@@ -71,15 +74,17 @@
             </nav>
         </header>
         <hr>
-        <div class={% if page.is_contact == true %}"container content contact"{% else %}"container content"{% endif %}>
+        <main id="content" class="{% if page.is_contact == true %}container content contact{% else %}container content{% endif %}">
             {{ content }}
             <p class="social-links">
                 {% for page in site.social %}
-                <span><a rel="me" href="{{ page.url }}" target="_blank"><i class="{{ page.icon }}"></i></a></span> &nbsp;
+                <span><a rel="me" href="{{ page.url }}" target="_blank" aria-label="{{ page.name }}"><i class="{{ page.icon }}" aria-hidden="true"></i></a></span> &nbsp;
                 {% endfor %}
             </p>
-        </div>
+        </main>
     </div>
+
+    <script src="{{ site.baseurl }}/js/toc.js" defer></script>
 
     <script>
       (function () {
@@ -88,6 +93,13 @@
           tables.forEach(function (t) {
             var remaining = t.scrollWidth - t.clientWidth - t.scrollLeft;
             t.toggleAttribute("data-overflow", remaining > 8);
+            // make horizontally scrollable tables reachable/scrollable via keyboard
+            if (t.scrollWidth - t.clientWidth > 8) {
+              if (!t.hasAttribute("tabindex")) {
+                t.setAttribute("tabindex", "0");
+                t.setAttribute("aria-label", (t.querySelector("caption") || {}).textContent || "Table, scrolls horizontally");
+              }
+            }
           });
         }
         update();

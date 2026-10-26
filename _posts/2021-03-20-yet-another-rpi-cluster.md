@@ -14,7 +14,7 @@ Those who are hardware tinkers and hackers know how easy it is to accumulate har
 Back in 2012, a new thingy appeared that reshaped the meaning of low-cost and small single-board computers: [Raspberry Pi](https://www.raspberrypi.org/). Its ability to run Linux and its exposed GPIO pins allowed it to become one of the most common pieces of hardware in every electronic enthusiast's storage[^1]. As of today, there are five different hardware families and more than 12 different models available. As a result, I had a few of these spread among storage shelves, but I always felt bad for having computing power just lying around and accumulating dust. The idea of using them as a computing cluster kept appearing in the usual places: [Hackaday](https://hackaday.com/2020/04/24/raspberry-pi-cluster-shows-you-the-ropes/)[^2], [OctaPi](https://www.raspberrypi.org/blog/octapi/), [hackster.io](https://www.hackster.io/aallan/a-4-node-raspberry-pi-cluster-e19273), ... so it appears that the time has come to do my version. This would be a pretty good playground to carry experiments with networking, distributed computing, DevOps, etc.
 
 <center>
-<img style="max-width: 80%;" src="/images/picluster/all.jpeg"/>
+<img style="max-width: 80%;" alt="Four-Raspberry-Pi cluster in a stacked case next to the TP-Link router" src="/images/picluster/all.jpeg"/>
 </center>
 
 ## Bill of Material
@@ -116,7 +116,7 @@ The next step was to connect the RPis one-by-one to the router ports and connect
 4. Repeat for each RPi.
 
 <center>
-<img style="max-width: 90%;" src="/images/picluster/ddwrt.png"/>
+<img style="max-width: 90%;" alt="DD-WRT DHCP clients table listing the four Raspberry Pis" src="/images/picluster/ddwrt.png"/>
 </center>
 
 #### Addendum (08/04/2021)
@@ -227,7 +227,7 @@ services:
 Prometheus provide an out-of-the-box Web UI that allows running queries over the collected metrics -- the [expression browser](https://prometheus.io/docs/visualization/browser/) and to check the status of the monitoring targets in `Status->Targets`. The query language documentation can be found [here](https://prometheus.io/docs/prometheus/latest/querying/basics/) but the autocomplete feature of the expression browser is a good starting point.
 
 <center>
-<img style="max-width: 75%;" src="/images/picluster/allhosts.png"/>
+<img style="max-width: 75%;" alt="Prometheus targets page showing all four Raspberry Pis up" src="/images/picluster/allhosts.png"/>
 </center>
 
 For configuring Grafana to retrieve data from Prometheus, go to Data Sources and add a new Prometheus data source, specifying the name of the container as the connection string, `prometheus`.
@@ -235,7 +235,7 @@ For configuring Grafana to retrieve data from Prometheus, go to Data Sources and
 For building the main dashboard with all the metrics on Grafana, I used as base the [Node Exporter for Prometheus Dashboard](https://grafana.com/grafana/dashboards/11074?pg=dashboards&plcmt=featured-sub1) by [starsliau](https://github.com/starsliao/Prometheus). However, some minor changes were required: add a panel with the different RPis temperatures and modify the `Job` drop-down to let all jobs (since each RPi is a different job). You can find the modified version in this [gist](https://gist.github.com/jpdias/87475dba768224e8fa50fd6354a3ad21).
 
 <center>
-<img style="max-width: 100%;" src="/images/picluster/grafana.png"/>
+<img style="max-width: 100%;" alt="Grafana dashboard with resource overview metrics for the four Raspberry Pis" src="/images/picluster/grafana.png"/>
 </center>
 
 Additionally, I would like to access metrics related to the router (DD-WRT) and showcase them in the Grafana. However, the TP-Link router does not have [JFFS](https://wiki.dd-wrt.com/wiki/index.php/JFFS), thus the only build compatible is a _micro_ version that neither provides [snmp](https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol) (which could be fectch using Prometheus [snmp_exporter](https://github.com/prometheus/snmp_exporter)) nor allows to run additional applications (which would enable us to use the `Node exporter` MIPS build).

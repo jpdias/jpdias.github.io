@@ -26,7 +26,7 @@ First things first, we need a sensor device capable of collecting temperature/hu
 For starters, we could use some WiFi-based setup, with some cheap ESP8266 plus a DHT22; however, the power consumption of those devices is not that low, so it would require some maintenance in terms of batteries (and, further, it would require some soldering and manual wiring). Next, we could use some ZigBee / Thread / Matter or whatever Connectivity Standards Alliance is now pushing as the "solution" for the standards issue[^1], but that would require specific hardware or some DIY gateway with a Raspberry and a ZigBee / Thread dongle, so no-go. There are other "state-of-the-art" solutions, but they are typically expensive or over-engineered for this use case.
 
 <center>
-<img style="max-width: 30% !important" src="/images/smarthome/xiaomi.jpeg">
+<img alt="Xiaomi LYWSD03MMC temperature and humidity monitor showing 26.8 degrees" style="max-width: 30% !important" src="/images/smarthome/xiaomi.jpeg">
 </center>
 
 Lastly, one of the technologies that have been around for some time now (circa 2009) and have proven to be one of the most battery-efficient ones is Bluetooth Low Energy. And as one of the oldest techs, it is easy to find cheap devices that leverage the protocol, one of them being the [Xiaomi MIJIA Temperature and Humidity Monitor 2](https://xiaomi-mi.com/sockets-and-sensors/mijia-temperature-and-humidity-monitor-2/) (model: LYWSD03MMC), which can be found for around 5$ a piece.

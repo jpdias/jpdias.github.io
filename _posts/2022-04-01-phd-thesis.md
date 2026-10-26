@@ -35,7 +35,9 @@ These contributions materialize into a core set of building blocks that, in asse
 
 ## Presentation
 
-<script async class="speakerdeck-embed" data-id="18b538f15d3d4213981406270b2662ab" data-ratio="1.77966101694915" src="//speakerdeck.com/assets/embed.js"></script>
+<iframe class="slides-embed" src="/assets/talks/phd_defense_2022.pdf#view=Fit" title="PhD defense presentation slides" loading="lazy"></iframe>
+
+<p class="slides-download"><a href="/assets/talks/phd_defense_2022.pdf">View slides as PDF</a></p>
 
 ### References
 

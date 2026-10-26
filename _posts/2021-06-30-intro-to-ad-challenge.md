@@ -109,7 +109,7 @@ PS C:\> Invoke-BloodHound --CollectionMethod All --DomainController 5x.1xx.206.4
 
 This creates a new data dump in `temp` which we can then import to Bloodhound, resulting in something similar to the following image:
 
-<img src="/images/adchall21/userone.png">
+<img src="/images/adchall21/userone.png" alt="BloodHound graph showing user1 has AllExtendedRights over writeradmin">
 
 If you are stuck in a Linux machine, you can use a [Python port of the SharpHoud](https://github.com/fox-it/BloodHound.py) and follow a similar process:
 
@@ -142,7 +142,7 @@ PS C:\> Get-DomainObjectAcl -Identity writeradmin -domain oposec.local -Server 5
 
 Part of the [Windows Sysinternals](https://docs.microsoft.com/en-us/sysinternals/) tools, ADExplorer is an Active Directory (AD) viewer and editor, allowing to "navigate an AD database, define favorite locations, view object properties and attributes without having to open dialog boxes, edit permissions, view an object's schema, and execute sophisticated searches that you can save and re-execute". 
 
-<img src="/images/adchall21/adexplorerview.png">
+<img src="/images/adchall21/adexplorerview.png" alt="AD Explorer browsing the oposec.local domain tree and writeradmin attributes">
 
 ADExplorer presents a tree-view of the target DC, allowing us to navigate among objects, including `Users` and `Computers`. This allowed us to find some extra clues about the challenge, including:
 
@@ -169,7 +169,7 @@ Summarizing, here is a collection of all important Objects and their SIDs. While
 
 By the intel gathered with ADExplorer we are now convinced that need to pwn the `writeradmin` user, since they can read `flags`!
 
-<img src="/images/adchall21/extendedright.png">
+<img src="/images/adchall21/extendedright.png" alt="Out-GridView of writeradmin ACLs with user1's ExtendedRight highlighted">
 
 By inspecting the **ACLs** of `writeradmin` we observe that the object `User1` (by searching for its SID) has `ExtendedRight` over it. A quick search shows that users with `ExtendedRight` in [some situations](https://stealthbits.com/blog/attacking-active-directory-permissions-with-bloodhound/) can enable a object to reset passwords of other objects.
 
@@ -181,7 +181,7 @@ PS C:\> Set-DomainUserPassword -Domain 5x.1xx.206.45 -Identity writeradmin -Acco
 ```
 As this command has no output on success, it is time to test out if it really worked. Trying to use ADExplorer with this account gives us a new view:
 
-<img src="/images/adchall21/flag1.png">
+<img src="/images/adchall21/flag1.png" alt="AD Explorer showing App2 description with the first flag and computer account password">
 
 And we got ourself the first flag! And a Computer Account password for `App2$`.
 
@@ -216,11 +216,11 @@ We now have two new accounts to explore. First thing, we can now complete the ta
 
 First for `writeradmin`:
 
-<img src="/images/adchall21/writeradmin.png">
+<img src="/images/adchall21/writeradmin.png" alt="BloodHound graph of the relationships found in the writeradmin scan">
 
 Then for `App2$`:
 
-<img src="/images/adchall21/app2.png">
+<img src="/images/adchall21/app2.png" alt="BloodHound graph showing the App2 SID allowed to act on App1">
 
 While `writeradmin` does not give any new information beyond what we already knew, Bloodhound showed that a certain SID (1105) -- corresponding to `App2$` -- is `AllowedToAct` on `App1$`.
 

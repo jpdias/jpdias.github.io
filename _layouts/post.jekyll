@@ -3,25 +3,43 @@ layout: default
 ---
 
 <div class="blog-content">
+  {% assign toc_parts = content | split: '<h2 id="' %}
+  {% if toc_parts.size > 2 %}
+    <nav class="page-toc" id="page-toc" aria-label="On this page">
+      <div class="toc-inner">
+        <p class="toc-label" aria-hidden="true">contents</p>
+        <ul class="toc-list">
+          {% for part in toc_parts offset: 1 %}
+            {% assign heading_id = part | split: '"' | first %}
+            {% assign heading_open = heading_id | append: '">' %}
+            {% assign heading_title = part | remove_first: heading_open | split: '</h2>' | first | strip_html | strip %}
+            <li class="toc-item{% if forloop.first %} active{% endif %}">
+              <a href="#{{ heading_id }}"{% if forloop.first %} class="active"{% endif %}>{{ heading_title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </nav>
+  {% endif %}
   <h1>{{ page.title }}</h1>
   <div class="tagline">
     <span class="shield shield-blue">
       <span>
-        <i class="ri-calendar-2-line"></i>
+        <i class="ri-calendar-2-line" aria-hidden="true"></i>
       </span>
       {{ page.date | date: '%B %d, %Y' }}
     </span>
     {% for tag in page.tags %}
       <span class="shield shield-grey">
         <span>
-          <i class="ri-hashtag"></i>
+          <i class="ri-hashtag" aria-hidden="true"></i>
         </span>
         {{ tag }}
       </span>
     {% endfor %}
     <span class="shield shield-yellow">
       <span>
-        <i class="ri-timer-line"></i>
+        <i class="ri-timer-line" aria-hidden="true"></i>
       </span>
       {% include reading-time.jekyll %}
     </span>
@@ -45,9 +63,9 @@ layout: default
       href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1"
       target="_blank"
       rel="license noopener noreferrer"
-      style="display:inline-block;">CC BY 4.0&nbsp;<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;width:auto;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;width:auto;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a>
+      style="display:inline-block;">CC BY 4.0&nbsp;<img alt="" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;width:auto;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img alt="" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;width:auto;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a>
     and is
-    <a href="https://notbyai.fyi/hi/not-by-ai/" target="_blank">not by AI <img src="/images/not-by-ai-white.svg" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;width:auto"></a>
+    <a href="https://notbyai.fyi/hi/not-by-ai/" target="_blank">not by AI <img alt="" src="/images/not-by-ai-white.svg" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;width:auto"></a>
   </p>
   <script type="module">
     import { init } from '{{ site.baseurl }}/js/lite-light.min.js';
