@@ -23,7 +23,7 @@
     {% assign url = site.url | append: site.baseurl | append: page.url %}
     <meta name="description" content="{{ desc }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS" href="/feed.xml" />
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css?v={{ site.time | date: '%s' }}">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/code.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/academicons.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/remixicon.css">
@@ -84,7 +84,7 @@
         </main>
     </div>
 
-    <script src="{{ site.baseurl }}/js/toc.js?v={{ site.time | date: '%s' }}" defer></script>
+    <script src="{{ site.baseurl }}/js/toc.js" defer></script>
 
     <script>
       (function () {
