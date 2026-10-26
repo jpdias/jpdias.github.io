@@ -145,15 +145,20 @@ a {
   color: var(--main-headers-color);
 }
 
-/* slim dashed underline for links inside the content (4px dash, 5px gap) */
+/* in-content links: slight horizontal padding so they read as links without underlines */
 .content a:not(.shield),
 .blog-content a:not(.shield),
 .description-item a {
   text-decoration: none;
-  background-image: linear-gradient(to right, currentColor 0 4px, transparent 4px 9px);
-  background-repeat: repeat-x;
-  background-position: 0 100%;
-  background-size: 9px 1px;
+  padding: 0 0.25rem;
+  border-radius: 3px;
+}
+
+.content a:not(.shield):hover,
+.blog-content a:not(.shield):hover,
+.description-item a:hover {
+  background-color: var(--hover);
+  opacity: 1;
 }
 
 a:hover,
@@ -411,7 +416,7 @@ nav {
 }
 /*pagination*/
 ul.pager {
-  text-align: left;
+  text-align: center;
   list-style: none;
   padding-left: 0;
 }
@@ -420,6 +425,10 @@ ul.pager li {
   display: inline;
   padding: 0;
   margin: 0;
+}
+
+ul.pager li + li {
+  margin-left: 1.5rem;
 }
 /*shields*/
 .tagline {
@@ -964,6 +973,31 @@ details code {
   color: var(--details-code-color);
 }
 
+/* embedded slide decks (16:9, matching the deck ratio) */
+.slides-embed {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--code-bg-color);
+}
+
+/* fallback for browsers without aspect-ratio: derive size from the
+   viewport (16:9 height, never taller than 3/4 of the screen) */
+@supports not (aspect-ratio: 16 / 9) {
+  .slides-embed {
+    height: min(56.25vw, 75vh);
+  }
+}
+
+.slides-download {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+}
+
 /* * Accessibility */
 
 /* hidden but available to screen readers */
@@ -1007,6 +1041,72 @@ summary:focus-visible,
   outline: 2px solid var(--main-headers-color);
   outline-offset: 2px;
   border-radius: 3px;
+}
+
+/* section index for blog posts, pinned just outside the content's left edge;
+   the wrapper is a full-width fixed layer so the inner box can track the
+   centered content column via margin auto */
+.page-toc {
+  display: none;
+}
+
+@media (min-width: 1400px) {
+  .page-toc {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 170px;
+    left: 0;
+    width: 100%;
+    max-height: calc(100vh - 5rem);
+    pointer-events: none;
+  }
+
+  .page-toc .toc-inner {
+    width: 10rem;
+    margin-left: auto;
+    margin-right: 0;
+    /* sit just outside the content's left text edge: half the container
+       width + its padding, then pull back by the TOC width and a 0.5rem gap */
+    transform: translateX(calc(-550px - 1.5rem - 10rem - 0.5rem));
+    font-size: 0.8rem;
+    line-height: 1.4;
+    max-height: calc(100vh - 5rem);
+    overflow-y: auto;
+    pointer-events: auto;
+  }
+}
+
+.toc-label {
+  margin: 0 0 0.75rem;
+  color: var(--main-font-color);
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+}
+
+.toc-list {
+  margin: 0;
+}
+
+.toc-item a {
+  display: block;
+  padding: 0.25rem 0;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.toc-item a:hover {
+  color: var(--main-headers-color);
+  opacity: 1;
+}
+
+.toc-item a.active {
+  color: var(--main-headers-color);
+}
+
+/* the marker belongs to the li — color it when its link is active */
+.toc-item.active::marker {
+  color: var(--main-headers-color);
 }
 
 /* respect reduced-motion preference */

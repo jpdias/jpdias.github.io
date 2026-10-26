@@ -3,6 +3,30 @@ layout: default
 ---
 
 <div class="blog-content">
+  {% comment %}
+    Server-rendered table of contents: split the rendered content on kramdown's
+    h2 id attributes and list them here, so the TOC is in the HTML from the
+    start (no JS build step). Skipped when a post has fewer than two h2s.
+    js/toc.js only adds scroll highlighting and the two-line-title offset.
+  {% endcomment %}
+  {% assign toc_parts = content | split: '<h2 id="' %}
+  {% if toc_parts.size > 2 %}
+    <nav class="page-toc" id="page-toc" aria-label="On this page">
+      <div class="toc-inner">
+        <p class="toc-label" aria-hidden="true">contents</p>
+        <ul class="toc-list">
+          {% for part in toc_parts offset: 1 %}
+            {% assign heading_id = part | split: '"' | first %}
+            {% assign heading_open = heading_id | append: '">' %}
+            {% assign heading_title = part | remove_first: heading_open | split: '</h2>' | first | strip_html | strip %}
+            <li class="toc-item{% if forloop.first %} active{% endif %}">
+              <a href="#{{ heading_id }}"{% if forloop.first %} class="active"{% endif %}>{{ heading_title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </nav>
+  {% endif %}
   <h1>{{ page.title }}</h1>
   <div class="tagline">
     <span class="shield shield-blue">
