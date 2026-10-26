@@ -145,13 +145,19 @@ a {
   color: var(--main-headers-color);
 }
 
-/* in-content links: slight horizontal padding so they read as links without underlines */
-.content a:not(.shield),
-.blog-content a:not(.shield),
-.description-item a {
+/* in-content links: soft dashed underline (4px dash, 5px gap, ~40% opacity)
+   plus slight horizontal padding so they read clearly as links; not applied
+   to headings, the TOC, or icon-only (social) links */
+.content a:not(.shield):not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .page-toc a, .social-links a),
+.blog-content a:not(.shield):not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .page-toc a, .social-links a),
+.description-item a:not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .page-toc a, .social-links a) {
   text-decoration: none;
   padding: 0 0.25rem;
   border-radius: 3px;
+  background-image: linear-gradient(to right, color-mix(in srgb, currentColor 40%, transparent) 0 4px, transparent 4px 9px);
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 9px 1px;
 }
 
 .content a:not(.shield):hover,
@@ -1043,37 +1049,36 @@ summary:focus-visible,
   border-radius: 3px;
 }
 
-/* section index for blog posts, pinned just outside the content's left edge;
-   the wrapper is a full-width fixed layer so the inner box can track the
-   centered content column via margin auto */
+/* section index for blog posts, anchored to the centered content column so it
+   can never overlap the text: the content is content-box max-width 1100px with
+   1.5rem side padding, so its text always starts at calc(50% - 550px). The TOC
+   is a 13rem fixed box whose right edge is pinned 0.5rem left of that text edge
+   at every viewport width (the +/-13rem cancel for the right edge). The media
+   query only ensures the 13rem box stays fully on-screen: its left edge is
+   50% - 550px - 13rem - 0.5rem, which is >= 0 at >= ~1536px. */
 .page-toc {
   display: none;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1536px) {
   .page-toc {
-    display: flex;
-    justify-content: flex-end;
+    display: block;
     position: fixed;
     top: 170px;
-    left: 0;
-    width: 100%;
-    max-height: calc(100vh - 5rem);
-    pointer-events: none;
-  }
-
-  .page-toc .toc-inner {
-    width: 10rem;
-    margin-left: auto;
-    margin-right: 0;
-    /* sit just outside the content's left text edge: half the container
-       width + its padding, then pull back by the TOC width and a 0.5rem gap */
-    transform: translateX(calc(-550px - 1.5rem - 10rem - 0.5rem));
-    font-size: 0.8rem;
-    line-height: 1.4;
+    left: calc(50% - 550px - 13rem - 0.5rem);
+    width: 13rem;
+    /* body is text-align: justify; TOC entries are short and would get
+       stretched word gaps, so keep them left-aligned */
+    text-align: left;
     max-height: calc(100vh - 5rem);
     overflow-y: auto;
     pointer-events: auto;
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .page-toc .toc-inner {
+    width: 100%;
   }
 }
 
