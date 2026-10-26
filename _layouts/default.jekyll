@@ -23,11 +23,15 @@
     {% assign url = site.url | append: site.baseurl | append: page.url %}
     <meta name="description" content="{{ desc }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS" href="/feed.xml" />
+    <link rel="preload" href="{{ site.baseurl }}/fonts/IBMPlexMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ site.baseurl }}/fonts/lato-v17-latin-300.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/code.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/academicons.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/remixicon.css">
+    {% if page.layout == "post" %}
     <link rel="stylesheet" href="{{ site.baseurl }}/css/lite-light.min.css">
+    {% endif %}
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     {% if site.twitter_username %}
