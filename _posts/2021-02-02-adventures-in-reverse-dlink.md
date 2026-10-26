@@ -12,7 +12,7 @@ There are places over Portugal where fibre connections are still a mirage, and a
 <!--more-->
 
 <center>
-<img style="max-width: 50%;" src="/images/dlink21/connections.svg"/>
+<img style="max-width: 50%;" src="/images/dlink21/connections.svg" alt="Rear ports of the router labeled DSL, phone, LAN and power"/>
 </center>
 
 The DVA-G3170i ADSL2+ VoIP is an ADSL router with one 10/100BASE-T RJ45 LAN port and wireless access point IEEE 802.11g-2003. It supports wireless security with WEP, WPA, WPA2 or WPA/WPA2. Internet connectivity can be established using Dynamic IP Address, Static IP Address, PPPoE (PPP over Ethernet), PPPoA (PPP over ATM) and Bridge Mode. The device also has VoIP capabilities.
@@ -49,10 +49,10 @@ Regarding the admin interface, running on `192.168.10.1:8080`, the login is made
 
 <div class="row" style="text-align:center">
   <div class="column">
-    <img src="/images/dlink21/interface.png">
+    <img src="/images/dlink21/interface.png" alt="Web admin interface showing the setup wizard and side menu">
   </div>
   <div class="column">
-    <img style="width: 70%;" src="/images/dlink21/interface2.png">
+    <img style="width: 70%;" src="/images/dlink21/interface2.png" alt="WAN settings page with the PPPoE password visible">
   </div>
 </div>
 
@@ -78,13 +78,13 @@ With a multimeter, it was easy to find out the GND pin with a connectivity test,
 
 <div class="row" style="text-align:center">
   <div class="column">
-    <img src="/images/dlink21/uart1.jpg">
+    <img src="/images/dlink21/uart1.jpg" alt="Logic analyzer connected to the router UART header pins">
   </div>
   <div class="column">
-    <img src="/images/dlink21/uart2.jpg">
+    <img src="/images/dlink21/uart2.jpg" alt="USB UART adapter wired between a laptop and the router board">
   </div>
   <div class="column">
-    <img src="/images/dlink21/uart3.jpg">
+    <img src="/images/dlink21/uart3.jpg" alt="Bench setup capturing the router boot log on a laptop">
   </div>
 </div>
 
@@ -393,7 +393,7 @@ ELF 32-bit MSB executable
 Looking for the main function in the function tree we can find the `wpakeygen_main` which seems a rather good candidate, so lets look at the p-code:
 
 <center>
-<img style="max-width: 65%;" src="/images/dlink21/ghidra-pcode.png"/>
+<img style="max-width: 65%;" src="/images/dlink21/ghidra-pcode.png" alt="Ghidra decompilation of the wpakeygen password generation function"/>
 </center>
 
 The first part of the code, which is not shown, defines the variables and reads the `MAC` as the argument. Then the function `Alpha_MACString_Remove_Separator` is called, and, by its name, we can conclude that it removes the MAC address separator between the pairs of hex digits. In the following lines, this function's return is stored (including repetitions), in a mostly-random way, in a _string_ with 20 chars of size.
@@ -523,7 +523,7 @@ We can now use the same utility to change some configuration values, e.g.:
 All of this modifications can also be carried using the Web Admin GUI, e.g.: [192.168.10.1/auth.xgi?set/runtime/web/tr069hide=0]().
 
 <center>
-<img style="max-width: 50%;" src="/images/dlink21/hacked.png"/>
+<img style="max-width: 50%;" src="/images/dlink21/hacked.png" alt="Admin interface with unlocked TR-069 menu and renamed firmware"/>
 </center>
 
 ## Wrap Up

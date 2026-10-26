@@ -13,7 +13,7 @@ This year the Computer Emergency Response Team (CERT) of the RCTS – The Scienc
 
 The scoreboard by the end of the competition was the following: 
 <center>
-<img style="max-width: 70%;" src="/images/rctsctf20/scoreboard.png"/>
+<img style="max-width: 70%;" alt="Final scoreboard of the Summer 2020 RCTS CERT CTF" src="/images/rctsctf20/scoreboard.png"/>
 </center>
 The challenges were solved with [@0xz3z4d45](https://twitter.com/0xz3z4d45), which was the team MVP! Kudos.
 
@@ -217,7 +217,7 @@ We immediately get the flag: flag{ROP_TO_GET_THE_FLAG}
 Opening the binary file in Ghidra (or any other RE tool), we found a series of direct values being `mov`ed. By converting those, we get the flag directly.
 
 <center>
-<img style="width: 40%;" src="/assets/rctsctf20/reverse500.png"/>
+<img style="width: 40%;" alt="Ghidra disassembly with mov instructions encoding the flag" src="/assets/rctsctf20/reverse500.png"/>
 </center>
 
 
@@ -243,7 +243,7 @@ The `rctscert.txt` file is a simple plain text file which seemed inauspicious at
 > Find the flag in the file `rctscert.jpg`.
 
 <center>
-<img style="width: 40%;" src="/assets/rctsctf20/rctscert.jpg"/>
+<img style="width: 40%;" alt="CERT RCTS logo image used for the stega-200 challenge" src="/assets/rctsctf20/rctscert.jpg"/>
 </center>
 
 Running the typical stegno tools in the file did not output any useful information. However, typically, JPG files are used to hide secrets with the [steghide tool](http://steghide.sourceforge.net/). Since we had no password for the file (and empty password would not give anything), we jumped to brute force. Using the tool [stegcrack](https://github.com/Paradoxis/StegCracker) and the [rockyou](https://github.com/danielmiessler/SecLists/tree/master/Passwords/Leaked-Databases) dictionary (one of the most common dictionaries used in CTFs), we quickly found out the password:
@@ -271,7 +271,7 @@ flag{l3ts_pl@y_w1th_p1cs}
 > Find the flag in the file `steganography-300.jpg`.
 
 <center>
-<img style="width: 40%;" src="/assets/rctsctf20/steganography-300.jpg"/>
+<img style="width: 40%;" alt="CERT RCTS logo image hiding an embedded ZIP archive" src="/assets/rctsctf20/steganography-300.jpg"/>
 </center>
 
 This one was more tricky than the last one. `binwalk` pointed us to an embedded ZIP archive in the file. However, it just showed us the end of it, making it hard to just extract it from the image.
@@ -336,7 +336,7 @@ password: p@ssw0rd
 We could log in immediately, but there was a part of the page that was only visible to admin users (user1 was not an admin). 
 
 <center>
-<img style="width: 50%;" src="/assets/rctsctf20/web200-1.png"/>
+<img style="width: 50%;" alt="webhack-200 page with a secret link restricted to administrators" src="/assets/rctsctf20/web200-1.png"/>
 </center>
 
 After looking at the cookies of the website, we could see that there was a `privileges` key.
@@ -392,7 +392,7 @@ By analyzing the code we could see that the password was verified char by char, 
 Using Burp Intruder feature, we could just send chars and then order by the response length to get the password. 
 
 <center>
-<img style="width: 60%;" src="/assets/rctsctf20/burp.jpg"/>
+<img style="width: 60%;" alt="Burp Intruder brute-forcing password characters ordered by response length" src="/assets/rctsctf20/burp.jpg"/>
 </center>
 
 The password was BAD22757B321. After entering it, we were given the flag:
@@ -474,7 +474,7 @@ We were given an OVA (Open Virtual Appliance) file, which was virtual machine. C
 Booting the machine, and checking the bash history we got the flag.
 
 <center>
-<img style="width: 60%;" src="/assets/rctsctf20/50.png"/>
+<img style="width: 60%;" alt="Root shell history revealing a hidden secret command with the flag" src="/assets/rctsctf20/50.png"/>
 </center>
 
 ### forensics-100 (100 pts)
@@ -504,7 +504,7 @@ The flag was: flag{195.169.55.85_shellshock}
 The pen drive had a [Firefox portable](https://portableapps.com/apps/internet/firefox_portable) application in it. Opening this app and look at the `Saved Logins` we could get the email and password of the aforementioned person.
 
 <center>
-<img style="width: 50%;" src="/assets/rctsctf20/firefox.png"/>
+<img style="width: 50%;" alt="Firefox portable saved logins exposing the victim email and password" src="/assets/rctsctf20/firefox.png"/>
 </center>
 
 The flag was: {use_keypass_instead}.
@@ -582,5 +582,5 @@ Some other write-ups of these challenges around the web:
 - [forensics-250 by João Varelas](https://vrls.ws/posts/rcts-cert-summer-ctf-2020-forensics-250-writeup/)
 
 <center>
-<img style="width: 50%;" src="/images/rctsctf20/certrcts.jpg"/>
+<img style="width: 50%;" alt="CERT RCTS Capture The Flag illustration with a person among bear traps" src="/images/rctsctf20/certrcts.jpg"/>
 </center>

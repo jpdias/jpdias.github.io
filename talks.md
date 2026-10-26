@@ -8,14 +8,14 @@ title: "./jpdias/talks"
 {% for talk in site.data.talks.talks %}
 
 <article class="talk-item" id="{{ talk.title | downcase | replace: " ", "-" }}">
-    <div class="talk-title"><span><i class="ri-presentation-fill"></i> </span><b>{{ talk.title }}</b><br></div>
+    <div class="talk-title"><span><i class="ri-presentation-fill" aria-hidden="true"></i> </span><b>{{ talk.title }}</b><br></div>
     <div>
-        <span><i class="ri-calendar-schedule-fill"></i> {{ talk.year }}</span>
-        <span><i class="ri-map-pin-fill"></i> {{ talk.location }}</span>
-        <span><i class="ri-group-line"></i> {{ talk.speakers }}</span>
+        <span><i class="ri-calendar-schedule-fill" aria-hidden="true"></i> {{ talk.year }}</span>
+        <span><i class="ri-map-pin-fill" aria-hidden="true"></i> {{ talk.location }}</span>
+        <span><i class="ri-group-line" aria-hidden="true"></i> {{ talk.speakers }}</span>
     </div>
-    <div><i class="ri-tent-fill"></i> {{ talk.venue }}</div>
-    {% if talk.slides and talk.slides != "" %}<div><a href="{{ talk.slides }}" target="_blank" rel="noopener noreferrer"><i class="ri-file-download-fill"></i> Slides (pdf)</a></div>{% endif %}
+    <div><i class="ri-tent-fill" aria-hidden="true"></i> {{ talk.venue }}</div>
+    {% if talk.slides and talk.slides != "" %}<div><a href="{{ talk.slides }}" target="_blank" rel="noopener noreferrer"><i class="ri-file-download-fill" aria-hidden="true"></i> Slides (pdf)</a></div>{% endif %}
 </article>
 
 {% endfor %}

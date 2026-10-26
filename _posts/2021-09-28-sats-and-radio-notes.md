@@ -56,7 +56,7 @@ An antenna has always two poles, one positive and other negative. In some cases,
 
 <div class="row" style="text-align:center">
   <div class="column">
-    <img style="width: 70%;" src="/images/satsandradio21/radio-frequency-bands.png">
+    <img style="width: 70%;" alt="Chart of the radio frequency bands and their wavelengths" src="/images/satsandradio21/radio-frequency-bands.png">
   </div>
 </div>
 
@@ -64,10 +64,10 @@ The used spectrum of radio waves is presented in the figure above (from [terasen
 
 <div class="row" style="text-align:center">
   <div  style="width: 70%; margin:5px;">
-    <img style="width: 100%;" src="/images/satsandradio21/modulation.png">
+    <img style="width: 100%;" alt="Chart summarizing common analog and digital modulation techniques" src="/images/satsandradio21/modulation.png">
   </div>
    <div  style="width: 30%; margin:5px;">
-    <img style="width: 100%" src="/images/satsandradio21/modulation-anim.gif">
+    <img style="width: 100%" alt="Animated waveform showing amplitude and frequency modulation" src="/images/satsandradio21/modulation-anim.gif">
   </div>
 </div>
 
@@ -139,7 +139,7 @@ After connecting such antenna to the SDR, and the SDR to a Linux machine, we can
 
 <div class="row" style="text-align:center">
   <div class="column">
-    <img style="width: 70%;" src="/images/satsandradio21/gqrx_433.png">
+    <img style="width: 70%;" alt="Gqrx spectrum and waterfall showing signals around 433.6 MHz" src="/images/satsandradio21/gqrx_433.png">
   </div>
 </div>
 
@@ -164,7 +164,7 @@ After initialization, we start to see the first data appearing:
 
 <div class="row" style="text-align:center">
   <div class="column">
-    <img style="width: 80%;" src="/images/satsandradio21/rtl_433_out.png">
+    <img style="width: 80%;" alt="rtl_433 decoding temperature sensors and tire pressure monitors" src="/images/satsandradio21/rtl_433_out.png">
   </div>
 </div>
 
@@ -232,7 +232,7 @@ $ dump1090 --modeac --aggressive --net --interactive
 
 <div class="row" style="text-align:center">
   <div class="column">
-    <img style="width: 60%;" src="/images/satsandradio21/dump1090_plane.png">
+    <img style="width: 60%;" alt="dump1090 map tracking flight IBE6409 over Portugal" src="/images/satsandradio21/dump1090_plane.png">
   </div>
 </div>
 
@@ -261,7 +261,7 @@ The image bellow is an example of an APT signal being received. There are severa
 
 <div class="row" style="text-align:center">
   <div class="column">
-    <img style="width: 70%;" src="/images/satsandradio21/gqrx_noaa.png">
+    <img style="width: 70%;" alt="Gqrx receiving a NOAA APT signal at 137.9125 MHz" src="/images/satsandradio21/gqrx_noaa.png">
   </div>
 </div>
 
@@ -269,7 +269,7 @@ APT signals can be decoded using software such as the [noaa-apt image decoder](h
 
 <div class="row" style="text-align:center">
   <div class="column">
-    <img  src="/images/satsandradio21/noaa_fail.png">
+    <img  alt="Partially decoded NOAA weather image with heavy static noise" src="/images/satsandradio21/noaa_fail.png">
   </div>
 </div>
 
@@ -285,10 +285,10 @@ Similarly to the NOAA satellites, I would say that a V-dipole or QFH is good eno
 
 <div class="row" style="text-align:center">
   <div class="column">
-    <img  src="/images/satsandradio21/ariss_fail.png">
+    <img  alt="Corrupted ARISS SSTV image with heavy colour noise" src="/images/satsandradio21/ariss_fail.png">
   </div>
   <div class="column">
-    <img  src="/images/satsandradio21/ariss_ok.jpg">
+    <img  alt="Clear ARISS 20th anniversary SSTV image received from the ISS" src="/images/satsandradio21/ariss_ok.jpg">
   </div>
 </div>
 
@@ -314,7 +314,7 @@ u-blox provides a software to experiment with GPS reception named [u-center](htt
 
 <div class="row" style="text-align:center">
   <div class="column">
-    <img  src="/images/satsandradio21/gps.png">
+    <img  alt="u-center showing a GPS position fix at FEUP in Porto" src="/images/satsandradio21/gps.png">
   </div>
 </div>
 
@@ -397,7 +397,7 @@ With a cheap YouLoop antenna I was able to receive messages from long distances 
 
 <div class="row" style="text-align:center">
   <div class="column">
-    <img style="width:80%" src="/images/satsandradio21/ft8.png">
+    <img style="width:80%" alt="GridTracker map of FT8 contacts across Europe and North America" src="/images/satsandradio21/ft8.png">
   </div>
 </div>
 
@@ -406,7 +406,7 @@ With a cheap YouLoop antenna I was able to receive messages from long distances 
 HF signals are highly-sensible to solar activity, i.e., _solar activity can aid or hamper HF propagation beyond line-of-sight range._ More info [here](https://www.arrl.org/here-comes-the-sun). A common plot of relevant solar activity that is present around amateur radio websites is the following, that provides the most recent data about solar events and its influence in the radio bands. Similarly, some bands work better during daytime and others during nighttime.
 
 <center>
-<img style="width:70%" src="https://www.hamqsl.com/solar101vhfpic.php">
+<img style="width:70%" alt="Solar activity and HF band propagation conditions chart" src="https://www.hamqsl.com/solar101vhfpic.php">
 </center>
 
 ## 1.8Ghz and Beyond

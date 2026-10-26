@@ -11,7 +11,7 @@ The _Web of Things_ aims to build the Internet of Things in a truly open, flexib
 
 <!--more-->
 
-<img src="/images/indoorsensing/mozilla_iot_wordmark.png" style="width:200px; padding-left:8px" align="right">
+<img src="/images/indoorsensing/mozilla_iot_wordmark.png" alt="Mozilla IoT wordmark" style="width:200px; padding-left:8px" align="right">
 
 Before entering into the details of Web of Things[^7], one must present its origin, the Internet-of-Things. The Internet-of-Things can be seen as the result of the interconnection via the Internet of computing devices embedded in everyday objects, enabling them to send and receive data. This paradigm-shift provoked a ripple effect transforming everyday objects into _smart_ objects, thus being widespread in terms of domains of application.
 
@@ -47,13 +47,13 @@ After searching on [Thingiverse](https://www.thingiverse.com/) we found out this
 <div class="imgsdiv">
     <div class="row">
         <div class="column">
-            <img src="/images/indoorsensing/3d1-min.jpg">
+            <img src="/images/indoorsensing/3d1-min.jpg" alt="Anet A8 3D printer printing blue case parts">
         </div>
         <div class="column">
-            <img src="/images/indoorsensing/3d2-min.jpg">
+            <img src="/images/indoorsensing/3d2-min.jpg" alt="NodeMCU and DHT11 sensor wired on a breadboard beside the printed case">
         </div>
         <div class="column">
-            <img src="/images/indoorsensing/3d3-min.jpg">
+            <img src="/images/indoorsensing/3d3-min.jpg" alt="Three finished blue 3D printed case sections">
         </div>
     </div>
 </div>
@@ -309,13 +309,13 @@ Our `motionDetectedInterrupt` function toggles the value of the global variable 
 <div class="imgsdiv">
     <div class="row">
         <div class="column">
-            <img src="/images/indoorsensing/final1-min.jpg">
+            <img src="/images/indoorsensing/final1-min.jpg" alt="NodeMCU wired to the hub with the OLED module inside the case">
         </div>
         <div class="column">
-            <img src="/images/indoorsensing/final2-min.jpg">
+            <img src="/images/indoorsensing/final2-min.jpg" alt="Assembled blue sensing hub powered over USB">
         </div>
         <div class="column">
-            <img src="/images/indoorsensing/final3-min.jpg">
+            <img src="/images/indoorsensing/final3-min.jpg" alt="Assembled hub showing the PIR sensor and OLED displaying moz://a iot">
         </div>
     </div>
 </div>

@@ -21,7 +21,7 @@
   --table-th-bg: #f8f8f834;
   --item-bg: #80808005;
   --sponsor-bg: #0d1117;
-  --text-muted: #ffffff73;
+  --text-muted: #ffffff8c;
   --border: #ffffff14;
 }
 
@@ -145,6 +145,17 @@ a {
   color: var(--main-headers-color);
 }
 
+/* slim dashed underline for links inside the content (4px dash, 5px gap) */
+.content a:not(.shield),
+.blog-content a:not(.shield),
+.description-item a {
+  text-decoration: none;
+  background-image: linear-gradient(to right, currentColor 0 4px, transparent 4px 9px);
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 9px 1px;
+}
+
 a:hover,
 a > b:hover {
   color: var(--main-headers-color);
@@ -253,7 +264,6 @@ table tr td:last-child {
 summary {
   display: initial;
   cursor: pointer;
-  outline: 0;
   text-decoration: none;
   color: var(--main-headers-color);
 }
@@ -439,23 +449,23 @@ ul.pager li {
 }
 
 .shield-blue {
-  background-color: #297fb8;
+  background-color: #1f6d9e;
   color: white;
 }
 
 .shield-yellow {
   background-color: #d8a509;
-  color: white;
+  color: #1a1a1a;
 }
 
 .shield-red {
   background-color: var(--main-headers-color);
-  color: white;
+  color: #1a1a1a;
 }
 
 .shield-green {
   background-color: #35aa12;
-  color: white;
+  color: #1a1a1a;
 }
 
 .shield span {
@@ -463,6 +473,7 @@ ul.pager li {
   text-align: center;
   left: 0;
   width: 20px;
+  color: white;
   background-color: var(--shield-icon-bg);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -951,4 +962,61 @@ details code {
   border-radius: 4px;
   font-size: 0.9em;
   color: var(--details-code-color);
+}
+
+/* * Accessibility */
+
+/* hidden but available to screen readers */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* skip-to-content link, revealed on keyboard focus */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  border-radius: 0 0 5px 5px;
+  background: var(--main-headers-color);
+  color: #1a1a1a;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* visible focus indicator for keyboard users */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--main-headers-color);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

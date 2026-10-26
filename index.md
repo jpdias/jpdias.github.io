@@ -38,11 +38,11 @@ João Pedro Dias is part researcher on the thin line between hardware and softwa
 {% for talk in site.data.talks.talks limit:3 %}
 
 <article class="talk-item">
-    <div class="talk-title"><span><i class="ri-presentation-fill"></i> </span><b>{{ talk.title }}</b><br></div>
+    <div class="talk-title"><span><i class="ri-presentation-fill" aria-hidden="true"></i> </span><b>{{ talk.title }}</b><br></div>
     <div>
-        <span><i class="ri-calendar-schedule-fill"></i> {{ talk.year }}</span>
-        <span><i class="ri-tent-fill"></i> {{ talk.venue }}</span>
-        {% if talk.slides and talk.slides != "" %}<span><a href="{{ talk.slides }}" target="_blank" rel="noopener noreferrer"><i class="ri-file-download-fill"></i> Slides (pdf)</a></span>{% endif %}
+        <span><i class="ri-calendar-schedule-fill" aria-hidden="true"></i> {{ talk.year }}</span>
+        <span><i class="ri-tent-fill" aria-hidden="true"></i> {{ talk.venue }}</span>
+        {% if talk.slides and talk.slides != "" %}<span><a href="{{ talk.slides }}" target="_blank" rel="noopener noreferrer"><i class="ri-file-download-fill" aria-hidden="true"></i> Slides (pdf)</a></span>{% endif %}
     </div>
    
 </article>
@@ -57,8 +57,8 @@ João Pedro Dias is part researcher on the thin line between hardware and softwa
 {% assign counter = counter | plus:1 %}
 <div class="pub-item">
 <div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank"><b>{{ pub.title }}</b></a><br></div>
-<div><i class="ri-group-line"></i> {{ pub.authors }}</div>
-<div><i class="ri-book-3-line"></i>  {{ pub.conference }}</div>
+<div><i class="ri-group-line" aria-hidden="true"></i> {{ pub.authors }}</div>
+<div><i class="ri-book-3-line" aria-hidden="true"></i>  {{ pub.conference }}</div>
 </div>
 {% endfor %}
 
@@ -66,7 +66,7 @@ João Pedro Dias is part researcher on the thin line between hardware and softwa
 {% assign counter = counter | plus:1 %}
 <div class="pub-item">
 <div class="pub-title"><span>[{{ counter }}]</span><a href="{{ pub.url }}" target="_blank"><b>{{ pub.title }}</b></a><br></div>
-<div><i class="ri-group-line"></i> {{ pub.authors }}</div>
-<div><i class="ri-book-3-line"></i>  {{ pub.conference }}</div>
+<div><i class="ri-group-line" aria-hidden="true"></i> {{ pub.authors }}</div>
+<div><i class="ri-book-3-line" aria-hidden="true"></i>  {{ pub.conference }}</div>
 </div>
 {% endfor %}
