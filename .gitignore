@@ -12,3 +12,5 @@ vendor
 .vscode/
 tsconfig.json
 jsconfig.json
+# Node (frontend dep manifest; built files are vendored + committed)
+node_modules

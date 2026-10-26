@@ -1,0 +1,17 @@
+{
+  "name": "jpdias.github.io",
+  "private": true,
+  "description": "Frontend dependency manifest for jpdias.me. Built files are vendored into js/, css/, and fonts/ and committed, because classic GitHub Pages runs Jekyll only (no npm). Run `npm run vendor` after changing versions.",
+  "license": "MIT",
+  "scripts": {
+    "vendor": "node scripts/vendor.mjs",
+    "check": "node scripts/vendor.mjs --check"
+  },
+  "dependencies": {
+    "@fontsource/lato": "^5.3.0",
+    "@ibm/plex": "6.4.1",
+    "academicons": "1.9.5",
+    "litelight-js": "1.2.0",
+    "remixicon": "4.9.1"
+  }
+}

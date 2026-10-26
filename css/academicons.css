@@ -1,5 +1,5 @@
 /*
- *  Academicons 1.9.1 by James Walsh (https://github.com/jpswalsh) and Katja Bercic (https://github.com/katjabercic)
+ *  Academicons 1.9.4 by James Walsh (https://github.com/jpswalsh) and Katja Bercic (https://github.com/katjabercic)
  *  Fonts generated using FontForge - https://fontforge.org
  *  Square icons designed to be used alongside Font Awesome square icons - https://fortawesome.github.io/Font-Awesome/
  *  Licenses - Font: SIL OFL 1.1, CSS: MIT License
@@ -8,12 +8,8 @@
     font-family: 'Academicons';
     font-style: normal;
     font-weight: 400;
-    font-display: block;
-    src:url('../fonts/academicons.eot');
-    src:url('../fonts/academicons.eot') format('embedded-opentype'),
-        url('../fonts/academicons.ttf') format('truetype'),
-        url('../fonts/academicons.woff') format('woff'),
-        url('../fonts/academicons.svg') format('svg');
+    font-display: swap;
+    src: url('../fonts/academicons.woff') format('woff');
 }
 .ai {
   font-family: 'Academicons';
@@ -62,6 +58,12 @@
 .ai-africarxiv-square:before {
   content: "\e90b";
 }
+.ai-archive:before {
+  content: "\e955";
+}
+.ai-archive-square:before {
+  content: "\e956";
+}
 .ai-arxiv:before {
   content: "\e974";
 }
@@ -85,6 +87,12 @@
 }
 .ai-ciencia-vitae-square:before {
   content: "\e913";
+}
+.ai-clarivate:before {
+  content: "\e924";
+}
+.ai-clarivate-square:before {
+  content: "\e925";
 }
 .ai-closed-access:before {
   content: "\e942";
@@ -224,6 +232,12 @@
 .ai-isidore-square:before {
   content: "\e954";
 }
+.ai-isni:before {
+  content: "\e957";
+}
+.ai-isni-square:before {
+  content: "\e958";
+}
 .ai-jstor:before {
   content: "\e938";
 }
@@ -253,6 +267,12 @@
 }
 .ai-moodle-square:before {
   content: "\e908";
+}
+.ai-mtmt:before {
+  content: "\e950";
+}
+.ai-mtmt-square:before {
+  content: "\e951";
 }
 .ai-nakala:before {
   content: "\e940";
@@ -416,8 +436,23 @@
 .ai-stackoverflow-square:before {
   content: "\e921";
 }
+.ai-viaf:before {
+  content: "\e933";
+}
+.ai-viaf-square:before {
+  content: "\e934";
+}
+.ai-wiley:before {
+  content: "\e926";
+}
+.ai-wiley-square:before {
+  content: "\e927";
+}
 .ai-zenodo:before {
   content: "\e911";
+}
+.ai-zenodo-square:before {
+  content: "\e904";
 }
 .ai-zotero:before {
   content: "\e962";
@@ -459,7 +494,7 @@
 .ai-7x {
   font-size: 7em;
 }
-.ai-8x {left
+.ai-8x {
   font-size: 8em;
 }
 .ai-9x {

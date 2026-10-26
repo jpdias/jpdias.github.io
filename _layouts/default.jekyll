@@ -66,8 +66,8 @@
                 <a id="author-name" href="/">./jpdias</a>
                 <ul id="navlist" class="navbar-ul">
                     {% for page in site.nav %}
-                        {% if page.name contains "⤴" %}
-                            <li class="nav-list"><a href="{{ page.link }}"><span aria-hidden="true">/{{ page.name }}</span><span class="visually-hidden">/{{ page.name | remove: " ⤴" }} (opens in new tab)</span></a></li>
+                        {% if page.name contains "↗" %}
+                            <li class="nav-list"><a href="{{ page.link }}"><span aria-hidden="true">/{{ page.name }}</span><span class="visually-hidden">/{{ page.name | remove: " ↗" }} (opens in new tab)</span></a></li>
                         {% elsif page.name == "Resume" %}
                             <li class="nav-list"><a target="_blank" href="{{ page.link }}">/{{ page.name }}</a></li>
                         {% else %}
