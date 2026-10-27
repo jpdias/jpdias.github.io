@@ -68,6 +68,11 @@
     });
   }
 
+  // IntersectionObserver: highlight the section currently in view.
+  // rootMargin: "0px 0px -30% 0px" means the observer triggers when the
+  // heading is within the top 70% of the viewport (instead of the old -70%
+  // which only triggered in the top 30%). This fixes the issue where sections
+  // like footnotes at the bottom of a page never got highlighted.
   if ("IntersectionObserver" in window) {
     var visible = {};
     var observer = new IntersectionObserver(
@@ -88,7 +93,7 @@
           }
         }
       },
-      { rootMargin: "0px 0px -70% 0px", threshold: 0 }
+      { rootMargin: "0px 0px -30% 0px", threshold: 0 }
     );
     entries.forEach(function (e) {
       observer.observe(e.heading);
