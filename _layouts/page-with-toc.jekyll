@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="blog-content">
+  {% assign toc_parts = content | split: '<h2 id="' %}
+  {% if toc_parts.size > 2 %}
+    <nav class="page-toc" id="page-toc" aria-label="On this page">
+      <div class="toc-inner">
+        <p class="toc-label" aria-hidden="true">contents</p>
+        <ul class="toc-list">
+          {% for part in toc_parts offset: 1 %}
+            {% assign heading_id = part | split: '"' | first %}
+            {% assign heading_open = heading_id | append: '">' %}
+            {% assign heading_title = part | remove_first: heading_open | split: '</h2>' | first | strip_html | strip %}
+            <li class="toc-item{% if forloop.first %} active{% endif %}">
+              <a href="#{{ heading_id }}"{% if forloop.first %} class="active"{% endif %}>{{ heading_title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </nav>
+  {% endif %}
+  {{ content }}
+</div>
