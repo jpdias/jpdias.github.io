@@ -1,9 +1,128 @@
-// Enhances the server-rendered "on this page" table of contents
-// (markup generated at build time by _layouts/post.jekyll).
-// Responsibilities kept here: scroll highlighting and nudging the fixed
-// TOC down when the blog title wraps to two lines.
+// Adds copyable deep links to page headings and article/presentation entries,
+// and enhances the server-rendered "on this page" table of contents.
 (function () {
   "use strict";
+
+  function addCopyLinks() {
+    var style = document.createElement("style");
+    style.textContent = [
+      ".copy-link-target { position: relative; scroll-margin-top: 1.5rem; }",
+      ".copy-link-button { border: 0; background: transparent; color: var(--text-muted, #ffffff8c); cursor: pointer; font: inherit; font-size: .75em; line-height: 1; margin-left: .5em; opacity: 0; padding: .25em; vertical-align: middle; }",
+      ".copy-link-target:hover > .copy-link-button, .copy-link-button:focus-visible { opacity: 1; }",
+      ".copy-link-button:hover { color: var(--main-headers-color, #fe5c35); opacity: 1; }",
+      ".copy-link-button:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }",
+      ".copy-link-entry { position: relative; }",
+      ".copy-link-entry > .copy-link-button { position: absolute; right: .35rem; top: .35rem; margin: 0; }",
+      ".copy-link-entry:hover > .copy-link-button, .copy-link-entry > .copy-link-button:focus-visible { opacity: 1; }",
+      "@media (hover: none) { .copy-link-button { opacity: .8; } }",
+      "@media (prefers-reduced-motion: no-preference) { .copy-link-button { transition: opacity .15s ease; } }"
+    ].join("\n");
+    document.head.appendChild(style);
+
+    function slugify(text) {
+      return (text || "section")
+        .normalize("NFKD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .trim()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "") || "section";
+    }
+
+    function uniqueId(base) {
+      var id = base;
+      var suffix = 2;
+      while (document.getElementById(id)) {
+        id = base + "-" + suffix;
+        suffix += 1;
+      }
+      return id;
+    }
+
+    function copyText(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(text);
+      }
+      return new Promise(function (resolve, reject) {
+        var field = document.createElement("textarea");
+        field.value = text;
+        field.setAttribute("readonly", "");
+        field.style.position = "fixed";
+        field.style.opacity = "0";
+        document.body.appendChild(field);
+        field.select();
+        var copied = false;
+        try {
+          copied = document.execCommand("copy");
+        } catch (_error) {
+          copied = false;
+        }
+        field.remove();
+        if (copied) resolve();
+        else reject(new Error("Copy failed"));
+      });
+    }
+
+    function makeButton(target, label) {
+      var button = document.createElement("button");
+      button.type = "button";
+      button.className = "copy-link-button";
+      button.innerHTML = '<i class="ri-links-line" aria-hidden="true"></i>';
+      button.setAttribute("aria-label", "Copy link to " + label);
+      button.title = "Copy link";
+      button.addEventListener("click", function () {
+        var url = window.location.origin + window.location.pathname + window.location.search + "#" + encodeURIComponent(target.id);
+        var originalLabel = button.getAttribute("aria-label");
+        copyText(url).then(function () {
+          button.innerHTML = '<i class="ri-check-line" aria-hidden="true"></i>';
+          button.setAttribute("aria-label", "Link copied");
+          button.title = "Copied!";
+          window.setTimeout(function () {
+            button.innerHTML = '<i class="ri-links-line" aria-hidden="true"></i>';
+            button.setAttribute("aria-label", originalLabel);
+            button.title = "Copy link";
+          }, 1600);
+        }).catch(function () {
+          button.setAttribute("aria-label", "Could not copy link");
+          button.title = "Could not copy link";
+          window.setTimeout(function () {
+            button.setAttribute("aria-label", originalLabel);
+            button.title = "Copy link";
+          }, 1600);
+        });
+      });
+      target.appendChild(button);
+    }
+
+    var content = document.querySelector("main#content");
+    if (!content) return;
+
+    // Kramdown supplies heading IDs; add deterministic IDs where it does not.
+    var headings = content.querySelectorAll("h1, h2, h3, h4, h5, h6");
+    Array.prototype.forEach.call(headings, function (heading) {
+      if (heading.closest(".social-links")) return;
+      if (!heading.id) heading.id = uniqueId(slugify(heading.textContent));
+      if (heading.querySelector(":scope > .copy-link-button")) return;
+      heading.classList.add("copy-link-target");
+      makeButton(heading, heading.textContent.trim());
+    });
+
+    // Publications and talks are standalone entries; provide a stable URL for
+    // each card, including entries shown on the home page.
+    var entries = content.querySelectorAll(".pub-item, .talk-item, .post-item");
+    Array.prototype.forEach.call(entries, function (entry) {
+      if (!entry.id) {
+        var title = entry.querySelector(".pub-title, .talk-title, h1, h2, h3, b, strong");
+        entry.id = uniqueId(slugify(title ? title.textContent : entry.textContent));
+      }
+      if (entry.querySelector(":scope > .copy-link-button")) return;
+      entry.classList.add("copy-link-target", "copy-link-entry");
+      var title = entry.querySelector(".pub-title, .talk-title, h1, h2, h3, b, strong");
+      makeButton(entry, title ? title.textContent.trim() : "this entry");
+    });
+  }
+
+  addCopyLinks();
 
   var toc = document.getElementById("page-toc");
   if (!toc) return;
@@ -35,9 +154,7 @@
   }
 
   // The TOC is position:fixed. CSS anchors it at 170px, which is correct for
-  // a single-line blog title; when the title wraps to two lines the tagline
-  // (and everything below) shifts down, so add the extra line(s) measured
-  // against the h1's line-height.
+  // a single-line blog title; when the title wraps, move it down accordingly.
   var TOC_BASE_TOP = 170;
 
   function placeToc() {
@@ -61,18 +178,14 @@
 
   // Highlight the section currently in view.
   function setActive(id) {
-    entries.forEach(function (e) {
-      var on = e.link.getAttribute("href") === "#" + id;
-      e.link.classList.toggle("active", on);
-      e.link.parentNode.classList.toggle("active", on);
+    entries.forEach(function (entry) {
+      var on = entry.link.getAttribute("href") === "#" + id;
+      entry.link.classList.toggle("active", on);
+      entry.link.parentNode.classList.toggle("active", on);
     });
   }
 
-  // IntersectionObserver: highlight the section currently in view.
-  // rootMargin: "0px 0px -30% 0px" means the observer triggers when the
-  // heading is within the top 70% of the viewport (instead of the old -70%
-  // which only triggered in the top 30%). This fixes the issue where sections
-  // like footnotes at the bottom of a page never got highlighted.
+  // IntersectionObserver highlights the heading currently in view.
   if ("IntersectionObserver" in window) {
     var visible = {};
     var observer = new IntersectionObserver(
@@ -95,8 +208,8 @@
       },
       { rootMargin: "0px 0px -30% 0px", threshold: 0 }
     );
-    entries.forEach(function (e) {
-      observer.observe(e.heading);
+    entries.forEach(function (entry) {
+      observer.observe(entry.heading);
     });
   }
 })();
