@@ -13,9 +13,10 @@
       ".copy-link-button:hover { color: var(--main-headers-color, #fe5c35); opacity: 1; }",
       ".copy-link-button:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }",
       ".copy-link-entry { position: relative; }",
-      ".copy-link-entry > .copy-link-button { position: absolute; right: .35rem; top: .35rem; margin: 0; }",
+      ".copy-link-entry > .copy-link-button { position: absolute; right: .35rem; top: .35rem; margin: 0; opacity: .75; }",
       ".posts > li.copy-link-entry { padding-right: 2rem; }",
       ".copy-link-entry:hover > .copy-link-button, .copy-link-entry > .copy-link-button:focus-visible { opacity: 1; }",
+      ".talk-item:hover { background-color: var(--item-bg); transition: none; }",
       "@media (hover: none) { .copy-link-button { opacity: .8; } }",
       "@media (prefers-reduced-motion: no-preference) { .copy-link-button { transition: opacity .15s ease; } }"
     ].join("\n");
@@ -101,7 +102,7 @@
 
     // Kramdown supplies heading IDs; add deterministic IDs where it does not.
     // Article archive titles already link to their full post, so the permalink
-    // control on the archive entry is the useful action there.
+    // control on the archive entry copies that destination directly.
     var headings = content.querySelectorAll("h1, h2, h3, h4, h5, h6");
     Array.prototype.forEach.call(headings, function (heading) {
       if (heading.closest(".social-links, .posts") || heading.classList.contains("visually-hidden")) return;
@@ -111,8 +112,7 @@
       makeButton(heading, heading.textContent.trim());
     });
 
-    // Article archive entries copy the post permalink (not an archive-page
-    // fragment), so readers can share an article directly from the listing.
+    // Article archive entries copy the post permalink, not an archive fragment.
     var articles = content.querySelectorAll(".posts > li");
     Array.prototype.forEach.call(articles, function (article) {
       var titleLink = article.querySelector("h2 a[href], h3 a[href], h4 a[href]");
@@ -123,8 +123,7 @@
       makeButton(article, titleLink.textContent.trim(), new URL(titleLink.href, window.location.href).href);
     });
 
-    // Publications and talks are standalone entries; provide a stable URL for
-    // each card, including entries shown on the home page.
+    // Talks and publications copy a fragment link to their individual entry.
     var items = content.querySelectorAll(".pub-item, .talk-item, .post-item");
     Array.prototype.forEach.call(items, function (item) {
       if (!item.id) {
