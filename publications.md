@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page-with-toc
 title: "./jpdias/publications"
 ---
 
