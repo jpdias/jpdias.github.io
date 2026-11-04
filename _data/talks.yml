@@ -1,4 +1,10 @@
 talks:
+  - title: "Phishing Expedition Tales from When You Take the Bait"
+    speakers: "João Pedro Dias"
+    venue: "[0x2D6C203133337] - The Meet // ØxＯＰＯＳɆC"
+    location: "Porto, Portugal"
+    year: 2026
+    slides: "assets/talks/Phishing_Expedition_Tales_from_When_You_Take_the_Bait_2026.pdf"
   - title: "Compliance Killed Your Curiosity: Why Fear-Based Security Training Makes You Worse at Your Job"
     speakers: "João Pedro Dias"
     venue: "'Project and Seminars' course of the Information Security, Cybersecurity and Privacy Postgraduate Course at Instituto Superior de Engenharia do Porto (ISEP)"
@@ -131,8 +137,3 @@ talks:
     location: "Porto, Portugal"
     year: 2015
     slides: "assets/talks/Powershell_feup_2015.pdf"
-  
-    
-
-
-    
