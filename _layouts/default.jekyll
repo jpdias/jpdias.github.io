@@ -88,7 +88,7 @@
         </main>
     </div>
 
-    <script src="{{ site.baseurl }}/js/toc.js" defer></script>
+    {% include toc-script.jekyll %}
 
     <script>
       (function () {
