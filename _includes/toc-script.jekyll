@@ -7,7 +7,7 @@
   function addCopyLinks() {
     var style = document.createElement("style");
     style.textContent = [
-      ".copy-link-target { position: relative; scroll-margin-top: 1.5rem; }",
+      ".copy-link-target { position: relative; scroll-margin-top: 1.5rem; padding-right: 1.5rem; }",
       ".copy-link-button { border: 0; background: transparent; color: var(--text-muted, #ffffff8c); cursor: pointer; font: inherit; font-size: .75em; line-height: 1; margin-left: .5em; opacity: 0; padding: .25em; vertical-align: middle; }",
       ".copy-link-target:hover > .copy-link-button, .copy-link-button:focus-visible { opacity: 1; }",
       ".copy-link-button:hover { color: var(--main-headers-color, #fe5c35); opacity: 1; }",
@@ -74,7 +74,7 @@
       button.setAttribute("aria-label", "Copy link to " + label);
       button.title = "Copy link";
       button.addEventListener("click", function () {
-        var url = permalink || (window.location.origin + window.location.pathname + window.location.search + "#" + encodeURIComponent(target.id));
+        var url = permalink || (window.location.origin + window.location.pathname + window.location.search + "#" + target.id);
         var originalLabel = button.getAttribute("aria-label");
         copyText(url).then(function () {
           button.innerHTML = '<i class="ri-check-line" aria-hidden="true"></i>';
@@ -100,19 +100,15 @@
     var content = document.querySelector("main#content");
     if (!content) return;
 
-    // Kramdown supplies heading IDs; add deterministic IDs where it does not.
-    // Article archive titles already link to their full post, so the permalink
-    // control on the archive entry copies that destination directly.
     var headings = content.querySelectorAll("h1, h2, h3, h4, h5, h6");
     Array.prototype.forEach.call(headings, function (heading) {
-      if (heading.closest(".social-links, .posts") || heading.classList.contains("visually-hidden")) return;
+      if (heading.closest(".social-links")) return;
       if (!heading.id) heading.id = uniqueId(slugify(heading.textContent));
       if (heading.querySelector(":scope > .copy-link-button")) return;
       heading.classList.add("copy-link-target");
       makeButton(heading, heading.textContent.trim());
     });
 
-    // Article archive entries copy the post permalink, not an archive fragment.
     var articles = content.querySelectorAll(".posts > li");
     Array.prototype.forEach.call(articles, function (article) {
       var titleLink = article.querySelector("h2 a[href], h3 a[href], h4 a[href]");
@@ -123,7 +119,6 @@
       makeButton(article, titleLink.textContent.trim(), new URL(titleLink.href, window.location.href).href);
     });
 
-    // Talks and publications copy a fragment link to their individual entry.
     var items = content.querySelectorAll(".pub-item, .talk-item, .post-item");
     Array.prototype.forEach.call(items, function (item) {
       if (!item.id) {
@@ -149,7 +144,6 @@
   var links = toc.querySelectorAll(".toc-item a");
   if (links.length < 2) return;
 
-  // Pair each link with the element it points at.
   var entries = [];
   Array.prototype.forEach.call(links, function (link) {
     var href = link.getAttribute("href") || "";
@@ -160,20 +154,16 @@
   });
   if (entries.length < 2) return;
 
-  // The first entry ships pre-marked active in the HTML; keep the seed in
-  // sync with whatever is actually paired, in case of mismatches.
   var first = entries[0].link;
   if (!first.classList.contains("active")) {
     first.classList.add("active");
     first.parentNode.classList.add("active");
   }
 
-  // The TOC is position:fixed. CSS anchors it at 170px, which is correct for
-  // a single-line blog title; when the title wraps, move it down accordingly.
   var TOC_BASE_TOP = 170;
 
   function placeToc() {
-    if (toc.getClientRects().length === 0) return; // hidden at this width
+    if (toc.getClientRects().length === 0) return;
     var h1 = container.querySelector("h1");
     if (!h1) return;
     var lh = parseFloat(getComputedStyle(h1).lineHeight) || 28.8;
@@ -191,7 +181,6 @@
     document.fonts.ready.then(placeToc);
   }
 
-  // Highlight the section currently in view.
   function setActive(id) {
     entries.forEach(function (entry) {
       var on = entry.link.getAttribute("href") === "#" + id;
@@ -200,7 +189,6 @@
     });
   }
 
-  // IntersectionObserver highlights the heading currently in view.
   if ("IntersectionObserver" in window) {
     var visible = {};
     var observer = new IntersectionObserver(
@@ -212,7 +200,6 @@
             visible[entry.target.id] = true;
           }
         });
-        // Topmost heading still on screen wins.
         for (var i = 0; i < entries.length; i++) {
           var id = entries[i].heading.id;
           if (!visible[id]) {
