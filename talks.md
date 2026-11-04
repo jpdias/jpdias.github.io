@@ -7,10 +7,10 @@ title: "./jpdias/talks"
 
 {% assign current_year = nil %}
 {% for talk in site.data.talks.talks %}
-  {% if current_year != talk.year %}
-    {% assign current_year = talk.year %}
-    <h2 id="year-{{ talk.year }}">{{ talk.year }}</h2>
-  {% endif %}
+{% if current_year != talk.year %}
+{% assign current_year = talk.year %}
+<h2 id="year-{{ talk.year }}">{{ talk.year }}</h2>
+{% endif %}
 
 <article class="talk-item" id="{{ talk.title | downcase | replace: " ", "-" }}">
     <div class="talk-title"><span><i class="ri-presentation-fill" aria-hidden="true"></i> </span><b>{{ talk.title }}</b><br></div>
