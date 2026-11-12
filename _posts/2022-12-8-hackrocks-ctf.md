@@ -3,7 +3,7 @@ layout: post
 title: "Portuguese Cybersecurity Competition CTF Write-up"
 categories: [security]
 tags: [security,ctf,hackrocks,hacking]
-thumbnail: /images/hackrocks22/20221112112111.png
+image: /images/hackrocks22/20221112112111.png
 description: "Write-up of the Portuguese Cybersecurity Competition CTF by InvestAmarante and hackrocks."
 ---
 
@@ -44,7 +44,7 @@ And the flag is `OPORTO`.
 This was the trickiest one. Three files were inside the `files.zip` archive:
 - `contenedor.pdf`: ~~what I tought to be~~ a corrupted PDF file. Using all the tricks to recover the file to a readable format didn't succed. `binwalk` also wasn't able to extract anything from the file.
 - `README.txt`: a TXT file with the following text: `Hi there, This PDF is the receipt for the encryptor we bought in Saimazoon.`
-- `algarve.jpg`: A random photo. Using all the `steg` tools (props to [Aperi'solve](aperisolve.fr/)) to extract information from the image did not provide anything.
+- `algarve.jpg`: A random photo. Using all the `steg` tools (props to [Aperi'solve](https://www.aperisolve.com/)) to extract information from the image did not provide anything.
 - `portugal1.jpg`: Similar to the previous random picture, there was nothing within it.
 
 After spending some time messing around with it, and talking with *mluis*, he suggested that it could be related with [Veracrypt](https://www.veracrypt.fr/code/VeraCrypt/) (the challenge title says it all now...). So, assuming that the corrupted PDF file was the *vault*, the keys must lie amongst the remaining files.

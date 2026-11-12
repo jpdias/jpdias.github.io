@@ -3,7 +3,7 @@ layout: post
 title:  "A (not so) Gentle Intro to Active Directory: ØxＯＰＯＳɆＣ [0xF09F8EA3] Challenge"
 categories: [infosec, writeup]
 tags: [activedirectory, oposec, infosec, writeup]
-thumbnail: /images/adchall21/adgeneric.png
+image: /images/adchall21/adgeneric.png
 description: "Field notes for Microsoft AD and write-up for the challenge of ØxＯＰＯＳɆＣ Mɇɇtuᵽ [0xF09F8EA3]"
 ---
 

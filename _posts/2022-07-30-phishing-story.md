@@ -3,8 +3,8 @@ layout: post
 title: "On the hook of a phisher"
 categories: [infosec]
 tags: [infosec, phishing, security]
-thumbnail: /images/phishingms/hello.png
-description: "Analysis of a phishing attempt."
+image: /images/phishingms/hello.png
+description: "Analysis of a phishing attempt: the bait, the red flags and how to spot this kind of social-engineering attack."
 ---
 
 Phishing campaigns are standard, but they are typically poorly done and low-effort. But, sometimes, we catch a good one. This reports an analysis carried over one of those shady emails.
@@ -15,7 +15,7 @@ Phishing campaigns are standard, but they are typically poorly done and low-effo
 
 The entry point for this attempt was an email message sent to one of the top-tier individuals at the target organization. 
 
-The email contained the subject "Payment_Processed_for_Inv_92994_July 26, 2022" and was sent from an [gmx.net](gmx.net) email account. The sender details did appear legit, with something similar to `COMPANY_NAME | Account`.
+The email contained the subject "Payment_Processed_for_Inv_92994_July 26, 2022" and was sent from a [gmx.net](https://www.gmx.net) email account. The sender details did appear legit, with something similar to `COMPANY_NAME | Account`.
 
 As usual, the juice is in the attachments. So we have an `ATT26270.htm` which, when open, presents us with the following well-crafted fake Microsoft login page:
 

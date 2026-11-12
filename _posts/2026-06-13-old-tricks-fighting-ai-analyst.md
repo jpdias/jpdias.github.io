@@ -3,7 +3,7 @@ layout: post
 title: "Beyond Context Windows: When Malware Stops Fitting into Naive Automated Analysis"
 categories: [infosec]
 tags: [phishing,vbs,malware,trojan]
-thumbnail: /images/delphitrojan/endesa-phishing.png
+image: /images/delphitrojan/endesa-phishing.png
 description: "Deobfuscating a Grandoreiro VBS Dropper Hidden Inside a Matroska of ZIPs, Resources, and White Pixels"
 ---
 

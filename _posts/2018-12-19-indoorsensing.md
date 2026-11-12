@@ -3,7 +3,7 @@ layout: post
 title: "Indoor Sensing Hub powered by Mozilla Things Framework"
 categories: [hardware, iot]
 tags: [hardware, webofthings, iot, mozilla]
-thumbnail: /images/indoorsensing/final3-min.jpg
+image: /images/indoorsensing/final3-min.jpg
 description: Building an indoor sensing hub with several sensors using the Mozilla Things Framework.
 ---
 

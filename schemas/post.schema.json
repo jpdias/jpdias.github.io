@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Blog post front matter",
+  "type": "object",
+  "properties": {
+    "layout": {
+      "const": "post"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 150
+    },
+    "description": {
+      "type": "string",
+      "minLength": 50,
+      "maxLength": 200
+    },
+    "image": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^/images/"
+        },
+        {
+          "type": "object",
+          "required": ["path"],
+          "properties": {
+            "path": {
+              "type": "string",
+              "pattern": "^/images/"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "alt": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": ["layout", "title", "description", "image"]
+}

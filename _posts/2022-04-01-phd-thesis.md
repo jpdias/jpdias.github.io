@@ -3,7 +3,7 @@ layout: post
 title: "Increasing the Dependability of Internet-of-Things Systems in the context of End-User Development Environments"
 categories: [research, engineering, software, iot]
 tags: [research, phd, engineering, software, iot]
-thumbnail: /images/phd/phd.png
+image: /images/phd/phd.png
 description: "Abstract of my PhD thesis in Informatics Engineering."
 ---
 

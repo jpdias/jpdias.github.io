@@ -3,7 +3,7 @@ layout: post
 title: "VoicePress5: Tracing a Phishing-to-Java RAT Infection Chain"
 categories: [infosec]
 tags: [phishing,malware,rat]
-thumbnail: /images/javarat26/fatura.png
+image: /images/javarat26/fatura.png
 description: "Analysis of a phishing campaign spreading a Java-based Remote Access Trojan (RAT) targeting Portuguese institutions."
 ---
 

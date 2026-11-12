@@ -3,7 +3,7 @@ layout: post
 title: "Hardware Hacking and Research Toolbox Inventory"
 categories: [security]
 tags: [security,inventory,hacking,toolbox]
-thumbnail: /images/hwinventory/ch341a.jpg
+image: /images/hwinventory/ch341a.jpg
 description: "My inventory of my hardware hacking and research toolbox."
 ---
 

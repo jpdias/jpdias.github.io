@@ -3,7 +3,7 @@ layout: post
 title: "A (not so smart) smart home"
 categories: [iot]
 tags: [iot, smarthome, things, monitoring]
-thumbnail: /images/smarthome/xiaomi.jpeg
+image: /images/smarthome/xiaomi.jpeg
 description: "A DIY guide on creating a 'dummy' smart home, or how to monitor temperature and humidity for cheap."
 ---
 

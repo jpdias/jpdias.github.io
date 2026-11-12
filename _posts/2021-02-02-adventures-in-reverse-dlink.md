@@ -3,7 +3,7 @@ layout: post
 title: "Adventures in Reverse: D-Link DVA-G3170i"
 categories: [hardware]
 tags: [hardware, reverse, iot, router]
-thumbnail: /images/dlink21/uart3.jpg
+image: /images/dlink21/uart3.jpg
 description: "Hardware and Software Reverse Engineering an ADSL modem + router, the D-Link DVA-G3170i/PT (2011)"
 ---
 
@@ -375,7 +375,7 @@ rgdb -i -s /runtime/sys/info/bootcodeversion "$bootcodeversion"
 xmldbc -x /runtime/wpakey "get:wpakeygen $LANMAC"
 ```
 
-A new curious binary appears, the `xmldbc`, which is located in `/usr/sbin/xmldbc`. From [here](): "the `xmldbc` tool has all the commands needed to set the elements (nodes) in the XML MIB", MIB standing for management information base, which is a database used for managing the entities in a communication network. It can also run commands and set variables in the MIB with the result. So this appears to be where the `wpa-psk` is generated and, then, stored. The command executed is `wpakeygen $LANMAC` where the `$LANMAC` is equal to the `$WLANMAC` one.
+A new curious binary appears, the `xmldbc`, which is located in `/usr/sbin/xmldbc`. From the documentation: "the `xmldbc` tool has all the commands needed to set the elements (nodes) in the XML MIB", MIB standing for management information base, which is a database used for managing the entities in a communication network. It can also run commands and set variables in the MIB with the result. So this appears to be where the `wpa-psk` is generated and, then, stored. The command executed is `wpakeygen $LANMAC` where the `$LANMAC` is equal to the `$WLANMAC` one.
 
 ### Reversing the `wpakeygen`
 
@@ -520,7 +520,7 @@ We can now use the same utility to change some configuration values, e.g.:
 - Show the TR-069 menu on the Web Admin GUI: `xmldbc -i -s /runtime/web/tr069hide 0`
 - Change the Firmware Description: `xmldbc -i -s /runtime/sys/info/firmwareVersion AmazingFirmware`
 
-All of this modifications can also be carried using the Web Admin GUI, e.g.: [192.168.10.1/auth.xgi?set/runtime/web/tr069hide=0]().
+All of this modifications can also be carried using the Web Admin GUI, e.g.: `http://192.168.10.1/auth.xgi?set/runtime/web/tr069hide=0`.
 
 <center>
 <img style="max-width: 50%;" src="/images/dlink21/hacked.png" alt="Admin interface with unlocked TR-069 menu and renamed firmware"/>

@@ -1,0 +1,10 @@
+#!/bin/sh
+# Block commits with invalid front matter, broken internal links or missing images.
+set -e
+
+root="$(git rev-parse --show-toplevel)"
+cd "$root"
+
+npm run lint:frontmatter
+bundle exec jekyll build
+bundle exec htmlproofer ./_site --disable-external --no-enforce-https --ignore-urls "/photo"

@@ -1,6 +1,8 @@
 ---
 layout: page-with-toc
-title: "./jpdias/publications"
+head_title: "./jpdias/publications"
+title: "Publications"
+description: "Peer-reviewed journal articles and conference papers by jpdias on software engineering, IoT systems, security and privacy."
 ---
 
 # publications

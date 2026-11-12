@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{% if page.title %}
-            {{ page.title }}
-           {% else %}
-            {{ site.title }}
-           {% endif %}
-    </title>
-
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="theme-color" content="#5f899a" />
-    <meta name="keywords" content="blog, accent, {{ site.author }}, {{ site.title }}, jekyll"/>
+    <meta name="keywords" content="blog, accent, {{ site.author.name | default: site.author }}, {{ site.title }}, jekyll"/>
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
-    <meta name="author" content="{{ site.author }}"/>
-    
-    {% if page.description %}
-        {% assign desc = page.description %}
-    {% else %}
-        {% assign desc = site.description %}
+
+    {% assign head_title = page.head_title | default: page.title | default: site.title %}
+    {% if paginator and paginator.page > 1 %}
+        {% assign head_title = head_title | append: " (page " | append: paginator.page | append: ")" %}
     {% endif %}
-    {% assign url = site.url | append: site.baseurl | append: page.url %}
-    <meta name="description" content="{{ desc }}">
+    <title>{{ head_title }}</title>
+
+    {% comment %}
+      jekyll-seo-tag emits the description, canonical URL, Open Graph,
+      Twitter Card and JSON-LD metadata. `title=false` keeps our own tab
+      title above, while og:title/twitter:title still come from page.title.
+    {% endcomment %}
+    {% seo title=false %}
+
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS" href="/feed.xml" />
+    {% comment %} Relative link so HTMLProofer can verify the share image exists. {% endcomment %}
+    {% assign share_image = page.image.path | default: page.image | default: site.default_og_image %}
+    <link rel="image_src" href="{{ site.baseurl }}{{ share_image }}">
     <link rel="preload" href="{{ site.baseurl }}/fonts/IBMPlexMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{{ site.baseurl }}/fonts/lato-v17-latin-300.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
@@ -32,31 +33,10 @@
     {% if page.layout == "post" %}
     <link rel="stylesheet" href="{{ site.baseurl }}/css/lite-light.min.css">
     {% endif %}
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    {% if site.twitter_username %}
-        <link rel="author" href="https://twitter.com/{{ site.twitter_username }}">
-    {% endif %}
-    <!-- Facebook Open Graph -->
-    <meta name="og:description" content="{{ desc }}">
-    <meta name="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    <meta name="og:url" content="{{ url }}">
-    <meta name="og:type" content="article">
-    {% if page.thumbnail %}
-        <meta name="og:image" content="{{ site.url }}{{ page.thumbnail }}">
-    {% else %}
-        <meta name="og:image" content="{{ site.url }}{{ site.profile_picture }}">
-    {% endif %}
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    <meta name="twitter:description" content="{{ desc }}">
-    <meta name="twitter:url" content="{{ url }}">
-    {% if page.thumbnail %}
-        <meta name="twitter:image" content="{{ site.url }}{{ page.thumbnail }}">
-    {% else %}
-        <meta name="twitter:image" content="{{ site.url }}{{ site.profile_picture }}">
-    {% endif %}
+    <link rel="icon" href="{{ site.baseurl }}/images/favicon/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/images/favicon/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/images/favicon/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/images/favicon/apple-touch-icon.png">
 </head>
 <body>
     <a class="skip-link" href="#content">Skip to content</a>

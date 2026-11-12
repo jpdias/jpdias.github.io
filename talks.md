@@ -1,6 +1,8 @@
 ---
 layout: page-with-toc
-title: "./jpdias/talks"
+head_title: "./jpdias/talks"
+title: "Talks"
+description: "Talks, workshops and keynotes by jpdias on software engineering, IoT, cybersecurity and hardware hacking."
 ---
 
 # talks

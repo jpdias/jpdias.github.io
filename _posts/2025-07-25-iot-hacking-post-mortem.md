@@ -3,7 +3,7 @@ layout: post
 title: "Hardware Hacking 101 Village - Post-Mortem"
 categories: [infosec]
 tags: [hardware,hacking,router,iot]
-thumbnail: /images/hackday25/oxehack-day.jpeg
+image: /images/favicon/webprofile-window.png
 description: "On June 14, 2025, I organized a hardware hacking focused village as part of the ØxＯＰＯＳɆＣ Hack Day, and this is a post-mortem analysis of the village."
 ---
 

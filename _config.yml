@@ -1,10 +1,19 @@
 title: "João Pedro Dias"
+description: "jpdias — engineer, developer and security researcher. Notes on hardware hacking, software engineering, IoT and cybersecurity."
 url: "https://jpdias.me"
 baseurl: ""
 username: jpdias
-author: jpdias
-twitter_username: jpd1as
-profile_picture: /images/profile.jpg
+author:
+  name: jpdias
+default_og_image: /images/favicon/webprofile-window.png
+logo: /images/favicon/webprofile-window.png
+
+# Every page gets the fallback share image; posts override it in their front matter.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /images/favicon/webprofile-window.png
 
 markdown: kramdown
 excerpt_separator: <!--more-->
@@ -12,9 +21,23 @@ highlighter: rouge
 paginate: 8
 paginate_path: "/notes/page:num/"
 
-plugins: [rouge,kramdown,jekyll-paginate,jekyll-target-blank]
+plugins: [rouge,kramdown,jekyll-paginate,jekyll-target-blank,jekyll-seo-tag]
 
 footer: yes
+
+# Development-only files that should not be published with the site.
+exclude:
+  - .sass-cache
+  - .jekyll-cache
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - package.json
+  - package-lock.json
+  - schemas
+  - scripts
+  - vendor
 
 nav:
   - name: "notes"

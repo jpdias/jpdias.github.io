@@ -3,8 +3,8 @@ layout: post
 title:  "Summer 2020 RCTS CERT CTF Write-Up"
 categories: [ctf, security, writeup]
 tags: [ctf, security, writeup]
-thumbnail: /images/rctsctf20/certrcts.jpg
-description: "Write-up of the solution to the challenges fo the Summer 2020 RCTS CERT Capture The Flag by the FCCN (Foundation for National Scientific Computing) of the Portuguese Foundation for Science and Technology (FCT)" 
+image: /images/rctsctf20/certrcts.jpg
+description: "Write-up of the Summer 2020 RCTS CERT Capture The Flag challenges by FCCN, the Portuguese Foundation for Science and Technology."
 ---
 
 This year the Computer Emergency Response Team (CERT) of the RCTS – The Science, Technology and Society Network -- also known as NREN (National Research and Education Network), part of the FCCN (Foundation for National Scientific Computing) of the Portuguese Foundation for Science and Technology (FCT), organized for the first time a Capture The Flag competition targetting students from Portugal at different scholar degrees. The competition consisted of 21 challenges belonging to 7 different categories, namely: Reverse (5), Steganography (3), Web (3), Crypto (3), Forensics (4), Misc (2) and Wifi (1).
@@ -35,7 +35,7 @@ So let's get to the challenges, per category. All the text was translated from P
 
 > The file in annexe contains a code block in JavaScript. Use that to find the Flag.
 
-<a href="/assets/rctsctf20/reverse-100_js"><i class="fa fa-file" aria-hidden="true"></i> reverse-100_js<a/>
+<a href="/assets/rctsctf20/reverse-100_js"><i class="fa fa-file" aria-hidden="true"></i> reverse-100_js</a>
 
 
 Taking the file and spreading around some `console.log`, especially in the `for` loops that construct the strings from `chars` (`String.fromCharCode`), we could find the flag.
@@ -111,7 +111,7 @@ $ ./reverse200
 
 > The file contains a JavaScript code block. Use it to find the Flag.
 
-<a href="/assets/rctsctf20/reverse-300_js"><i class="fa fa-file" aria-hidden="true"></i> reverse-300_js<a/>
+<a href="/assets/rctsctf20/reverse-300_js"><i class="fa fa-file" aria-hidden="true"></i> reverse-300_js</a>
 
 After pasting the code in the browser console and execute it we get the message: `Working as expected! A secret has been created!!`.
 
@@ -234,7 +234,7 @@ By the flag content (ROP) and the possible buffer overflow, we conclude that we 
 
 > Find the flag in the `rctscert.txt` file.
 
-<a href="/assets/rctsctf20/rctscert.txt"><i class="fa fa-file" aria-hidden="true"></i> rctscert.txt<a/>
+<a href="/assets/rctsctf20/rctscert.txt"><i class="fa fa-file" aria-hidden="true"></i> rctscert.txt</a>
 
 The `rctscert.txt` file is a simple plain text file which seemed inauspicious at the start. However, after looking closer, we found that several letters were at UPPERCASE in the middle of the text. Putting together such letters together lead us to `USECODETOPARSE` string which was the flag.
 
@@ -438,7 +438,7 @@ Translation: Congrats! The answer to the challenge is flag{X0R_D3CRYPTI0N$$%%@@}
 
 > The file `public.pem` is a public key of an RSA certificate. Find the private key and decipher the file `ctf_secret.enc`.
 
-<a href="/assets/rctsctf20/public.pem"><i class="fa fa-file" aria-hidden="true"></i> public.pem<a/> <a href="/assets/rctsctf20/ctf_secret.enc"><i class="fa fa-file" aria-hidden="true"></i> ctf_secret.enc<a/>
+<a href="/assets/rctsctf20/public.pem"><i class="fa fa-file" aria-hidden="true"></i> public.pem</a> <a href="/assets/rctsctf20/ctf_secret.enc"><i class="fa fa-file" aria-hidden="true"></i> ctf_secret.enc</a>
 
 This challenge called for the use of the [RsaCtfTool](https://github.com/Ganapati/RsaCtfTool).
 
@@ -456,7 +456,7 @@ Results for public.pem:
 
 Private key :
 ```
-<a href="/assets/rctsctf20/priv.key"><i class="fa fa-file" aria-hidden="true"></i> priv.key<a/>
+<a href="/assets/rctsctf20/priv.key"><i class="fa fa-file" aria-hidden="true"></i> priv.key</a>
 
 
 After having the private key is time for OpenSSL.
@@ -483,7 +483,7 @@ Booting the machine, and checking the bash history we got the flag.
 
 > Find the pieces of evidence of the attack in the log file and submit the flag using the following structure: flag{\<ip_address\>_\<vulnerability_name\>}. 
 
-<a href="/assets/rctsctf20/apache_logs"><i class="fa fa-file" aria-hidden="true"></i> apache_logs<a/>
+<a href="/assets/rctsctf20/apache_logs"><i class="fa fa-file" aria-hidden="true"></i> apache_logs</a>
 
 
 Since it was a RCE vulnerability, the first search was for a reference to something like `/bin/bash`. The following appered:
@@ -541,7 +541,7 @@ After bruteforcing the `keypass` file with the [rockyou](https://github.com/dani
 
 > Find the flag in the following file:
 
-<a href="/assets/rctsctf20/stylist.html"><i class="fa fa-file" aria-hidden="true"></i> stylist.html<a/>
+<a href="/assets/rctsctf20/stylist.html"><i class="fa fa-file" aria-hidden="true"></i> stylist.html</a>
 
 The file has only squares with different colors. Analysing the HTML code something interesting, there was a pattern. `id=nXX` and `background:#0000XX`, where the XX values correspond to the following:
 
@@ -555,7 +555,7 @@ Using [CyberChef](https://gchq.github.io/CyberChef/) to sort the values by ID, c
 
 > Find the flag in the following file: flag.zip.
 
-Using a zip cracker script (e.g. <a target="_blank" href="https://gist.github.com/jpdias/6e19fb84d49bfd8c7d858d74c31958de"><i class="fa fa-file" aria-hidden="true"></i> zipcracker.py<a/>) and using the [rockyou](https://github.com/danielmiessler/SecLists/tree/master/Passwords/Leaked-Databases) dictionary we find out that the password was `josh123`.
+Using a zip cracker script (e.g. <a target="_blank" href="https://gist.github.com/jpdias/6e19fb84d49bfd8c7d858d74c31958de"><i class="fa fa-file" aria-hidden="true"></i> zipcracker.py</a>) and using the [rockyou](https://github.com/danielmiessler/SecLists/tree/master/Passwords/Leaked-Databases) dictionary we find out that the password was `josh123`.
 
 Inside the zip was a text file which content was the flag: flag{br3@k_th3_z1P}.
 
@@ -565,7 +565,7 @@ Inside the zip was a text file which content was the flag: flag{br3@k_th3_z1P}.
 
 > The following file contains data from a Wireless network. The MAC address of the Access Point is D0:FF:98:19:1F:33. The data comprises information about IVs of the 4-Way-Handshake between the AP clients and the AP. Find out the Wireless network password knowing that it uses WPA2.
 
-<a href="/assets/rctsctf20/wifi_capture-01.cap"><i class="fa fa-file" aria-hidden="true"></i> wifi_capture-01.cap<a/>
+<a href="/assets/rctsctf20/wifi_capture-01.cap"><i class="fa fa-file" aria-hidden="true"></i> wifi_capture-01.cap</a>
 
 Using [aircrack-ng](https://www.aircrack-ng.org/) along with the [rockyou](https://github.com/danielmiessler/SecLists/tree/master/Passwords/Leaked-Databases) dictionary we can crack the password.
 
