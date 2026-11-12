@@ -118,7 +118,7 @@ talks:
     venue: "[0x33] - The Meet, ØxＯＰＯＳɆＣ Mɇɇtuᵽ"
     location: "Porto, Portugal"
     year: 2017
-    slides: "assets/talks/piheadquarters_pixelscamp_2017.pdf"
+    slides: "assets/talks/A_hands-on_approach_on_botnets_for_a_learning_oposec_2016.pdf"
   - title: "Web Development Workshop"
     speakers: "João Pedro Dias and João Maia"
     venue: "IEEE Day 2015 at Faculty of Engineering, University of Porto"
