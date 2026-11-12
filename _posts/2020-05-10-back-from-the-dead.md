@@ -3,8 +3,8 @@ layout: post
 title: "Back from the Dead: Recovering from a Bricked BIOS"
 categories: [hardware, msi, bios]
 tags: [hardware, msi, bios]
-thumbnail: /images/msi/flash.jpg
-description: "An adventure in the world of bricked BIOS"
+image: /images/msi/flash.jpg
+description: "An adventure in the world of bricked BIOS: how a failed firmware update killed a laptop, and how it came back to life."
 ---
 
 My long-term laptop, which accompanied me for some years, died some time ago while proceeding a BIOS update. Why update the BIOS since it's a process well-known for bricking computers? Well, because of Intel and their wonderful speculative execution vulnerabilities. So, after the update, the PC did not turn on again (with only the fans and the keyboard backlight turning on). As you can imagine doing the typical BIOS reset procedures did not work. So here's the story of bringing it back from the dead.

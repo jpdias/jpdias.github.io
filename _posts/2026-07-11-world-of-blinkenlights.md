@@ -3,7 +3,7 @@ layout: post
 title: "A World of Blinkenlights"
 categories: [hardware]
 tags: [iot,harware,cloudflare,wargames]
-thumbnail: /images/blinkenlights26/boot.jpeg
+image: /images/blinkenlights26/boot.jpeg
 description: "A WarGames-style world map that turns Cloudflare traffic analytics into blinking lights on the wall."
 ---
 

@@ -12,5 +12,10 @@ group :jekyll_plugins do
     gem 'base64'
     gem 'bigdecimal'
     gem 'jekyll-target-blank'
+    gem 'jekyll-seo-tag'
 end
 gem "yajl-ruby", "~> 1.4"
+
+group :test do
+    gem 'html-proofer', require: false
+end

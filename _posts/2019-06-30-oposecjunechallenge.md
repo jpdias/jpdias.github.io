@@ -3,7 +3,7 @@ layout: post
 title:  "ØxＯＰＯＳɆＣ Mɇɇtuᵽ [0x75] Challenge Write-up"
 categories: [infosec, iot]
 tags: [oposec, infosec, ctf]
-thumbnail: /images/oposec/banner.jpg
+image: /images/oposec/banner.jpg
 description: "Write-up for the CTF-like challenge of [0x75] edition of the ØxＯＰＯＳɆＣ Mɇɇtuᵽ"
 ---
 
@@ -140,7 +140,7 @@ NOTEPAD
 
 Yey! Another URL. Checking this URL would lead us to a dropbox hosted TXT file with the following content: `synt{Z8Z%QHZC%E5PXF!}`.
 
-After checking out that the expected format for the flag was something like flag{.....} it seemed to close to what we had. After checking on [CyberChef](), this came up to be a simple ROT13 cipher: 
+After checking out that the expected format for the flag was something like flag{.....} it seemed to close to what we had. After checking on [CyberChef](https://gchq.github.io/CyberChef/), this came up to be a simple ROT13 cipher:
 
 >> flag{M8M%DUMP%R5CKS!}
 

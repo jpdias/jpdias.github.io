@@ -3,7 +3,7 @@ layout: post
 title: "Notes on (Software Engineering) Research"
 categories: [research, engineering, software]
 tags: [research, phd, engineering, software]
-thumbnail: /images/code.jpg
+image: /images/favicon/webprofile-window.png
 description: "Notes on research from a software engineering perspective."
 ---
 

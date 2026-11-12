@@ -1,7 +1,9 @@
 ---
 layout: default
 is_contact: true
-title: "./jpdias/contact"
+head_title: "./jpdias/contact"
+title: "Contact"
+description: "Get in touch with jpdias — email, social profiles and academic accounts such as ORCID, Google Scholar and DBLP."
 ---
 
 # contact

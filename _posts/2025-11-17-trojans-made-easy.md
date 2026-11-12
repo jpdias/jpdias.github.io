@@ -3,7 +3,7 @@ layout: post
 title: "Plywood Trojan: When Attackers Go Budget"
 categories: [infosec]
 tags: [phishing,malware,uphold]
-thumbnail: /images/uphold25/upholddesktop.jpeg
+image: /images/uphold25/upholddesktop.jpeg
 description: "Another phishing story: how to straightforwardly bypass most antivirus and achieve remote access control on a victim PC."
 ---
 

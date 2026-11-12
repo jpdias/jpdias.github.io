@@ -3,7 +3,7 @@ layout: post
 title: "How to Run Your Own Weather Station"
 categories: [iot]
 tags: [weather,weatherstation,smarthome,iot]
-thumbnail: /images/weatherstation/ttgo.jpeg
+image: /images/weatherstation/ttgo.jpeg
 description: "How Bresser messed up my Weather Station shipment and WiFi connectivity was forgotten along the way, thus hacks were needed."
 ---
 
@@ -129,7 +129,7 @@ I don't even know what to say. But summarizing the problems:
 - Only supports specific units for certain measurements that are not the most common ones (e.g. barometric pressure is commonly measured in milibar/hPa, but somehow the API accepts inches Hg[^3])
 - There is no validation on top of the values sent as part of the payload beyond their type, so completely random values will be considered valid (Windy validates the values to be within plausible sensor readings)
 
-But this seems somehow a standard across several weather services, which [The Weather Company]()[^4] defines as the [PWS Upload Protocol](https://support.weather.com/s/article/PWS-Upload-Protocol?language=en_US).
+But this seems somehow a standard across several weather services, which The Weather Company[^4] defines as the [PWS Upload Protocol](https://support.weather.com/s/article/PWS-Upload-Protocol?language=en_US).
 
 Anyhow, using this hell-raised API I was finally able to post data to the PWS weather website. There is also a "trust" rating to the station (that goes from "initializing" to "active"), but it seems to only consider the readings posting rate and nothing more.
 

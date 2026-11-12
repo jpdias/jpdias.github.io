@@ -3,7 +3,7 @@ layout: post
 title: "Yet Another Raspberry Pi Cluster"
 categories: [hardware, devops]
 tags: [raspberrypi, hardware, devops, network]
-thumbnail: /images/picluster/all.jpeg
+image: /images/picluster/all.jpeg
 description: "Yet another Raspberry Pi cluster build with some network, monitoring and automation perks."
 ---
 
@@ -78,7 +78,7 @@ Typically in this kind of builds, switches are used. However, using no-static co
 
 ### Finding a Working Firmware
 
-I had three routers lying around, so the journey began of finding a proper alternative firmware that would provide such features. The best candidate among those was the [Linksys WRT54G](https://en.wikipedia.org/wiki/Linksys_WRT54G_series) ([more info]()) series, since it was one of the most well-supported series. However, the specific version that I have ([WRT54GS v7](http://en.techinfodepot.shoutwiki.com/wiki/Linksys_WRT54GS_v7.0)) is only supported by an old version of [DD-WRT](https://wiki.dd-wrt.com/wiki/index.php/How_To_Flash_the_WRT54GS_v7) primarily due to hardware limitations. After several hours messing around configurations, several issues with local domain resolution and DHCP led me to abandon it.
+I had three routers lying around, so the journey began of finding a proper alternative firmware that would provide such features. The best candidate among those was the [Linksys WRT54G](https://en.wikipedia.org/wiki/Linksys_WRT54G_series) series, since it was one of the most well-supported series. However, the specific version that I have ([WRT54GS v7](http://en.techinfodepot.shoutwiki.com/wiki/Linksys_WRT54GS_v7.0)) is only supported by an old version of [DD-WRT](https://wiki.dd-wrt.com/wiki/index.php/How_To_Flash_the_WRT54GS_v7) primarily due to hardware limitations. After several hours messing around configurations, several issues with local domain resolution and DHCP led me to abandon it.
 
 The next one was an [ASUS RT-N12E_B](http://en.techinfodepot.shoutwiki.com/wiki/ASUS_RT-N12E_B1), which, supposedly, is supported by [OpenWRT](https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=58e0673900ea585b03d3cc2f8917667faa3f977f). However, after flashing, I couldn't get the router to work in WiFi client mode (the signal was so weak that even with the 3rd-party router really close to it, it would not connect). After searching around, I found out that there's an alternative firmware for it called [Padavan](https://bitbucket.org/padavan/rt-n56u/src/master/). This happens to be a pretty good all-around firmware but had a down-side: I could not bridge the WAN port to the switch.
 

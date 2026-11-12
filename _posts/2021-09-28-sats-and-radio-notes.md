@@ -3,7 +3,7 @@ layout: post
 title: "Listening to Satellites and Other Adventures"
 categories: [radio, space, sdr]
 tags: [radio, satellites, sdr]
-thumbnail: /images/satsandradio21/gqrx_433.png
+image: /images/satsandradio21/gqrx_433.png
 description: "Notes on listenning to satellites and other space- and earth-craft."
 ---
 

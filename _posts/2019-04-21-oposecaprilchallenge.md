@@ -3,7 +3,7 @@ layout: post
 title:  "ØxＯＰＯＳɆＣ Mɇɇtuᵽ [0x72] and [0x73] Challenges Write-up"
 categories: [infosec, iot]
 tags: [oposec, infosec, ctf]
-thumbanil: https://imgs.xkcd.com/comics/random_number.png
+image: /images/oposec/challenge.jpg
 description: "Write-up for the CTF-like challenges of [0x72] and [0x73] edition of the ØxＯＰＯＳɆＣ Mɇɇtuᵽ"
 ---
 
@@ -24,7 +24,7 @@ The resulting image was a modified version of the known XKCD sketch "Random Numb
 
 The modified imaged can be downloaded below:
 
-> [Download Image](/images/oposec/omegalul.png)
+> [Download Image](/images/oposec/omegalul.bmp)
 
 ### How to solve it?
 
