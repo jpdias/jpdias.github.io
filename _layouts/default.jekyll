@@ -36,6 +36,7 @@
     {% if page.layout == "post" %}
     <link rel="stylesheet" href="{{ site.baseurl }}/css/lite-light.min.css">
     {% endif %}
+    <link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}/images/favicon/favicon.svg" sizes="any">
     <link rel="icon" href="{{ site.baseurl }}/images/favicon/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/images/favicon/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/images/favicon/favicon-16.png">
