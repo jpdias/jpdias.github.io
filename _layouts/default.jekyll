@@ -19,6 +19,9 @@
       title above, while og:title/twitter:title still come from page.title.
     {% endcomment %}
     {% seo title=false %}
+    {% if site.logo %}
+    <meta property="og:logo" content="{{ site.logo | absolute_url }}" />
+    {% endif %}
 
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS" href="/feed.xml" />
     {% comment %} Relative link so HTMLProofer can verify the share image exists. {% endcomment %}
