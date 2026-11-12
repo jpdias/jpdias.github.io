@@ -29,6 +29,7 @@
     <link rel="image_src" href="{{ site.baseurl }}{{ share_image }}">
     <link rel="preload" href="{{ site.baseurl }}/fonts/IBMPlexMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{{ site.baseurl }}/fonts/lato-v17-latin-300.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ site.baseurl }}/fonts/remixicon.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/code.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/academicons.css">

@@ -1088,6 +1088,110 @@ summary:focus-visible,
   color: var(--main-headers-color);
 }
 
+/* Copy-link buttons (see _includes/toc-script.jekyll).
+   These rules live in the stylesheet instead of being injected by the script,
+   so the space reserved for the buttons is part of the first paint and the
+   page does not reflow once JavaScript adds them. */
+.copy-link-target {
+  position: relative;
+  scroll-margin-top: 1.5rem;
+}
+
+.copy-link-button {
+  position: absolute;
+  border: 0;
+  background: transparent;
+  color: var(--text-muted, #ffffff8c);
+  cursor: pointer;
+  font: inherit;
+  font-size: .75em;
+  line-height: 1;
+  margin: 0;
+  opacity: 0;
+  padding: .25em;
+  vertical-align: middle;
+}
+
+/* headings are not entries: keep their button out of the text flow so long
+   titles never re-wrap when the button is added. The script positions it
+   right after the heading text. */
+.copy-link-target:not(.copy-link-entry) > .copy-link-button {
+  left: 0;
+  top: 0;
+  right: auto;
+  margin-left: .5em;
+}
+
+.copy-link-target:hover > .copy-link-button,
+.copy-link-button:focus-visible {
+  opacity: 1;
+}
+
+.copy-link-button:hover {
+  color: var(--main-headers-color, #fe5c35);
+  opacity: 1;
+}
+
+.copy-link-button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.copy-link-entry {
+  position: relative;
+}
+
+.copy-link-entry > .copy-link-button {
+  position: absolute;
+  right: .35rem;
+  top: .35rem;
+  margin: 0;
+  opacity: .75;
+}
+
+.copy-link-entry:hover > .copy-link-button,
+.copy-link-entry > .copy-link-button:focus-visible {
+  opacity: 1;
+}
+
+.talk-item:hover {
+  background-color: var(--item-bg);
+  transition: none;
+}
+
+/* space for the copy-link buttons is reserved up-front, so adding them at
+   runtime does not change the layout */
+main#content h1,
+main#content h2,
+main#content h3,
+main#content h4,
+main#content h5,
+main#content h6 {
+  padding-right: 1.5rem;
+}
+
+main#content .pub-item,
+main#content .talk-item,
+main#content .post-item {
+  padding-right: 1.5rem;
+}
+
+main#content .posts > li {
+  padding-right: 2rem;
+}
+
+@media (hover: none) {
+  .copy-link-button {
+    opacity: .8;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .copy-link-button {
+    transition: opacity .15s ease;
+  }
+}
+
 /* respect reduced-motion preference */
 @media (prefers-reduced-motion: reduce) {
   *,

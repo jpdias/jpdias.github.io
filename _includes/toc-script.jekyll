@@ -5,23 +5,8 @@
   "use strict";
 
   function addCopyLinks() {
-    var style = document.createElement("style");
-    style.textContent = [
-      ".copy-link-target { position: relative; scroll-margin-top: 1.5rem; padding-right: 1.5rem; }",
-      ".copy-link-button { border: 0; background: transparent; color: var(--text-muted, #ffffff8c); cursor: pointer; font: inherit; font-size: .75em; line-height: 1; margin-left: .5em; opacity: 0; padding: .25em; vertical-align: middle; }",
-      ".copy-link-target:hover > .copy-link-button, .copy-link-button:focus-visible { opacity: 1; }",
-      ".copy-link-button:hover { color: var(--main-headers-color, #fe5c35); opacity: 1; }",
-      ".copy-link-button:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }",
-      ".copy-link-entry { position: relative; }",
-      ".copy-link-entry > .copy-link-button { position: absolute; right: .35rem; top: .35rem; margin: 0; opacity: .75; }",
-      ".posts > li.copy-link-entry { padding-right: 2rem; }",
-      ".copy-link-entry:hover > .copy-link-button, .copy-link-entry > .copy-link-button:focus-visible { opacity: 1; }",
-      ".talk-item:hover { background-color: var(--item-bg); transition: none; }",
-      "@media (hover: none) { .copy-link-button { opacity: .8; } }",
-      "@media (prefers-reduced-motion: no-preference) { .copy-link-button { transition: opacity .15s ease; } }"
-    ].join("\n");
-    document.head.appendChild(style);
-
+    // The copy-link styles live in css/main.css: the reserved space is part of
+    // the first paint, so adding the buttons does not make the page reflow.
     function slugify(text) {
       return (text || "section")
         .normalize("NFKD")
@@ -95,10 +80,42 @@
         });
       });
       target.appendChild(button);
+      return button;
+    }
+
+    // Positions a heading button right after the heading text without putting
+    // it back in the text flow, so it can never change the layout.
+    function placeAtTextEnd(target, button) {
+      if (!button) return;
+      var last = null;
+      var nodes = target.childNodes;
+      for (var i = nodes.length - 1; i >= 0; i--) {
+        var node = nodes[i];
+        if (node === button) continue;
+        if (node.nodeType === 3) {
+          if (node.nodeValue && node.nodeValue.trim()) { last = node; break; }
+        } else if (node.nodeType === 1 && node.textContent.trim()) {
+          last = node;
+          break;
+        }
+      }
+      if (!last) { button.hidden = true; return; }
+      var range = document.createRange();
+      range.selectNodeContents(last);
+      var rects = range.getClientRects();
+      var rect = rects.length ? rects[rects.length - 1] : null;
+      if (!rect) { button.hidden = true; return; }
+      var targetRect = target.getBoundingClientRect();
+      button.style.left = Math.round(rect.right - targetRect.left) + "px";
+      button.style.top = Math.round(rect.top - targetRect.top) + "px";
+      button.style.right = "auto";
+      button.hidden = false;
     }
 
     var content = document.querySelector("main#content");
     if (!content) return;
+
+    var placements = [];
 
     var headings = content.querySelectorAll("h1, h2, h3, h4, h5, h6");
     Array.prototype.forEach.call(headings, function (heading) {
@@ -106,7 +123,9 @@
       if (!heading.id) heading.id = uniqueId(slugify(heading.textContent));
       if (heading.querySelector(":scope > .copy-link-button")) return;
       heading.classList.add("copy-link-target");
-      makeButton(heading, heading.textContent.trim());
+      var button = makeButton(heading, heading.textContent.trim());
+      placeAtTextEnd(heading, button);
+      placements.push([heading, button]);
     });
 
     var articles = content.querySelectorAll(".posts > li");
@@ -130,6 +149,18 @@
       var title = item.querySelector(".pub-title, .talk-title, h1, h2, h3, b, strong");
       makeButton(item, title ? title.textContent.trim() : "this entry");
     });
+
+    // The text metrics change once the web fonts load, so the buttons are
+    // placed again afterwards.
+    function reposition() {
+      placements.forEach(function (placement) {
+        placeAtTextEnd(placement[0], placement[1]);
+      });
+    }
+    window.addEventListener("load", reposition);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(reposition);
+    }
   }
 
   addCopyLinks();
