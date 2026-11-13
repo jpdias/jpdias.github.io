@@ -1,7 +1,7 @@
 ---
 layout: default
 head_title: "./jpdias"
-title: "jpdias — engineer, developer, security researcher"
+title: "jpdias — engineer, developer, security explorer, photography enthusiast"
 description: "Engineer. Developer. Photography enthusiast. Researching on the thin line between hardware and software."
 ---
 
